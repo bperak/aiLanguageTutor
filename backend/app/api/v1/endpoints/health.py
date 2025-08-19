@@ -23,6 +23,7 @@ class HealthResponse(BaseModel):
     service: str
     version: str
     dependencies: dict[str, str]
+    message: str = "Welcome to AI Language Tutor API!"
 
 
 @router.get("/", response_model=HealthResponse)
