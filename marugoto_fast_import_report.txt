@@ -1,0 +1,80 @@
+
+📋 MARUGOTO GRAMMAR FAST IMPORT REPORT
+=====================================
+
+📊 Summary Statistics:
+- Total patterns imported: 392
+- Romaji generated with: pykakasi (no AI validation)
+
+📚 By Textbook Level:
+- 中級1: 68 patterns
+- 中級2: 73 patterns
+- 入門(りかい): 55 patterns
+- 初中級: 43 patterns
+- 初級1(りかい): 75 patterns
+- 初級2(りかい): 78 patterns
+
+🏷️ By Classification:
+- その他（助詞）: 1 patterns
+- その他（名詞化）: 2 patterns
+- その他（間接疑問）: 1 patterns
+- 並列・反復: 13 patterns
+- 主張・断定的評価: 4 patterns
+- 付加: 5 patterns
+- 付帯状態・非付帯状態: 5 patterns
+- 伝聞・引用: 12 patterns
+- 使役: 1 patterns
+- 例示: 3 patterns
+- 依頼・命令: 8 patterns
+- 依頼・命令　敬意: 1 patterns
+- 傾向: 1 patterns
+- 判断の立場: 1 patterns
+- 動作の開始と終了: 1 patterns
+- 勧誘・申し出・助言: 13 patterns
+- 原因・理由: 14 patterns
+- 受身・使役受身: 6 patterns
+- 可能・難易: 8 patterns
+- 否定: 6 patterns
+- 基準: 1 patterns
+- 変化・不定: 14 patterns
+- 対比: 7 patterns
+- 対象: 2 patterns
+- 意図的行為: 2 patterns
+- 意志: 6 patterns
+- 意志　変化　目的: 1 patterns
+- 意志（実際との不一致）: 1 patterns
+- 意見・予想・推測: 1 patterns
+- 感嘆: 1 patterns
+- 手段・媒介: 1 patterns
+- 手段・媒体: 2 patterns
+- 授受: 7 patterns
+- 推量: 15 patterns
+- 敬意: 14 patterns
+- 文体: 6 patterns
+- 時点・場面: 15 patterns
+- 時点・場面　様子・状態: 5 patterns
+- 時間的前後: 18 patterns
+- 条件: 10 patterns
+- 条件　願望: 1 patterns
+- 様子・状態: 24 patterns
+- 比況: 3 patterns
+- 決定: 6 patterns
+- 目的: 11 patterns
+- 程度・比較: 12 patterns
+- 経過・結末: 17 patterns
+- 経験: 1 patterns
+- 許可・禁止・義務・不必要: 7 patterns
+- 話題: 3 patterns
+- 説明: 28 patterns
+- 説明　　様子・状態: 1 patterns
+- 起点・終点・限界・範囲: 5 patterns
+- 起点･終点・限界・範囲: 2 patterns
+- 軽重の強調: 4 patterns
+- 逆接･譲歩: 13 patterns
+- 逆接･譲歩　　原因・理由: 1 patterns
+- 進行: 2 patterns
+- 避けられない心情・行動: 1 patterns
+- 部分否定: 2 patterns
+- 関連・対応: 2 patterns
+- 限定: 4 patterns
+- 願望: 7 patterns

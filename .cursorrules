@@ -1,0 +1,23 @@
+# Goal
+we are creating an AI language tutor 
+
+
+# Python env
+use .venv for python
+
+
+#General 
+please keeeeep iiiiiit simpleeeee as posssible ! do not overcomplicate!
+
+# Tests
+create tests
+reuse tests
+
+# Mock DATA
+- Do not use mock data, instead resolve real issues.
+
+# Update documentation
+update documentation on progress
+
+# UI
+please make an effort to create beautiful and slick and functional UI

@@ -1,0 +1,15 @@
+# Enhanced Knowledge Import Requirements
+# For importing Lee's vocabulary and NetworkX synonym graph
+
+# Core dependencies
+neo4j>=5.14.0
+pandas>=2.2.0
+networkx>=3.2.0
+structlog>=23.2.0
+
+# Data processing
+numpy>=1.26.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0

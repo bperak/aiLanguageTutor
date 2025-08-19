@@ -1,0 +1,10 @@
+- on the Dashboard:
+ - this looks very data science like, we want this to look inspirational for learning new words, grammatical concepts, syntactic structures, topics, pragmatic points
+ - all this based on the personal data provided by the user - but intelligently moderated by the AI agent - so we should enable an agent with more intelligence - a model like o3 or gemini 2.5 pro
+ - the data statistics is not so much what should be focus for the student - we want more content that will engage with student
+  some actual news could be helpfull but lets not overdo - maybe some word of the day or similar
+
+
+ - on Conversations 
+
+  -this should be driven from the Dashboard, and not so sterile like now , we do not want to copy chatgpt but want this to be place for learning language

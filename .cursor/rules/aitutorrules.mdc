@@ -1,0 +1,9 @@
+---
+alwaysApply: true
+---
+-we are on the windows use PowerShell syntax
+-you can not see .env so if you need some changes please tell to the user to change the content - never try to edit .env
+
+
+# AI rules
+- I want the prompts to be organized in a way that is intuitive to be edited!

@@ -1,0 +1,10 @@
+# Requirements for Marugoto Grammar Import Script
+pandas>=2.0.0
+pykakasi>=2.2.1
+neo4j>=5.0.0
+google-generativeai>=0.3.0
+python-dotenv>=1.0.0
+
+# Already available in backend
+# fastapi
+# pydantic

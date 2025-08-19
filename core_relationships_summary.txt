@@ -1,0 +1,22 @@
+
+📋 GRAMMAR GRAPH RELATIONSHIP SUMMARY
+====================================
+
+📊 Node Types:
+- Word: 138153 nodes
+- GrammarPattern: 392 nodes
+- GrammarClassification: 63 nodes
+- MarugotoTopic: 55 nodes
+- JFSCategory: 25 nodes
+- TextbookLevel: 6 nodes
+
+🔗 Relationship Types:
+- SYNONYM_OF: 173425 relationships
+- SIMILAR_TO: 4448 relationships
+- PREREQUISITE_FOR: 3654 relationships
+- USES_WORD: 2046 relationships
+- DOMAIN_OF: 803 relationships
+- BELONGS_TO_LEVEL: 392 relationships
+- HAS_CLASSIFICATION: 392 relationships
+- CATEGORIZED_AS: 392 relationships
+- ANTONYM_OF: 265 relationships
