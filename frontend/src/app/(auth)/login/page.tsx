@@ -6,6 +6,7 @@ import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useRouter } from "next/navigation"
 import { apiPost } from "@/lib/api"
+import { setToken } from "@/lib/auth"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -27,9 +28,9 @@ export default function LoginPage() {
       setLoading(true)
       const data = await apiPost<{ access_token: string }>("/api/v1/auth/login", values)
       if (typeof window !== "undefined") {
-        localStorage.setItem("token", data.access_token)
+        setToken(data.access_token)
       }
-      router.push("/dashboard")
+      router.push("/")
     } catch {
       form.setError("password", { message: "Login failed. Check credentials." })
     } finally {

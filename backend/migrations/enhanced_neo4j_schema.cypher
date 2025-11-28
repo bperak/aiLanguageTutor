@@ -8,16 +8,16 @@
 // =============
 
 // Word nodes from Lee's vocabulary database
-CREATE CONSTRAINT word_kanji_unique IF NOT EXISTS FOR (w:Word) REQUIRE w.kanji IS UNIQUE;
+CREATE CONSTRAINT word_standard_orthography_unique IF NOT EXISTS FOR (w:Word) REQUIRE w.standard_orthography IS UNIQUE;
 CREATE CONSTRAINT word_id_unique IF NOT EXISTS FOR (w:Word) REQUIRE w.lee_id IS UNIQUE;
 
 // Enhanced Word node structure
 (:Word {
     // Lee's data
     lee_id: INTEGER,                    // Original No from Lee's data
-    kanji: STRING,                      // Standard orthography (kanji or other)
-    katakana: STRING,                   // Katakana reading
-    hiragana: STRING,                   // Hiragana reading (from NetworkX)
+    standard_orthography: STRING,       // Canonical surface form (formerly 'kanji')
+    reading_katakana: STRING,           // Katakana reading
+    reading_hiragana: STRING,           // Hiragana reading
     
     // Difficulty and classification
     difficulty_level: STRING,           // "1.初級前半" to "6.上級後半"
@@ -156,9 +156,9 @@ CREATE CONSTRAINT mutual_sense_unique IF NOT EXISTS FOR (m:MutualSense) REQUIRE 
 // =============
 
 // Text search indexes
-CREATE INDEX word_kanji_text IF NOT EXISTS FOR (w:Word) ON (w.kanji);
-CREATE INDEX word_katakana_text IF NOT EXISTS FOR (w:Word) ON (w.katakana);
-CREATE INDEX word_hiragana_text IF NOT EXISTS FOR (w:Word) ON (w.hiragana);
+CREATE INDEX word_standard_orthography_text IF NOT EXISTS FOR (w:Word) ON (w.standard_orthography);
+CREATE INDEX word_reading_katakana_text IF NOT EXISTS FOR (w:Word) ON (w.reading_katakana);
+CREATE INDEX word_reading_hiragana_text IF NOT EXISTS FOR (w:Word) ON (w.reading_hiragana);
 CREATE INDEX word_translation_text IF NOT EXISTS FOR (w:Word) ON (w.translation);
 
 // Classification indexes

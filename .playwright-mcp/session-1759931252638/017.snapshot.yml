@@ -1,0 +1,99 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e211]:
+          - button "Toggle theme" [ref=e212]: Dark
+          - button "Toggle mobile menu" [expanded] [active] [ref=e213]:
+            - img [ref=e215]
+      - generic [ref=e219]:
+        - link "Home" [ref=e220] [cursor=pointer]:
+          - /url: /dashboard
+        - generic [ref=e221]:
+          - generic [ref=e222]: Lexical
+          - link "Lexical Graph" [ref=e223] [cursor=pointer]:
+            - /url: /lexical/graph
+          - link "Lexical Lessons" [ref=e224] [cursor=pointer]:
+            - /url: /lexical/lessons
+          - link "Knowledge Base" [ref=e225] [cursor=pointer]:
+            - /url: /knowledge
+        - generic [ref=e226]:
+          - generic [ref=e227]: Grammar
+          - link "Grammar Study" [ref=e228] [cursor=pointer]:
+            - /url: /grammar
+          - link "Grammar Patterns" [ref=e229] [cursor=pointer]:
+            - /url: /grammar/study
+          - link "SRS System" [ref=e230] [cursor=pointer]:
+            - /url: /srs
+        - link "Conversations" [ref=e231] [cursor=pointer]:
+          - /url: /conversations
+        - generic [ref=e232]:
+          - generic [ref=e233]: Profile
+          - link "Profile Settings" [ref=e234] [cursor=pointer]:
+            - /url: /profile
+          - link "Content Analysis" [ref=e235] [cursor=pointer]:
+            - /url: /content/analyze
+          - link "Logout" [ref=e236] [cursor=pointer]:
+            - /url: /logout
+  - main [ref=e12]:
+    - generic [ref=e238]:
+      - heading "Your Learning Dashboard" [level=1] [ref=e239]
+      - generic [ref=e240]:
+        - generic [ref=e241]:
+          - generic [ref=e242]:
+            - generic [ref=e243]: Total Sessions
+            - generic [ref=e244]: All time
+          - paragraph [ref=e246]: "9"
+        - generic [ref=e247]:
+          - generic [ref=e248]:
+            - generic [ref=e249]: Total Messages
+            - generic [ref=e250]: All time
+          - paragraph [ref=e252]: "181"
+        - generic [ref=e253]:
+          - generic [ref=e254]:
+            - generic [ref=e255]: Last Session
+            - generic [ref=e256]: Most recent
+          - paragraph [ref=e258]: 8/17/2025
+      - generic [ref=e259]:
+        - generic [ref=e261]:
+          - generic [ref=e262]: Messages per day
+          - generic [ref=e263]: Last 14 days
+        - generic [ref=e268]:
+          - generic [ref=e269]: Sessions per week
+          - generic [ref=e270]: Last 8 weeks
+      - generic [ref=e274]:
+        - heading "Recent Sessions" [level=2] [ref=e275]
+        - generic [ref=e276]:
+          - generic [ref=e277]:
+            - generic [ref=e278]:
+              - generic [ref=e279]: Visiting home
+              - generic [ref=e280]: 8/17/2025, 8:50:57 PM
+            - generic [ref=e282]: "Messages: 57"
+          - generic [ref=e283]:
+            - generic [ref=e284]:
+              - generic [ref=e285]: New chat
+              - generic [ref=e286]: 8/17/2025, 8:46:16 PM
+            - generic [ref=e288]: "Messages: 9"
+          - generic [ref=e289]:
+            - generic [ref=e290]:
+              - generic [ref=e291]: Doručak
+              - generic [ref=e292]: 8/17/2025, 6:17:32 PM
+            - generic [ref=e294]: "Messages: 60"
+          - generic [ref=e295]:
+            - generic [ref=e296]:
+              - generic [ref=e297]: New chat
+              - generic [ref=e298]: 8/9/2025, 7:20:57 AM
+            - generic [ref=e300]: "Messages: 11"
+          - generic [ref=e301]:
+            - generic [ref=e302]:
+              - generic [ref=e303]: s
+              - generic [ref=e304]: 8/9/2025, 7:18:52 AM
+            - generic [ref=e306]: "Messages: 6"
+  - button "Open Next.js Dev Tools" [ref=e46] [cursor=pointer]:
+    - img [ref=e47]
+  - alert [ref=e50]
+  - generic [ref=e147]: "2"

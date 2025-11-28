@@ -1,0 +1,2022 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - list [ref=e9]:
+            - listitem "Database Information" [ref=e11]:
+              - button "Database" [ref=e12] [cursor=pointer]:
+                - img "Database" [ref=e333]
+            - listitem "Favorites" [ref=e22]:
+              - button "Favorites" [ref=e23] [cursor=pointer]:
+                - img "Favorites" [ref=e339]
+            - listitem "Guides" [ref=e29]:
+              - button "Guides" [ref=e30] [cursor=pointer]:
+                - img "Guides" [ref=e341]
+          - list [ref=e38]:
+            - listitem "Help &amp; Resources" [ref=e40]:
+              - button "Help & Resources" [ref=e41] [cursor=pointer]:
+                - img "Help & Resources" [ref=e346]
+            - listitem "Browser Sync" [ref=e49]:
+              - button "Browser Sync" [ref=e50] [cursor=pointer]:
+                - img "Browser Sync" [ref=e350]
+            - listitem "Settings" [ref=e59]:
+              - button "Browser Settings" [ref=e60] [cursor=pointer]:
+                - img "Browser Settings" [ref=e355]
+            - listitem "About Neo4j" [ref=e67]:
+              - button "About Neo4j" [ref=e68] [cursor=pointer]:
+                - img "About Neo4j" [ref=e358]
+        - generic [ref=e366]:
+          - heading "Database Information" [level=4] [ref=e367]
+          - generic [ref=e368]:
+            - generic [ref=e369]:
+              - heading "Use database" [level=5] [ref=e370]
+              - combobox [ref=e372]:
+                - option "neo4j 🏠" [selected]
+                - option "system"
+            - generic [ref=e373]:
+              - heading "Node labels" [level=5] [ref=e374]
+              - generic [ref=e375]:
+                - generic [ref=e376] [cursor=pointer]: "*(77,330)"
+                - generic [ref=e377] [cursor=pointer]: CanDoDescriptor
+                - generic [ref=e378] [cursor=pointer]: GrammarClassification
+                - generic [ref=e379] [cursor=pointer]: GrammarPattern
+                - generic [ref=e380] [cursor=pointer]: JFSCategory
+                - generic [ref=e381] [cursor=pointer]: Lesson
+                - generic [ref=e382] [cursor=pointer]: MarugotoTopic
+                - generic [ref=e383] [cursor=pointer]: PragmaticPattern
+                - generic [ref=e384] [cursor=pointer]: TextbookLevel
+                - generic [ref=e385] [cursor=pointer]: User
+                - generic [ref=e386] [cursor=pointer]: Word
+            - generic [ref=e387]:
+              - heading "Relationship types" [level=5] [ref=e388]
+              - generic [ref=e389]:
+                - generic [ref=e390] [cursor=pointer]: "*(460,782)"
+                - generic [ref=e391] [cursor=pointer]: ANTONYM_OF
+                - generic [ref=e392] [cursor=pointer]: BELONGS_TO_DOMAIN
+                - generic [ref=e393] [cursor=pointer]: BELONGS_TO_LEVEL
+                - generic [ref=e394] [cursor=pointer]: CATEGORIZED_AS
+                - generic [ref=e395] [cursor=pointer]: DOMAIN_OF
+                - generic [ref=e396] [cursor=pointer]: FOR
+                - generic [ref=e397] [cursor=pointer]: HAS_CLASSIFICATION
+                - generic [ref=e398] [cursor=pointer]: HAS_DIFFICULTY
+                - generic [ref=e399] [cursor=pointer]: HAS_ETYMOLOGY
+                - generic [ref=e400] [cursor=pointer]: HAS_POS
+                - generic [ref=e401] [cursor=pointer]: MASTERED
+                - generic [ref=e402] [cursor=pointer]: PREREQUISITE_FOR
+                - generic [ref=e403] [cursor=pointer]: SAME_LEVEL
+                - generic [ref=e404] [cursor=pointer]: SAME_SKILLDOMAIN
+                - generic [ref=e405] [cursor=pointer]: SAME_TOPIC
+                - generic [ref=e406] [cursor=pointer]: SAME_TYPE
+                - generic [ref=e407] [cursor=pointer]: SIMILAR_TO
+                - generic [ref=e408] [cursor=pointer]: SYNOMYM_OF
+                - generic [ref=e409] [cursor=pointer]: SYNONYM_OF
+                - generic [ref=e410] [cursor=pointer]: USES_PRAGMA
+                - generic [ref=e411] [cursor=pointer]: USES_WORD
+            - generic [ref=e412]:
+              - heading "Property keys" [level=5] [ref=e413]
+              - generic [ref=e414]:
+                - generic [ref=e415] [cursor=pointer]: ai_collocations
+                - generic [ref=e416] [cursor=pointer]: ai_confidence_score
+                - generic [ref=e417] [cursor=pointer]: ai_content_version
+                - generic [ref=e418] [cursor=pointer]: ai_cultural_notes
+                - generic [ref=e419] [cursor=pointer]: ai_definitions
+                - generic [ref=e420] [cursor=pointer]: ai_examples
+                - generic [ref=e421] [cursor=pointer]: ai_generated
+                - generic [ref=e422] [cursor=pointer]: ai_generated_at
+                - generic [ref=e423] [cursor=pointer]: ai_generated_node
+                - generic [ref=e424] [cursor=pointer]: ai_grammar_patterns
+                - generic [ref=e425] [cursor=pointer]: ai_kanji_breakdown
+                - generic [ref=e426] [cursor=pointer]: ai_learning_tips
+                - generic [ref=e427] [cursor=pointer]: ai_model_used
+                - generic [ref=e428] [cursor=pointer]: ai_overview
+                - generic [ref=e429] [cursor=pointer]: ai_overview_generated_at
+                - generic [ref=e430] [cursor=pointer]: ai_overview_model
+                - generic [ref=e431] [cursor=pointer]: ai_provider
+                - generic [ref=e432] [cursor=pointer]: ai_target_level
+                - generic [ref=e433] [cursor=pointer]: ai_translated
+                - generic [ref=e434] [cursor=pointer]: antonym_antonym_explanation
+                - generic [ref=e435] [cursor=pointer]: antonym_antonym_strength
+                - generic [ref=e436] [cursor=pointer]: antonym_antonymy_domain
+                - generic [ref=e437] [cursor=pointer]: antonym_antonymy_domain_hiragana
+                - generic [ref=e438] [cursor=pointer]: antonym_antonymy_domain_translation
+                - generic [ref=e439] [cursor=pointer]: canDo_links
+                - generic [ref=e440] [cursor=pointer]: can_do_id
+                - generic [ref=e441] [cursor=pointer]: category
+                - generic [ref=e442] [cursor=pointer]: classification
+                - generic [ref=e443] [cursor=pointer]: constraints
+                - generic [ref=e444] [cursor=pointer]: created_at
+                - generic [ref=e445] [cursor=pointer]: description
+                - generic [ref=e446] [cursor=pointer]: descriptionEn
+                - generic [ref=e447] [cursor=pointer]: descriptionJa
+                - generic [ref=e448] [cursor=pointer]: difficulty_level
+                - generic [ref=e449] [cursor=pointer]: difficulty_numeric
+                - generic [ref=e450] [cursor=pointer]: edge_id
+                - generic [ref=e451] [cursor=pointer]: entryNumber
+                - generic [ref=e452] [cursor=pointer]: etymology
+                - generic [ref=e453] [cursor=pointer]: evaluation
+                - generic [ref=e454] [cursor=pointer]: example_romaji
+                - generic [ref=e455] [cursor=pointer]: example_sentence
+                - generic [ref=e456] [cursor=pointer]: examples
+                - generic [ref=e457] [cursor=pointer]: expressions
+                - generic [ref=e458] [cursor=pointer]: from_level
+                - generic [ref=e459] [cursor=pointer]: from_word
+                - generic [ref=e460] [cursor=pointer]: grammarPatterns
+                - generic [ref=e461] [cursor=pointer]: hiragana
+                - generic [ref=e462] [cursor=pointer]: id
+                - generic [ref=e463] [cursor=pointer]: illustration_created_at
+                - generic [ref=e464] [cursor=pointer]: illustration_meta_path
+              - generic [ref=e465]:
+                - button "Show 50 more" [ref=e466] [cursor=pointer]
+                - text: "|"
+                - button "Show all" [ref=e467] [cursor=pointer]
+            - generic [ref=e468]:
+              - heading "Connected as" [level=5] [ref=e469]
+              - table [ref=e471]:
+                - rowgroup [ref=e472]:
+                  - 'row "Username: neo4j" [ref=e473]':
+                    - cell "Username:" [ref=e474]
+                    - cell "neo4j" [ref=e475]
+                  - 'row "Roles: -" [ref=e476]':
+                    - cell "Roles:" [ref=e477]
+                    - cell "-" [ref=e478]
+                  - 'row "Disconnect:  :server disconnect" [ref=e479]':
+                    - cell "Disconnect:" [ref=e480]
+                    - cell " :server disconnect" [ref=e481]:
+                      - generic [ref=e482] [cursor=pointer]:
+                        - generic [ref=e483]: 
+                        - text: :server disconnect
+            - generic [ref=e484]:
+              - heading "DBMS" [level=5] [ref=e485]
+              - table [ref=e487]:
+                - rowgroup [ref=e488]:
+                  - 'row "Cluster role: primary" [ref=e489]':
+                    - cell "Cluster role:" [ref=e490]
+                    - cell "primary" [ref=e491]
+                  - 'row "Version: 5.15.0" [ref=e492]':
+                    - cell "Version:" [ref=e493]
+                    - cell "5.15.0" [ref=e494]
+                  - 'row "Edition: community" [ref=e495]':
+                    - cell "Edition:" [ref=e496]
+                    - cell "community" [ref=e497]
+                  - 'row "Name: neo4j" [ref=e498]':
+                    - cell "Name:" [ref=e499]
+                    - cell "neo4j" [ref=e500]
+                  - 'row "Databases:  :dbs" [ref=e501]':
+                    - cell "Databases:" [ref=e502]
+                    - cell " :dbs" [ref=e503]:
+                      - generic [ref=e504] [cursor=pointer]:
+                        - generic [ref=e505]: 
+                        - text: :dbs
+                  - 'row "Information:  :sysinfo" [ref=e506]':
+                    - cell "Information:" [ref=e507]
+                    - cell " :sysinfo" [ref=e508]:
+                      - generic [ref=e509] [cursor=pointer]:
+                        - generic [ref=e510]: 
+                        - text: :sysinfo
+                  - 'row "Query List:  :queries" [ref=e511]':
+                    - cell "Query List:" [ref=e512]
+                    - cell " :queries" [ref=e513]:
+                      - generic [ref=e514] [cursor=pointer]:
+                        - generic [ref=e515]: 
+                        - text: :queries
+      - generic [ref=e78]:
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - code [ref=e84]:
+              - generic [ref=e85]:
+                - generic [ref=e518]: neo4j$
+                - textbox "Editor content;Press Alt+F1 for Accessibility Options." [ref=e96]
+            - button "Run (ctrl+enter)" [ref=e97] [cursor=pointer]:
+              - img "Run (ctrl+enter)" [ref=e530]
+          - generic [ref=e103]:
+            - button "Fullscreen (ctrl + alt + F)" [ref=e104] [cursor=pointer]:
+              - img [ref=e107]
+            - button "Clear" [ref=e112] [cursor=pointer]:
+              - img [ref=e115]
+        - generic [ref=e239]:
+          - generic [ref=e240]: To help make Neo4j Browser better we collect information on product usage. Review your settings at any time.
+          - generic [ref=e241]: ×
+        - generic [ref=e121]:
+          - article [ref=e534]:
+            - generic [ref=e535]:
+              - button "Pin at top" [ref=e536] [cursor=pointer]:
+                - img [ref=e539]
+              - button "Collapse" [ref=e542] [cursor=pointer]:
+                - img [ref=e545]
+              - button "Fullscreen" [ref=e547] [cursor=pointer]:
+                - img [ref=e550]
+              - button "Close" [ref=e555] [cursor=pointer]:
+                - img [ref=e558]
+            - generic [ref=e561]:
+              - generic [ref=e562]:
+                - generic [ref=e563]:
+                  - code [ref=e3153]:
+                    - generic [ref=e3154]:
+                      - generic [ref=e3159]: neo4j$
+                      - generic [ref=e3184]:
+                        - text: MATCH (n:CanDoDescriptor) RETURN n
+                        - generic [ref=e3185]: ·
+                        - text: LIMIT
+                        - generic [ref=e3186]: ·
+                        - text: "25"
+                      - textbox "Editor content;Press Alt+F1 for Accessibility Options." [active] [ref=e3167]: MATCH (n:CanDoDescriptor) RETURN c
+                  - button "Rerun" [ref=e565] [cursor=pointer]:
+                    - img "Rerun" [ref=e3168]
+                - list [ref=e571]:
+                  - button "Save as Favorite" [ref=e572] [cursor=pointer]:
+                    - img [ref=e575]
+                  - button "Exports" [ref=e577] [cursor=pointer]:
+                    - img [ref=e580]
+                    - list
+              - generic [ref=e583]:
+                - list [ref=e584]:
+                  - listitem [ref=e585] [cursor=pointer]:
+                    - generic [ref=e586]:
+                      - img [ref=e589]
+                      - generic [ref=e600]: Graph
+                  - listitem [ref=e601] [cursor=pointer]:
+                    - generic [ref=e602]:
+                      - img [ref=e605]
+                      - generic [ref=e607]: Table
+                  - listitem [ref=e608] [cursor=pointer]:
+                    - generic [ref=e609]:
+                      - img [ref=e612]
+                      - generic [ref=e614]: Text
+                  - listitem [ref=e615] [cursor=pointer]:
+                    - generic [ref=e616]:
+                      - img [ref=e619]
+                      - generic [ref=e622]: Code
+                - generic [ref=e628]:
+                  - generic [ref=e629]:
+                    - img [ref=e630]:
+                      - generic [ref=e633]:
+                        - generic [ref=e634]:
+                          - generic [ref=e635]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e638]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e641]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e644]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e647]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e650]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e653]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e656]:
+                            - generic: SAME…
+                          - generic [ref=e659]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e662]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e665]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e668]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e671]:
+                            - generic: SAME…
+                          - generic [ref=e674]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e677]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e680]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e683]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e686]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e689]:
+                            - generic: SAME…
+                          - generic [ref=e692]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e695]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e698]:
+                            - generic: SAME_…
+                          - generic [ref=e701]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e704]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e707]:
+                            - generic: SAME…
+                          - generic [ref=e710]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e713]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e716]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e719]:
+                            - generic: SAME_SKI…
+                          - generic [ref=e722]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e725]:
+                            - generic: SAME…
+                          - generic [ref=e728]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e731]:
+                            - generic: SAME…
+                          - generic [ref=e734]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e737]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e740]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e743]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e746]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e749]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e752]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e755]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e758]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e761]:
+                            - generic: SAME…
+                          - generic [ref=e764]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e767]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e770]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e773]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e776]:
+                            - generic: SAME…
+                          - generic [ref=e779]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e782]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e785]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e788]:
+                            - generic: SAME_…
+                          - generic [ref=e791]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e794]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e797]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e800]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e803]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e806]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e809]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e812]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e815]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e818]:
+                            - generic: SAME_…
+                          - generic [ref=e821]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e824]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e827]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e830]:
+                            - generic: SAME_…
+                          - generic [ref=e833]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e836]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e839]:
+                            - generic: SAME_…
+                          - generic [ref=e842]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e845]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e848]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e851]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e854]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e857]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e860]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e863]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e866]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e869]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e872]:
+                            - generic: SAME_…
+                          - generic [ref=e875]:
+                            - generic: SAME_…
+                          - generic [ref=e878]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e881]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e884]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e887]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e890]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e893]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e896]:
+                            - generic: SAME_…
+                          - generic [ref=e899]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e902]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e905]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e908]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e911]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e914]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e917]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e920]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e923]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e926]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e929]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e932]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e935]:
+                            - generic: SAME_L…
+                          - generic [ref=e938]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e941]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e944]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e947]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e950]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e953]:
+                            - generic: SAME_L…
+                          - generic [ref=e956]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e959]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e962]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e965]:
+                            - generic: SAME_…
+                          - generic [ref=e968]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e971]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e974]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e977]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e980]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e983]:
+                            - generic: SAME…
+                          - generic [ref=e986]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e989]:
+                            - generic: SAME…
+                          - generic [ref=e992]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e995]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e998]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1001]:
+                            - generic: SAME_…
+                          - generic [ref=e1004]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1007]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1010]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1013]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1016]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1019]:
+                            - generic: SAME_…
+                          - generic [ref=e1022]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1025]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1028]:
+                            - generic: SAME_T…
+                          - generic [ref=e1031]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1034]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1037]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1040]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1043]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1046]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1049]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1052]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1055]:
+                            - generic: SAME_T…
+                          - generic [ref=e1058]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1061]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1064]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1067]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1070]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1073]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1076]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1079]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1082]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1085]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1088]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1091]:
+                            - generic: SAME_…
+                          - generic [ref=e1094]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e1097]:
+                            - generic: SAME_…
+                          - generic [ref=e1100]:
+                            - generic: SAME_…
+                          - generic [ref=e1103]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1106]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1109]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1112]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1115]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1118]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1121]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1124]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1127]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1130]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1133]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1136]:
+                            - generic: SAME_…
+                          - generic [ref=e1139]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1142]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1145]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1148]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1151]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1154]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1157]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1160]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1163]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1166]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1169]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1172]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1175]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1178]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1181]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1184]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1187]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1190]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1193]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1196]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1199]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1202]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1205]:
+                            - generic: SAME_L…
+                          - generic [ref=e1208]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1211]:
+                            - generic: SAME_…
+                          - generic [ref=e1214]:
+                            - generic: SAME_…
+                          - generic [ref=e1217]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1220]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1223]:
+                            - generic: SAME_…
+                          - generic [ref=e1226]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1229]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1232]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1235]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1238]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1241]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1244]:
+                            - generic: SAME_…
+                          - generic [ref=e1247]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1250]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1253]:
+                            - generic: SAME_…
+                          - generic [ref=e1256]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1259]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1262]:
+                            - generic: SAME_T…
+                          - generic [ref=e1265]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1268]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1271]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1274]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1277]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1280]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1283]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1286]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1289]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1292]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1295]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1298]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1301]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1304]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1307]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1310]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1313]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1316]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1319]:
+                            - generic: SAME_…
+                          - generic [ref=e1322]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1325]:
+                            - generic: SAME_…
+                          - generic [ref=e1328]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1331]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1334]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1337]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1340]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1343]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1346]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1349]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1352]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1355]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1358]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1361]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1364]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1367]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1370]:
+                            - generic: SAME_L…
+                          - generic [ref=e1373]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1376]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1379]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1382]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1385]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1388]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1391]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1394]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1397]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1400]:
+                            - generic: SAME…
+                          - generic [ref=e1403]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1406]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1409]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1412]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1415]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1418]:
+                            - generic: SAME_T…
+                          - generic [ref=e1421]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1424]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1427]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1430]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1433]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1436]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1439]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1442]:
+                            - generic: SAME_L…
+                          - generic [ref=e1445]:
+                            - generic: SAME_LE…
+                          - generic [ref=e1448]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1451]:
+                            - generic: SAME_L…
+                          - generic [ref=e1454]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1457]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1460]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1463]:
+                            - generic: SAME_L…
+                          - generic [ref=e1466]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1469]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1472]:
+                            - generic: SAME_L…
+                          - generic [ref=e1475]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1478]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1481]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1484]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1487]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1490]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1493]:
+                            - generic: SAME…
+                          - generic [ref=e1496]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1499]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1502]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1505]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1508]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1511]:
+                            - generic: SAME_…
+                          - generic [ref=e1514]:
+                            - generic: SAME…
+                          - generic [ref=e1517]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1520]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1523]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1526]:
+                            - generic: SAME…
+                          - generic [ref=e1529]:
+                            - generic: SAME_…
+                          - generic [ref=e1532]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1535]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1538]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1541]:
+                            - generic: SAME_T…
+                          - generic [ref=e1544]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1547]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1550]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1553]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1556]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1559]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1562]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1565]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1568]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1571]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1574]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1577]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1580]:
+                            - generic: SAME_T…
+                          - generic [ref=e1583]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1586]:
+                            - generic: SAME_T…
+                          - generic [ref=e1589]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1592]:
+                            - generic: SAME_T…
+                          - generic [ref=e1595]:
+                            - generic: SAME_TY…
+                          - generic [ref=e1598]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1601]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1604]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1607]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1610]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1613]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1616]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1619]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1622]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1625]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1628]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1631]:
+                            - generic: SAME_LE…
+                          - generic [ref=e1634]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1637]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1640]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1643]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1646]:
+                            - generic: SAME_…
+                          - generic [ref=e1649]:
+                            - generic: SAME_…
+                          - generic [ref=e1652]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e1655]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1658]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1661]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1664]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1667]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1670]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1673]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1676]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1679]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1682]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1685]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1688]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1691]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1694]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1697]:
+                            - generic: SAME_…
+                          - generic [ref=e1700]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1703]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1706]:
+                            - generic: SAME_…
+                          - generic [ref=e1709]:
+                            - generic: SAME_…
+                          - generic [ref=e1712]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1715]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1718]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1721]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1724]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1727]:
+                            - generic: SAME_T…
+                          - generic [ref=e1730]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1733]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1736]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1739]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1742]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1745]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1748]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1751]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1754]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1757]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1760]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1763]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1766]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1769]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1772]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1775]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1778]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1781]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1784]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1787]:
+                            - generic: SAME_…
+                          - generic [ref=e1790]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e1793]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1796]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1799]:
+                            - generic: SAME_…
+                          - generic [ref=e1802]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1805]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1808]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1811]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1814]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1817]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1820]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1823]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1826]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1829]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1832]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1835]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1838]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1841]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1844]:
+                            - generic: SAME_…
+                          - generic [ref=e1847]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1850]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1853]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1856]:
+                            - generic: SAME_…
+                          - generic [ref=e1859]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1862]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1865]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1868]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1871]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1874]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1877]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1880]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1883]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1886]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1889]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1892]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1895]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1898]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1901]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1904]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1907]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1910]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e1913]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1916]:
+                            - generic: SAME_L…
+                          - generic [ref=e1919]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1922]:
+                            - generic: SAME_L…
+                          - generic [ref=e1925]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1928]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1931]:
+                            - generic: SAME_L…
+                          - generic [ref=e1934]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1937]:
+                            - generic: SAME_L…
+                          - generic [ref=e1940]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1943]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1946]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1949]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e1952]:
+                            - generic: SAME_LE…
+                          - generic [ref=e1955]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1958]:
+                            - generic: SAME_…
+                          - generic [ref=e1961]:
+                            - generic: SAME_…
+                          - generic [ref=e1964]:
+                            - generic: SAME…
+                          - generic [ref=e1967]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1970]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1973]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1976]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1979]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1982]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1985]:
+                            - generic: SAME…
+                          - generic [ref=e1988]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1991]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1994]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e1997]:
+                            - generic: SAME…
+                          - generic [ref=e2000]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2003]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2006]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2009]:
+                            - generic: SAME_T…
+                          - generic [ref=e2012]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2015]:
+                            - generic: SAME_T…
+                          - generic [ref=e2018]:
+                            - generic: SAME_TY…
+                          - generic [ref=e2021]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2024]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2027]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2030]:
+                            - generic: SAME_T…
+                          - generic [ref=e2033]:
+                            - generic: SAME_T…
+                          - generic [ref=e2036]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2039]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2042]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2045]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2048]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2051]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2054]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2057]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2060]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2063]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2066]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2069]:
+                            - generic: SAME_L…
+                          - generic [ref=e2072]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2075]:
+                            - generic: SAME_L…
+                          - generic [ref=e2078]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2081]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2084]:
+                            - generic: SAME_L…
+                          - generic [ref=e2087]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2090]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2093]:
+                            - generic: SAME_L…
+                          - generic [ref=e2096]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2099]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2102]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2105]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2108]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2111]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2114]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2117]:
+                            - generic: SAME…
+                          - generic [ref=e2120]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2123]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2126]:
+                            - generic: SAME…
+                          - generic [ref=e2129]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2132]:
+                            - generic: SAME_…
+                          - generic [ref=e2135]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2138]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2141]:
+                            - generic: SAME…
+                          - generic [ref=e2144]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2147]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2150]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2153]:
+                            - generic: SAME_T…
+                          - generic [ref=e2156]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2159]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2162]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2165]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2168]:
+                            - generic: SAME_T…
+                          - generic [ref=e2171]:
+                            - generic: SAME_T…
+                          - generic [ref=e2174]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2177]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2180]:
+                            - generic: SAME_T…
+                          - generic [ref=e2183]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2186]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2189]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2192]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2195]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2198]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2201]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2204]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2207]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2210]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2213]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e2216]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2219]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2222]:
+                            - generic: SAME_SKIL…
+                          - generic [ref=e2225]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2228]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2231]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2234]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2237]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2240]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2243]:
+                            - generic: SAME_SKI…
+                          - generic [ref=e2246]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2249]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2252]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2255]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2258]:
+                            - generic: SAME_L…
+                          - generic [ref=e2261]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2264]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2267]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2270]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2273]:
+                            - generic: SAME_L…
+                          - generic [ref=e2276]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2279]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2282]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2285]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2288]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2291]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2294]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2297]:
+                            - generic: SAME_…
+                          - generic [ref=e2300]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2303]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2306]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2309]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2312]:
+                            - generic: SAME_…
+                          - generic [ref=e2315]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2318]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2321]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2324]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2327]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2330]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2333]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2336]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2339]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2342]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2345]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2348]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2351]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2354]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2357]:
+                            - generic: SAME_T…
+                          - generic [ref=e2360]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2363]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2366]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2369]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2372]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2375]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2378]:
+                            - generic: SAME_T…
+                          - generic [ref=e2381]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2384]:
+                            - generic: SAME_L…
+                          - generic [ref=e2387]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2390]:
+                            - generic: SAME_L…
+                          - generic [ref=e2393]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2396]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2399]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2402]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2405]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2408]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2411]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2414]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2417]:
+                            - generic: SAME_LE…
+                          - generic [ref=e2420]:
+                            - generic: SAME_L…
+                          - generic [ref=e2423]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2426]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2429]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2432]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2435]:
+                            - generic: SAME…
+                          - generic [ref=e2438]:
+                            - generic: SAME_…
+                          - generic [ref=e2441]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2444]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2447]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2450]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2453]:
+                            - generic: SAME_…
+                          - generic [ref=e2456]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2459]:
+                            - generic: SAME_…
+                          - generic [ref=e2462]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2465]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2468]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2471]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2474]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2477]:
+                            - generic: SAME_…
+                          - generic [ref=e2480]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2483]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2486]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2489]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2492]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2495]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2498]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2501]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2504]:
+                            - generic: SAME_T…
+                          - generic [ref=e2507]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2510]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2513]:
+                            - generic: SAME_TY…
+                          - generic [ref=e2516]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2519]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2522]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2525]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2528]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2531]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2534]:
+                            - generic: SAME_T…
+                          - generic [ref=e2537]:
+                            - generic: SAME_T…
+                          - generic [ref=e2540]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2543]:
+                            - generic: SAME_…
+                          - generic [ref=e2546]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2549]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2552]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2555]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2558]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2561]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2564]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2567]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2570]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2573]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2576]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2579]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2582]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2585]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2588]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2591]:
+                            - generic: SAME_…
+                          - generic [ref=e2594]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e2597]:
+                            - generic: SAME_…
+                          - generic [ref=e2600]:
+                            - generic: SAME_…
+                          - generic [ref=e2603]:
+                            - generic: SAME_…
+                          - generic [ref=e2606]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2609]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2612]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2615]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2618]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2621]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2624]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2627]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2630]:
+                            - generic: SAME_…
+                          - generic [ref=e2633]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2636]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2639]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2642]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2645]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2648]:
+                            - generic: SAME_…
+                          - generic [ref=e2651]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2654]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2657]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2660]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2663]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2666]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2669]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2672]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2675]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2678]:
+                            - generic: SAME_TO…
+                          - generic [ref=e2681]:
+                            - generic: SAME_…
+                          - generic [ref=e2684]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2687]:
+                            - generic: SAME_…
+                          - generic [ref=e2690]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2693]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2696]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2699]:
+                            - generic: SAME_…
+                          - generic [ref=e2702]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2705]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2708]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2711]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2714]:
+                            - generic: SAME_SK…
+                          - generic [ref=e2717]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2720]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2723]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2726]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2729]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2732]:
+                            - generic: SAME_…
+                          - generic [ref=e2735]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2738]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2741]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2744]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2747]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2750]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2753]:
+                            - generic: SAME_…
+                          - generic [ref=e2756]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2759]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2762]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2765]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2768]:
+                            - generic: SAME_…
+                          - generic [ref=e2771]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2774]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2777]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2780]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2783]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2786]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2789]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2792]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2795]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2798]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2801]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2804]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2807]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2810]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2813]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2816]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2819]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2822]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2825]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2828]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2831]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2834]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2837]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2840]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2843]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2846]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2849]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2852]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2855]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2858]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2861]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2864]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2867]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2870]:
+                            - generic: SAME_LE…
+                          - generic [ref=e2873]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2876]:
+                            - generic: SAME_L…
+                          - generic [ref=e2879]:
+                            - generic: SAME_LEVEL
+                          - generic [ref=e2882]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e2885]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e2888]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e2891]:
+                            - generic: SAME_TOPIC
+                          - generic [ref=e2894]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2897]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2900]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2903]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2906]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2909]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2912]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2915]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2918]:
+                            - generic: SAME_…
+                          - generic [ref=e2921]:
+                            - generic: SAME_…
+                          - generic [ref=e2924]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2927]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2930]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2933]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2936]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2939]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2942]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2945]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2948]:
+                            - generic: SAME_…
+                          - generic [ref=e2951]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2954]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2957]:
+                            - generic: SAME_SKILLDOMAIN
+                          - generic [ref=e2960]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2963]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2966]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2969]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2972]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2975]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2978]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2981]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2984]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2987]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2990]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2993]:
+                            - generic: SAME_T…
+                          - generic [ref=e2996]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e2999]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e3002]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e3005]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e3008]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e3011]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e3014]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e3017]:
+                            - generic: SAME_TYPE
+                          - generic [ref=e3020]:
+                            - generic: SAME_…
+                          - generic [ref=e3023]:
+                            - generic: SAME_TYPE
+                        - generic [ref=e3026]:
+                          - generic "graph-node0" [ref=e3027] [cursor=pointer]:
+                            - generic: JF:1
+                          - generic "graph-node1" [ref=e3030] [cursor=pointer]:
+                            - generic: JF:2
+                          - generic "graph-node2" [ref=e3033] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node3" [ref=e3036] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node4" [ref=e3039] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node5" [ref=e3042] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node6" [ref=e3045] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node7" [ref=e3048] [cursor=pointer]:
+                            - generic: JF:4
+                          - generic "graph-node8" [ref=e3051] [cursor=pointer]:
+                            - generic: JF:5
+                          - generic "graph-node9" [ref=e3054] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node11" [ref=e3057] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node14" [ref=e3060] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node16" [ref=e3063] [cursor=pointer]:
+                            - generic: JF:6
+                          - generic "graph-node17" [ref=e3066] [cursor=pointer]:
+                            - generic: JF:7
+                          - generic "graph-node18" [ref=e3069] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node20" [ref=e3072] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node22" [ref=e3075] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node24" [ref=e3078] [cursor=pointer]:
+                            - generic: JF:9
+                          - generic "graph-node27" [ref=e3081] [cursor=pointer]:
+                            - generic: JF:10
+                          - generic "graph-node28" [ref=e3084] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node30" [ref=e3087] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node31" [ref=e3090] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node32" [ref=e3093] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node34" [ref=e3096] [cursor=pointer]:
+                            - generic: JFまる…
+                          - generic "graph-node35" [ref=e3099] [cursor=pointer]:
+                            - generic: JF:11
+                    - generic [ref=e3102]:
+                      - button "zoom-in" [ref=e3103] [cursor=pointer]:
+                        - img [ref=e3104]
+                      - button "zoom-out" [ref=e3106] [cursor=pointer]:
+                        - img [ref=e3107]
+                      - button "zoom-to-fit" [ref=e3109] [cursor=pointer]:
+                        - img [ref=e3110]
+                  - button "Collapse the node properties display" [ref=e3112] [cursor=pointer]:
+                    - img [ref=e3113]
+                  - generic [ref=e3118]:
+                    - generic [ref=e3119]: Overview
+                    - generic [ref=e3120]:
+                      - generic [ref=e3121]:
+                        - generic [ref=e3123]: Node labels
+                        - list [ref=e3124]:
+                          - generic [ref=e3125] [cursor=pointer]: "* (25)"
+                          - generic [ref=e3126] [cursor=pointer]: CanDoDescriptor (25)
+                      - generic [ref=e3127]:
+                        - generic [ref=e3129]: Relationship types
+                        - list [ref=e3130]:
+                          - generic [ref=e3131] [cursor=pointer]: "* (797)"
+                          - generic [ref=e3132] [cursor=pointer]: SAME_LEVEL (164)
+                          - generic [ref=e3133] [cursor=pointer]: SAME_TOPIC (33)
+                          - generic [ref=e3134] [cursor=pointer]: SAME_SKILLDOMAIN (300)
+                          - generic [ref=e3135] [cursor=pointer]: SAME_TYPE (300)
+                      - generic [ref=e3136]: Displaying 25 nodes, 0 relationships.
+          - article [ref=e243]:
+            - generic [ref=e244]:
+              - button "Pin at top" [ref=e245] [cursor=pointer]:
+                - img [ref=e248]
+              - button "Collapse" [ref=e251] [cursor=pointer]:
+                - img [ref=e254]
+              - button "Fullscreen" [ref=e256] [cursor=pointer]:
+                - img [ref=e259]
+              - button "Close" [ref=e264] [cursor=pointer]:
+                - img [ref=e267]
+            - generic [ref=e270]:
+              - generic [ref=e271]:
+                - generic [ref=e272]:
+                  - generic "Ctrl+click to copy to main editor" [ref=e273]: $ :play start
+                  - button "Rerun" [ref=e274] [cursor=pointer]:
+                    - img "Rerun" [ref=e3171]
+                - list [ref=e280]:
+                  - button "Save as Favorite" [ref=e281] [cursor=pointer]:
+                    - img [ref=e284]
+              - generic [ref=e286]:
+                - heading "Neo4j" [level=3] [ref=e288]:
+                  - img "Neo4j" [ref=e289]
+                - generic [ref=e293]:
+                  - generic [ref=e294]:
+                    - generic [ref=e295]:
+                      - heading "Getting started with Neo4j Browser" [level=3] [ref=e296]
+                      - paragraph [ref=e297]: Neo4j Browser user interface guide
+                      - button " Get started" [ref=e298] [cursor=pointer]:
+                        - generic [ref=e299]: 
+                        - text: Get started
+                    - generic [ref=e300]:
+                      - heading "Try Neo4j with live data" [level=3] [ref=e301]
+                      - paragraph [ref=e302]: A complete example graph that demonstrates common query patterns.
+                      - paragraph [ref=e304]: Actors & movies in cross-referenced pop culture.
+                      - button " Open guide" [ref=e305] [cursor=pointer]:
+                        - generic [ref=e306]: 
+                        - text: Open guide
+                    - generic [ref=e307]:
+                      - heading "Cypher basics" [level=3] [ref=e308]
+                      - paragraph [ref=e309]: Intro to Graphs with Cypher
+                      - list [ref=e310]:
+                        - listitem [ref=e311]: What is a graph database?
+                        - listitem [ref=e312]: How can I query a graph?
+                      - button " Start querying" [ref=e314] [cursor=pointer]:
+                        - generic [ref=e315]: 
+                        - text: Start querying
+                  - paragraph [ref=e317]:
+                    - text: Copyright ©
+                    - link "Neo4j, Inc" [ref=e318] [cursor=pointer]:
+                      - /url: http://neo4j.com/
+                    - generic [ref=e319]: 2002–2025
+                  - generic [ref=e320]:
+                    - link "Sign up" [ref=e321] [cursor=pointer]:
+                      - /url: https://neo4j.com/cloud/aura/pricing/?utm_medium=browser&utm_source=ce&utm_campaign=wl_v1
+                    - text: for a free Neo4j cloud instance with
+                    - img "Neo4j" [ref=e322]
+          - article [ref=e123]:
+            - generic [ref=e124]:
+              - button "Pin at top" [ref=e125] [cursor=pointer]:
+                - img [ref=e128]
+              - button "Collapse" [ref=e131] [cursor=pointer]:
+                - img [ref=e134]
+              - button "Fullscreen" [ref=e136] [cursor=pointer]:
+                - img [ref=e139]
+              - button "Close" [ref=e144] [cursor=pointer]:
+                - img [ref=e147]
+            - generic [ref=e150]:
+              - generic [ref=e151]:
+                - generic [ref=e152]:
+                  - generic "Ctrl+click to copy to main editor" [ref=e153]: $ :server connect
+                  - button "Rerun" [ref=e154] [cursor=pointer]:
+                    - img "Rerun" [ref=e3174]
+                - list [ref=e160]:
+                  - button "Save as Favorite" [ref=e161] [cursor=pointer]:
+                    - img [ref=e164]
+              - generic [ref=e168]:
+                - generic [ref=e169]:
+                  - heading "Connected to Neo4j" [level=3] [ref=e326]
+                  - paragraph [ref=e171]: Nice to meet you.
+                - generic [ref=e327]:
+                  - generic [ref=e328]:
+                    - text: You are connected as user
+                    - code [ref=e329]: neo4j
+                  - generic [ref=e330]:
+                    - text: to
+                    - code [ref=e331]: neo4j://localhost:7687
+                  - generic [ref=e332]: Connection credentials are stored in your web browser.
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - img "Import"
+  - generic [ref=e196]:
+    - alert
+    - alert
+    - complementary
+    - complementary

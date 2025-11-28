@@ -1,0 +1,77 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e18] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e20]:
+          - text: Lexical
+          - img [ref=e21]
+        - button "Grammar" [ref=e24]:
+          - text: Grammar
+          - img [ref=e25]
+        - link "Conversations" [ref=e27] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e29]:
+          - text: Profile
+          - img [ref=e30]
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - button "Back to Grammar" [ref=e32]:
+          - img
+          - text: Back to Grammar
+        - generic [ref=e34]:
+          - heading "～ができる" [level=1] [ref=e35]:
+            - text: ～ができる
+            - button [ref=e36]:
+              - img
+          - paragraph [ref=e37]: ~gadekiru
+          - generic [ref=e38]:
+            - generic [ref=e39]: 入門(りかい)
+            - generic [ref=e40]: 可能・難易
+            - generic [ref=e41]: 1 自分と家族
+      - generic [ref=e42]:
+        - tablist [ref=e43]:
+          - tab "Overview" [selected] [ref=e44]
+          - tab "Similar Patterns" [ref=e45]
+          - tab "Prerequisites" [ref=e46]
+          - tab "Practice" [ref=e47]
+          - tab "🤖 AI Chat" [ref=e48]
+        - tabpanel "Overview" [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e52]: AI Overview
+            - generic [ref=e54]:
+              - paragraph [ref=e55]: No AI overview yet for this pattern.
+              - button "Generate Overview" [ref=e56]
+          - generic [ref=e57]:
+            - generic [ref=e59]: Pattern Details
+            - generic [ref=e60]:
+              - generic [ref=e61]:
+                - heading "Textbook Form" [level=3] [ref=e62]
+                - generic [ref=e63]:
+                  - paragraph [ref=e64]: N（言葉）ができます（か） Nはできません
+                  - paragraph [ref=e65]: N(kotoba)gadekimasu(ka) Nhadekimasen
+              - generic [ref=e66]:
+                - heading "Example Sentence" [level=3] [ref=e67]
+                - generic [ref=e68]:
+                  - paragraph [ref=e69]: 私は日本語ができます。
+                  - paragraph [ref=e70]: watashihanihongogadekimasu.
+                  - button "Play Audio" [ref=e71]:
+                    - img
+                    - text: Play Audio
+              - generic [ref=e72]:
+                - generic [ref=e73]:
+                  - heading "Topic" [level=3] [ref=e74]
+                  - paragraph [ref=e75]: 2 わたし
+                - generic [ref=e76]:
+                  - heading "Lesson" [level=3] [ref=e77]
+                  - paragraph [ref=e78]: 3 どうぞよろしく
+  - button "Open Next.js Dev Tools" [ref=e84] [cursor=pointer]:
+    - img [ref=e85]
+  - alert [ref=e88]

@@ -1,0 +1,181 @@
+{
+  "can_do_id": "JFまるごと:13",
+  "title": "A2: Talk about a trip and give a souvenir",
+  "ui_lang": "en",
+  "l1_lang": "en",
+  "l2_lang": "ja",
+  "objectives": [
+    "Say where you went and what happened",
+    "Give a souvenir with a brief comment (in Japanese)"
+  ],
+  "lexicon": [
+    {
+      "word_id": "w-omiyage",
+      "lemma": "おみやげ",
+      "gloss_l1": "souvenir"
+    },
+    {
+      "word_id": "w-ryokou",
+      "lemma": "りょこう",
+      "gloss_l1": "trip"
+    },
+    {
+      "word_id": "w-ikimashita",
+      "lemma": "行きました",
+      "gloss_l1": "went"
+    }
+  ],
+  "patterns": [
+    {
+      "pattern_id": "gp-tai",
+      "name": "〜たいです (want to)"
+    },
+    {
+      "pattern_id": "gp-kara",
+      "name": "〜から (because)"
+    }
+  ],
+  "modes": [
+    "speaking",
+    "writing"
+  ],
+  "sections": [
+    {
+      "type": "explain",
+      "blurb": "Goal: say where you traveled and give a souvenir with a short explanation.",
+      "useful_expressions": [
+        {
+          "l2": "きょうとに 行きました。",
+          "l1": "I went to Kyoto."
+        },
+        {
+          "l2": "おみやげです。どうぞ。",
+          "l1": "This is a souvenir. Here you go."
+        },
+        {
+          "l2": "〜から、すきです。",
+          "l1": "I like it because ~."
+        },
+        {
+          "l2": "しゃしんを とりました。",
+          "l1": "I took photos."
+        },
+        {
+          "l2": "おいしかったです。",
+          "l1": "It was delicious."
+        }
+      ],
+      "media": [
+        {
+          "image_id": "scene-01"
+        },
+        {
+          "image_id": "vocab-omiyage"
+        },
+        {
+          "image_id": "expressions-omiyage-dozo"
+        },
+        {
+          "image_id": "culture-cue"
+        }
+      ]
+    },
+    {
+      "type": "socratic",
+      "items": [
+        {
+          "q": "What does おみやげ mean?",
+          "a": "souvenir"
+        },
+        {
+          "q": "Which pattern means ‘I want to’?",
+          "a": "〜たいです"
+        },
+        {
+          "q": "Which marker introduces a reason?",
+          "a": "〜から"
+        }
+      ]
+    },
+    {
+      "type": "micro_ex",
+      "prompt": "Write 4–6 sentences: where you went, what you saw, and give a souvenir with a reason why you chose it.",
+      "constraints": {
+        "min_sentences": 4,
+        "required_patterns": [
+          "gp-tai",
+          "gp-kara"
+        ],
+        "required_words": [
+          "w-omiyage",
+          "w-ryokou"
+        ]
+      },
+      "accepts": "text"
+    },
+    {
+      "type": "mini_quiz",
+      "items": [
+        {
+          "id": "q1",
+          "stem": "Choose the correct: ‘I want to buy a souvenir.’",
+          "options": [
+            "おみやげを かいたいです。",
+            "おみやげを かいます。",
+            "おみやげが すきです。"
+          ],
+          "correct_option": 0
+        },
+        {
+          "id": "q2",
+          "stem": "Which ending means ‘because’?",
+          "options": [
+            "〜ので",
+            "〜から",
+            "〜けど"
+          ],
+          "correct_option": 1
+        },
+        {
+          "id": "q3",
+          "stem": "‘I went to Kyoto.’",
+          "options": [
+            "きょうとに 行きました。",
+            "きょうとが 行きました。",
+            "きょうとを 行きました。"
+          ],
+          "correct_option": 0
+        }
+      ]
+    },
+    {
+      "type": "final_task",
+      "prompt": "Write 5–7 sentences or record up to 90s: present the souvenir (what it is, where it is from), why you chose it (〜から), and who you give it to.",
+      "accepts": "text"
+    },
+    {
+      "type": "reflection",
+      "questions": [
+        "How would you express the same content in an email?",
+        "Which words/patterns helped you most and why?"
+      ]
+    }
+  ],
+  "illustrations": [
+    {
+      "image_id": "culture-cue"
+    },
+    {
+      "image_id": "dialog-v1"
+    },
+    {
+      "image_id": "expressions-omiyage-dozo"
+    },
+    {
+      "image_id": "scene-01"
+    },
+    {
+      "image_id": "vocab-omiyage"
+    }
+  ]
+}

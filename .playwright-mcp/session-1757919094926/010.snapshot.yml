@@ -1,0 +1,290 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - navigation [ref=e3]:
+    - link "Open toolbar Pristupačnost" [ref=e5] [cursor=pointer]:
+      - /url: javascript:void(0);
+      - generic [ref=e6]: Open toolbar
+      - img "Pristupačnost" [ref=e7]
+    - generic [ref=e10]:
+      - paragraph [ref=e11]: Pristupačnost
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link "Povećaj tekst Povećaj tekst" [ref=e14] [cursor=pointer]:
+            - /url: "#"
+            - img "Povećaj tekst" [ref=e16]
+            - text: Povećaj tekst
+        - listitem [ref=e18]:
+          - link "Smanji tekst Smanji tekst" [ref=e19] [cursor=pointer]:
+            - /url: "#"
+            - img "Smanji tekst" [ref=e21]
+            - text: Smanji tekst
+        - listitem [ref=e23]:
+          - link "Sivi tonovi Sivi tonovi" [ref=e24] [cursor=pointer]:
+            - /url: "#"
+            - img "Sivi tonovi" [ref=e26]
+            - text: Sivi tonovi
+        - listitem [ref=e28]:
+          - link "Visoki kontrast Visoki kontrast" [ref=e29] [cursor=pointer]:
+            - /url: "#"
+            - img "Visoki kontrast" [ref=e31]
+            - text: Visoki kontrast
+        - listitem [ref=e33]:
+          - link "Negativni kontrast Negativni kontrast" [ref=e34] [cursor=pointer]:
+            - /url: "#"
+            - img "Negativni kontrast" [ref=e36]
+            - text: Negativni kontrast
+        - listitem [ref=e38]:
+          - link "Svijetla pozadina Svijetla pozadina" [ref=e39] [cursor=pointer]:
+            - /url: "#"
+            - img "Svijetla pozadina" [ref=e41]
+            - text: Svijetla pozadina
+        - listitem [ref=e43]:
+          - link "Podcrtaj poveznice Podcrtaj poveznice" [ref=e44] [cursor=pointer]:
+            - /url: "#"
+            - img "Podcrtaj poveznice" [ref=e46]
+            - text: Podcrtaj poveznice
+        - listitem [ref=e48]:
+          - link "Čitljivi font Čitljivi font" [ref=e49] [cursor=pointer]:
+            - /url: "#"
+            - img "Čitljivi font" [ref=e51]
+            - text: Čitljivi font
+        - listitem [ref=e53]:
+          - link "Reset Reset" [ref=e54] [cursor=pointer]:
+            - /url: "#"
+            - img "Reset" [ref=e56]
+            - text: Reset
+      - list [ref=e58]:
+        - listitem [ref=e59]:
+          - link "Pomoć Pomoć" [ref=e60] [cursor=pointer]:
+            - /url: https://uniri.hr/info/pristupacnost
+            - img "Pomoć" [ref=e62]
+            - text: Pomoć
+        - listitem [ref=e64]:
+          - link "Povratne informacije Povratne informacije" [ref=e65] [cursor=pointer]:
+            - /url: mailto:pristupacnost@uniri.hr
+            - img "Povratne informacije" [ref=e67]
+            - text: Povratne informacije
+  - link "Idi na sadržaj" [ref=e69] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=e70]:
+    - text:                 
+    - banner [ref=e71]:
+      - generic [ref=e72]:
+        - link [ref=e77] [cursor=pointer]:
+          - /url: https://ffri.uniri.hr
+        - generic [ref=e79]:
+          - generic [ref=e83]:
+            - menu [ref=e88]:
+              - link "Hrvatski" [ref=e89] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/dogadjanja/radionica-workshop-on-the-linguistic-turn/
+                - menuitem "Hrvatski" [ref=e90]
+            - search [ref=e93]:
+              - generic [ref=e94]:
+                - button "Search" [ref=e95] [cursor=pointer]:
+                  - generic [ref=e96]: 
+                - generic:
+                  - generic: Search
+                  - searchbox "Search"
+                  - text: 
+          - generic [ref=e98]:
+            - navigation "Menu" [ref=e99]:
+              - list [ref=e100]:
+                - listitem [ref=e101]:
+                  - link "Studiranje " [ref=e102] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/studiranje/
+                    - text: Studiranje
+                    - generic [ref=e103]:
+                      - generic: 
+                  - text:   
+                - listitem [ref=e104]:
+                  - link "Istraživanje" [ref=e105] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/istrazivanje/
+                - listitem [ref=e106]:
+                  - link "Internacionalizacija " [ref=e107] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/internacionalizacija-i-mobilnost/
+                    - text: Internacionalizacija
+                    - generic [ref=e108]:
+                      - generic: 
+                - listitem [ref=e109]:
+                  - link "Fakultet i zajednica " [ref=e110] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/fakultet-i-zajednica/
+                    - text: Fakultet i zajednica
+                    - generic [ref=e111]:
+                      - generic: 
+                - listitem [ref=e112]:
+                  - link "O Fakultetu " [ref=e113] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/o-fakultetu/
+                    - text: O Fakultetu
+                    - generic [ref=e114]:
+                      - generic: 
+                  - text:   
+            - text:            
+  - generic [ref=e115]:
+    - heading "Događanje" [level=2] [ref=e122]
+    - heading "Radionica – Workshop on the Linguistic Turn" [level=1] [ref=e135]
+    - generic [ref=e137]:
+      - generic [ref=e139]:
+        - generic [ref=e143]:
+          - paragraph [ref=e146]: 15.09.2025.
+          - paragraph [ref=e153]: 10:00
+          - paragraph [ref=e156]: — 18:00
+          - paragraph [ref=e159]: h
+          - paragraph [ref=e166]: _Radionica, Znanost
+          - list [ref=e174]:
+            - listitem [ref=e175]:
+              - generic [ref=e176]: FFRI
+        - paragraph [ref=e179]:
+          - link "Pregledaj sva događanja" [ref=e180] [cursor=pointer]:
+            - /url: /dogadjanja/
+      - generic [ref=e182]:
+        - generic [ref=e184]:
+          - paragraph [ref=e185]:
+            - text: Pozivamo Vas na radionicu –
+            - emphasis [ref=e186]:
+              - link "Workshop on the Linguistic Turn" [active] [ref=e187] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/wp-content/uploads/Workshop-On_the_linguistic_turn-9_2025.pdf
+                - strong [ref=e188]: Workshop on the Linguistic Turn
+            - text: koja će se održati u ponedjeljak 15. rujna 2025. godine na Filozofskom fakultetu u Rijeci, Sveučilišna avenija 4, predavaonica F-401/F-412.
+          - paragraph [ref=e189]: Veselimo se Vašem dolasku!
+        - generic [ref=e193]:
+          - generic [ref=e196]: Podijeli događanje na
+          - list [ref=e199]:
+            - listitem [ref=e200]:
+              - button "Share on facebook" [ref=e201] [cursor=pointer]:
+                - generic [ref=e203]: Facebook
+              - text: /
+            - listitem [ref=e204]:
+              - button "Share on twitter" [ref=e205] [cursor=pointer]:
+                - generic [ref=e207]: Twitter
+  - contentinfo [ref=e208]:
+    - generic [ref=e210]:
+      - generic [ref=e212]:
+        - paragraph [ref=e215]: // info
+        - link [ref=e218] [cursor=pointer]:
+          - /url: https://ffri.uniri.hr
+        - link [ref=e221] [cursor=pointer]:
+          - /url: https://uniri.hr/
+        - link [ref=e224] [cursor=pointer]:
+          - /url: https://uniri.hr/
+        - generic [ref=e226]:
+          - generic [ref=e228]:
+            - paragraph [ref=e231]: Filozofski Fakultet u Rijeci
+            - list [ref=e234]:
+              - listitem [ref=e235]:
+                - generic [ref=e236]: Sveučilišna avenija 4
+              - listitem [ref=e237]:
+                - generic [ref=e238]: 51000 Rijeka
+              - listitem [ref=e239]:
+                - generic [ref=e240]: Republika Hrvatska
+            - paragraph [ref=e247]:
+              - link "Vijesti" [ref=e248] [cursor=pointer]:
+                - /url: /vijesti/
+          - generic [ref=e250]:
+            - paragraph [ref=e253]: Kontakt
+            - list [ref=e256]:
+              - listitem [ref=e257]:
+                - link "Dekanat" [ref=e258] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/
+                  - generic [ref=e259]: Dekanat
+              - listitem [ref=e260]:
+                - 'link "Tel: 051/265-600" [ref=e261] [cursor=pointer]':
+                  - /url: tel:+38551265600
+                  - generic [ref=e262]: "Tel: 051/265-600"
+              - listitem [ref=e263]:
+                - generic [ref=e264]: "Fax: 051/216-099"
+              - listitem [ref=e265]:
+                - link "Studentska služba" [ref=e266] [cursor=pointer]:
+                  - /url: mailto:sanja.unkovic@ffri.uniri.hr
+                  - generic [ref=e267]: Studentska služba
+              - listitem [ref=e268]:
+                - link "Kontakti djelatnika" [ref=e269] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/kontakti/
+                  - generic [ref=e270]: Kontakti djelatnika
+            - paragraph [ref=e277]:
+              - link "Događanja" [ref=e278] [cursor=pointer]:
+                - /url: /dogadjanja/
+          - generic [ref=e280]:
+            - paragraph [ref=e283]: Studiranje
+            - list [ref=e286]:
+              - listitem [ref=e287]:
+                - link "Nastava" [ref=e288] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/postojeci-studenti/nastava/
+                  - generic [ref=e289]: Nastava
+              - listitem [ref=e290]:
+                - link "Studentska služba" [ref=e291] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/postojeci-studenti/studentska-sluzba/
+                  - generic [ref=e292]: Studentska služba
+              - listitem [ref=e293]:
+                - link "Budući studenti" [ref=e294] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/buduci-studenti/
+                  - generic [ref=e295]: Budući studenti
+              - listitem [ref=e296]:
+                - link "Ured za karijere" [ref=e297] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/fakultet-i-zajednica/ured-za-karijere/
+                  - generic [ref=e298]: Ured za karijere
+              - listitem [ref=e299]:
+                - link "Ured za akademsku podršku" [ref=e300] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/postojeci-studenti/savjetovanje-i-podrska-studentima/
+                  - generic [ref=e301]: Ured za akademsku podršku
+            - paragraph [ref=e308]:
+              - link "Webmail" [ref=e309] [cursor=pointer]:
+                - /url: https://outlook.office365.com/
+          - generic [ref=e311]:
+            - paragraph [ref=e314]: Opće informacije
+            - list [ref=e317]:
+              - listitem [ref=e318]:
+                - link "Obrasci" [ref=e319] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/obrasci/
+                  - generic [ref=e320]: Obrasci
+              - listitem [ref=e321]:
+                - link "Javna nabava" [ref=e322] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/javna-nabava/
+                  - generic [ref=e323]: Javna nabava
+              - listitem [ref=e324]:
+                - link "Pristup informacijama" [ref=e325] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/pristup-informacijama/
+                  - generic [ref=e326]: Pristup informacijama
+              - listitem [ref=e327]:
+                - link "Rezervacija prostora" [ref=e328] [cursor=pointer]:
+                  - /url: https://prostorije.uniri.hr/week.php?area=6
+                  - generic [ref=e329]: Rezervacija prostora
+            - paragraph [ref=e336]:
+              - link "SPO za djelatnike" [ref=e337] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/o-fakultetu/spo-za-djelatnike/
+          - generic [ref=e339]:
+            - paragraph [ref=e342]: Zajednica
+            - list [ref=e345]:
+              - listitem [ref=e346]:
+                - link "Cjeloživotno obrazovanje" [ref=e347] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/programi-cjelozivotnog-obrazovanja/
+                  - generic [ref=e348]: Cjeloživotno obrazovanje
+              - listitem [ref=e349]:
+                - link "Alumni FFRi" [ref=e350] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/fakultet-i-zajednica/alumni-ffri/
+                  - generic [ref=e351]: Alumni FFRi
+              - listitem [ref=e352]:
+                - link "Transfer znanja" [ref=e353] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/fakultet-i-zajednica/transfer-znanja/
+                  - generic [ref=e354]: Transfer znanja
+              - listitem [ref=e355]:
+                - link "Mediji o nama" [ref=e356] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/mediji-o-nama/
+                  - generic [ref=e357]: Mediji o nama
+            - paragraph [ref=e364]:
+              - link "Stari ffri web" [ref=e365] [cursor=pointer]:
+                - /url: https://arhiva.ffri.uniri.hr
+        - generic [ref=e369]:
+          - paragraph [ref=e372]: Filozofski Fakultet u Rijeci
+          - paragraph [ref=e375]: "@2025. Sva prava pridržana."
+      - link "Facebook-f " [ref=e382] [cursor=pointer]:
+        - /url: https://www.facebook.com/people/Filozofski-fakultet-u-Rijeci/100051375052656/
+        - generic [ref=e383]: Facebook-f
+        - generic [ref=e384]: 
+  - generic [ref=e385]: desktop
+  - generic [ref=e387]:
+    - button "close chat pop card" [ref=e388] [cursor=pointer]:
+      - img [ref=e389]
+    - button "chat now" [ref=e391] [cursor=pointer]:
+      - img "Mirzobahtiyor Mirzoboboev, profile picture" [ref=e393]
+      - generic [ref=e394]: Chat now

@@ -1,0 +1,145 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: 空き瓶
+            - generic [ref=e104]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e124]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e125]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e126]: "Error: Request failed with status code 404"
+        - generic [ref=e65]:
+          - heading "Selected Node" [level=3] [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]: 空き瓶
+              - generic [ref=e72]:
+                - generic [ref=e73]:
+                  - generic [ref=e74]: "POS: 名詞"
+                  - generic [ref=e75]: "Level: 4"
+                  - generic [ref=e76]: "Connections: 0"
+                - generic [ref=e122]: "Etymology: 混種語"
+            - generic [ref=e77]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e78]
+              - 'button "Synonym: 1.00 | POS: | Level:" [ref=e123]':
+                - generic [ref=e84]: "Synonym: 1.00 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - generic [active]:
+    - generic [ref=e138]:
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - navigation [ref=e141]:
+            - button "previous" [disabled] [ref=e142]:
+              - img "previous" [ref=e143]
+            - generic [ref=e145]:
+              - generic [ref=e146]: 1/
+              - text: "1"
+            - button "next" [disabled] [ref=e147]:
+              - img "next" [ref=e148]
+          - img
+        - generic [ref=e150]:
+          - link "Next.js 15.5.2 (stale) Webpack" [ref=e151] [cursor=pointer]:
+            - /url: https://nextjs.org/docs/messages/version-staleness
+            - img [ref=e152]
+            - generic "There is a newer version (15.5.4) available, upgrade recommended!" [ref=e154]: Next.js 15.5.2 (stale)
+            - generic [ref=e155]: Webpack
+          - img
+      - dialog "Console AxiosError" [ref=e157]:
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - generic [ref=e164]: Console AxiosError
+              - generic [ref=e165]:
+                - button "Copy Error Info" [ref=e166] [cursor=pointer]:
+                  - img [ref=e167]
+                - button "No related documentation found" [disabled] [ref=e169]:
+                  - img [ref=e170]
+                - link "Learn more about enabling Node.js inspector for server code with Chrome DevTools" [ref=e172] [cursor=pointer]:
+                  - /url: https://nextjs.org/docs/app/building-your-application/configuring/debugging#server-side-code
+                  - img [ref=e173]
+            - paragraph [ref=e182]: Request failed with status code 404
+          - generic [ref=e183]:
+            - generic [ref=e184]:
+              - paragraph [ref=e186]:
+                - img [ref=e188]
+                - generic [ref=e192]: src/lib/api.ts (20:16) @ async apiGet
+                - button "Open in editor" [ref=e193] [cursor=pointer]:
+                  - img [ref=e195]
+              - generic [ref=e198]:
+                - generic [ref=e199]: "18 | const authToken = attachAuth ? (token ?? (typeof window !== \"undefined\" ? localStorage.getItem(\"token\") ?? undefined : undefined)) : undefined"
+                - generic [ref=e200]: "19 | if (authToken) headers[\"Authorization\"] = `Bearer ${authToken}`"
+                - generic [ref=e201]: "> 20 | const resp = await axios.get<T>(`${BASE_URL}${path}`, { ...(config || {}), headers: { ...(config?.headers || {}), ...headers } })"
+                - generic [ref=e202]: "| ^"
+                - generic [ref=e203]: 21 | return resp.data
+                - generic [ref=e204]: "22 | }"
+                - generic [ref=e205]: 23 |
+            - generic [ref=e206]:
+              - generic [ref=e207]:
+                - paragraph [ref=e208]:
+                  - text: Call Stack
+                  - generic [ref=e209]: "5"
+                - button "Show 3 ignore-listed frame(s)" [ref=e210] [cursor=pointer]:
+                  - text: Show 3 ignore-listed frame(s)
+                  - img [ref=e211]
+              - generic [ref=e213]:
+                - generic [ref=e214]:
+                  - text: async apiGet
+                  - button "Open async apiGet in editor" [ref=e215] [cursor=pointer]:
+                    - img [ref=e216]
+                - text: src/lib/api.ts (20:16)
+              - generic [ref=e218]:
+                - generic [ref=e219]:
+                  - text: async handleNodeClick
+                  - button "Open async handleNodeClick in editor" [ref=e220] [cursor=pointer]:
+                    - img [ref=e221]
+                - text: src/components/lexical/LexicalGraph2D.tsx (301:22)
+        - generic [ref=e223]:
+          - generic [ref=e224]: "1"
+          - generic [ref=e225]: "2"
+    - generic [ref=e90] [cursor=pointer]:
+      - button "Open Next.js Dev Tools" [ref=e91]:
+        - img [ref=e92]
+      - generic [ref=e127]:
+        - button "Open issues overlay" [ref=e128]:
+          - generic [ref=e129]:
+            - generic [ref=e130]: "0"
+            - generic [ref=e131]: "1"
+          - generic [ref=e132]: Issue
+        - button "Collapse issues badge" [ref=e133]:
+          - img [ref=e134]
+  - alert [ref=e95]

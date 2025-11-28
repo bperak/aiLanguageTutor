@@ -1,0 +1,94 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [active] [ref=e30]: mo
+            - generic [ref=e104]: "Searching in: translation"
+            - generic [ref=e32]:
+              - generic "Kanji" [ref=e105]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation (active)" [ref=e106]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e209]:
+          - generic [ref=e210]:
+            - generic [ref=e211]: "Search node: モヘア"
+            - generic [ref=e212]: "Nodes: 5"
+            - generic [ref=e213]: "Links: 20"
+            - combobox [ref=e214]:
+              - 'option "Depth: 1" [selected]'
+              - 'option "Depth: 2"'
+          - generic [ref=e215]:
+            - button "3D" [ref=e216]
+            - button "Fit" [ref=e217]
+            - button "Reset" [ref=e218]
+        - generic [ref=e65]:
+          - heading "Selected Node" [level=3] [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]: モヘア
+              - generic [ref=e70]: もへあ
+              - generic [ref=e71]: mohair
+              - generic [ref=e73]:
+                - generic [ref=e74]: "POS: -"
+                - generic [ref=e75]: "Level: -"
+                - generic [ref=e76]: "Connections: 4"
+            - generic [ref=e77]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e78]
+              - generic [ref=e79]:
+                - 'button "羊毛 ようもう wool Synonym: 0.65 | POS: | Level:" [ref=e219]':
+                  - generic [ref=e81]: 羊毛
+                  - generic [ref=e82]: ようもう
+                  - generic [ref=e83]: wool
+                  - generic [ref=e84]: "Synonym: 0.65 | POS: | Level:"
+                - 'button "ウール うーる wool Synonym: 0.65 | POS: | Level:" [ref=e220]':
+                  - generic [ref=e124]: ウール
+                  - generic [ref=e125]: うーる
+                  - generic [ref=e126]: wool
+                  - generic [ref=e127]: "Synonym: 0.65 | POS: | Level:"
+                - 'button "カシミア かしみあ cashmere Synonym: 0.60 | POS: | Level:" [ref=e221]':
+                  - generic [ref=e129]: カシミア
+                  - generic [ref=e130]: かしみあ
+                  - generic [ref=e131]: cashmere
+                  - generic [ref=e132]: "Synonym: 0.60 | POS: | Level:"
+                - 'button "リネン りねん linen Synonym: 0.30 | POS: | Level:" [ref=e222]':
+                  - generic [ref=e134]: リネン
+                  - generic [ref=e135]: りねん
+                  - generic [ref=e136]: linen
+                  - generic [ref=e137]: "Synonym: 0.30 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

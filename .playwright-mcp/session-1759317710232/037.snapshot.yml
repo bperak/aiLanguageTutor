@@ -1,0 +1,651 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - button "Toggle theme" [ref=e8]: Dark
+        - button "Toggle mobile menu" [ref=e9]:
+          - img [ref=e10]
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - heading "Japanese Grammar Patterns" [level=1] [ref=e1188]
+      - generic [ref=e1189]:
+        - tablist [ref=e1190]:
+          - tab "Browse Patterns" [selected] [ref=e1191]:
+            - img
+            - text: Browse Patterns
+          - tab "Learning Paths" [ref=e1192]:
+            - img
+            - text: Learning Paths
+          - tab "Recommendations" [ref=e1193]:
+            - img
+            - text: Recommendations
+        - tabpanel "Browse Patterns" [ref=e1194]:
+          - generic [ref=e1195]:
+            - generic [ref=e1197]:
+              - generic [ref=e1198]:
+                - img [ref=e1199]
+                - text: Filters
+              - button "Hide" [ref=e1201]:
+                - img
+                - text: Hide
+            - generic [ref=e1202]:
+              - generic [ref=e1203]:
+                - generic [ref=e1204]:
+                  - text: Search
+                  - generic [ref=e1205]:
+                    - img [ref=e1206]
+                    - textbox "Search patterns..." [ref=e1209]
+                - generic [ref=e1210]:
+                  - text: Level
+                  - combobox [ref=e1211]:
+                    - generic: All levels
+                    - img
+                - generic [ref=e1212]:
+                  - text: Classification
+                  - combobox [ref=e1213]:
+                    - generic: All types
+                    - img
+                - generic [ref=e1214]:
+                  - text: Topic
+                  - combobox [ref=e1215]:
+                    - generic: All topics
+                    - img
+              - button "Clear Filters" [ref=e1217]
+          - generic [ref=e1218]:
+            - generic [ref=e1219]:
+              - generic [ref=e1220]: Page size
+              - combobox [ref=e1221]:
+                - generic: "20"
+                - img
+              - generic [ref=e1222]: Showing 21–40 of 392 patterns
+            - generic [ref=e1223]:
+              - button "Prev" [ref=e1224]
+              - button "Next" [ref=e1225]
+          - generic [ref=e1226]:
+            - generic [ref=e1227]:
+              - generic [ref=e1229]:
+                - generic [ref=e1230]:
+                  - generic [ref=e1231]:
+                    - heading "～から～まで" [level=3] [ref=e1232]
+                    - button [ref=e1233]:
+                      - img
+                    - button "Hide Japanese" [ref=e1234]:
+                      - img
+                  - paragraph [ref=e1235]: ~kara~made
+                - generic [ref=e1236]:
+                  - generic [ref=e1237]: 入門(りかい)
+                  - generic [ref=e1238]: "#21"
+              - generic [ref=e1240]:
+                - generic [ref=e1241]:
+                  - paragraph [ref=e1242]: "Example:"
+                  - generic [ref=e1243]:
+                    - paragraph [ref=e1244]: 会社は9時から5時までです。
+                    - paragraph [ref=e1245]: kaishaha9tokikara5tokimadedesu.
+                - generic [ref=e1246]:
+                  - generic [ref=e1247]:
+                    - img
+                    - text: 起点・終点・限界・範囲
+                  - generic [ref=e1248]: 4 生活と人生
+                - generic [ref=e1249]:
+                  - button "Study This Pattern" [ref=e1250]
+                  - button "Quick Study" [ref=e1252]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1253]:
+              - generic [ref=e1255]:
+                - generic [ref=e1256]:
+                  - generic [ref=e1257]:
+                    - heading "～時間" [level=3] [ref=e1258]
+                    - button [ref=e1259]:
+                      - img
+                    - button "Hide Japanese" [ref=e1260]:
+                      - img
+                  - paragraph [ref=e1261]: ~jikan
+                - generic [ref=e1262]:
+                  - generic [ref=e1263]: 入門(りかい)
+                  - generic [ref=e1264]: "#22"
+              - generic [ref=e1266]:
+                - generic [ref=e1267]:
+                  - paragraph [ref=e1268]: "Example:"
+                  - generic [ref=e1269]:
+                    - paragraph [ref=e1270]: 7時間仕事をします。
+                    - paragraph [ref=e1271]: 7jikanshigotowoshimasu.
+                - generic [ref=e1272]:
+                  - generic [ref=e1273]:
+                    - img
+                    - text: 起点・終点・限界・範囲
+                  - generic [ref=e1274]: 4 生活と人生
+                - generic [ref=e1275]:
+                  - button "Study This Pattern" [ref=e1276]
+                  - button "Quick Study" [ref=e1278]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1279]:
+              - generic [ref=e1281]:
+                - generic [ref=e1282]:
+                  - generic [ref=e1283]:
+                    - heading "～がいい" [level=3] [ref=e1284]
+                    - button [ref=e1285]:
+                      - img
+                    - button "Hide Japanese" [ref=e1286]:
+                      - img
+                  - paragraph [ref=e1287]: ~gaii
+                - generic [ref=e1288]:
+                  - generic [ref=e1289]: 入門(りかい)
+                  - generic [ref=e1290]: "#23"
+              - generic [ref=e1292]:
+                - generic [ref=e1293]:
+                  - paragraph [ref=e1294]: "Example:"
+                  - generic [ref=e1295]:
+                    - paragraph [ref=e1296]: 金曜日がいいです。
+                    - paragraph [ref=e1297]: kinyoubigaiidesu.
+                - generic [ref=e1298]:
+                  - generic [ref=e1299]:
+                    - img
+                    - text: 決定
+                  - generic [ref=e1300]: 4 生活と人生
+                - generic [ref=e1301]:
+                  - button "Study This Pattern" [ref=e1302]
+                  - button "Quick Study" [ref=e1304]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1305]:
+              - generic [ref=e1307]:
+                - generic [ref=e1308]:
+                  - generic [ref=e1309]:
+                    - heading "～が好き" [level=3] [ref=e1310]
+                    - button [ref=e1311]:
+                      - img
+                    - button "Hide Japanese" [ref=e1312]:
+                      - img
+                  - paragraph [ref=e1313]: ~gasuki
+                - generic [ref=e1314]:
+                  - generic [ref=e1315]: 入門(りかい)
+                  - generic [ref=e1316]: "#24"
+              - generic [ref=e1318]:
+                - generic [ref=e1319]:
+                  - paragraph [ref=e1320]: "Example:"
+                  - generic [ref=e1321]:
+                    - paragraph [ref=e1322]: 読書が好きです。
+                    - paragraph [ref=e1323]: dokushogasukidesu.
+                - generic [ref=e1324]:
+                  - generic [ref=e1325]:
+                    - img
+                    - text: 説明
+                  - generic [ref=e1326]: 3 自由時間と娯楽
+                - generic [ref=e1327]:
+                  - button "Study This Pattern" [ref=e1328]
+                  - button "Quick Study" [ref=e1330]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1331]:
+              - generic [ref=e1333]:
+                - generic [ref=e1334]:
+                  - generic [ref=e1335]:
+                    - heading "～ができる" [level=3] [ref=e1336]
+                    - button [ref=e1337]:
+                      - img
+                    - button "Hide Japanese" [ref=e1338]:
+                      - img
+                  - paragraph [ref=e1339]: ~gadekiru
+                - generic [ref=e1340]:
+                  - generic [ref=e1341]: 入門(りかい)
+                  - generic [ref=e1342]: "#25"
+              - generic [ref=e1344]:
+                - generic [ref=e1345]:
+                  - paragraph [ref=e1346]: "Example:"
+                  - generic [ref=e1347]:
+                    - paragraph [ref=e1348]: ギターができます。
+                    - paragraph [ref=e1349]: gitaagadekimasu.
+                - generic [ref=e1350]:
+                  - generic [ref=e1351]:
+                    - img
+                    - text: 可能・難易
+                  - generic [ref=e1352]: 3 自由時間と娯楽
+                - generic [ref=e1353]:
+                  - button "Study This Pattern" [ref=e1354]
+                  - button "Quick Study" [ref=e1356]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1357]:
+              - generic [ref=e1359]:
+                - generic [ref=e1360]:
+                  - generic [ref=e1361]:
+                    - heading "～で（～ます）" [level=3] [ref=e1362]
+                    - button [ref=e1363]:
+                      - img
+                    - button "Hide Japanese" [ref=e1364]:
+                      - img
+                  - paragraph [ref=e1365]: ~de(~masu)
+                - generic [ref=e1366]:
+                  - generic [ref=e1367]: 入門(りかい)
+                  - generic [ref=e1368]: "#26"
+              - generic [ref=e1370]:
+                - generic [ref=e1371]:
+                  - paragraph [ref=e1372]: "Example:"
+                  - generic [ref=e1373]:
+                    - paragraph [ref=e1374]: 家で映画を見ます。
+                    - paragraph [ref=e1375]: iedeeigawomimasu.
+                - generic [ref=e1376]:
+                  - generic [ref=e1377]:
+                    - img
+                    - text: 時点・場面
+                  - generic [ref=e1378]: 3 自由時間と娯楽
+                - generic [ref=e1379]:
+                  - button "Study This Pattern" [ref=e1380]
+                  - button "Quick Study" [ref=e1382]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1383]:
+              - generic [ref=e1385]:
+                - generic [ref=e1386]:
+                  - generic [ref=e1387]:
+                    - heading "ときどき・あまり・ぜんぜん" [level=3] [ref=e1388]
+                    - button [ref=e1389]:
+                      - img
+                    - button "Hide Japanese" [ref=e1390]:
+                      - img
+                  - paragraph [ref=e1391]: tokidoki・amari・zenzen
+                - generic [ref=e1392]:
+                  - generic [ref=e1393]: 入門(りかい)
+                  - generic [ref=e1394]: "#27"
+              - generic [ref=e1396]:
+                - generic [ref=e1397]:
+                  - paragraph [ref=e1398]: "Example:"
+                  - generic [ref=e1399]:
+                    - paragraph [ref=e1400]: ときどき買い物をします。
+                    - paragraph [ref=e1401]: tokidokikaimonowoshimasu.
+                - generic [ref=e1402]:
+                  - generic [ref=e1403]:
+                    - img
+                    - text: 並列・反復
+                  - generic [ref=e1404]: 3 自由時間と娯楽
+                - generic [ref=e1405]:
+                  - button "Study This Pattern" [ref=e1406]
+                  - button "Quick Study" [ref=e1408]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1409]:
+              - generic [ref=e1411]:
+                - generic [ref=e1412]:
+                  - generic [ref=e1413]:
+                    - heading "～に～がある" [level=3] [ref=e1414]
+                    - button [ref=e1415]:
+                      - img
+                    - button "Hide Japanese" [ref=e1416]:
+                      - img
+                  - paragraph [ref=e1417]: ~ni~gaaru
+                - generic [ref=e1418]:
+                  - generic [ref=e1419]: 入門(りかい)
+                  - generic [ref=e1420]: "#28"
+              - generic [ref=e1422]:
+                - generic [ref=e1423]:
+                  - paragraph [ref=e1424]: "Example:"
+                  - generic [ref=e1425]:
+                    - paragraph [ref=e1426]: 土曜日にコンサートがあります。
+                    - paragraph [ref=e1427]: doyoubinikonsaatogaarimasu.
+                - generic [ref=e1428]:
+                  - generic [ref=e1429]:
+                    - img
+                    - text: 説明
+                  - generic [ref=e1430]: 3 自由時間と娯楽
+                - generic [ref=e1431]:
+                  - button "Study This Pattern" [ref=e1432]
+                  - button "Quick Study" [ref=e1434]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1435]:
+              - generic [ref=e1437]:
+                - generic [ref=e1438]:
+                  - generic [ref=e1439]:
+                    - heading "～で～がある" [level=3] [ref=e1440]
+                    - button [ref=e1441]:
+                      - img
+                    - button "Hide Japanese" [ref=e1442]:
+                      - img
+                  - paragraph [ref=e1443]: ~de~gaaru
+                - generic [ref=e1444]:
+                  - generic [ref=e1445]: 入門(りかい)
+                  - generic [ref=e1446]: "#29"
+              - generic [ref=e1448]:
+                - generic [ref=e1449]:
+                  - paragraph [ref=e1450]: "Example:"
+                  - generic [ref=e1451]:
+                    - paragraph [ref=e1452]: 国際ホールで映画があります。
+                    - paragraph [ref=e1453]: kokusaihoorudeeigagaarimasu.
+                - generic [ref=e1454]:
+                  - generic [ref=e1455]:
+                    - img
+                    - text: 説明
+                  - generic [ref=e1456]: 3 自由時間と娯楽
+                - generic [ref=e1457]:
+                  - button "Study This Pattern" [ref=e1458]
+                  - button "Quick Study" [ref=e1460]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1461]:
+              - generic [ref=e1463]:
+                - generic [ref=e1464]:
+                  - generic [ref=e1465]:
+                    - heading "～に行く" [level=3] [ref=e1466]
+                    - button [ref=e1467]:
+                      - img
+                    - button "Hide Japanese" [ref=e1468]:
+                      - img
+                  - paragraph [ref=e1469]: ~niiku
+                - generic [ref=e1470]:
+                  - generic [ref=e1471]: 入門(りかい)
+                  - generic [ref=e1472]: "#30"
+              - generic [ref=e1474]:
+                - generic [ref=e1475]:
+                  - paragraph [ref=e1476]: "Example:"
+                  - generic [ref=e1477]:
+                    - paragraph [ref=e1478]: 相撲を見に行きます。
+                    - paragraph [ref=e1479]: sumouwominiikimasu.
+                - generic [ref=e1480]:
+                  - generic [ref=e1481]:
+                    - img
+                    - text: 目的
+                  - generic [ref=e1482]: 3 自由時間と娯楽
+                - generic [ref=e1483]:
+                  - button "Study This Pattern" [ref=e1484]
+                  - button "Quick Study" [ref=e1486]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1487]:
+              - generic [ref=e1489]:
+                - generic [ref=e1490]:
+                  - generic [ref=e1491]:
+                    - heading "～ませんか" [level=3] [ref=e1492]
+                    - button [ref=e1493]:
+                      - img
+                    - button "Hide Japanese" [ref=e1494]:
+                      - img
+                  - paragraph [ref=e1495]: ~masenka
+                - generic [ref=e1496]:
+                  - generic [ref=e1497]: 入門(りかい)
+                  - generic [ref=e1498]: "#31"
+              - generic [ref=e1500]:
+                - generic [ref=e1501]:
+                  - paragraph [ref=e1502]: "Example:"
+                  - generic [ref=e1503]:
+                    - paragraph [ref=e1504]: 一緒に公園に行きませんか。
+                    - paragraph [ref=e1505]: isshonikouenniikimasenka.
+                - generic [ref=e1506]:
+                  - generic [ref=e1507]:
+                    - img
+                    - text: 勧誘・申し出・助言
+                  - generic [ref=e1508]: 3 自由時間と娯楽
+                - generic [ref=e1509]:
+                  - button "Study This Pattern" [ref=e1510]
+                  - button "Quick Study" [ref=e1512]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1513]:
+              - generic [ref=e1515]:
+                - generic [ref=e1516]:
+                  - generic [ref=e1517]:
+                    - heading "～ましょう" [level=3] [ref=e1518]
+                    - button [ref=e1519]:
+                      - img
+                    - button "Hide Japanese" [ref=e1520]:
+                      - img
+                  - paragraph [ref=e1521]: ~mashou
+                - generic [ref=e1522]:
+                  - generic [ref=e1523]: 入門(りかい)
+                  - generic [ref=e1524]: "#32"
+              - generic [ref=e1526]:
+                - generic [ref=e1527]:
+                  - paragraph [ref=e1528]: "Example:"
+                  - generic [ref=e1529]:
+                    - paragraph [ref=e1530]: 行きましょう。
+                    - paragraph [ref=e1531]: ikimashou.
+                - generic [ref=e1532]:
+                  - generic [ref=e1533]:
+                    - img
+                    - text: 勧誘・申し出・助言
+                  - generic [ref=e1534]: 3 自由時間と娯楽
+                - generic [ref=e1535]:
+                  - button "Study This Pattern" [ref=e1536]
+                  - button "Quick Study" [ref=e1538]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1539]:
+              - generic [ref=e1541]:
+                - generic [ref=e1542]:
+                  - generic [ref=e1543]:
+                    - heading "～から～まで～で～ます" [level=3] [ref=e1544]
+                    - button [ref=e1545]:
+                      - img
+                    - button "Hide Japanese" [ref=e1546]:
+                      - img
+                  - paragraph [ref=e1547]: ~kara~made~de~masu
+                - generic [ref=e1548]:
+                  - generic [ref=e1549]: 入門(りかい)
+                  - generic [ref=e1550]: "#33"
+              - generic [ref=e1552]:
+                - generic [ref=e1553]:
+                  - paragraph [ref=e1554]: "Example:"
+                  - generic [ref=e1555]:
+                    - paragraph [ref=e1556]: 家から駅までバスで行きます。
+                    - paragraph [ref=e1557]: iekaraekimadebasudeikimasu.
+                - generic [ref=e1558]:
+                  - generic [ref=e1559]:
+                    - img
+                    - text: 起点･終点・限界・範囲
+                  - generic [ref=e1560]: 6 旅行と交通
+                - generic [ref=e1561]:
+                  - button "Study This Pattern" [ref=e1562]
+                  - button "Quick Study" [ref=e1564]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1565]:
+              - generic [ref=e1567]:
+                - generic [ref=e1568]:
+                  - generic [ref=e1569]:
+                    - heading "～に乗る・～を降りる" [level=3] [ref=e1570]
+                    - button [ref=e1571]:
+                      - img
+                    - button "Hide Japanese" [ref=e1572]:
+                      - img
+                  - paragraph [ref=e1573]: ~ninoru・~wooriru
+                - generic [ref=e1574]:
+                  - generic [ref=e1575]: 入門(りかい)
+                  - generic [ref=e1576]: "#34"
+              - generic [ref=e1578]:
+                - generic [ref=e1579]:
+                  - paragraph [ref=e1580]: "Example:"
+                  - generic [ref=e1581]:
+                    - paragraph [ref=e1582]: 駅で電車に乗ります。
+                    - paragraph [ref=e1583]: ekidedenshaninorimasu.
+                - generic [ref=e1584]:
+                  - generic [ref=e1585]:
+                    - img
+                    - text: 起点･終点・限界・範囲
+                  - generic [ref=e1586]: 6 旅行と交通
+                - generic [ref=e1587]:
+                  - button "Study This Pattern" [ref=e1588]
+                  - button "Quick Study" [ref=e1590]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1591]:
+              - generic [ref=e1593]:
+                - generic [ref=e1594]:
+                  - generic [ref=e1595]:
+                    - heading "～は～がいい" [level=3] [ref=e1596]
+                    - button [ref=e1597]:
+                      - img
+                    - button "Hide Japanese" [ref=e1598]:
+                      - img
+                  - paragraph [ref=e1599]: ~ha~gaii
+                - generic [ref=e1600]:
+                  - generic [ref=e1601]: 入門(りかい)
+                  - generic [ref=e1602]: "#35"
+              - generic [ref=e1604]:
+                - generic [ref=e1605]:
+                  - paragraph [ref=e1606]: "Example:"
+                  - generic [ref=e1607]:
+                    - paragraph [ref=e1608]: 空港は電車がいいです。
+                    - paragraph [ref=e1609]: kuukouhadenshagaiidesu.
+                - generic [ref=e1610]:
+                  - generic [ref=e1611]:
+                    - img
+                    - text: 勧誘・申し出・助言
+                  - generic [ref=e1612]: 6 旅行と交通
+                - generic [ref=e1613]:
+                  - button "Study This Pattern" [ref=e1614]
+                  - button "Quick Study" [ref=e1616]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1617]:
+              - generic [ref=e1619]:
+                - generic [ref=e1620]:
+                  - generic [ref=e1621]:
+                    - heading "～から" [level=3] [ref=e1622]
+                    - button [ref=e1623]:
+                      - img
+                    - button "Hide Japanese" [ref=e1624]:
+                      - img
+                  - paragraph [ref=e1625]: ~kara
+                - generic [ref=e1626]:
+                  - generic [ref=e1627]: 入門(りかい)
+                  - generic [ref=e1628]: "#36"
+              - generic [ref=e1630]:
+                - generic [ref=e1631]:
+                  - paragraph [ref=e1632]: "Example:"
+                  - generic [ref=e1633]:
+                    - paragraph [ref=e1634]: 速いですから。
+                    - paragraph [ref=e1635]: hayaidesukara.
+                - generic [ref=e1636]:
+                  - generic [ref=e1637]:
+                    - img
+                    - text: 原因・理由
+                  - generic [ref=e1638]: 6 旅行と交通
+                - generic [ref=e1639]:
+                  - button "Study This Pattern" [ref=e1640]
+                  - button "Quick Study" [ref=e1642]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1643]:
+              - generic [ref=e1645]:
+                - generic [ref=e1646]:
+                  - generic [ref=e1647]:
+                    - heading "形容詞＋N" [level=3] [ref=e1648]
+                    - button [ref=e1649]:
+                      - img
+                    - button "Hide Japanese" [ref=e1650]:
+                      - img
+                  - paragraph [ref=e1651]: keiyoushi+N
+                - generic [ref=e1652]:
+                  - generic [ref=e1653]: 入門(りかい)
+                  - generic [ref=e1654]: "#37"
+              - generic [ref=e1656]:
+                - generic [ref=e1657]:
+                  - paragraph [ref=e1658]: "Example:"
+                  - generic [ref=e1659]:
+                    - paragraph [ref=e1660]: にぎやかな町、古い神社
+                    - paragraph [ref=e1661]: nigiyakanamachi,furuijinja
+                - generic [ref=e1662]:
+                  - generic [ref=e1663]:
+                    - img
+                    - text: 様子・状態
+                  - generic [ref=e1664]: 6 旅行と交通
+                - generic [ref=e1665]:
+                  - button "Study This Pattern" [ref=e1666]
+                  - button "Quick Study" [ref=e1668]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1669]:
+              - generic [ref=e1671]:
+                - generic [ref=e1672]:
+                  - generic [ref=e1673]:
+                    - heading "～に～がある" [level=3] [ref=e1674]
+                    - button [ref=e1675]:
+                      - img
+                    - button "Hide Japanese" [ref=e1676]:
+                      - img
+                  - paragraph [ref=e1677]: ~ni~gaaru
+                - generic [ref=e1678]:
+                  - generic [ref=e1679]: 入門(りかい)
+                  - generic [ref=e1680]: "#38"
+              - generic [ref=e1682]:
+                - generic [ref=e1683]:
+                  - paragraph [ref=e1684]: "Example:"
+                  - generic [ref=e1685]:
+                    - paragraph [ref=e1686]: さいたまに古い神社があります。
+                    - paragraph [ref=e1687]: saitamanifuruijinjagaarimasu.
+                - generic [ref=e1688]:
+                  - generic [ref=e1689]:
+                    - img
+                    - text: 様子・状態
+                  - generic [ref=e1690]: 6 旅行と交通
+                - generic [ref=e1691]:
+                  - button "Study This Pattern" [ref=e1692]
+                  - button "Quick Study" [ref=e1694]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1695]:
+              - generic [ref=e1697]:
+                - generic [ref=e1698]:
+                  - generic [ref=e1699]:
+                    - heading "～の～" [level=3] [ref=e1700]
+                    - button [ref=e1701]:
+                      - img
+                    - button "Hide Japanese" [ref=e1702]:
+                      - img
+                  - paragraph [ref=e1703]: ~no~
+                - generic [ref=e1704]:
+                  - generic [ref=e1705]: 入門(りかい)
+                  - generic [ref=e1706]: "#39"
+              - generic [ref=e1708]:
+                - generic [ref=e1709]:
+                  - paragraph [ref=e1710]: "Example:"
+                  - generic [ref=e1711]:
+                    - paragraph [ref=e1712]: 駅のとなり、喫茶店の前
+                    - paragraph [ref=e1713]: ekinotonari,kissatennomae
+                - generic [ref=e1714]:
+                  - generic [ref=e1715]:
+                    - img
+                    - text: 説明
+                  - generic [ref=e1716]: 6 旅行と交通
+                - generic [ref=e1717]:
+                  - button "Study This Pattern" [ref=e1718]
+                  - button "Quick Study" [ref=e1720]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e1721]:
+              - generic [ref=e1723]:
+                - generic [ref=e1724]:
+                  - generic [ref=e1725]:
+                    - heading "～は～にある" [level=3] [ref=e1726]
+                    - button [ref=e1727]:
+                      - img
+                    - button "Hide Japanese" [ref=e1728]:
+                      - img
+                  - paragraph [ref=e1729]: ~ha~niaru
+                - generic [ref=e1730]:
+                  - generic [ref=e1731]: 入門(りかい)
+                  - generic [ref=e1732]: "#40"
+              - generic [ref=e1734]:
+                - generic [ref=e1735]:
+                  - paragraph [ref=e1736]: "Example:"
+                  - generic [ref=e1737]:
+                    - paragraph [ref=e1738]: 喫茶店は駅のとなりにあります。
+                    - paragraph [ref=e1739]: kissatenhaekinotonariniarimasu.
+                - generic [ref=e1740]:
+                  - generic [ref=e1741]:
+                    - img
+                    - text: 様子・状態
+                  - generic [ref=e1742]: 6 旅行と交通
+                - generic [ref=e1743]:
+                  - button "Study This Pattern" [ref=e1744]
+                  - button "Quick Study" [ref=e1746]:
+                    - img
+                    - text: Quick Study
+  - button "Open Next.js Dev Tools" [ref=e561] [cursor=pointer]:
+    - img [ref=e562]
+  - alert [ref=e565]

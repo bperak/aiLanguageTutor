@@ -355,3 +355,7 @@ Thumbs.db
 *.iml
 *.ipr
 *.iws
+
+# Large data files
+resources/networkx_objects/*.pkl
+*.pkl

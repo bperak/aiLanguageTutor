@@ -1,0 +1,1564 @@
+{
+  "session_id": "68c77484-1965-4b19-8d48-8252606ecc31",
+  "scenario": {
+    "scenario_id": "cando:JF21_introduction_intermediate",
+    "pattern_id": "cando:JF21",
+    "pattern": "Topic practice: general",
+    "context": "introduction",
+    "situation": "You are attending a welcome party for new employees at a Japanese company. You are meeting a colleague for the first time and exchanging self-introductions.",
+    "learning_objective": "Practice using the topic marker \"は\" to introduce and discuss general topics about oneself and others.",
+    "ai_character": "Yuki Tanaka, a friendly and approachable colleague who is curious about new people and enjoys sharing about herself.",
+    "user_role": "A new employee at the company, eager to make a good impression and learn more about your colleagues.",
+    "difficulty_level": "intermediate",
+    "dialogue_turns": [
+      {
+        "speaker": "ai",
+        "message": "こんにちは、新しい社員の方ですよね？私は田中由紀です。よろしくお願いします。",
+        "feedback": null,
+        "grammar_focus": null,
+        "corrections": null,
+        "hints": null
+      },
+      {
+        "speaker": "ai",
+        "message": "そうですか。私は営業部で働いています。あなたはどの部署ですか？",
+        "feedback": null,
+        "grammar_focus": null,
+        "corrections": null,
+        "hints": null
+      }
+    ],
+    "completed": false
+  },
+  "master": {
+    "ui": {
+      "header": {
+        "chips": [
+          "objective",
+          "level",
+          "topic"
+        ],
+        "title": "general",
+        "subtitle": "Complete lesson package"
+      },
+      "gallery": [],
+      "sections": [
+        {
+          "id": "lessonPlan",
+          "type": "teach",
+          "cards": [
+            {
+              "id": "e9c76204-7f44-431b-9d9c-7f0c6e70c4a2",
+              "body": {
+                "meta": "**Teacher Notes:** Introduce the lesson topic and objectives to the students.\n\n**Student Task:** Listen to the teacher's introduction."
+              },
+              "kind": "text",
+              "title": "Introduction"
+            },
+            {
+              "id": "d110b5c0-022d-4078-8b91-bc37731a67a6",
+              "body": {
+                "meta": "**Teacher Notes:** Teach key vocabulary related to daily activities.\n\n**Student Task:** Write down and repeat the new vocabulary."
+              },
+              "kind": "text",
+              "title": "Vocabulary"
+            },
+            {
+              "id": "03f6cf3c-91f5-4163-a3ba-525dc60655b8",
+              "body": {
+                "meta": "**Teacher Notes:** Explain the use of the te-form in making requests.\n\n**Student Task:** Take notes on the grammar explanation."
+              },
+              "kind": "text",
+              "title": "Grammar Explanation"
+            },
+            {
+              "id": "f070c6b7-a7ac-4049-9754-b528acc1a741",
+              "body": {
+                "meta": "**Teacher Notes:** Engage students in a role-play using the new vocabulary and grammar.\n\n**Student Task:** Participate in the role-play activity."
+              },
+              "kind": "text",
+              "title": "Practice"
+            }
+          ],
+          "title": "Lesson Plan"
+        },
+        {
+          "id": "reading",
+          "type": "reading",
+          "cards": [
+            {
+              "id": "c11b949c-86b1-4971-93ea-6e80051ac3f7",
+              "kind": "reading",
+              "reading": {
+                "title": {
+                  "kanji": "A Day in Tokyo",
+                  "romaji": "A Day in Tokyo",
+                  "furigana": [
+                    {
+                      "ruby": null,
+                      "text": "A Day in Tokyo"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                "content": {
+                  "kanji": "今日は東京で忙しい一日でした。朝、電車で会社に行きました。昼ご飯は同僚と一緒に食べました。午後は会議がありました。夜は友達と居酒屋で飲みました。",
+                  "romaji": "今日は東京で忙しい一日でした。朝、電車で会社に行きました。昼ご飯は同僚と一緒に食べました。午後は会議がありました。夜は友達と居酒屋で飲みました。",
+                  "furigana": [
+                    {
+                      "ruby": "今",
+                      "text": "今"
+                    },
+                    {
+                      "ruby": "日",
+                      "text": "日"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "は"
+                    },
+                    {
+                      "ruby": "東",
+                      "text": "東"
+                    },
+                    {
+                      "ruby": "京",
+                      "text": "京"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "で"
+                    },
+                    {
+                      "ruby": "忙",
+                      "text": "忙"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "しい"
+                    },
+                    {
+                      "ruby": "一",
+                      "text": "一"
+                    },
+                    {
+                      "ruby": "日",
+                      "text": "日"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "でした。"
+                    },
+                    {
+                      "ruby": "朝",
+                      "text": "朝"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "、"
+                    },
+                    {
+                      "ruby": "電",
+                      "text": "電"
+                    },
+                    {
+                      "ruby": "車",
+                      "text": "車"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "で"
+                    },
+                    {
+                      "ruby": "会",
+                      "text": "会"
+                    },
+                    {
+                      "ruby": "社",
+                      "text": "社"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "に"
+                    },
+                    {
+                      "ruby": "行",
+                      "text": "行"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "きました。"
+                    },
+                    {
+                      "ruby": "昼",
+                      "text": "昼"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "ご"
+                    },
+                    {
+                      "ruby": "飯",
+                      "text": "飯"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "は"
+                    },
+                    {
+                      "ruby": "同",
+                      "text": "同"
+                    },
+                    {
+                      "ruby": "僚",
+                      "text": "僚"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "と"
+                    },
+                    {
+                      "ruby": "一",
+                      "text": "一"
+                    },
+                    {
+                      "ruby": "緒",
+                      "text": "緒"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "に"
+                    },
+                    {
+                      "ruby": "食",
+                      "text": "食"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "べました。"
+                    },
+                    {
+                      "ruby": "午",
+                      "text": "午"
+                    },
+                    {
+                      "ruby": "後",
+                      "text": "後"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "は"
+                    },
+                    {
+                      "ruby": "会",
+                      "text": "会"
+                    },
+                    {
+                      "ruby": "議",
+                      "text": "議"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "がありました。"
+                    },
+                    {
+                      "ruby": "夜",
+                      "text": "夜"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "は"
+                    },
+                    {
+                      "ruby": "友",
+                      "text": "友"
+                    },
+                    {
+                      "ruby": "達",
+                      "text": "達"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "と"
+                    },
+                    {
+                      "ruby": "居",
+                      "text": "居"
+                    },
+                    {
+                      "ruby": "酒",
+                      "text": "酒"
+                    },
+                    {
+                      "ruby": "屋",
+                      "text": "屋"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "で"
+                    },
+                    {
+                      "ruby": "飲",
+                      "text": "飲"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "みました。"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                "comprehension": []
+              }
+            }
+          ],
+          "title": "Reading"
+        },
+        {
+          "id": "dialogue",
+          "type": "dialogue",
+          "cards": [
+            {
+              "id": "67897c0b-c9ca-498f-8055-4017b77f7a85",
+              "kind": "dialogue",
+              "title": "Conversation Practice",
+              "dialogue_turns": [
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "今日は何をしましたか?",
+                    "romaji": "今日は何をしましたか?",
+                    "furigana": [
+                      {
+                        "ruby": "今",
+                        "text": "今"
+                      },
+                      {
+                        "ruby": "日",
+                        "text": "日"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "は"
+                      },
+                      {
+                        "ruby": "何",
+                        "text": "何"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "をしましたか?"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "朝、ジョギングをしました。",
+                    "romaji": "朝、ジョギングをしました。",
+                    "furigana": [
+                      {
+                        "ruby": "朝",
+                        "text": "朝"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "、ジョギングをしました。"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "その後は?",
+                    "romaji": "その後は?",
+                    "furigana": [
+                      {
+                        "ruby": null,
+                        "text": "その"
+                      },
+                      {
+                        "ruby": "後",
+                        "text": "後"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "は?"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "友達とカフェに行きました。",
+                    "romaji": "友達とカフェに行きました。",
+                    "furigana": [
+                      {
+                        "ruby": "友",
+                        "text": "友"
+                      },
+                      {
+                        "ruby": "達",
+                        "text": "達"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "とカフェに"
+                      },
+                      {
+                        "ruby": "行",
+                        "text": "行"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "きました。"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "楽しかったですか?",
+                    "romaji": "楽しかったですか?",
+                    "furigana": [
+                      {
+                        "ruby": "楽",
+                        "text": "楽"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "しかったですか?"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "はい、とても楽しかったです。",
+                    "romaji": "はい、とても楽しかったです。",
+                    "furigana": [
+                      {
+                        "ruby": null,
+                        "text": "はい、とても"
+                      },
+                      {
+                        "ruby": "楽",
+                        "text": "楽"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "しかったです。"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                }
+              ]
+            }
+          ],
+          "title": "Dialogue"
+        },
+        {
+          "id": "grammar",
+          "type": "teach",
+          "cards": [
+            {
+              "id": "9e6d176a-195d-4eef-8434-ff5ffd470f6c",
+              "body": {
+                "meta": "Use to make polite requests."
+              },
+              "kind": "text",
+              "title": "て-form + ください",
+              "bullets": [
+                {
+                  "kanji": "ドアを開けてください。",
+                  "romaji": "ドアを開けてください。",
+                  "furigana": [
+                    {
+                      "ruby": null,
+                      "text": "ドアを"
+                    },
+                    {
+                      "ruby": "開",
+                      "text": "開"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "けてください。"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                {
+                  "kanji": "本を読んでください。",
+                  "romaji": "本を読んでください。",
+                  "furigana": [
+                    {
+                      "ruby": "本",
+                      "text": "本"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "を"
+                    },
+                    {
+                      "ruby": "読",
+                      "text": "読"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "んでください。"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              ]
+            },
+            {
+              "id": "c8bde610-c2f3-4da7-aabd-9b14ab547f35",
+              "body": {
+                "meta": "Use to ask for permission."
+              },
+              "kind": "text",
+              "title": "て-form + もいいですか",
+              "bullets": [
+                {
+                  "kanji": "ここに座ってもいいですか。",
+                  "romaji": "ここに座ってもいいですか。",
+                  "furigana": [
+                    {
+                      "ruby": null,
+                      "text": "ここに"
+                    },
+                    {
+                      "ruby": "座",
+                      "text": "座"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "ってもいいですか。"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                {
+                  "kanji": "水を飲んでもいいですか。",
+                  "romaji": "水を飲んでもいいですか。",
+                  "furigana": [
+                    {
+                      "ruby": "水",
+                      "text": "水"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "を"
+                    },
+                    {
+                      "ruby": "飲",
+                      "text": "飲"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "んでもいいですか。"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              ]
+            }
+          ],
+          "title": "Grammar Points"
+        },
+        {
+          "id": "practice",
+          "type": "practice",
+          "cards": [
+            {
+              "id": "07eada75-0158-443c-a7a2-d8491ba2c8ad",
+              "body": {
+                "meta": "**Instructions:** Fill in the blanks with the correct te-form.\n\n\n- 窓を（開ける）___ください。\n- ここに（座る）___もいいですか。\n- 本を（読む）___ください。"
+              },
+              "kind": "text",
+              "title": "Cloze"
+            },
+            {
+              "id": "249a00bc-afc7-444b-aae2-910aca71945b",
+              "body": {
+                "meta": "**Instructions:** Match the Japanese phrases with their English translations.\n\n\nPairs:\n- 手伝ってください -> Please help me\n- 待ってください -> Please wait\n- 見てもいいですか -> May I see?\n- 聞いてもいいですか -> May I ask?"
+              },
+              "kind": "text",
+              "title": "Matching"
+            },
+            {
+              "id": "e7b5f97d-42f1-49fe-b018-156d822e1c6a",
+              "body": {
+                "meta": "**Instructions:** Complete the dialogue with the correct phrases.\n\n\n- A: 今日は何をしましたか？ B: 朝、___をしました。\n- A: その後は？ B: 友達と___に行きました。"
+              },
+              "kind": "text",
+              "title": "Dialoguegap"
+            }
+          ],
+          "title": "Practice"
+        },
+        {
+          "id": "culture",
+          "type": "teach",
+          "cards": [
+            {
+              "id": "ca6679a8-6e59-4355-8847-ebb24b04f1f3",
+              "body": {
+                "meta": {
+                  "kanji": "In Japan, work culture emphasizes punctuality, teamwork, and respect for hierarchy. Employees often work long hours and participate in after-work socializing.",
+                  "romaji": "In Japan, work culture emphasizes punctuality, teamwork, and respect for hierarchy. Employees often work long hours and participate in after-work socializing.",
+                  "furigana": [
+                    {
+                      "ruby": null,
+                      "text": "In Japan, work culture emphasizes punctuality, teamwork, and respect for hierarchy. Employees often work long hours and participate in after-work socializing."
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              },
+              "kind": "text",
+              "title": "Japanese Work Culture"
+            },
+            {
+              "id": "3b5d1a99-30a1-4204-9661-cf07338c8584",
+              "body": {
+                "meta": {
+                  "kanji": "When dining in Japan, it is customary to say 'itadakimasu' before eating and 'gochisousama' after finishing. It is also important to avoid sticking chopsticks upright in rice.",
+                  "romaji": "When dining in Japan, it is customary to say 'itadakimasu' before eating and 'gochisousama' after finishing. It is also important to avoid sticking chopsticks upright in rice.",
+                  "furigana": [
+                    {
+                      "ruby": null,
+                      "text": "When dining in Japan, it is customary to say 'itadakimasu' before eating and 'gochisousama' after finishing. It is also important to avoid sticking chopsticks upright in rice."
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              },
+              "kind": "text",
+              "title": "Japanese Dining Etiquette"
+            }
+          ],
+          "title": "Culture"
+        }
+      ]
+    },
+    "pdf": {
+      "assetPaths": [],
+      "renderTemplate": "default-a4"
+    },
+    "canDoId": "JF21",
+    "lessonId": "d3fe998b-c599-4772-b5cc-ce58f646a1b9",
+    "metadata": {
+      "tags": [],
+      "topic": "general",
+      "createdAt": 1761480193,
+      "languageCode": "ja",
+      "stage2EnhancedMap": {
+        "culture": true,
+        "grammar": true,
+        "reading": true,
+        "dialogue": true
+      },
+      "multilingualVersion": true,
+      "estimatedDurationMin": 25
+    },
+    "exercises": [],
+    "uiVersion": 2,
+    "readability": {
+      "metrics": {
+        "chars": 0,
+        "sentences": 0
+      },
+      "jlptEstimate": "N5"
+    },
+    "lessonSource": "ai_generated",
+    "originalLevel": 3,
+    "extractedEntities": {
+      "words": [
+        {
+          "pos": null,
+          "orth": "ドア",
+          "romaji": "Doa",
+          "katakana": "ドア",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:129757",
+          "source_text": "ドア",
+          "translation": "door"
+        },
+        {
+          "pos": "動詞",
+          "orth": "明ける",
+          "romaji": "Akeru",
+          "katakana": "アケル",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:201",
+          "source_text": "開ける",
+          "translation": null
+        },
+        {
+          "pos": null,
+          "orth": "本",
+          "romaji": "Hon",
+          "katakana": "ホン",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:133800",
+          "source_text": "本",
+          "translation": "book"
+        },
+        {
+          "pos": "動詞",
+          "orth": "読む",
+          "romaji": "Yomu",
+          "katakana": "ヨム",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:17475",
+          "source_text": "読む",
+          "translation": null
+        },
+        {
+          "pos": "動詞",
+          "orth": "座る",
+          "romaji": "Suwaru",
+          "katakana": "スワル",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:8834",
+          "source_text": "座る",
+          "translation": null
+        },
+        {
+          "pos": null,
+          "orth": "水",
+          "romaji": "Mizu",
+          "katakana": "ミズ",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:126615",
+          "source_text": "水",
+          "translation": "water"
+        },
+        {
+          "pos": "動詞",
+          "orth": "手伝う",
+          "romaji": "Tetsudau",
+          "katakana": "テツダウ",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:11394",
+          "source_text": "手伝う",
+          "translation": null
+        },
+        {
+          "pos": "動詞",
+          "orth": "待つ",
+          "romaji": "Matsu",
+          "katakana": "マツ",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:15920",
+          "source_text": "待つ",
+          "translation": null
+        },
+        {
+          "pos": "動詞",
+          "orth": "見る",
+          "romaji": "Miru",
+          "katakana": "ミル",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:16334",
+          "source_text": "見る",
+          "translation": null
+        },
+        {
+          "pos": "動詞",
+          "orth": "聞く",
+          "romaji": "Kiku",
+          "katakana": "キク",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:3674",
+          "source_text": "聞く",
+          "translation": null
+        },
+        {
+          "pos": null,
+          "orth": "文化",
+          "romaji": "Bun ka",
+          "katakana": "ブンカ",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:133130",
+          "source_text": "文化",
+          "translation": "culture"
+        },
+        {
+          "pos": null,
+          "orth": "仕事",
+          "romaji": "Shigoto",
+          "katakana": "シゴト",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:125009",
+          "source_text": "仕事",
+          "translation": "work"
+        },
+        {
+          "pos": null,
+          "orth": "時間",
+          "romaji": "Jikan",
+          "katakana": "ジカン",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:124920",
+          "source_text": "時間",
+          "translation": "time"
+        },
+        {
+          "pos": null,
+          "orth": "チームワーク",
+          "romaji": "Chi- muwaaku",
+          "katakana": "チームワーク",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:128633",
+          "source_text": "チームワーク",
+          "translation": "teamwork"
+        },
+        {
+          "pos": null,
+          "orth": "礼儀",
+          "romaji": "Reigi",
+          "katakana": "レイギ",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:135945",
+          "source_text": "礼儀",
+          "translation": "manners"
+        },
+        {
+          "pos": null,
+          "orth": "食事",
+          "romaji": "Shokuji",
+          "katakana": "ショクジ",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:126196",
+          "source_text": "食事",
+          "translation": "meal"
+        },
+        {
+          "pos": null,
+          "orth": "橋",
+          "romaji": "Hashi",
+          "katakana": "ハシ",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:122280",
+          "source_text": "箸",
+          "translation": "bridge"
+        },
+        {
+          "pos": null,
+          "orth": "言う",
+          "romaji": "Iu",
+          "katakana": "イウ",
+          "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:118937",
+          "source_text": "言う",
+          "translation": "say"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pos": "noun",
+          "reading": "どあ",
+          "surface": "ドア",
+          "translation": "door"
+        },
+        {
+          "pos": "noun",
+          "reading": "ほん",
+          "surface": "本",
+          "translation": "book"
+        },
+        {
+          "pos": "noun",
+          "reading": "みず",
+          "surface": "水",
+          "translation": "water"
+        },
+        {
+          "pos": "noun",
+          "reading": "ぶんか",
+          "surface": "文化",
+          "translation": "culture"
+        },
+        {
+          "pos": "noun",
+          "reading": "しごと",
+          "surface": "仕事",
+          "translation": "work"
+        },
+        {
+          "pos": "noun",
+          "reading": "じかん",
+          "surface": "時間",
+          "translation": "time"
+        },
+        {
+          "pos": "noun",
+          "reading": "ちーむわーく",
+          "surface": "チームワーク",
+          "translation": "teamwork"
+        },
+        {
+          "pos": "noun",
+          "reading": "れいぎ",
+          "surface": "礼儀",
+          "translation": "manners"
+        },
+        {
+          "pos": "noun",
+          "reading": "しょくじ",
+          "surface": "食事",
+          "translation": "meal"
+        },
+        {
+          "pos": "noun",
+          "reading": "はし",
+          "surface": "橋",
+          "translation": "bridge"
+        },
+        {
+          "pos": "noun",
+          "reading": "いう",
+          "surface": "言う",
+          "translation": "say"
+        }
+      ],
+      "grammarPatterns": [
+        {
+          "id": "grammar_053",
+          "pattern": "でも",
+          "classification": "逆接･譲歩"
+        }
+      ]
+    },
+    "learningObjectives": []
+  },
+  "variant": {
+    "lessonId": "d3fe998b-c599-4772-b5cc-ce58f646a1b9",
+    "level": 3,
+    "ui": {
+      "header": {
+        "chips": [
+          "objective",
+          "level",
+          "topic"
+        ],
+        "title": "general",
+        "subtitle": "Complete lesson package"
+      },
+      "gallery": [],
+      "sections": [
+        {
+          "id": "lessonPlan",
+          "type": "teach",
+          "cards": [
+            {
+              "id": "e9c76204-7f44-431b-9d9c-7f0c6e70c4a2",
+              "body": {
+                "meta": "**Teacher Notes:** Introduce the lesson topic and objectives to the students.\n\n**Student Task:** Listen to the teacher's introduction."
+              },
+              "kind": "text",
+              "title": "Introduction"
+            },
+            {
+              "id": "d110b5c0-022d-4078-8b91-bc37731a67a6",
+              "body": {
+                "meta": "**Teacher Notes:** Teach key vocabulary related to daily activities.\n\n**Student Task:** Write down and repeat the new vocabulary."
+              },
+              "kind": "text",
+              "title": "Vocabulary"
+            },
+            {
+              "id": "03f6cf3c-91f5-4163-a3ba-525dc60655b8",
+              "body": {
+                "meta": "**Teacher Notes:** Explain the use of the te-form in making requests.\n\n**Student Task:** Take notes on the grammar explanation."
+              },
+              "kind": "text",
+              "title": "Grammar Explanation"
+            },
+            {
+              "id": "f070c6b7-a7ac-4049-9754-b528acc1a741",
+              "body": {
+                "meta": "**Teacher Notes:** Engage students in a role-play using the new vocabulary and grammar.\n\n**Student Task:** Participate in the role-play activity."
+              },
+              "kind": "text",
+              "title": "Practice"
+            }
+          ],
+          "title": "Lesson Plan"
+        },
+        {
+          "id": "reading",
+          "type": "reading",
+          "cards": [
+            {
+              "id": "c11b949c-86b1-4971-93ea-6e80051ac3f7",
+              "kind": "reading",
+              "reading": {
+                "title": {
+                  "kanji": "A Day in Tokyo",
+                  "romaji": "A Day in Tokyo",
+                  "furigana": [
+                    {
+                      "ruby": null,
+                      "text": "A Day in Tokyo"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                "content": {
+                  "kanji": "今日は東京で忙しい一日でした。朝、電車で会社に行きました。昼ご飯は同僚と一緒に食べました。午後は会議がありました。夜は友達と居酒屋で飲みました。",
+                  "romaji": "今日は東京で忙しい一日でした。朝、電車で会社に行きました。昼ご飯は同僚と一緒に食べました。午後は会議がありました。夜は友達と居酒屋で飲みました。",
+                  "furigana": [
+                    {
+                      "ruby": "今",
+                      "text": "今"
+                    },
+                    {
+                      "ruby": "日",
+                      "text": "日"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "は"
+                    },
+                    {
+                      "ruby": "東",
+                      "text": "東"
+                    },
+                    {
+                      "ruby": "京",
+                      "text": "京"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "で"
+                    },
+                    {
+                      "ruby": "忙",
+                      "text": "忙"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "しい"
+                    },
+                    {
+                      "ruby": "一",
+                      "text": "一"
+                    },
+                    {
+                      "ruby": "日",
+                      "text": "日"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "でした。"
+                    },
+                    {
+                      "ruby": "朝",
+                      "text": "朝"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "、"
+                    },
+                    {
+                      "ruby": "電",
+                      "text": "電"
+                    },
+                    {
+                      "ruby": "車",
+                      "text": "車"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "で"
+                    },
+                    {
+                      "ruby": "会",
+                      "text": "会"
+                    },
+                    {
+                      "ruby": "社",
+                      "text": "社"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "に"
+                    },
+                    {
+                      "ruby": "行",
+                      "text": "行"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "きました。"
+                    },
+                    {
+                      "ruby": "昼",
+                      "text": "昼"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "ご"
+                    },
+                    {
+                      "ruby": "飯",
+                      "text": "飯"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "は"
+                    },
+                    {
+                      "ruby": "同",
+                      "text": "同"
+                    },
+                    {
+                      "ruby": "僚",
+                      "text": "僚"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "と"
+                    },
+                    {
+                      "ruby": "一",
+                      "text": "一"
+                    },
+                    {
+                      "ruby": "緒",
+                      "text": "緒"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "に"
+                    },
+                    {
+                      "ruby": "食",
+                      "text": "食"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "べました。"
+                    },
+                    {
+                      "ruby": "午",
+                      "text": "午"
+                    },
+                    {
+                      "ruby": "後",
+                      "text": "後"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "は"
+                    },
+                    {
+                      "ruby": "会",
+                      "text": "会"
+                    },
+                    {
+                      "ruby": "議",
+                      "text": "議"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "がありました。"
+                    },
+                    {
+                      "ruby": "夜",
+                      "text": "夜"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "は"
+                    },
+                    {
+                      "ruby": "友",
+                      "text": "友"
+                    },
+                    {
+                      "ruby": "達",
+                      "text": "達"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "と"
+                    },
+                    {
+                      "ruby": "居",
+                      "text": "居"
+                    },
+                    {
+                      "ruby": "酒",
+                      "text": "酒"
+                    },
+                    {
+                      "ruby": "屋",
+                      "text": "屋"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "で"
+                    },
+                    {
+                      "ruby": "飲",
+                      "text": "飲"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "みました。"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                "comprehension": []
+              }
+            }
+          ],
+          "title": "Reading"
+        },
+        {
+          "id": "dialogue",
+          "type": "dialogue",
+          "cards": [
+            {
+              "id": "67897c0b-c9ca-498f-8055-4017b77f7a85",
+              "kind": "dialogue",
+              "title": "Conversation Practice",
+              "dialogue_turns": [
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "今日は何をしましたか?",
+                    "romaji": "今日は何をしましたか?",
+                    "furigana": [
+                      {
+                        "ruby": "今",
+                        "text": "今"
+                      },
+                      {
+                        "ruby": "日",
+                        "text": "日"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "は"
+                      },
+                      {
+                        "ruby": "何",
+                        "text": "何"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "をしましたか?"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "朝、ジョギングをしました。",
+                    "romaji": "朝、ジョギングをしました。",
+                    "furigana": [
+                      {
+                        "ruby": "朝",
+                        "text": "朝"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "、ジョギングをしました。"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "その後は?",
+                    "romaji": "その後は?",
+                    "furigana": [
+                      {
+                        "ruby": null,
+                        "text": "その"
+                      },
+                      {
+                        "ruby": "後",
+                        "text": "後"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "は?"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "友達とカフェに行きました。",
+                    "romaji": "友達とカフェに行きました。",
+                    "furigana": [
+                      {
+                        "ruby": "友",
+                        "text": "友"
+                      },
+                      {
+                        "ruby": "達",
+                        "text": "達"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "とカフェに"
+                      },
+                      {
+                        "ruby": "行",
+                        "text": "行"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "きました。"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "楽しかったですか?",
+                    "romaji": "楽しかったですか?",
+                    "furigana": [
+                      {
+                        "ruby": "楽",
+                        "text": "楽"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "しかったですか?"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "はい、とても楽しかったです。",
+                    "romaji": "はい、とても楽しかったです。",
+                    "furigana": [
+                      {
+                        "ruby": null,
+                        "text": "はい、とても"
+                      },
+                      {
+                        "ruby": "楽",
+                        "text": "楽"
+                      },
+                      {
+                        "ruby": null,
+                        "text": "しかったです。"
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                }
+              ]
+            }
+          ],
+          "title": "Dialogue"
+        },
+        {
+          "id": "grammar",
+          "type": "teach",
+          "cards": [
+            {
+              "id": "9e6d176a-195d-4eef-8434-ff5ffd470f6c",
+              "body": {
+                "meta": "Use to make polite requests."
+              },
+              "kind": "text",
+              "title": "て-form + ください",
+              "bullets": [
+                {
+                  "kanji": "ドアを開けてください。",
+                  "romaji": "ドアを開けてください。",
+                  "furigana": [
+                    {
+                      "ruby": null,
+                      "text": "ドアを"
+                    },
+                    {
+                      "ruby": "開",
+                      "text": "開"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "けてください。"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                {
+                  "kanji": "本を読んでください。",
+                  "romaji": "本を読んでください。",
+                  "furigana": [
+                    {
+                      "ruby": "本",
+                      "text": "本"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "を"
+                    },
+                    {
+                      "ruby": "読",
+                      "text": "読"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "んでください。"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              ]
+            },
+            {
+              "id": "c8bde610-c2f3-4da7-aabd-9b14ab547f35",
+              "body": {
+                "meta": "Use to ask for permission."
+              },
+              "kind": "text",
+              "title": "て-form + もいいですか",
+              "bullets": [
+                {
+                  "kanji": "ここに座ってもいいですか。",
+                  "romaji": "ここに座ってもいいですか。",
+                  "furigana": [
+                    {
+                      "ruby": null,
+                      "text": "ここに"
+                    },
+                    {
+                      "ruby": "座",
+                      "text": "座"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "ってもいいですか。"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                {
+                  "kanji": "水を飲んでもいいですか。",
+                  "romaji": "水を飲んでもいいですか。",
+                  "furigana": [
+                    {
+                      "ruby": "水",
+                      "text": "水"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "を"
+                    },
+                    {
+                      "ruby": "飲",
+                      "text": "飲"
+                    },
+                    {
+                      "ruby": null,
+                      "text": "んでもいいですか。"
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              ]
+            }
+          ],
+          "title": "Grammar Points"
+        },
+        {
+          "id": "practice",
+          "type": "practice",
+          "cards": [
+            {
+              "id": "07eada75-0158-443c-a7a2-d8491ba2c8ad",
+              "body": {
+                "meta": "**Instructions:** Fill in the blanks with the correct te-form.\n\n\n- 窓を（開ける）___ください。\n- ここに（座る）___もいいですか。\n- 本を（読む）___ください。"
+              },
+              "kind": "text",
+              "title": "Cloze"
+            },
+            {
+              "id": "249a00bc-afc7-444b-aae2-910aca71945b",
+              "body": {
+                "meta": "**Instructions:** Match the Japanese phrases with their English translations.\n\n\nPairs:\n- 手伝ってください -> Please help me\n- 待ってください -> Please wait\n- 見てもいいですか -> May I see?\n- 聞いてもいいですか -> May I ask?"
+              },
+              "kind": "text",
+              "title": "Matching"
+            },
+            {
+              "id": "e7b5f97d-42f1-49fe-b018-156d822e1c6a",
+              "body": {
+                "meta": "**Instructions:** Complete the dialogue with the correct phrases.\n\n\n- A: 今日は何をしましたか？ B: 朝、___をしました。\n- A: その後は？ B: 友達と___に行きました。"
+              },
+              "kind": "text",
+              "title": "Dialoguegap"
+            }
+          ],
+          "title": "Practice"
+        },
+        {
+          "id": "culture",
+          "type": "teach",
+          "cards": [
+            {
+              "id": "ca6679a8-6e59-4355-8847-ebb24b04f1f3",
+              "body": {
+                "meta": {
+                  "kanji": "In Japan, work culture emphasizes punctuality, teamwork, and respect for hierarchy. Employees often work long hours and participate in after-work socializing.",
+                  "romaji": "In Japan, work culture emphasizes punctuality, teamwork, and respect for hierarchy. Employees often work long hours and participate in after-work socializing.",
+                  "furigana": [
+                    {
+                      "ruby": null,
+                      "text": "In Japan, work culture emphasizes punctuality, teamwork, and respect for hierarchy. Employees often work long hours and participate in after-work socializing."
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              },
+              "kind": "text",
+              "title": "Japanese Work Culture"
+            },
+            {
+              "id": "3b5d1a99-30a1-4204-9661-cf07338c8584",
+              "body": {
+                "meta": {
+                  "kanji": "When dining in Japan, it is customary to say 'itadakimasu' before eating and 'gochisousama' after finishing. It is also important to avoid sticking chopsticks upright in rice.",
+                  "romaji": "When dining in Japan, it is customary to say 'itadakimasu' before eating and 'gochisousama' after finishing. It is also important to avoid sticking chopsticks upright in rice.",
+                  "furigana": [
+                    {
+                      "ruby": null,
+                      "text": "When dining in Japan, it is customary to say 'itadakimasu' before eating and 'gochisousama' after finishing. It is also important to avoid sticking chopsticks upright in rice."
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              },
+              "kind": "text",
+              "title": "Japanese Dining Etiquette"
+            }
+          ],
+          "title": "Culture"
+        }
+      ]
+    },
+    "exercises": []
+  },
+  "package": {},
+  "phase": "lexicon_and_patterns",
+  "completed_count": 0
+}

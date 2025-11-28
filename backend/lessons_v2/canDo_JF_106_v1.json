@@ -1,0 +1,879 @@
+{
+  "lesson": {
+    "meta": {
+      "lesson_id": "canDo_JF:106_v1",
+      "metalanguage": "en",
+      "can_do": {
+        "uid": "JF:106",
+        "level": "A1",
+        "primaryTopic_ja": "自然と環境",
+        "primaryTopic_en": "Nature and Environment",
+        "skillDomain_ja": "受容",
+        "type_ja": "活動",
+        "description": {
+          "en": "Can listen to and understand very simple instructions from the team leader when participating in a volunteer project to pick up garbage on a beach, if the leader demonstrates and talks slowly and clearly.",
+          "ja": "海岸でのゴミ拾いのボランティアをしているとき、実際にやり方を示しながらゆっくりとはっきりと話されれば、リーダーのごく簡単な指示を聞いて、理解することができる。"
+        },
+        "source": "JF"
+      }
+    },
+    "graph_bindings": {
+      "words": {
+        "by_cypher": null,
+        "by_keys": [],
+        "resolve_label": null,
+        "resolve_property": null
+      },
+      "grammar_patterns": {
+        "by_cypher": null,
+        "by_keys": [],
+        "resolve_label": null,
+        "resolve_property": null
+      }
+    },
+    "ui_prefs": {
+      "text_layers_default": {
+        "std": true,
+        "furigana": true,
+        "romaji": false,
+        "translation": true
+      }
+    },
+    "cards": {
+      "objective": {
+        "type": "ObjectiveCard",
+        "title": {
+          "en": "Understand Simple Beach Cleanup Instructions",
+          "ja": "海岸清掃の簡単な指示を理解する"
+        },
+        "body": {
+          "en": "Learn to understand simple instructions for cleaning up a beach.",
+          "ja": "海岸を掃除するための簡単な指示を理解することを学ぶ。"
+        },
+        "success_criteria": [
+          "Understands and follows basic instructions.",
+          "Responds appropriately to simple commands.",
+          "Can identify and name common objects used in cleanup.",
+          "Demonstrates comprehension through actions."
+        ],
+        "outcomes": [],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: ObjectiveCard\n\nINPUTS:\n- metalanguage: en\n- can_do: {\"uid\": \"JF:106\", \"level\": \"A1\", \"primaryTopic_ja\": \"自然と環境\", \"primaryTopic_en\": \"Nature and Environment\", \"skillDomain_ja\": \"受容\", \"type_ja\": \"活動\", \"description\": {\"en\": \"Can listen to and understand very simple instructions from the team leader when participating in a volunteer project to pick up garbage on a beach, if the leader demonstrates and talks slowly and clearly.\", \"ja\": \"海岸でのゴミ拾いのボランティアをしているとき、実際にやり方を示しながらゆっくりとはっきりと話されれば、リーダーのごく簡単な指示を聞いて、理解することができる。\"}, \"source\": \"JF\"}\n- plan: {\"uid\": \"12345\", \"level\": \"A1\", \"communicative_function_en\": \"Understand simple instructions for beach cleanup\", \"communicative_function_ja\": \"海岸清掃の簡単な指示を理解する\", \"scenarios\": [{\"name\": \"Beach Cleanup Volunteer Project\", \"setting\": \"Beach\", \"roles\": [{\"label\": \"Team Leader\", \"register\": \"polite\"}, {\"label\": \"Volunteer\", \"register\": \"polite\"}]}], \"lex_buckets\": [{\"name\": \"Beach Cleanup Actions\", \"items\": [\"拾う\", \"集める\", \"捨てる\", \"持ってくる\", \"置く\", \"掃除する\", \"片付ける\", \"運ぶ\", \"手伝う\", \"指示する\"]}, {\"name\": \"Common Objects\", \"items\": [\"ゴミ\", \"袋\", \"手袋\", \"バケツ\", \"ビン\", \"缶\", \"プラスチック\", \"紙\", \"海\", \"砂\"]}, {\"name\": \"Basic Directions\", \"items\": [\"右\", \"左\", \"前\", \"後ろ\", \"ここ\", \"そこ\", \"あそこ\", \"近く\", \"遠く\", \"中\"]}, {\"name\": \"Simple Verbs\", \"items\": [\"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"待つ\", \"始める\", \"終わる\", \"使う\", \"持つ\"]}, {\"name\": \"Basic Adjectives\", \"items\": [\"大きい\", \"小さい\", \"重い\", \"軽い\", \"新しい\", \"古い\", \"きれい\", \"汚い\", \"簡単\", \"難しい\"]}], \"grammar_functions\": [{\"id\": \"GF:001\", \"label\": \"Simple Imperatives\", \"pattern_ja\": \"動詞の命令形\", \"slots\": [\"拾う\", \"集める\", \"捨てる\"], \"notes_en\": \"Use simple verb forms to give commands.\"}, {\"id\": \"GF:002\", \"label\": \"Basic Noun Phrases\", \"pattern_ja\": \"名詞 + 助詞\", \"slots\": [\"ゴミを\", \"袋に\", \"手袋で\"], \"notes_en\": \"Combine nouns with particles to form simple phrases.\"}, {\"id\": \"GF:003\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"動詞の現在形\", \"slots\": [\"行く\", \"来る\", \"見る\"], \"notes_en\": \"Use present tense for ongoing actions.\"}], \"evaluation\": {\"success_criteria\": [\"Understands and follows basic instructions.\", \"Responds appropriately to simple commands.\", \"Can identify and name common objects used in cleanup.\", \"Demonstrates comprehension through actions.\", \"Asks for clarification if needed.\"], \"discourse_markers\": [\"はい\", \"わかりました\", \"もう一度お願いします\", \"これですか？\", \"どうすればいいですか？\"]}, \"cultural_themes_en\": [\"Understanding the importance of environmental conservation.\", \"Respecting team hierarchy and roles.\", \"Participating in community service activities.\", \"Learning through demonstration and practice.\"], \"cultural_themes_ja\": [\"環境保護の重要性を理解する。\", \"チームの階層と役割を尊重する。\", \"地域社会の奉仕活動に参加する。\", \"実演と練習を通じて学ぶ。\"]}\n\nTASK:\nCreate an ObjectiveCard:\n- title: {\"en\", \"ja\"} succinct.\n- body: {\"en\", \"ja\"} derived from plan.communicative_function_* (learner-facing, A1 terms).\n- success_criteria: copy/trim from plan.evaluation.success_criteria (2–5 items).\n- outcomes: optional 0–4 finer-grained outcomes.\n\nCONSTRAINTS:\n- No extra fields. Strict JSON.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "words": {
+        "type": "WordsCard",
+        "items": [
+          {
+            "id": "1",
+            "neo4j_id": null,
+            "jp": {
+              "std": "拾う",
+              "furigana": "拾(ひろ)う",
+              "romaji": "hirou",
+              "translation": {
+                "en": "pick up"
+              }
+            },
+            "tags": [
+              "Beach Cleanup Actions"
+            ],
+            "image": {
+              "prompt": "A person picking up trash on a beach",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "2",
+            "neo4j_id": null,
+            "jp": {
+              "std": "ゴミ",
+              "furigana": "ゴミ",
+              "romaji": "gomi",
+              "translation": {
+                "en": "trash"
+              }
+            },
+            "tags": [
+              "Common Objects"
+            ],
+            "image": {
+              "prompt": "A pile of trash",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "3",
+            "neo4j_id": null,
+            "jp": {
+              "std": "袋",
+              "furigana": "袋(ふくろ)",
+              "romaji": "fukuro",
+              "translation": {
+                "en": "bag"
+              }
+            },
+            "tags": [
+              "Common Objects"
+            ],
+            "image": {
+              "prompt": "A plastic bag",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "4",
+            "neo4j_id": null,
+            "jp": {
+              "std": "右",
+              "furigana": "右(みぎ)",
+              "romaji": "migi",
+              "translation": {
+                "en": "right"
+              }
+            },
+            "tags": [
+              "Basic Directions"
+            ],
+            "image": {
+              "prompt": "An arrow pointing to the right",
+              "style": "diagram",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "5",
+            "neo4j_id": null,
+            "jp": {
+              "std": "左",
+              "furigana": "左(ひだり)",
+              "romaji": "hidari",
+              "translation": {
+                "en": "left"
+              }
+            },
+            "tags": [
+              "Basic Directions"
+            ],
+            "image": {
+              "prompt": "An arrow pointing to the left",
+              "style": "diagram",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "6",
+            "neo4j_id": null,
+            "jp": {
+              "std": "手伝う",
+              "furigana": "手伝(てつだ)う",
+              "romaji": "tetsudau",
+              "translation": {
+                "en": "help"
+              }
+            },
+            "tags": [
+              "Beach Cleanup Actions"
+            ],
+            "image": {
+              "prompt": "A person helping another person",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "7",
+            "neo4j_id": null,
+            "jp": {
+              "std": "きれい",
+              "furigana": "きれい",
+              "romaji": "kirei",
+              "translation": {
+                "en": "clean"
+              }
+            },
+            "tags": [
+              "Basic Adjectives"
+            ],
+            "image": {
+              "prompt": "A clean beach",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "8",
+            "neo4j_id": null,
+            "jp": {
+              "std": "捨てる",
+              "furigana": "捨(す)てる",
+              "romaji": "suteru",
+              "translation": {
+                "en": "throw away"
+              }
+            },
+            "tags": [
+              "Beach Cleanup Actions"
+            ],
+            "image": {
+              "prompt": "A person throwing trash into a bin",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          }
+        ],
+        "ui_layers_override": null,
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: WordsCard\n\nINPUTS:\n- metalanguage: en\n- plan.lex_buckets: {\"uid\": \"12345\", \"level\": \"A1\", \"communicative_function_en\": \"Understand simple instructions for beach cleanup\", \"communicative_function_ja\": \"海岸清掃の簡単な指示を理解する\", \"scenarios\": [{\"name\": \"Beach Cleanup Volunteer Project\", \"setting\": \"Beach\", \"roles\": [{\"label\": \"Team Leader\", \"register\": \"polite\"}, {\"label\": \"Volunteer\", \"register\": \"polite\"}]}], \"lex_buckets\": [{\"name\": \"Beach Cleanup Actions\", \"items\": [\"拾う\", \"集める\", \"捨てる\", \"持ってくる\", \"置く\", \"掃除する\", \"片付ける\", \"運ぶ\", \"手伝う\", \"指示する\"]}, {\"name\": \"Common Objects\", \"items\": [\"ゴミ\", \"袋\", \"手袋\", \"バケツ\", \"ビン\", \"缶\", \"プラスチック\", \"紙\", \"海\", \"砂\"]}, {\"name\": \"Basic Directions\", \"items\": [\"右\", \"左\", \"前\", \"後ろ\", \"ここ\", \"そこ\", \"あそこ\", \"近く\", \"遠く\", \"中\"]}, {\"name\": \"Simple Verbs\", \"items\": [\"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"待つ\", \"始める\", \"終わる\", \"使う\", \"持つ\"]}, {\"name\": \"Basic Adjectives\", \"items\": [\"大きい\", \"小さい\", \"重い\", \"軽い\", \"新しい\", \"古い\", \"きれい\", \"汚い\", \"簡単\", \"難しい\"]}], \"grammar_functions\": [{\"id\": \"GF:001\", \"label\": \"Simple Imperatives\", \"pattern_ja\": \"動詞の命令形\", \"slots\": [\"拾う\", \"集める\", \"捨てる\"], \"notes_en\": \"Use simple verb forms to give commands.\"}, {\"id\": \"GF:002\", \"label\": \"Basic Noun Phrases\", \"pattern_ja\": \"名詞 + 助詞\", \"slots\": [\"ゴミを\", \"袋に\", \"手袋で\"], \"notes_en\": \"Combine nouns with particles to form simple phrases.\"}, {\"id\": \"GF:003\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"動詞の現在形\", \"slots\": [\"行く\", \"来る\", \"見る\"], \"notes_en\": \"Use present tense for ongoing actions.\"}], \"evaluation\": {\"success_criteria\": [\"Understands and follows basic instructions.\", \"Responds appropriately to simple commands.\", \"Can identify and name common objects used in cleanup.\", \"Demonstrates comprehension through actions.\", \"Asks for clarification if needed.\"], \"discourse_markers\": [\"はい\", \"わかりました\", \"もう一度お願いします\", \"これですか？\", \"どうすればいいですか？\"]}, \"cultural_themes_en\": [\"Understanding the importance of environmental conservation.\", \"Respecting team hierarchy and roles.\", \"Participating in community service activities.\", \"Learning through demonstration and practice.\"], \"cultural_themes_ja\": [\"環境保護の重要性を理解する。\", \"チームの階層と役割を尊重する。\", \"地域社会の奉仕活動に参加する。\", \"実演と練習を通じて学ぶ。\"]}\n\nTASK:\nSelect 6–12 items total across plan.lex_buckets that best support the function.\nFor each item:\n- Build JPText layers: std (from plan), furigana inline, Hepburn romaji with macrons where applicable,\n  translation keyed by \"en\".\n- tags: the source bucket name (e.g., \"places\",\"actions\",\"specialties\",\"connectors\").\n- image: optional flat-icon 1024x1024 prompt describing the concept.\n\nCONSTRAINTS:\n- A-level simplicity. Natural readings. No duplicates.\n- Strict JSON.\n\nOUTPUT: WordsCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "grammar_patterns": {
+        "type": "GrammarPatternsCard",
+        "patterns": [
+          {
+            "id": "GF:001",
+            "neo4j_id": null,
+            "form": {
+              "ja": {
+                "std": "動詞の命令形",
+                "furigana": "どうしのめいれいけい",
+                "romaji": "doushi no meireikei",
+                "translation": {
+                  "en": "Imperative form of verbs"
+                }
+              }
+            },
+            "explanation": {
+              "en": "Use simple verb forms to give commands, such as 'pick up' or 'collect'."
+            },
+            "slots": [
+              "拾う",
+              "集める",
+              "捨てる"
+            ],
+            "examples": [
+              {
+                "ja": {
+                  "std": "ゴミを拾ってください。",
+                  "furigana": "ごみをひろってください。",
+                  "romaji": "gomi o hirotte kudasai",
+                  "translation": {
+                    "en": "Please pick up the trash."
+                  }
+                },
+                "audio_ref": null
+              },
+              {
+                "ja": {
+                  "std": "袋に集めてください。",
+                  "furigana": "ふくろにあつめてください。",
+                  "romaji": "fukuro ni atsumete kudasai",
+                  "translation": {
+                    "en": "Please collect it in the bag."
+                  }
+                },
+                "audio_ref": null
+              }
+            ],
+            "image": null
+          },
+          {
+            "id": "GF:002",
+            "neo4j_id": null,
+            "form": {
+              "ja": {
+                "std": "名詞 + 助詞",
+                "furigana": "めいし + じょし",
+                "romaji": "meishi + joshi",
+                "translation": {
+                  "en": "Noun + Particle"
+                }
+              }
+            },
+            "explanation": {
+              "en": "Combine nouns with particles to form simple phrases, like 'with gloves' or 'in the bag'."
+            },
+            "slots": [
+              "ゴミを",
+              "袋に",
+              "手袋で"
+            ],
+            "examples": [
+              {
+                "ja": {
+                  "std": "手袋で拾います。",
+                  "furigana": "てぶくろでひろいます。",
+                  "romaji": "tebukuro de hiroimasu",
+                  "translation": {
+                    "en": "I will pick it up with gloves."
+                  }
+                },
+                "audio_ref": null
+              },
+              {
+                "ja": {
+                  "std": "ゴミを袋に入れます。",
+                  "furigana": "ごみをふくろにいれます。",
+                  "romaji": "gomi o fukuro ni iremasu",
+                  "translation": {
+                    "en": "Put the trash in the bag."
+                  }
+                },
+                "audio_ref": null
+              }
+            ],
+            "image": null
+          },
+          {
+            "id": "GF:003",
+            "neo4j_id": null,
+            "form": {
+              "ja": {
+                "std": "動詞の現在形",
+                "furigana": "どうしのげんざいけい",
+                "romaji": "doushi no genzaikei",
+                "translation": {
+                  "en": "Present tense of verbs"
+                }
+              }
+            },
+            "explanation": {
+              "en": "Use present tense verbs to describe ongoing actions, such as 'going' or 'coming'."
+            },
+            "slots": [
+              "行く",
+              "来る",
+              "見る"
+            ],
+            "examples": [
+              {
+                "ja": {
+                  "std": "海に行きます。",
+                  "furigana": "うみにいきます。",
+                  "romaji": "umi ni ikimasu",
+                  "translation": {
+                    "en": "I am going to the beach."
+                  }
+                },
+                "audio_ref": null
+              },
+              {
+                "ja": {
+                  "std": "ここに来ます。",
+                  "furigana": "ここにきます。",
+                  "romaji": "koko ni kimasu",
+                  "translation": {
+                    "en": "I am coming here."
+                  }
+                },
+                "audio_ref": null
+              }
+            ],
+            "image": null
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: GrammarPatternsCard\n\nINPUTS:\n- metalanguage: en\n- plan.grammar_functions: {\"uid\": \"12345\", \"level\": \"A1\", \"communicative_function_en\": \"Understand simple instructions for beach cleanup\", \"communicative_function_ja\": \"海岸清掃の簡単な指示を理解する\", \"scenarios\": [{\"name\": \"Beach Cleanup Volunteer Project\", \"setting\": \"Beach\", \"roles\": [{\"label\": \"Team Leader\", \"register\": \"polite\"}, {\"label\": \"Volunteer\", \"register\": \"polite\"}]}], \"lex_buckets\": [{\"name\": \"Beach Cleanup Actions\", \"items\": [\"拾う\", \"集める\", \"捨てる\", \"持ってくる\", \"置く\", \"掃除する\", \"片付ける\", \"運ぶ\", \"手伝う\", \"指示する\"]}, {\"name\": \"Common Objects\", \"items\": [\"ゴミ\", \"袋\", \"手袋\", \"バケツ\", \"ビン\", \"缶\", \"プラスチック\", \"紙\", \"海\", \"砂\"]}, {\"name\": \"Basic Directions\", \"items\": [\"右\", \"左\", \"前\", \"後ろ\", \"ここ\", \"そこ\", \"あそこ\", \"近く\", \"遠く\", \"中\"]}, {\"name\": \"Simple Verbs\", \"items\": [\"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"待つ\", \"始める\", \"終わる\", \"使う\", \"持つ\"]}, {\"name\": \"Basic Adjectives\", \"items\": [\"大きい\", \"小さい\", \"重い\", \"軽い\", \"新しい\", \"古い\", \"きれい\", \"汚い\", \"簡単\", \"難しい\"]}], \"grammar_functions\": [{\"id\": \"GF:001\", \"label\": \"Simple Imperatives\", \"pattern_ja\": \"動詞の命令形\", \"slots\": [\"拾う\", \"集める\", \"捨てる\"], \"notes_en\": \"Use simple verb forms to give commands.\"}, {\"id\": \"GF:002\", \"label\": \"Basic Noun Phrases\", \"pattern_ja\": \"名詞 + 助詞\", \"slots\": [\"ゴミを\", \"袋に\", \"手袋で\"], \"notes_en\": \"Combine nouns with particles to form simple phrases.\"}, {\"id\": \"GF:003\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"動詞の現在形\", \"slots\": [\"行く\", \"来る\", \"見る\"], \"notes_en\": \"Use present tense for ongoing actions.\"}], \"evaluation\": {\"success_criteria\": [\"Understands and follows basic instructions.\", \"Responds appropriately to simple commands.\", \"Can identify and name common objects used in cleanup.\", \"Demonstrates comprehension through actions.\", \"Asks for clarification if needed.\"], \"discourse_markers\": [\"はい\", \"わかりました\", \"もう一度お願いします\", \"これですか？\", \"どうすればいいですか？\"]}, \"cultural_themes_en\": [\"Understanding the importance of environmental conservation.\", \"Respecting team hierarchy and roles.\", \"Participating in community service activities.\", \"Learning through demonstration and practice.\"], \"cultural_themes_ja\": [\"環境保護の重要性を理解する。\", \"チームの階層と役割を尊重する。\", \"地域社会の奉仕活動に参加する。\", \"実演と練習を通じて学ぶ。\"]}\n\nTASK:\nChoose 2–4 grammar_functions from the plan that are core for achieving the CanDo.\nFor each chosen function:\n- id: reuse the plan function id.\n- form.ja: JPText layers where std == pattern_ja; add furigana and romaji; translation in \"en\".\n- explanation: {\"en\": \"...\"}, 1–2 sentences.\n- slots: copy from the plan function.\n- examples: 1–2 A-level examples with full JPText and ≤12 words each.\n- image: optional diagram 1280x720.\n\nCONSTRAINTS:\n- Respect the level; avoid advanced structures.\n- Strict JSON.\n\nOUTPUT: GrammarPatternsCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "lesson_dialogue": {
+        "type": "DialogueCard",
+        "title": {
+          "en": "Beach Cleanup Volunteer Project"
+        },
+        "turns": [
+          {
+            "speaker": "Team Leader",
+            "ja": {
+              "std": "こんにちは、今日はビーチを掃除します。",
+              "furigana": "こんにちは、きょうはビーチをそうじします。",
+              "romaji": "Konnichiwa, kyou wa bīchi o souji shimasu.",
+              "translation": {
+                "en": "Hello, today we will clean the beach."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Volunteer",
+            "ja": {
+              "std": "はい、手伝います。何を持ってくればいいですか？",
+              "furigana": "はい、てつだいます。なにをもってくればいいですか？",
+              "romaji": "Hai, tetsudaimasu. Nani o motte kureba ii desu ka?",
+              "translation": {
+                "en": "Yes, I will help. What should I bring?"
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Team Leader",
+            "ja": {
+              "std": "手袋と袋を持ってきてください。",
+              "furigana": "てぶくろとふくろをもってきてください。",
+              "romaji": "Tebukuro to fukuro o motte kite kudasai.",
+              "translation": {
+                "en": "Please bring gloves and bags."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Volunteer",
+            "ja": {
+              "std": "わかりました。ゴミを拾い始めます。",
+              "furigana": "わかりました。ごみをひろいはじめます。",
+              "romaji": "Wakarimashita. Gomi o hiroi hajimemasu.",
+              "translation": {
+                "en": "Understood. I will start picking up trash."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Team Leader",
+            "ja": {
+              "std": "ビンと缶は別の袋に入れてください。",
+              "furigana": "びんとかんはべつのふくろにいれてください。",
+              "romaji": "Bin to kan wa betsu no fukuro ni irete kudasai.",
+              "translation": {
+                "en": "Please put bottles and cans in a separate bag."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Volunteer",
+            "ja": {
+              "std": "はい、プラスチックも集めますか？",
+              "furigana": "はい、プラスチックもあつめますか？",
+              "romaji": "Hai, purasuchikku mo atsumemasu ka?",
+              "translation": {
+                "en": "Yes, should I also collect plastic?"
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Team Leader",
+            "ja": {
+              "std": "はい、プラスチックもお願いします。",
+              "furigana": "はい、プラスチックもおねがいします。",
+              "romaji": "Hai, purasuchikku mo onegaishimasu.",
+              "translation": {
+                "en": "Yes, please collect plastic as well."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Volunteer",
+            "ja": {
+              "std": "ここに置いてもいいですか？",
+              "furigana": "ここにおいてもいいですか？",
+              "romaji": "Koko ni oite mo ii desu ka?",
+              "translation": {
+                "en": "Can I place it here?"
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Team Leader",
+            "ja": {
+              "std": "はい、そこに置いてください。",
+              "furigana": "はい、そこにおいてください。",
+              "romaji": "Hai, soko ni oite kudasai.",
+              "translation": {
+                "en": "Yes, please place it there."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Volunteer",
+            "ja": {
+              "std": "わかりました。終わったら教えてください。",
+              "furigana": "わかりました。おわったらおしえてください。",
+              "romaji": "Wakarimashita. Owattara oshiete kudasai.",
+              "translation": {
+                "en": "Understood. Please let me know when we're done."
+              }
+            },
+            "audio_ref": null
+          }
+        ],
+        "notes_en": "A dialogue between a team leader and a volunteer during a beach cleanup.",
+        "image": null,
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: DialogueCard\n\nINPUTS:\n- metalanguage: en\n- plan.scenarios[0]: {\"name\": \"Beach Cleanup Volunteer Project\", \"setting\": \"Beach\", \"roles\": [{\"label\": \"Team Leader\", \"register\": \"polite\"}, {\"label\": \"Volunteer\", \"register\": \"polite\"}]}\n- plan.grammar_functions (ids available): [\"GF:001\", \"GF:002\", \"GF:003\"]\n - plan.lex_items (preferred vocabulary): [\"拾う\", \"集める\", \"捨てる\", \"持ってくる\", \"置く\", \"掃除する\", \"片付ける\", \"運ぶ\", \"手伝う\", \"指示する\", \"ゴミ\", \"袋\", \"手袋\", \"バケツ\", \"ビン\", \"缶\", \"プラスチック\", \"紙\", \"海\", \"砂\", \"右\", \"左\", \"前\", \"後ろ\", \"ここ\", \"そこ\", \"あそこ\", \"近く\", \"遠く\", \"中\", \"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"待つ\", \"始める\", \"終わる\", \"使う\", \"持つ\", \"大きい\", \"小さい\", \"重い\", \"軽い\", \"新しい\", \"古い\", \"きれい\", \"汚い\", \"簡単\", \"難しい\"]\n\nTASK:\nCreate a DialogueCard with 8–10 turns in the first scenario. Use the scenario roles' labels for \"speaker\".\nEach turn provides JPText layers (std, furigana, romaji, translation[\"en\"]).\nGrammar alignment: naturally use at least 2 of the selected grammar function ids across the dialogue.\nVocabulary alignment: prefer content words from plan.lex_items (target ≥60% of nouns/verbs from this list); allow at most 2 new content words total.\nAdd a one-line notes_en, and optionally a scene-illustration 1280x768.\n\nCONSTRAINTS:\n- ≤12 words per turn. A-level tone/register per scenario role register. Keep continuity across turns (light back-and-forth).\n- Strict JSON.\n\nOUTPUT: DialogueCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "guided_dialogue": {
+        "type": "GuidedDialogueCard",
+        "mode": "prompted",
+        "stages": [
+          {
+            "stage_id": "stage_1",
+            "goal_en": "Understands and follows basic instructions.",
+            "expected_patterns": [
+              "GF:001"
+            ],
+            "hints": [
+              {
+                "en": "Please pick up the book.",
+                "ja": "本を拾ってください。"
+              },
+              {
+                "en": "Can you close the door?",
+                "ja": "ドアを閉めてもらえますか？"
+              }
+            ],
+            "learner_turn_schema": {
+              "min_words": 4,
+              "max_words": 12,
+              "allow_romaji": false
+            },
+            "ai_feedback": {
+              "rubric": [
+                "pattern_correctness",
+                "fluency_a1",
+                "content_relevance"
+              ],
+              "feedback_prompt": "Did the learner follow the instruction correctly?"
+            }
+          },
+          {
+            "stage_id": "stage_2",
+            "goal_en": "Responds appropriately to simple commands.",
+            "expected_patterns": [
+              "GF:002"
+            ],
+            "hints": [
+              {
+                "en": "Put the pen on the table.",
+                "ja": "ペンをテーブルの上に置いてください。"
+              },
+              {
+                "en": "Turn off the light.",
+                "ja": "電気を消してください。"
+              }
+            ],
+            "learner_turn_schema": {
+              "min_words": 4,
+              "max_words": 12,
+              "allow_romaji": false
+            },
+            "ai_feedback": {
+              "rubric": [
+                "pattern_correctness",
+                "fluency_a1",
+                "content_relevance"
+              ],
+              "feedback_prompt": "Did the learner respond to the command correctly?"
+            }
+          },
+          {
+            "stage_id": "stage_3",
+            "goal_en": "Can identify and name common objects used in cleanup.",
+            "expected_patterns": [
+              "GF:003"
+            ],
+            "hints": [
+              {
+                "en": "What is this object called?",
+                "ja": "この物は何と呼ばれていますか？"
+              },
+              {
+                "en": "Name the item used for cleaning.",
+                "ja": "掃除に使うアイテムの名前を言ってください。"
+              }
+            ],
+            "learner_turn_schema": {
+              "min_words": 4,
+              "max_words": 12,
+              "allow_romaji": false
+            },
+            "ai_feedback": {
+              "rubric": [
+                "pattern_correctness",
+                "fluency_a1",
+                "content_relevance"
+              ],
+              "feedback_prompt": "Did the learner correctly identify the object?"
+            }
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: GuidedDialogueCard\n\nINPUTS:\n- metalanguage: en\n- plan.grammar_functions (ids): [\"GF:001\", \"GF:002\", \"GF:003\"]\n- plan.evaluation.success_criteria: [\"Understands and follows basic instructions.\", \"Responds appropriately to simple commands.\", \"Can identify and name common objects used in cleanup.\", \"Demonstrates comprehension through actions.\", \"Asks for clarification if needed.\"]\n\nTASK:\nCreate 1–3 scaffold stages moving the learner towards the success_criteria.\nEach stage:\n- stage_id\n- goal_en (align with one success criterion)\n- expected_patterns: choose relevant grammar function ids from plan\n- 1–2 bilingual hints ({\"en\",\"ja\"})\n- learner_turn_schema: {\"min_words\":4,\"max_words\":12,\"allow_romaji\":false}\n- ai_feedback: rubric [\"pattern_correctness\",\"fluency_a1\",\"content_relevance\"] and a one-line feedback prompt.\n\nCONSTRAINTS:\n- Strict JSON.\n\nOUTPUT: GuidedDialogueCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "exercises": {
+        "type": "ExercisesCard",
+        "items": [
+          {
+            "exercise_type": "match",
+            "id": "match1",
+            "instructions": {
+              "en": "Match the Japanese words with their English meanings."
+            },
+            "pairs": [
+              {
+                "left": {
+                  "std": "拾う",
+                  "furigana": "ひろう",
+                  "romaji": "hirou",
+                  "translation": {
+                    "en": "Pick up"
+                  }
+                },
+                "right_options_en": [
+                  "Pick up",
+                  "Collect",
+                  "Throw away",
+                  "Bring",
+                  "Clean"
+                ],
+                "answer_en": "Pick up"
+              },
+              {
+                "left": {
+                  "std": "集める",
+                  "furigana": "あつめる",
+                  "romaji": "atsumeru",
+                  "translation": {
+                    "en": "Collect"
+                  }
+                },
+                "right_options_en": [
+                  "Pick up",
+                  "Collect",
+                  "Throw away",
+                  "Bring",
+                  "Clean"
+                ],
+                "answer_en": "Collect"
+              },
+              {
+                "left": {
+                  "std": "捨てる",
+                  "furigana": "すてる",
+                  "romaji": "suteru",
+                  "translation": {
+                    "en": "Throw away"
+                  }
+                },
+                "right_options_en": [
+                  "Pick up",
+                  "Collect",
+                  "Throw away",
+                  "Bring",
+                  "Clean"
+                ],
+                "answer_en": "Throw away"
+              },
+              {
+                "left": {
+                  "std": "持ってくる",
+                  "furigana": "もってくる",
+                  "romaji": "mottekuru",
+                  "translation": {
+                    "en": "Bring"
+                  }
+                },
+                "right_options_en": [
+                  "Pick up",
+                  "Collect",
+                  "Throw away",
+                  "Bring",
+                  "Clean"
+                ],
+                "answer_en": "Bring"
+              },
+              {
+                "left": {
+                  "std": "掃除する",
+                  "furigana": "そうじする",
+                  "romaji": "souji suru",
+                  "translation": {
+                    "en": "Clean"
+                  }
+                },
+                "right_options_en": [
+                  "Pick up",
+                  "Collect",
+                  "Throw away",
+                  "Bring",
+                  "Clean"
+                ],
+                "answer_en": "Clean"
+              }
+            ]
+          },
+          {
+            "exercise_type": "fill_blank",
+            "id": "fill1",
+            "item": {
+              "std": "ゴミを ______ 。",
+              "furigana": "ごみを ______ 。",
+              "romaji": "gomi o ______ .",
+              "translation": {
+                "en": "______ the trash."
+              }
+            },
+            "answer_key_en": [
+              "Pick up",
+              "Collect",
+              "Throw away"
+            ]
+          },
+          {
+            "exercise_type": "order",
+            "id": "order1",
+            "instructions": {
+              "en": "Arrange the segments in the correct order."
+            },
+            "segments_ja": [
+              "はい",
+              "わかりました",
+              "もう一度お願いします"
+            ],
+            "correct_order": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: ExercisesCard\n\nINPUTS:\n- metalanguage: en\n- plan.lex_buckets: {\"uid\": \"12345\", \"level\": \"A1\", \"communicative_function_en\": \"Understand simple instructions for beach cleanup\", \"communicative_function_ja\": \"海岸清掃の簡単な指示を理解する\", \"scenarios\": [{\"name\": \"Beach Cleanup Volunteer Project\", \"setting\": \"Beach\", \"roles\": [{\"label\": \"Team Leader\", \"register\": \"polite\"}, {\"label\": \"Volunteer\", \"register\": \"polite\"}]}], \"lex_buckets\": [{\"name\": \"Beach Cleanup Actions\", \"items\": [\"拾う\", \"集める\", \"捨てる\", \"持ってくる\", \"置く\", \"掃除する\", \"片付ける\", \"運ぶ\", \"手伝う\", \"指示する\"]}, {\"name\": \"Common Objects\", \"items\": [\"ゴミ\", \"袋\", \"手袋\", \"バケツ\", \"ビン\", \"缶\", \"プラスチック\", \"紙\", \"海\", \"砂\"]}, {\"name\": \"Basic Directions\", \"items\": [\"右\", \"左\", \"前\", \"後ろ\", \"ここ\", \"そこ\", \"あそこ\", \"近く\", \"遠く\", \"中\"]}, {\"name\": \"Simple Verbs\", \"items\": [\"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"待つ\", \"始める\", \"終わる\", \"使う\", \"持つ\"]}, {\"name\": \"Basic Adjectives\", \"items\": [\"大きい\", \"小さい\", \"重い\", \"軽い\", \"新しい\", \"古い\", \"きれい\", \"汚い\", \"簡単\", \"難しい\"]}], \"grammar_functions\": [{\"id\": \"GF:001\", \"label\": \"Simple Imperatives\", \"pattern_ja\": \"動詞の命令形\", \"slots\": [\"拾う\", \"集める\", \"捨てる\"], \"notes_en\": \"Use simple verb forms to give commands.\"}, {\"id\": \"GF:002\", \"label\": \"Basic Noun Phrases\", \"pattern_ja\": \"名詞 + 助詞\", \"slots\": [\"ゴミを\", \"袋に\", \"手袋で\"], \"notes_en\": \"Combine nouns with particles to form simple phrases.\"}, {\"id\": \"GF:003\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"動詞の現在形\", \"slots\": [\"行く\", \"来る\", \"見る\"], \"notes_en\": \"Use present tense for ongoing actions.\"}], \"evaluation\": {\"success_criteria\": [\"Understands and follows basic instructions.\", \"Responds appropriately to simple commands.\", \"Can identify and name common objects used in cleanup.\", \"Demonstrates comprehension through actions.\", \"Asks for clarification if needed.\"], \"discourse_markers\": [\"はい\", \"わかりました\", \"もう一度お願いします\", \"これですか？\", \"どうすればいいですか？\"]}, \"cultural_themes_en\": [\"Understanding the importance of environmental conservation.\", \"Respecting team hierarchy and roles.\", \"Participating in community service activities.\", \"Learning through demonstration and practice.\"], \"cultural_themes_ja\": [\"環境保護の重要性を理解する。\", \"チームの階層と役割を尊重する。\", \"地域社会の奉仕活動に参加する。\", \"実演と練習を通じて学ぶ。\"]}\n- plan.grammar_functions (ids & patterns available): [{\"id\": \"GF:001\", \"pattern_ja\": \"動詞の命令形\"}, {\"id\": \"GF:002\", \"pattern_ja\": \"名詞 + 助詞\"}, {\"id\": \"GF:003\", \"pattern_ja\": \"動詞の現在形\"}]\n- plan.evaluation.discourse_markers: [\"はい\", \"わかりました\", \"もう一度お願いします\", \"これですか？\", \"どうすればいいですか？\"]\n\nTASK:\nCreate 2–4 exercises:\n1) \"match\" (3–6 pairs) using lexemes from plan.lex_buckets; answers in \"en\".\n2) \"fill_blank\" using one grammar function; provide 3–6 acceptable answers in \"en\".\n3) optionally \"order\" (3 segments) if discourse markers exist.\n\nUse JPText for any Japanese stems.\n\nCONSTRAINTS:\n- A-level difficulty. Strict JSON.\n\nOUTPUT: ExercisesCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "cultural_explanation": {
+        "type": "CultureCard",
+        "title": {
+          "en": "Cultural Values in Teamwork and Community",
+          "ja": "チームワークとコミュニティにおける文化的価値"
+        },
+        "body": {
+          "en": "In many cultures, understanding the importance of environmental conservation is crucial. Respecting team hierarchy and roles ensures smooth collaboration and effective communication. Participating in community service activities fosters a sense of belonging and responsibility. Learning through demonstration and practice is a valued approach to acquiring new skills.",
+          "ja": "多くの文化において、環境保護の重要性を理解することは重要です。チームの階層と役割を尊重することは、円滑な協力と効果的なコミュニケーションを保証します。地域社会の奉仕活動に参加することは、帰属意識と責任感を育みます。実演と練習を通じて学ぶことは、新しいスキルを習得するための価値あるアプローチです。"
+        },
+        "image": null,
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: CultureCard\n\nINPUTS:\n- metalanguage: en\n- plan.cultural_themes_* and plan.communicative_function_*:\n  en: [\"Understanding the importance of environmental conservation.\", \"Respecting team hierarchy and roles.\", \"Participating in community service activities.\", \"Learning through demonstration and practice.\"]\n  ja: [\"環境保護の重要性を理解する。\", \"チームの階層と役割を尊重する。\", \"地域社会の奉仕活動に参加する。\", \"実演と練習を通じて学ぶ。\"]\n\nTASK:\nWrite a CultureCard (title/body in {\"en\",\"ja\"}) summarizing 2–4 key pragmatic/cultural themes relevant to the communicative function.\nOptional infographic image 1280x720 (style \"infographic\").\n\nCONSTRAINTS:\n- Strict JSON.\n\nOUTPUT: CultureCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "drills_ai": {
+        "type": "DrillsCard",
+        "drills": [
+          {
+            "drill_type": "substitution",
+            "id": "sub001",
+            "pattern_ref": "GF:001",
+            "prompt_template": {
+              "template": "Use the verbs to describe actions you can perform with the objects."
+            },
+            "slots": [
+              "拾う",
+              "集める",
+              "捨てる"
+            ],
+            "seed_items": [
+              {
+                "place": "ゴミ",
+                "specialty_en": "trash"
+              },
+              {
+                "place": "袋",
+                "specialty_en": "bag"
+              },
+              {
+                "place": "手袋",
+                "specialty_en": "glove"
+              },
+              {
+                "place": "ビン",
+                "specialty_en": "bottle"
+              },
+              {
+                "place": "缶",
+                "specialty_en": "can"
+              }
+            ],
+            "ai_support": {
+              "support": "Use the verbs to describe actions you can perform with the objects."
+            }
+          },
+          {
+            "drill_type": "pronunciation",
+            "id": "pron001",
+            "focus": [
+              {
+                "ja": "拾う",
+                "romaji": "hirou"
+              },
+              {
+                "ja": "集める",
+                "romaji": "atsumeru"
+              },
+              {
+                "ja": "捨てる",
+                "romaji": "suteru"
+              }
+            ],
+            "ai_support": {
+              "support": "Practice pronouncing these common verbs used in a beach cleanup."
+            }
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: DrillsCard\n\nINPUTS:\n- metalanguage: en\n- plan.grammar_functions (ids & slots): [{\"id\": \"GF:001\", \"slots\": [\"拾う\", \"集める\", \"捨てる\"]}, {\"id\": \"GF:002\", \"slots\": [\"ゴミを\", \"袋に\", \"手袋で\"]}, {\"id\": \"GF:003\", \"slots\": [\"行く\", \"来る\", \"見る\"]}]\n- plan.lex_buckets (for seed items): [{\"name\": \"Beach Cleanup Actions\", \"items\": [\"拾う\", \"集める\", \"捨てる\", \"持ってくる\", \"置く\", \"掃除する\", \"片付ける\", \"運ぶ\", \"手伝う\", \"指示する\"]}, {\"name\": \"Common Objects\", \"items\": [\"ゴミ\", \"袋\", \"手袋\", \"バケツ\", \"ビン\", \"缶\", \"プラスチック\", \"紙\", \"海\", \"砂\"]}, {\"name\": \"Basic Directions\", \"items\": [\"右\", \"左\", \"前\", \"後ろ\", \"ここ\", \"そこ\", \"あそこ\", \"近く\", \"遠く\", \"中\"]}, {\"name\": \"Simple Verbs\", \"items\": [\"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"待つ\", \"始める\", \"終わる\", \"使う\", \"持つ\"]}, {\"name\": \"Basic Adjectives\", \"items\": [\"大きい\", \"小さい\", \"重い\", \"軽い\", \"新しい\", \"古い\", \"きれい\", \"汚い\", \"簡単\", \"難しい\"]}]\n\nTASK:\nCreate 2 drills:\n- substitution: choose one grammar function id for pattern_ref; set slots per that function; add 2–6 seed_items from lex_buckets (simple nouns).\n- pronunciation: 2–4 targets from high-frequency lexemes or pattern chunks (provide \"ja\" and \"romaji\").\n\nInclude ai_support prompts.\n\nCONSTRAINTS:\n- Strict JSON.\n\nOUTPUT: DrillsCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "RecommendNext minimal",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "() => fetch('http://localhost:8000/api/v1/lexical/lessons/recommend-next?can_do_id=JFまるごと:13&limit=3').then(r=>r.json())",
+      "saveAs": "rn"
+    },
+    {
+      "action": "assert",
+      "expression": "rn.can_do_id === 'JFまるごと:13' && Array.isArray(rn.recommendations)"
+    }
+  ]
+}
+
+

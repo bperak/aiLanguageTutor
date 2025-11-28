@@ -1,0 +1,937 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e21] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e23]:
+          - text: Lexical
+          - img [ref=e24]
+        - button "Grammar" [ref=e27]:
+          - text: Grammar
+          - img [ref=e28]
+        - link "Conversations" [ref=e30] [cursor=pointer]:
+          - /url: /conversations
+        - link "CanDo" [ref=e31] [cursor=pointer]:
+          - /url: /cando
+        - button "Profile" [ref=e33]:
+          - text: Profile
+          - img [ref=e34]
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - heading "CanDo Browser" [level=1] [ref=e14]
+      - generic [ref=e15]:
+        - textbox "Search CanDo or Topic" [ref=e16]
+        - textbox "Level (e.g., A2)" [ref=e17]
+        - textbox "Topic contains" [ref=e18]
+        - button "Search" [ref=e19]
+        - generic [ref=e20]: 100 result(s)
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: B2
+          - generic [ref=e39]: JF:1
+          - generic [ref=e40]: 自由時間と娯楽
+          - generic [ref=e41]:
+            - link "Open" [ref=e42] [cursor=pointer]:
+              - /url: /cando/JF%3A1
+            - link "JSON" [ref=e43] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A1
+        - generic [ref=e44]:
+          - generic [ref=e45]: B2
+          - generic [ref=e46]: JF:2
+          - generic [ref=e47]: 学校と教育
+          - generic [ref=e48]:
+            - link "Open" [ref=e49] [cursor=pointer]:
+              - /url: /cando/JF%3A2
+            - link "JSON" [ref=e50] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A2
+        - generic [ref=e51]:
+          - generic [ref=e52]: B1
+          - generic [ref=e53]: JFまるごと:239
+          - generic [ref=e54]: 自分と家族
+          - generic [ref=e55]:
+            - link "Open" [ref=e56] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A239
+            - link "JSON" [ref=e57] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A239
+        - generic [ref=e58]:
+          - generic [ref=e59]: B1
+          - generic [ref=e60]: JFまるごと:249
+          - generic [ref=e61]: 自由時間と娯楽
+          - generic [ref=e62]:
+            - link "Open" [ref=e63] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A249
+            - link "JSON" [ref=e64] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A249
+        - generic [ref=e65]:
+          - generic [ref=e66]: B1
+          - generic [ref=e67]: JFまるごと:3
+          - generic [ref=e68]: 自由時間と娯楽
+          - generic [ref=e69]:
+            - link "Open" [ref=e70] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A3
+            - link "JSON" [ref=e71] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A3
+        - generic [ref=e72]:
+          - generic [ref=e73]: B1
+          - generic [ref=e74]: JFまるごと:555
+          - generic [ref=e75]: 自由時間と娯楽
+          - generic [ref=e76]:
+            - link "Open" [ref=e77] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A555
+            - link "JSON" [ref=e78] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A555
+        - generic [ref=e79]:
+          - generic [ref=e80]: B1
+          - generic [ref=e81]: JFまるごと:556
+          - generic [ref=e82]: 自由時間と娯楽
+          - generic [ref=e83]:
+            - link "Open" [ref=e84] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A556
+            - link "JSON" [ref=e85] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A556
+        - generic [ref=e86]:
+          - generic [ref=e87]: B1
+          - generic [ref=e88]: JF:4
+          - generic [ref=e89]: 仕事と職業
+          - generic [ref=e90]:
+            - link "Open" [ref=e91] [cursor=pointer]:
+              - /url: /cando/JF%3A4
+            - link "JSON" [ref=e92] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A4
+        - generic [ref=e93]:
+          - generic [ref=e94]: B1
+          - generic [ref=e95]: JF:5
+          - generic [ref=e96]: 旅行と交通
+          - generic [ref=e97]:
+            - link "Open" [ref=e98] [cursor=pointer]:
+              - /url: /cando/JF%3A5
+            - link "JSON" [ref=e99] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A5
+        - generic [ref=e100]:
+          - generic [ref=e101]: B1
+          - generic [ref=e102]: JFまるごと:557
+          - generic [ref=e103]: 旅行と交通
+          - generic [ref=e104]:
+            - link "Open" [ref=e105] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A557
+            - link "JSON" [ref=e106] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A557
+        - generic [ref=e107]:
+          - generic [ref=e108]: B1
+          - generic [ref=e109]: JFまるごと:558
+          - generic [ref=e110]: 旅行と交通
+          - generic [ref=e111]:
+            - link "Open" [ref=e112] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A558
+            - link "JSON" [ref=e113] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A558
+        - generic [ref=e114]:
+          - generic [ref=e115]: B1
+          - generic [ref=e116]: JFまるごと:559
+          - generic [ref=e117]: 旅行と交通
+          - generic [ref=e118]:
+            - link "Open" [ref=e119] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A559
+            - link "JSON" [ref=e120] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A559
+        - generic [ref=e121]:
+          - generic [ref=e122]: B1
+          - generic [ref=e123]: JF:6
+          - generic [ref=e124]: 健康
+          - generic [ref=e125]:
+            - link "Open" [ref=e126] [cursor=pointer]:
+              - /url: /cando/JF%3A6
+            - link "JSON" [ref=e127] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A6
+        - generic [ref=e128]:
+          - generic [ref=e129]: B1
+          - generic [ref=e130]: JF:7
+          - generic [ref=e131]: 買い物
+          - generic [ref=e132]:
+            - link "Open" [ref=e133] [cursor=pointer]:
+              - /url: /cando/JF%3A7
+            - link "JSON" [ref=e134] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A7
+        - generic [ref=e135]:
+          - generic [ref=e136]: B1
+          - generic [ref=e137]: JFまるごと:8
+          - generic [ref=e138]: 食生活
+          - generic [ref=e139]:
+            - link "Open" [ref=e140] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A8
+            - link "JSON" [ref=e141] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A8
+        - generic [ref=e142]:
+          - generic [ref=e143]: B1
+          - generic [ref=e144]: JFまるごと:560
+          - generic [ref=e145]: 人との関係
+          - generic [ref=e146]:
+            - link "Open" [ref=e147] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A560
+            - link "JSON" [ref=e148] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A560
+        - generic [ref=e149]:
+          - generic [ref=e150]: B1
+          - generic [ref=e151]: JFまるごと:561
+          - generic [ref=e152]: 人との関係
+          - generic [ref=e153]:
+            - link "Open" [ref=e154] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A561
+            - link "JSON" [ref=e155] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A561
+        - generic [ref=e156]:
+          - generic [ref=e157]: B1
+          - generic [ref=e158]: JF:9
+          - generic [ref=e159]: 学校と教育
+          - generic [ref=e160]:
+            - link "Open" [ref=e161] [cursor=pointer]:
+              - /url: /cando/JF%3A9
+            - link "JSON" [ref=e162] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A9
+        - generic [ref=e163]:
+          - generic [ref=e164]: B1
+          - generic [ref=e165]: JF:10
+          - generic [ref=e166]: 言語と文化
+          - generic [ref=e167]:
+            - link "Open" [ref=e168] [cursor=pointer]:
+              - /url: /cando/JF%3A10
+            - link "JSON" [ref=e169] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A10
+        - generic [ref=e170]:
+          - generic [ref=e171]: B1
+          - generic [ref=e172]: JFまるごと:562
+          - generic [ref=e173]: 社会
+          - generic [ref=e174]:
+            - link "Open" [ref=e175] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A562
+            - link "JSON" [ref=e176] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A562
+        - generic [ref=e177]:
+          - generic [ref=e178]: A2
+          - generic [ref=e179]: JFまるごと:456
+          - generic [ref=e180]: 自分と家族
+          - generic [ref=e181]:
+            - link "Open" [ref=e182] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A456
+            - link "JSON" [ref=e183] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A456
+        - generic [ref=e184]:
+          - generic [ref=e185]: A2
+          - generic [ref=e186]: JFまるごと:457
+          - generic [ref=e187]: 自分と家族
+          - generic [ref=e188]:
+            - link "Open" [ref=e189] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A457
+            - link "JSON" [ref=e190] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A457
+        - generic [ref=e191]:
+          - generic [ref=e192]: A2
+          - generic [ref=e193]: JFまるごと:458
+          - generic [ref=e194]: 自分と家族
+          - generic [ref=e195]:
+            - link "Open" [ref=e196] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A458
+            - link "JSON" [ref=e197] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A458
+        - generic [ref=e198]:
+          - generic [ref=e199]: A2
+          - generic [ref=e200]: JFまるごと:459
+          - generic [ref=e201]: 自分と家族
+          - generic [ref=e202]:
+            - link "Open" [ref=e203] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A459
+            - link "JSON" [ref=e204] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A459
+        - generic [ref=e205]:
+          - generic [ref=e206]: A2
+          - generic [ref=e207]: JF:11
+          - generic [ref=e208]: 自由時間と娯楽
+          - generic [ref=e209]:
+            - link "Open" [ref=e210] [cursor=pointer]:
+              - /url: /cando/JF%3A11
+            - link "JSON" [ref=e211] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A11
+        - generic [ref=e212]:
+          - generic [ref=e213]: A2
+          - generic [ref=e214]: JFまるごと:460
+          - generic [ref=e215]: 自由時間と娯楽
+          - generic [ref=e216]:
+            - link "Open" [ref=e217] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A460
+            - link "JSON" [ref=e218] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A460
+        - generic [ref=e219]:
+          - generic [ref=e220]: A2
+          - generic [ref=e221]: JFまるごと:19
+          - generic [ref=e222]: 生活と人生
+          - generic [ref=e223]:
+            - link "Open" [ref=e224] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A19
+            - link "JSON" [ref=e225] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A19
+        - generic [ref=e226]:
+          - generic [ref=e227]: A2
+          - generic [ref=e228]: JFまるごと:461
+          - generic [ref=e229]: 生活と人生
+          - generic [ref=e230]:
+            - link "Open" [ref=e231] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A461
+            - link "JSON" [ref=e232] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A461
+        - generic [ref=e233]:
+          - generic [ref=e234]: A2
+          - generic [ref=e235]: JFまるごと:462
+          - generic [ref=e236]: 生活と人生
+          - generic [ref=e237]:
+            - link "Open" [ref=e238] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A462
+            - link "JSON" [ref=e239] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A462
+        - generic [ref=e240]:
+          - generic [ref=e241]: A2
+          - generic [ref=e242]: JF:12
+          - generic [ref=e243]: 仕事と職業
+          - generic [ref=e244]:
+            - link "Open" [ref=e245] [cursor=pointer]:
+              - /url: /cando/JF%3A12
+            - link "JSON" [ref=e246] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A12
+        - generic [ref=e247]:
+          - generic [ref=e248]: A2
+          - generic [ref=e249]: JFまるごと:463
+          - generic [ref=e250]: 仕事と職業
+          - generic [ref=e251]:
+            - link "Open" [ref=e252] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A463
+            - link "JSON" [ref=e253] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A463
+        - generic [ref=e254]:
+          - generic [ref=e255]: A2
+          - generic [ref=e256]: JFまるごと:464
+          - generic [ref=e257]: 仕事と職業
+          - generic [ref=e258]:
+            - link "Open" [ref=e259] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A464
+            - link "JSON" [ref=e260] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A464
+        - generic [ref=e261]:
+          - generic [ref=e262]: A2
+          - generic [ref=e263]: JFまるごと:13
+          - generic [ref=e264]: 旅行と交通
+          - generic [ref=e265]:
+            - link "Open" [ref=e266] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A13
+            - link "JSON" [ref=e267] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A13
+        - generic [ref=e268]:
+          - generic [ref=e269]: A2
+          - generic [ref=e270]: JFまるごと:14
+          - generic [ref=e271]: 旅行と交通
+          - generic [ref=e272]:
+            - link "Open" [ref=e273] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A14
+            - link "JSON" [ref=e274] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A14
+        - generic [ref=e275]:
+          - generic [ref=e276]: A2
+          - generic [ref=e277]: JFまるごと:465
+          - generic [ref=e278]: 旅行と交通
+          - generic [ref=e279]:
+            - link "Open" [ref=e280] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A465
+            - link "JSON" [ref=e281] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A465
+        - generic [ref=e282]:
+          - generic [ref=e283]: A2
+          - generic [ref=e284]: JFまるごと:15
+          - generic [ref=e285]: 健康
+          - generic [ref=e286]:
+            - link "Open" [ref=e287] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A15
+            - link "JSON" [ref=e288] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A15
+        - generic [ref=e289]:
+          - generic [ref=e290]: A2
+          - generic [ref=e291]: JF:16
+          - generic [ref=e292]: 買い物
+          - generic [ref=e293]:
+            - link "Open" [ref=e294] [cursor=pointer]:
+              - /url: /cando/JF%3A16
+            - link "JSON" [ref=e295] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A16
+        - generic [ref=e296]:
+          - generic [ref=e297]: A2
+          - generic [ref=e298]: JF:17
+          - generic [ref=e299]: 食生活
+          - generic [ref=e300]:
+            - link "Open" [ref=e301] [cursor=pointer]:
+              - /url: /cando/JF%3A17
+            - link "JSON" [ref=e302] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A17
+        - generic [ref=e303]:
+          - generic [ref=e304]: A2
+          - generic [ref=e305]: JFまるごと:466
+          - generic [ref=e306]: 食生活
+          - generic [ref=e307]:
+            - link "Open" [ref=e308] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A466
+            - link "JSON" [ref=e309] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A466
+        - generic [ref=e310]:
+          - generic [ref=e311]: A2
+          - generic [ref=e312]: JFまるごと:18
+          - generic [ref=e313]: 人との関係
+          - generic [ref=e314]:
+            - link "Open" [ref=e315] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A18
+            - link "JSON" [ref=e316] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A18
+        - generic [ref=e317]:
+          - generic [ref=e318]: A2
+          - generic [ref=e319]: JF:20
+          - generic [ref=e320]: 言語と文化
+          - generic [ref=e321]:
+            - link "Open" [ref=e322] [cursor=pointer]:
+              - /url: /cando/JF%3A20
+            - link "JSON" [ref=e323] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A20
+        - generic [ref=e324]:
+          - generic [ref=e325]: A2
+          - generic [ref=e326]: JFまるごと:467
+          - generic [ref=e327]: 言語と文化
+          - generic [ref=e328]:
+            - link "Open" [ref=e329] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A467
+            - link "JSON" [ref=e330] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A467
+        - generic [ref=e331]:
+          - generic [ref=e332]: A2
+          - generic [ref=e333]: JFまるごと:468
+          - generic [ref=e334]: 言語と文化
+          - generic [ref=e335]:
+            - link "Open" [ref=e336] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A468
+            - link "JSON" [ref=e337] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A468
+        - generic [ref=e338]:
+          - generic [ref=e339]: A1
+          - generic [ref=e340]: JF:21
+          - generic [ref=e341]: 自分と家族
+          - generic [ref=e342]:
+            - link "Open" [ref=e343] [cursor=pointer]:
+              - /url: /cando/JF%3A21
+            - link "JSON" [ref=e344] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A21
+        - generic [ref=e345]:
+          - generic [ref=e346]: A1
+          - generic [ref=e347]: JFまるごと:22
+          - generic [ref=e348]: 自分と家族
+          - generic [ref=e349]:
+            - link "Open" [ref=e350] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A22
+            - link "JSON" [ref=e351] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A22
+        - generic [ref=e352]:
+          - generic [ref=e353]: A1
+          - generic [ref=e354]: JFまるごと:23
+          - generic [ref=e355]: 住まいと住環境
+          - generic [ref=e356]:
+            - link "Open" [ref=e357] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A23
+            - link "JSON" [ref=e358] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A23
+        - generic [ref=e359]:
+          - generic [ref=e360]: A1
+          - generic [ref=e361]: JFまるごと:24
+          - generic [ref=e362]: 住まいと住環境
+          - generic [ref=e363]:
+            - link "Open" [ref=e364] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A24
+            - link "JSON" [ref=e365] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A24
+        - generic [ref=e366]:
+          - generic [ref=e367]: A1
+          - generic [ref=e368]: JFまるごと:25
+          - generic [ref=e369]: 住まいと住環境
+          - generic [ref=e370]:
+            - link "Open" [ref=e371] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A25
+            - link "JSON" [ref=e372] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A25
+        - generic [ref=e373]:
+          - generic [ref=e374]: A1
+          - generic [ref=e375]: JFまるごと:26
+          - generic [ref=e376]: 生活と人生
+          - generic [ref=e377]:
+            - link "Open" [ref=e378] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A26
+            - link "JSON" [ref=e379] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A26
+        - generic [ref=e380]:
+          - generic [ref=e381]: A1
+          - generic [ref=e382]: JF:27
+          - generic [ref=e383]: 食生活
+          - generic [ref=e384]:
+            - link "Open" [ref=e385] [cursor=pointer]:
+              - /url: /cando/JF%3A27
+            - link "JSON" [ref=e386] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A27
+        - generic [ref=e387]:
+          - generic [ref=e388]: B2
+          - generic [ref=e389]: JF:28
+          - generic [ref=e390]: 仕事と職業
+          - generic [ref=e391]:
+            - link "Open" [ref=e392] [cursor=pointer]:
+              - /url: /cando/JF%3A28
+            - link "JSON" [ref=e393] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A28
+        - generic [ref=e394]:
+          - generic [ref=e395]: B2
+          - generic [ref=e396]: JF:29
+          - generic [ref=e397]: 買い物
+          - generic [ref=e398]:
+            - link "Open" [ref=e399] [cursor=pointer]:
+              - /url: /cando/JF%3A29
+            - link "JSON" [ref=e400] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A29
+        - generic [ref=e401]:
+          - generic [ref=e402]: B2
+          - generic [ref=e403]: JF:30
+          - generic [ref=e404]: 社会
+          - generic [ref=e405]:
+            - link "Open" [ref=e406] [cursor=pointer]:
+              - /url: /cando/JF%3A30
+            - link "JSON" [ref=e407] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A30
+        - generic [ref=e408]:
+          - generic [ref=e409]: B2
+          - generic [ref=e410]: JF:31
+          - generic [ref=e411]: 社会
+          - generic [ref=e412]:
+            - link "Open" [ref=e413] [cursor=pointer]:
+              - /url: /cando/JF%3A31
+            - link "JSON" [ref=e414] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A31
+        - generic [ref=e415]:
+          - generic [ref=e416]: B1
+          - generic [ref=e417]: JF:32
+          - generic [ref=e418]: 自由時間と娯楽
+          - generic [ref=e419]:
+            - link "Open" [ref=e420] [cursor=pointer]:
+              - /url: /cando/JF%3A32
+            - link "JSON" [ref=e421] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A32
+        - generic [ref=e422]:
+          - generic [ref=e423]: B1
+          - generic [ref=e424]: JF:33
+          - generic [ref=e425]: 学校と教育
+          - generic [ref=e426]:
+            - link "Open" [ref=e427] [cursor=pointer]:
+              - /url: /cando/JF%3A33
+            - link "JSON" [ref=e428] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A33
+        - generic [ref=e429]:
+          - generic [ref=e430]: B1
+          - generic [ref=e431]: JF:34
+          - generic [ref=e432]: 社会
+          - generic [ref=e433]:
+            - link "Open" [ref=e434] [cursor=pointer]:
+              - /url: /cando/JF%3A34
+            - link "JSON" [ref=e435] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A34
+        - generic [ref=e436]:
+          - generic [ref=e437]: B1
+          - generic [ref=e438]: JFまるごと:35
+          - generic [ref=e439]: 科学技術
+          - generic [ref=e440]:
+            - link "Open" [ref=e441] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A35
+            - link "JSON" [ref=e442] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A35
+        - generic [ref=e443]:
+          - generic [ref=e444]: B2
+          - generic [ref=e445]: JF:36
+          - generic [ref=e446]: 仕事と職業
+          - generic [ref=e447]:
+            - link "Open" [ref=e448] [cursor=pointer]:
+              - /url: /cando/JF%3A36
+            - link "JSON" [ref=e449] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A36
+        - generic [ref=e450]:
+          - generic [ref=e451]: B2
+          - generic [ref=e452]: JF:37
+          - generic [ref=e453]: 仕事と職業
+          - generic [ref=e454]:
+            - link "Open" [ref=e455] [cursor=pointer]:
+              - /url: /cando/JF%3A37
+            - link "JSON" [ref=e456] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A37
+        - generic [ref=e457]:
+          - generic [ref=e458]: B1
+          - generic [ref=e459]: JF:38
+          - generic [ref=e460]: 仕事と職業
+          - generic [ref=e461]:
+            - link "Open" [ref=e462] [cursor=pointer]:
+              - /url: /cando/JF%3A38
+            - link "JSON" [ref=e463] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A38
+        - generic [ref=e464]:
+          - generic [ref=e465]: B1
+          - generic [ref=e466]: JF:39
+          - generic [ref=e467]: 仕事と職業
+          - generic [ref=e468]:
+            - link "Open" [ref=e469] [cursor=pointer]:
+              - /url: /cando/JF%3A39
+            - link "JSON" [ref=e470] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A39
+        - generic [ref=e471]:
+          - generic [ref=e472]: A2
+          - generic [ref=e473]: JF:40
+          - generic [ref=e474]: 仕事と職業
+          - generic [ref=e475]:
+            - link "Open" [ref=e476] [cursor=pointer]:
+              - /url: /cando/JF%3A40
+            - link "JSON" [ref=e477] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A40
+        - generic [ref=e478]:
+          - generic [ref=e479]: A2
+          - generic [ref=e480]: JF:41
+          - generic [ref=e481]: 仕事と職業
+          - generic [ref=e482]:
+            - link "Open" [ref=e483] [cursor=pointer]:
+              - /url: /cando/JF%3A41
+            - link "JSON" [ref=e484] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A41
+        - generic [ref=e485]:
+          - generic [ref=e486]: A2
+          - generic [ref=e487]: JFまるごと:469
+          - generic [ref=e488]: 仕事と職業
+          - generic [ref=e489]:
+            - link "Open" [ref=e490] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A469
+            - link "JSON" [ref=e491] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A469
+        - generic [ref=e492]:
+          - generic [ref=e493]: B2
+          - generic [ref=e494]: JF:42
+          - generic [ref=e495]: 仕事と職業
+          - generic [ref=e496]:
+            - link "Open" [ref=e497] [cursor=pointer]:
+              - /url: /cando/JF%3A42
+            - link "JSON" [ref=e498] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A42
+        - generic [ref=e499]:
+          - generic [ref=e500]: B2
+          - generic [ref=e501]: JF:43
+          - generic [ref=e502]: 仕事と職業
+          - generic [ref=e503]:
+            - link "Open" [ref=e504] [cursor=pointer]:
+              - /url: /cando/JF%3A43
+            - link "JSON" [ref=e505] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A43
+        - generic [ref=e506]:
+          - generic [ref=e507]: B2
+          - generic [ref=e508]: JF:44
+          - generic [ref=e509]: 学校と教育
+          - generic [ref=e510]:
+            - link "Open" [ref=e511] [cursor=pointer]:
+              - /url: /cando/JF%3A44
+            - link "JSON" [ref=e512] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A44
+        - generic [ref=e513]:
+          - generic [ref=e514]: B1
+          - generic [ref=e515]: JFまるごと:45
+          - generic [ref=e516]: 仕事と職業
+          - generic [ref=e517]:
+            - link "Open" [ref=e518] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A45
+            - link "JSON" [ref=e519] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A45
+        - generic [ref=e520]:
+          - generic [ref=e521]: B1
+          - generic [ref=e522]: JF:46
+          - generic [ref=e523]: 仕事と職業
+          - generic [ref=e524]:
+            - link "Open" [ref=e525] [cursor=pointer]:
+              - /url: /cando/JF%3A46
+            - link "JSON" [ref=e526] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A46
+        - generic [ref=e527]:
+          - generic [ref=e528]: B1
+          - generic [ref=e529]: JFまるごと:563
+          - generic [ref=e530]: 健康
+          - generic [ref=e531]:
+            - link "Open" [ref=e532] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A563
+            - link "JSON" [ref=e533] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A563
+        - generic [ref=e534]:
+          - generic [ref=e535]: B1
+          - generic [ref=e536]: JF:47
+          - generic [ref=e537]: 自然と環境
+          - generic [ref=e538]:
+            - link "Open" [ref=e539] [cursor=pointer]:
+              - /url: /cando/JF%3A47
+            - link "JSON" [ref=e540] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A47
+        - generic [ref=e541]:
+          - generic [ref=e542]: B1
+          - generic [ref=e543]: JF:48
+          - generic [ref=e544]: 人との関係
+          - generic [ref=e545]:
+            - link "Open" [ref=e546] [cursor=pointer]:
+              - /url: /cando/JF%3A48
+            - link "JSON" [ref=e547] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A48
+        - generic [ref=e548]:
+          - generic [ref=e549]: B1
+          - generic [ref=e550]: JFまるごと:533
+          - generic [ref=e551]: 人との関係
+          - generic [ref=e552]:
+            - link "Open" [ref=e553] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A533
+            - link "JSON" [ref=e554] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A533
+        - generic [ref=e555]:
+          - generic [ref=e556]: B1
+          - generic [ref=e557]: JF:49
+          - generic [ref=e558]: 学校と教育
+          - generic [ref=e559]:
+            - link "Open" [ref=e560] [cursor=pointer]:
+              - /url: /cando/JF%3A49
+            - link "JSON" [ref=e561] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A49
+        - generic [ref=e562]:
+          - generic [ref=e563]: B1
+          - generic [ref=e564]: JF:50
+          - generic [ref=e565]: 言語と文化
+          - generic [ref=e566]:
+            - link "Open" [ref=e567] [cursor=pointer]:
+              - /url: /cando/JF%3A50
+            - link "JSON" [ref=e568] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A50
+        - generic [ref=e569]:
+          - generic [ref=e570]: B1
+          - generic [ref=e571]: JF:51
+          - generic [ref=e572]: 言語と文化
+          - generic [ref=e573]:
+            - link "Open" [ref=e574] [cursor=pointer]:
+              - /url: /cando/JF%3A51
+            - link "JSON" [ref=e575] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A51
+        - generic [ref=e576]:
+          - generic [ref=e577]: A2
+          - generic [ref=e578]: JFまるごと:470
+          - generic [ref=e579]: 生活と人生
+          - generic [ref=e580]:
+            - link "Open" [ref=e581] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A470
+            - link "JSON" [ref=e582] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A470
+        - generic [ref=e583]:
+          - generic [ref=e584]: A2
+          - generic [ref=e585]: JFまるごと:54
+          - generic [ref=e586]: 生活と人生
+          - generic [ref=e587]:
+            - link "Open" [ref=e588] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A54
+            - link "JSON" [ref=e589] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A54
+        - generic [ref=e590]:
+          - generic [ref=e591]: A2
+          - generic [ref=e592]: JF:52
+          - generic [ref=e593]: 仕事と職業
+          - generic [ref=e594]:
+            - link "Open" [ref=e595] [cursor=pointer]:
+              - /url: /cando/JF%3A52
+            - link "JSON" [ref=e596] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A52
+        - generic [ref=e597]:
+          - generic [ref=e598]: A2
+          - generic [ref=e599]: JFまるごと:471
+          - generic [ref=e600]: 健康
+          - generic [ref=e601]:
+            - link "Open" [ref=e602] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A471
+            - link "JSON" [ref=e603] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A471
+        - generic [ref=e604]:
+          - generic [ref=e605]: A2
+          - generic [ref=e606]: JFまるごと:472
+          - generic [ref=e607]: 食生活
+          - generic [ref=e608]:
+            - link "Open" [ref=e609] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A472
+            - link "JSON" [ref=e610] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A472
+        - generic [ref=e611]:
+          - generic [ref=e612]: A2
+          - generic [ref=e613]: JF:53
+          - generic [ref=e614]: 自然と環境
+          - generic [ref=e615]:
+            - link "Open" [ref=e616] [cursor=pointer]:
+              - /url: /cando/JF%3A53
+            - link "JSON" [ref=e617] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A53
+        - generic [ref=e618]:
+          - generic [ref=e619]: A2
+          - generic [ref=e620]: JFまるごと:55
+          - generic [ref=e621]: 言語と文化
+          - generic [ref=e622]:
+            - link "Open" [ref=e623] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A55
+            - link "JSON" [ref=e624] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A55
+        - generic [ref=e625]:
+          - generic [ref=e626]: A2
+          - generic [ref=e627]: JF:56
+          - generic [ref=e628]: 言語と文化
+          - generic [ref=e629]:
+            - link "Open" [ref=e630] [cursor=pointer]:
+              - /url: /cando/JF%3A56
+            - link "JSON" [ref=e631] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A56
+        - generic [ref=e632]:
+          - generic [ref=e633]: A1
+          - generic [ref=e634]: JF:57
+          - generic [ref=e635]: 生活と人生
+          - generic [ref=e636]:
+            - link "Open" [ref=e637] [cursor=pointer]:
+              - /url: /cando/JF%3A57
+            - link "JSON" [ref=e638] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A57
+        - generic [ref=e639]:
+          - generic [ref=e640]: A1
+          - generic [ref=e641]: JF:58
+          - generic [ref=e642]: 仕事と職業
+          - generic [ref=e643]:
+            - link "Open" [ref=e644] [cursor=pointer]:
+              - /url: /cando/JF%3A58
+            - link "JSON" [ref=e645] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A58
+        - generic [ref=e646]:
+          - generic [ref=e647]: A1
+          - generic [ref=e648]: JF:59
+          - generic [ref=e649]: 人との関係
+          - generic [ref=e650]:
+            - link "Open" [ref=e651] [cursor=pointer]:
+              - /url: /cando/JF%3A59
+            - link "JSON" [ref=e652] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A59
+        - generic [ref=e653]:
+          - generic [ref=e654]: A1
+          - generic [ref=e655]: JF:60
+          - generic [ref=e656]: 人との関係
+          - generic [ref=e657]:
+            - link "Open" [ref=e658] [cursor=pointer]:
+              - /url: /cando/JF%3A60
+            - link "JSON" [ref=e659] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A60
+        - generic [ref=e660]:
+          - generic [ref=e661]: B2
+          - generic [ref=e662]: JF:61
+          - generic [ref=e663]: 自由時間と娯楽
+          - generic [ref=e664]:
+            - link "Open" [ref=e665] [cursor=pointer]:
+              - /url: /cando/JF%3A61
+            - link "JSON" [ref=e666] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A61
+        - generic [ref=e667]:
+          - generic [ref=e668]: B2
+          - generic [ref=e669]: JF:62
+          - generic [ref=e670]: 仕事と職業
+          - generic [ref=e671]:
+            - link "Open" [ref=e672] [cursor=pointer]:
+              - /url: /cando/JF%3A62
+            - link "JSON" [ref=e673] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A62
+        - generic [ref=e674]:
+          - generic [ref=e675]: B1
+          - generic [ref=e676]: JFまるごと:564
+          - generic [ref=e677]: 自分と家族
+          - generic [ref=e678]:
+            - link "Open" [ref=e679] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A564
+            - link "JSON" [ref=e680] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A564
+        - generic [ref=e681]:
+          - generic [ref=e682]: B1
+          - generic [ref=e683]: JFまるごと:565
+          - generic [ref=e684]: 自由時間と娯楽
+          - generic [ref=e685]:
+            - link "Open" [ref=e686] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A565
+            - link "JSON" [ref=e687] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A565
+        - generic [ref=e688]:
+          - generic [ref=e689]: B1
+          - generic [ref=e690]: JF:63
+          - generic [ref=e691]: 自由時間と娯楽
+          - generic [ref=e692]:
+            - link "Open" [ref=e693] [cursor=pointer]:
+              - /url: /cando/JF%3A63
+            - link "JSON" [ref=e694] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A63
+        - generic [ref=e695]:
+          - generic [ref=e696]: B1
+          - generic [ref=e697]: JFまるごと:566
+          - generic [ref=e698]: 自由時間と娯楽
+          - generic [ref=e699]:
+            - link "Open" [ref=e700] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A566
+            - link "JSON" [ref=e701] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A566
+        - generic [ref=e702]:
+          - generic [ref=e703]: B1
+          - generic [ref=e704]: JF:64
+          - generic [ref=e705]: 仕事と職業
+          - generic [ref=e706]:
+            - link "Open" [ref=e707] [cursor=pointer]:
+              - /url: /cando/JF%3A64
+            - link "JSON" [ref=e708] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%3A64
+        - generic [ref=e709]:
+          - generic [ref=e710]: B1
+          - generic [ref=e711]: JFまるごと:567
+          - generic [ref=e712]: 健康
+          - generic [ref=e713]:
+            - link "Open" [ref=e714] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A567
+            - link "JSON" [ref=e715] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A567
+        - generic [ref=e716]:
+          - generic [ref=e717]: B1
+          - generic [ref=e718]: JFまるごと:568
+          - generic [ref=e719]: 買い物
+          - generic [ref=e720]:
+            - link "Open" [ref=e721] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A568
+            - link "JSON" [ref=e722] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A568
+        - generic [ref=e723]:
+          - generic [ref=e724]: B1
+          - generic [ref=e725]: JFまるごと:65
+          - generic [ref=e726]: 食生活
+          - generic [ref=e727]:
+            - link "Open" [ref=e728] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A65
+            - link "JSON" [ref=e729] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A65
+        - generic [ref=e730]:
+          - generic [ref=e731]: B1
+          - generic [ref=e732]: JFまるごと:66
+          - generic [ref=e733]: 言語と文化
+          - generic [ref=e734]:
+            - link "Open" [ref=e735] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A66
+            - link "JSON" [ref=e736] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A66
+  - button "Open Next.js Dev Tools" [ref=e742] [cursor=pointer]:
+    - img [ref=e743]
+  - alert [ref=e746]

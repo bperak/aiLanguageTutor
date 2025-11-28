@@ -85,6 +85,14 @@ As a tutor orchestrator, I want to activate CanDo-driven lessons from the graph,
 - **FR-009**: Content MUST avoid personal data and inappropriate material.
 - **FR-010**: The system SHOULD propose spaced-review sets when SEEN.count ≥ 2 and interval expired.
 - **FR-011**: The system SHOULD gracefully degrade when Word/Pattern links or textbook content are missing.
+- **FR-012**: Precedence policy MUST be feature-flagged: default Graph-first; fill gaps from compiled; allow env flag to switch precedence.  
+  (Feature flag: `LESSON_SOURCE_PRECEDENCE` with values `graph_first` | `compiled_first` | `strict_merge`.)
+- **FR-013**: Phase gating in GenerateExercises MUST support two modes via config; default is Completion gate (finish N exercises per phase; N configurable). Alternative Score gate (coverage+language ≥ 0.70) can be enabled via config.
+- **FR-014**: Storage model MUST be Hybrid: Postgres JSONB holds lesson plans (base) and per-user personalized variants; Neo4j holds structural links (no blobs); images live in filesystem/object storage with `manifest.json` referenced by JSON.  
+  (Tables: lessons, lesson_versions, user_lesson_overlays; Graph edges: (:Lesson)-[:COVERS]->(:CanDoDescriptor), etc.)
+- **FR-015**: Illustration policy MUST be Hybrid: pre-generate core assets and serve statically/CDN; generate personalized/variant images on-demand with caching (ETag/TTL); manifests hold refs only.
+- **FR-016**: Personalization MUST use JSON Patch overlays pinned to a base lesson version, with auto‑rebase on base updates and conflict logging for review.
+- **FR-017**: Frontend MUST include a dedicated "CanDo" tab in main navigation with browsing/search by Level/Topic/Domain, and deep links into ActivateCanDo.
 
 ### Key Entities *(include if feature involves data)*
 - **CanDoDescriptor**: target ability descriptor; attrs: uid, level, topic, domain, type, texts.
@@ -112,6 +120,19 @@ As a tutor orchestrator, I want to activate CanDo-driven lessons from the graph,
 - [ ] Success criteria are measurable
 - [ ] Scope is clearly bounded
 - [ ] Dependencies and assumptions identified
+
+---
+
+## Clarifications
+### Session 2025-10-06
+- Q: When ActivateCanDo assembles a lesson and both graph data and compiled artifacts exist, which precedence should apply? → A: D (Feature-flag: default Graph-first; switchable per env)
+- Q: What criteria should unlock guided and then open dialogue phases in GenerateExercises? → A: B (Completion gate default; Score gate selectable via config)
+- Q: Where should lesson JSON live at runtime for read/write? → A: C (Hybrid: Postgres JSONB + graph links; images in filesystem/object storage)
+- Q: How should lesson illustrations be generated and served? → A: C (Hybrid: pre-generate core; on-demand personalized with caching)
+- Q: How should user personalization merge with base lesson updates? → A: A (JSON Patch overlay with base version pin; auto‑rebase)
+
+### Session 2025-10-08
+- Q: Will we have a separate tab for CanDo? → A: A (Separate "CanDo" tab with browse/search by Level/Topic)
 
 ---
 

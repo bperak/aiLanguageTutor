@@ -1,0 +1,16 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e3547]:
+        - button "Toggle theme" [ref=e3548]: Dark
+        - button "Toggle mobile menu" [ref=e3549]:
+          - img [ref=e3550]
+  - main [ref=e24]:
+    - paragraph [ref=e3555]: Loading pattern details...
+  - button "Open Next.js Dev Tools" [ref=e35] [cursor=pointer]:
+    - img [ref=e36]
+  - alert [ref=e39]

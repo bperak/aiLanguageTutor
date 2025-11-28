@@ -164,3 +164,13 @@ def test_grammar_patterns_unauthorized():
     assert "detail" in error_detail
     assert "authenticated" in error_detail["detail"].lower()
 
+
+
+
+
+
+
+
+
+
+

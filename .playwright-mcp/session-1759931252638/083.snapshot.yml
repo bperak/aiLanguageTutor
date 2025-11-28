@@ -1,0 +1,968 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - link "CanDo" [ref=e18] [cursor=pointer]:
+          - /url: /cando
+        - button "Profile" [ref=e20]:
+          - text: Profile
+          - img [ref=e21]
+        - button "Toggle theme" [ref=e24]: Dark
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - heading "CanDo Browser" [level=1] [ref=e27]
+      - generic [ref=e28]:
+        - textbox "Search CanDo or Topic" [ref=e29]
+        - combobox [ref=e30]:
+          - option "All levels" [selected]
+          - option "A1"
+          - option "A2"
+          - option "B1"
+          - option "B2"
+        - combobox [ref=e31]:
+          - option "All topics" [selected]
+          - option "人との関係"
+          - option "仕事と職業"
+          - option "住まいと住環境"
+          - option "健康"
+          - option "学校と教育"
+          - option "旅行と交通"
+          - option "生活と人生"
+          - option "社会"
+          - option "科学技術"
+          - option "自分と家族"
+          - option "自然と環境"
+          - option "自由時間と娯楽"
+          - option "言語と文化"
+          - option "買い物"
+          - option "食生活"
+        - button "Search" [ref=e32]
+      - generic [ref=e33]:
+        - generic [ref=e34]: Showing 100 of 0 result(s)
+        - generic [ref=e35]:
+          - generic [ref=e36]: Page size
+          - combobox [ref=e37]:
+            - option "20"
+            - option "50"
+            - option "100" [selected]
+            - option "200"
+          - button "Prev" [disabled] [ref=e38]
+          - button "Next" [disabled] [ref=e39]
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]: B2
+          - generic [ref=e43]: JF:1
+          - generic [ref=e44]: 自由時間と娯楽
+          - generic [ref=e45]:
+            - link "Open" [ref=e46] [cursor=pointer]:
+              - /url: /cando/JF%3A1
+            - link "JSON" [ref=e47] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A1
+        - generic [ref=e48]:
+          - generic [ref=e49]: B2
+          - generic [ref=e50]: JF:2
+          - generic [ref=e51]: 学校と教育
+          - generic [ref=e52]:
+            - link "Open" [ref=e53] [cursor=pointer]:
+              - /url: /cando/JF%3A2
+            - link "JSON" [ref=e54] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A2
+        - generic [ref=e55]:
+          - generic [ref=e56]: B1
+          - generic [ref=e57]: JFまるごと:239
+          - generic [ref=e58]: 自分と家族
+          - generic [ref=e59]:
+            - link "Open" [ref=e60] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A239
+            - link "JSON" [ref=e61] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A239
+        - generic [ref=e62]:
+          - generic [ref=e63]: B1
+          - generic [ref=e64]: JFまるごと:249
+          - generic [ref=e65]: 自由時間と娯楽
+          - generic [ref=e66]:
+            - link "Open" [ref=e67] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A249
+            - link "JSON" [ref=e68] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A249
+        - generic [ref=e69]:
+          - generic [ref=e70]: B1
+          - generic [ref=e71]: JFまるごと:3
+          - generic [ref=e72]: 自由時間と娯楽
+          - generic [ref=e73]:
+            - link "Open" [ref=e74] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A3
+            - link "JSON" [ref=e75] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A3
+        - generic [ref=e76]:
+          - generic [ref=e77]: B1
+          - generic [ref=e78]: JFまるごと:555
+          - generic [ref=e79]: 自由時間と娯楽
+          - generic [ref=e80]:
+            - link "Open" [ref=e81] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A555
+            - link "JSON" [ref=e82] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A555
+        - generic [ref=e83]:
+          - generic [ref=e84]: B1
+          - generic [ref=e85]: JFまるごと:556
+          - generic [ref=e86]: 自由時間と娯楽
+          - generic [ref=e87]:
+            - link "Open" [ref=e88] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A556
+            - link "JSON" [ref=e89] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A556
+        - generic [ref=e90]:
+          - generic [ref=e91]: B1
+          - generic [ref=e92]: JF:4
+          - generic [ref=e93]: 仕事と職業
+          - generic [ref=e94]:
+            - link "Open" [ref=e95] [cursor=pointer]:
+              - /url: /cando/JF%3A4
+            - link "JSON" [ref=e96] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A4
+        - generic [ref=e97]:
+          - generic [ref=e98]: B1
+          - generic [ref=e99]: JF:5
+          - generic [ref=e100]: 旅行と交通
+          - generic [ref=e101]:
+            - link "Open" [ref=e102] [cursor=pointer]:
+              - /url: /cando/JF%3A5
+            - link "JSON" [ref=e103] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A5
+        - generic [ref=e104]:
+          - generic [ref=e105]: B1
+          - generic [ref=e106]: JFまるごと:557
+          - generic [ref=e107]: 旅行と交通
+          - generic [ref=e108]:
+            - link "Open" [ref=e109] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A557
+            - link "JSON" [ref=e110] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A557
+        - generic [ref=e111]:
+          - generic [ref=e112]: B1
+          - generic [ref=e113]: JFまるごと:558
+          - generic [ref=e114]: 旅行と交通
+          - generic [ref=e115]:
+            - link "Open" [ref=e116] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A558
+            - link "JSON" [ref=e117] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A558
+        - generic [ref=e118]:
+          - generic [ref=e119]: B1
+          - generic [ref=e120]: JFまるごと:559
+          - generic [ref=e121]: 旅行と交通
+          - generic [ref=e122]:
+            - link "Open" [ref=e123] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A559
+            - link "JSON" [ref=e124] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A559
+        - generic [ref=e125]:
+          - generic [ref=e126]: B1
+          - generic [ref=e127]: JF:6
+          - generic [ref=e128]: 健康
+          - generic [ref=e129]:
+            - link "Open" [ref=e130] [cursor=pointer]:
+              - /url: /cando/JF%3A6
+            - link "JSON" [ref=e131] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A6
+        - generic [ref=e132]:
+          - generic [ref=e133]: B1
+          - generic [ref=e134]: JF:7
+          - generic [ref=e135]: 買い物
+          - generic [ref=e136]:
+            - link "Open" [ref=e137] [cursor=pointer]:
+              - /url: /cando/JF%3A7
+            - link "JSON" [ref=e138] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A7
+        - generic [ref=e139]:
+          - generic [ref=e140]: B1
+          - generic [ref=e141]: JFまるごと:8
+          - generic [ref=e142]: 食生活
+          - generic [ref=e143]:
+            - link "Open" [ref=e144] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A8
+            - link "JSON" [ref=e145] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A8
+        - generic [ref=e146]:
+          - generic [ref=e147]: B1
+          - generic [ref=e148]: JFまるごと:560
+          - generic [ref=e149]: 人との関係
+          - generic [ref=e150]:
+            - link "Open" [active] [ref=e151] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A560
+            - link "JSON" [ref=e152] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A560
+        - generic [ref=e153]:
+          - generic [ref=e154]: B1
+          - generic [ref=e155]: JFまるごと:561
+          - generic [ref=e156]: 人との関係
+          - generic [ref=e157]:
+            - link "Open" [ref=e158] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A561
+            - link "JSON" [ref=e159] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A561
+        - generic [ref=e160]:
+          - generic [ref=e161]: B1
+          - generic [ref=e162]: JF:9
+          - generic [ref=e163]: 学校と教育
+          - generic [ref=e164]:
+            - link "Open" [ref=e165] [cursor=pointer]:
+              - /url: /cando/JF%3A9
+            - link "JSON" [ref=e166] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A9
+        - generic [ref=e167]:
+          - generic [ref=e168]: B1
+          - generic [ref=e169]: JF:10
+          - generic [ref=e170]: 言語と文化
+          - generic [ref=e171]:
+            - link "Open" [ref=e172] [cursor=pointer]:
+              - /url: /cando/JF%3A10
+            - link "JSON" [ref=e173] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A10
+        - generic [ref=e174]:
+          - generic [ref=e175]: B1
+          - generic [ref=e176]: JFまるごと:562
+          - generic [ref=e177]: 社会
+          - generic [ref=e178]:
+            - link "Open" [ref=e179] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A562
+            - link "JSON" [ref=e180] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A562
+        - generic [ref=e181]:
+          - generic [ref=e182]: A2
+          - generic [ref=e183]: JFまるごと:456
+          - generic [ref=e184]: 自分と家族
+          - generic [ref=e185]:
+            - link "Open" [ref=e186] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A456
+            - link "JSON" [ref=e187] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A456
+        - generic [ref=e188]:
+          - generic [ref=e189]: A2
+          - generic [ref=e190]: JFまるごと:457
+          - generic [ref=e191]: 自分と家族
+          - generic [ref=e192]:
+            - link "Open" [ref=e193] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A457
+            - link "JSON" [ref=e194] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A457
+        - generic [ref=e195]:
+          - generic [ref=e196]: A2
+          - generic [ref=e197]: JFまるごと:458
+          - generic [ref=e198]: 自分と家族
+          - generic [ref=e199]:
+            - link "Open" [ref=e200] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A458
+            - link "JSON" [ref=e201] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A458
+        - generic [ref=e202]:
+          - generic [ref=e203]: A2
+          - generic [ref=e204]: JFまるごと:459
+          - generic [ref=e205]: 自分と家族
+          - generic [ref=e206]:
+            - link "Open" [ref=e207] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A459
+            - link "JSON" [ref=e208] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A459
+        - generic [ref=e209]:
+          - generic [ref=e210]: A2
+          - generic [ref=e211]: JF:11
+          - generic [ref=e212]: 自由時間と娯楽
+          - generic [ref=e213]:
+            - link "Open" [ref=e214] [cursor=pointer]:
+              - /url: /cando/JF%3A11
+            - link "JSON" [ref=e215] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A11
+        - generic [ref=e216]:
+          - generic [ref=e217]: A2
+          - generic [ref=e218]: JFまるごと:460
+          - generic [ref=e219]: 自由時間と娯楽
+          - generic [ref=e220]:
+            - link "Open" [ref=e221] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A460
+            - link "JSON" [ref=e222] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A460
+        - generic [ref=e223]:
+          - generic [ref=e224]: A2
+          - generic [ref=e225]: JFまるごと:19
+          - generic [ref=e226]: 生活と人生
+          - generic [ref=e227]:
+            - link "Open" [ref=e228] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A19
+            - link "JSON" [ref=e229] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A19
+        - generic [ref=e230]:
+          - generic [ref=e231]: A2
+          - generic [ref=e232]: JFまるごと:461
+          - generic [ref=e233]: 生活と人生
+          - generic [ref=e234]:
+            - link "Open" [ref=e235] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A461
+            - link "JSON" [ref=e236] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A461
+        - generic [ref=e237]:
+          - generic [ref=e238]: A2
+          - generic [ref=e239]: JFまるごと:462
+          - generic [ref=e240]: 生活と人生
+          - generic [ref=e241]:
+            - link "Open" [ref=e242] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A462
+            - link "JSON" [ref=e243] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A462
+        - generic [ref=e244]:
+          - generic [ref=e245]: A2
+          - generic [ref=e246]: JF:12
+          - generic [ref=e247]: 仕事と職業
+          - generic [ref=e248]:
+            - link "Open" [ref=e249] [cursor=pointer]:
+              - /url: /cando/JF%3A12
+            - link "JSON" [ref=e250] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A12
+        - generic [ref=e251]:
+          - generic [ref=e252]: A2
+          - generic [ref=e253]: JFまるごと:463
+          - generic [ref=e254]: 仕事と職業
+          - generic [ref=e255]:
+            - link "Open" [ref=e256] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A463
+            - link "JSON" [ref=e257] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A463
+        - generic [ref=e258]:
+          - generic [ref=e259]: A2
+          - generic [ref=e260]: JFまるごと:464
+          - generic [ref=e261]: 仕事と職業
+          - generic [ref=e262]:
+            - link "Open" [ref=e263] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A464
+            - link "JSON" [ref=e264] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A464
+        - generic [ref=e265]:
+          - generic [ref=e266]: A2
+          - generic [ref=e267]: JFまるごと:13
+          - generic [ref=e268]: 旅行と交通
+          - generic [ref=e269]:
+            - link "Open" [ref=e270] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A13
+            - link "JSON" [ref=e271] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A13
+        - generic [ref=e272]:
+          - generic [ref=e273]: A2
+          - generic [ref=e274]: JFまるごと:14
+          - generic [ref=e275]: 旅行と交通
+          - generic [ref=e276]:
+            - link "Open" [ref=e277] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A14
+            - link "JSON" [ref=e278] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A14
+        - generic [ref=e279]:
+          - generic [ref=e280]: A2
+          - generic [ref=e281]: JFまるごと:465
+          - generic [ref=e282]: 旅行と交通
+          - generic [ref=e283]:
+            - link "Open" [ref=e284] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A465
+            - link "JSON" [ref=e285] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A465
+        - generic [ref=e286]:
+          - generic [ref=e287]: A2
+          - generic [ref=e288]: JFまるごと:15
+          - generic [ref=e289]: 健康
+          - generic [ref=e290]:
+            - link "Open" [ref=e291] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A15
+            - link "JSON" [ref=e292] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A15
+        - generic [ref=e293]:
+          - generic [ref=e294]: A2
+          - generic [ref=e295]: JF:16
+          - generic [ref=e296]: 買い物
+          - generic [ref=e297]:
+            - link "Open" [ref=e298] [cursor=pointer]:
+              - /url: /cando/JF%3A16
+            - link "JSON" [ref=e299] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A16
+        - generic [ref=e300]:
+          - generic [ref=e301]: A2
+          - generic [ref=e302]: JF:17
+          - generic [ref=e303]: 食生活
+          - generic [ref=e304]:
+            - link "Open" [ref=e305] [cursor=pointer]:
+              - /url: /cando/JF%3A17
+            - link "JSON" [ref=e306] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A17
+        - generic [ref=e307]:
+          - generic [ref=e308]: A2
+          - generic [ref=e309]: JFまるごと:466
+          - generic [ref=e310]: 食生活
+          - generic [ref=e311]:
+            - link "Open" [ref=e312] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A466
+            - link "JSON" [ref=e313] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A466
+        - generic [ref=e314]:
+          - generic [ref=e315]: A2
+          - generic [ref=e316]: JFまるごと:18
+          - generic [ref=e317]: 人との関係
+          - generic [ref=e318]:
+            - link "Open" [ref=e319] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A18
+            - link "JSON" [ref=e320] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A18
+        - generic [ref=e321]:
+          - generic [ref=e322]: A2
+          - generic [ref=e323]: JF:20
+          - generic [ref=e324]: 言語と文化
+          - generic [ref=e325]:
+            - link "Open" [ref=e326] [cursor=pointer]:
+              - /url: /cando/JF%3A20
+            - link "JSON" [ref=e327] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A20
+        - generic [ref=e328]:
+          - generic [ref=e329]: A2
+          - generic [ref=e330]: JFまるごと:467
+          - generic [ref=e331]: 言語と文化
+          - generic [ref=e332]:
+            - link "Open" [ref=e333] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A467
+            - link "JSON" [ref=e334] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A467
+        - generic [ref=e335]:
+          - generic [ref=e336]: A2
+          - generic [ref=e337]: JFまるごと:468
+          - generic [ref=e338]: 言語と文化
+          - generic [ref=e339]:
+            - link "Open" [ref=e340] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A468
+            - link "JSON" [ref=e341] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A468
+        - generic [ref=e342]:
+          - generic [ref=e343]: A1
+          - generic [ref=e344]: JF:21
+          - generic [ref=e345]: 自分と家族
+          - generic [ref=e346]:
+            - link "Open" [ref=e347] [cursor=pointer]:
+              - /url: /cando/JF%3A21
+            - link "JSON" [ref=e348] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A21
+        - generic [ref=e349]:
+          - generic [ref=e350]: A1
+          - generic [ref=e351]: JFまるごと:22
+          - generic [ref=e352]: 自分と家族
+          - generic [ref=e353]:
+            - link "Open" [ref=e354] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A22
+            - link "JSON" [ref=e355] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A22
+        - generic [ref=e356]:
+          - generic [ref=e357]: A1
+          - generic [ref=e358]: JFまるごと:23
+          - generic [ref=e359]: 住まいと住環境
+          - generic [ref=e360]:
+            - link "Open" [ref=e361] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A23
+            - link "JSON" [ref=e362] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A23
+        - generic [ref=e363]:
+          - generic [ref=e364]: A1
+          - generic [ref=e365]: JFまるごと:24
+          - generic [ref=e366]: 住まいと住環境
+          - generic [ref=e367]:
+            - link "Open" [ref=e368] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A24
+            - link "JSON" [ref=e369] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A24
+        - generic [ref=e370]:
+          - generic [ref=e371]: A1
+          - generic [ref=e372]: JFまるごと:25
+          - generic [ref=e373]: 住まいと住環境
+          - generic [ref=e374]:
+            - link "Open" [ref=e375] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A25
+            - link "JSON" [ref=e376] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A25
+        - generic [ref=e377]:
+          - generic [ref=e378]: A1
+          - generic [ref=e379]: JFまるごと:26
+          - generic [ref=e380]: 生活と人生
+          - generic [ref=e381]:
+            - link "Open" [ref=e382] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A26
+            - link "JSON" [ref=e383] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A26
+        - generic [ref=e384]:
+          - generic [ref=e385]: A1
+          - generic [ref=e386]: JF:27
+          - generic [ref=e387]: 食生活
+          - generic [ref=e388]:
+            - link "Open" [ref=e389] [cursor=pointer]:
+              - /url: /cando/JF%3A27
+            - link "JSON" [ref=e390] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A27
+        - generic [ref=e391]:
+          - generic [ref=e392]: B2
+          - generic [ref=e393]: JF:28
+          - generic [ref=e394]: 仕事と職業
+          - generic [ref=e395]:
+            - link "Open" [ref=e396] [cursor=pointer]:
+              - /url: /cando/JF%3A28
+            - link "JSON" [ref=e397] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A28
+        - generic [ref=e398]:
+          - generic [ref=e399]: B2
+          - generic [ref=e400]: JF:29
+          - generic [ref=e401]: 買い物
+          - generic [ref=e402]:
+            - link "Open" [ref=e403] [cursor=pointer]:
+              - /url: /cando/JF%3A29
+            - link "JSON" [ref=e404] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A29
+        - generic [ref=e405]:
+          - generic [ref=e406]: B2
+          - generic [ref=e407]: JF:30
+          - generic [ref=e408]: 社会
+          - generic [ref=e409]:
+            - link "Open" [ref=e410] [cursor=pointer]:
+              - /url: /cando/JF%3A30
+            - link "JSON" [ref=e411] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A30
+        - generic [ref=e412]:
+          - generic [ref=e413]: B2
+          - generic [ref=e414]: JF:31
+          - generic [ref=e415]: 社会
+          - generic [ref=e416]:
+            - link "Open" [ref=e417] [cursor=pointer]:
+              - /url: /cando/JF%3A31
+            - link "JSON" [ref=e418] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A31
+        - generic [ref=e419]:
+          - generic [ref=e420]: B1
+          - generic [ref=e421]: JF:32
+          - generic [ref=e422]: 自由時間と娯楽
+          - generic [ref=e423]:
+            - link "Open" [ref=e424] [cursor=pointer]:
+              - /url: /cando/JF%3A32
+            - link "JSON" [ref=e425] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A32
+        - generic [ref=e426]:
+          - generic [ref=e427]: B1
+          - generic [ref=e428]: JF:33
+          - generic [ref=e429]: 学校と教育
+          - generic [ref=e430]:
+            - link "Open" [ref=e431] [cursor=pointer]:
+              - /url: /cando/JF%3A33
+            - link "JSON" [ref=e432] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A33
+        - generic [ref=e433]:
+          - generic [ref=e434]: B1
+          - generic [ref=e435]: JF:34
+          - generic [ref=e436]: 社会
+          - generic [ref=e437]:
+            - link "Open" [ref=e438] [cursor=pointer]:
+              - /url: /cando/JF%3A34
+            - link "JSON" [ref=e439] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A34
+        - generic [ref=e440]:
+          - generic [ref=e441]: B1
+          - generic [ref=e442]: JFまるごと:35
+          - generic [ref=e443]: 科学技術
+          - generic [ref=e444]:
+            - link "Open" [ref=e445] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A35
+            - link "JSON" [ref=e446] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A35
+        - generic [ref=e447]:
+          - generic [ref=e448]: B2
+          - generic [ref=e449]: JF:36
+          - generic [ref=e450]: 仕事と職業
+          - generic [ref=e451]:
+            - link "Open" [ref=e452] [cursor=pointer]:
+              - /url: /cando/JF%3A36
+            - link "JSON" [ref=e453] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A36
+        - generic [ref=e454]:
+          - generic [ref=e455]: B2
+          - generic [ref=e456]: JF:37
+          - generic [ref=e457]: 仕事と職業
+          - generic [ref=e458]:
+            - link "Open" [ref=e459] [cursor=pointer]:
+              - /url: /cando/JF%3A37
+            - link "JSON" [ref=e460] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A37
+        - generic [ref=e461]:
+          - generic [ref=e462]: B1
+          - generic [ref=e463]: JF:38
+          - generic [ref=e464]: 仕事と職業
+          - generic [ref=e465]:
+            - link "Open" [ref=e466] [cursor=pointer]:
+              - /url: /cando/JF%3A38
+            - link "JSON" [ref=e467] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A38
+        - generic [ref=e468]:
+          - generic [ref=e469]: B1
+          - generic [ref=e470]: JF:39
+          - generic [ref=e471]: 仕事と職業
+          - generic [ref=e472]:
+            - link "Open" [ref=e473] [cursor=pointer]:
+              - /url: /cando/JF%3A39
+            - link "JSON" [ref=e474] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A39
+        - generic [ref=e475]:
+          - generic [ref=e476]: A2
+          - generic [ref=e477]: JF:40
+          - generic [ref=e478]: 仕事と職業
+          - generic [ref=e479]:
+            - link "Open" [ref=e480] [cursor=pointer]:
+              - /url: /cando/JF%3A40
+            - link "JSON" [ref=e481] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A40
+        - generic [ref=e482]:
+          - generic [ref=e483]: A2
+          - generic [ref=e484]: JF:41
+          - generic [ref=e485]: 仕事と職業
+          - generic [ref=e486]:
+            - link "Open" [ref=e487] [cursor=pointer]:
+              - /url: /cando/JF%3A41
+            - link "JSON" [ref=e488] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A41
+        - generic [ref=e489]:
+          - generic [ref=e490]: A2
+          - generic [ref=e491]: JFまるごと:469
+          - generic [ref=e492]: 仕事と職業
+          - generic [ref=e493]:
+            - link "Open" [ref=e494] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A469
+            - link "JSON" [ref=e495] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A469
+        - generic [ref=e496]:
+          - generic [ref=e497]: B2
+          - generic [ref=e498]: JF:42
+          - generic [ref=e499]: 仕事と職業
+          - generic [ref=e500]:
+            - link "Open" [ref=e501] [cursor=pointer]:
+              - /url: /cando/JF%3A42
+            - link "JSON" [ref=e502] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A42
+        - generic [ref=e503]:
+          - generic [ref=e504]: B2
+          - generic [ref=e505]: JF:43
+          - generic [ref=e506]: 仕事と職業
+          - generic [ref=e507]:
+            - link "Open" [ref=e508] [cursor=pointer]:
+              - /url: /cando/JF%3A43
+            - link "JSON" [ref=e509] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A43
+        - generic [ref=e510]:
+          - generic [ref=e511]: B2
+          - generic [ref=e512]: JF:44
+          - generic [ref=e513]: 学校と教育
+          - generic [ref=e514]:
+            - link "Open" [ref=e515] [cursor=pointer]:
+              - /url: /cando/JF%3A44
+            - link "JSON" [ref=e516] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A44
+        - generic [ref=e517]:
+          - generic [ref=e518]: B1
+          - generic [ref=e519]: JFまるごと:45
+          - generic [ref=e520]: 仕事と職業
+          - generic [ref=e521]:
+            - link "Open" [ref=e522] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A45
+            - link "JSON" [ref=e523] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A45
+        - generic [ref=e524]:
+          - generic [ref=e525]: B1
+          - generic [ref=e526]: JF:46
+          - generic [ref=e527]: 仕事と職業
+          - generic [ref=e528]:
+            - link "Open" [ref=e529] [cursor=pointer]:
+              - /url: /cando/JF%3A46
+            - link "JSON" [ref=e530] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A46
+        - generic [ref=e531]:
+          - generic [ref=e532]: B1
+          - generic [ref=e533]: JFまるごと:563
+          - generic [ref=e534]: 健康
+          - generic [ref=e535]:
+            - link "Open" [ref=e536] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A563
+            - link "JSON" [ref=e537] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A563
+        - generic [ref=e538]:
+          - generic [ref=e539]: B1
+          - generic [ref=e540]: JF:47
+          - generic [ref=e541]: 自然と環境
+          - generic [ref=e542]:
+            - link "Open" [ref=e543] [cursor=pointer]:
+              - /url: /cando/JF%3A47
+            - link "JSON" [ref=e544] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A47
+        - generic [ref=e545]:
+          - generic [ref=e546]: B1
+          - generic [ref=e547]: JF:48
+          - generic [ref=e548]: 人との関係
+          - generic [ref=e549]:
+            - link "Open" [ref=e550] [cursor=pointer]:
+              - /url: /cando/JF%3A48
+            - link "JSON" [ref=e551] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A48
+        - generic [ref=e552]:
+          - generic [ref=e553]: B1
+          - generic [ref=e554]: JFまるごと:533
+          - generic [ref=e555]: 人との関係
+          - generic [ref=e556]:
+            - link "Open" [ref=e557] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A533
+            - link "JSON" [ref=e558] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A533
+        - generic [ref=e559]:
+          - generic [ref=e560]: B1
+          - generic [ref=e561]: JF:49
+          - generic [ref=e562]: 学校と教育
+          - generic [ref=e563]:
+            - link "Open" [ref=e564] [cursor=pointer]:
+              - /url: /cando/JF%3A49
+            - link "JSON" [ref=e565] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A49
+        - generic [ref=e566]:
+          - generic [ref=e567]: B1
+          - generic [ref=e568]: JF:50
+          - generic [ref=e569]: 言語と文化
+          - generic [ref=e570]:
+            - link "Open" [ref=e571] [cursor=pointer]:
+              - /url: /cando/JF%3A50
+            - link "JSON" [ref=e572] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A50
+        - generic [ref=e573]:
+          - generic [ref=e574]: B1
+          - generic [ref=e575]: JF:51
+          - generic [ref=e576]: 言語と文化
+          - generic [ref=e577]:
+            - link "Open" [ref=e578] [cursor=pointer]:
+              - /url: /cando/JF%3A51
+            - link "JSON" [ref=e579] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A51
+        - generic [ref=e580]:
+          - generic [ref=e581]: A2
+          - generic [ref=e582]: JFまるごと:470
+          - generic [ref=e583]: 生活と人生
+          - generic [ref=e584]:
+            - link "Open" [ref=e585] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A470
+            - link "JSON" [ref=e586] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A470
+        - generic [ref=e587]:
+          - generic [ref=e588]: A2
+          - generic [ref=e589]: JFまるごと:54
+          - generic [ref=e590]: 生活と人生
+          - generic [ref=e591]:
+            - link "Open" [ref=e592] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A54
+            - link "JSON" [ref=e593] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A54
+        - generic [ref=e594]:
+          - generic [ref=e595]: A2
+          - generic [ref=e596]: JF:52
+          - generic [ref=e597]: 仕事と職業
+          - generic [ref=e598]:
+            - link "Open" [ref=e599] [cursor=pointer]:
+              - /url: /cando/JF%3A52
+            - link "JSON" [ref=e600] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A52
+        - generic [ref=e601]:
+          - generic [ref=e602]: A2
+          - generic [ref=e603]: JFまるごと:471
+          - generic [ref=e604]: 健康
+          - generic [ref=e605]:
+            - link "Open" [ref=e606] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A471
+            - link "JSON" [ref=e607] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A471
+        - generic [ref=e608]:
+          - generic [ref=e609]: A2
+          - generic [ref=e610]: JFまるごと:472
+          - generic [ref=e611]: 食生活
+          - generic [ref=e612]:
+            - link "Open" [ref=e613] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A472
+            - link "JSON" [ref=e614] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A472
+        - generic [ref=e615]:
+          - generic [ref=e616]: A2
+          - generic [ref=e617]: JF:53
+          - generic [ref=e618]: 自然と環境
+          - generic [ref=e619]:
+            - link "Open" [ref=e620] [cursor=pointer]:
+              - /url: /cando/JF%3A53
+            - link "JSON" [ref=e621] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A53
+        - generic [ref=e622]:
+          - generic [ref=e623]: A2
+          - generic [ref=e624]: JFまるごと:55
+          - generic [ref=e625]: 言語と文化
+          - generic [ref=e626]:
+            - link "Open" [ref=e627] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A55
+            - link "JSON" [ref=e628] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A55
+        - generic [ref=e629]:
+          - generic [ref=e630]: A2
+          - generic [ref=e631]: JF:56
+          - generic [ref=e632]: 言語と文化
+          - generic [ref=e633]:
+            - link "Open" [ref=e634] [cursor=pointer]:
+              - /url: /cando/JF%3A56
+            - link "JSON" [ref=e635] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A56
+        - generic [ref=e636]:
+          - generic [ref=e637]: A1
+          - generic [ref=e638]: JF:57
+          - generic [ref=e639]: 生活と人生
+          - generic [ref=e640]:
+            - link "Open" [ref=e641] [cursor=pointer]:
+              - /url: /cando/JF%3A57
+            - link "JSON" [ref=e642] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A57
+        - generic [ref=e643]:
+          - generic [ref=e644]: A1
+          - generic [ref=e645]: JF:58
+          - generic [ref=e646]: 仕事と職業
+          - generic [ref=e647]:
+            - link "Open" [ref=e648] [cursor=pointer]:
+              - /url: /cando/JF%3A58
+            - link "JSON" [ref=e649] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A58
+        - generic [ref=e650]:
+          - generic [ref=e651]: A1
+          - generic [ref=e652]: JF:59
+          - generic [ref=e653]: 人との関係
+          - generic [ref=e654]:
+            - link "Open" [ref=e655] [cursor=pointer]:
+              - /url: /cando/JF%3A59
+            - link "JSON" [ref=e656] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A59
+        - generic [ref=e657]:
+          - generic [ref=e658]: A1
+          - generic [ref=e659]: JF:60
+          - generic [ref=e660]: 人との関係
+          - generic [ref=e661]:
+            - link "Open" [ref=e662] [cursor=pointer]:
+              - /url: /cando/JF%3A60
+            - link "JSON" [ref=e663] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A60
+        - generic [ref=e664]:
+          - generic [ref=e665]: B2
+          - generic [ref=e666]: JF:61
+          - generic [ref=e667]: 自由時間と娯楽
+          - generic [ref=e668]:
+            - link "Open" [ref=e669] [cursor=pointer]:
+              - /url: /cando/JF%3A61
+            - link "JSON" [ref=e670] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A61
+        - generic [ref=e671]:
+          - generic [ref=e672]: B2
+          - generic [ref=e673]: JF:62
+          - generic [ref=e674]: 仕事と職業
+          - generic [ref=e675]:
+            - link "Open" [ref=e676] [cursor=pointer]:
+              - /url: /cando/JF%3A62
+            - link "JSON" [ref=e677] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A62
+        - generic [ref=e678]:
+          - generic [ref=e679]: B1
+          - generic [ref=e680]: JFまるごと:564
+          - generic [ref=e681]: 自分と家族
+          - generic [ref=e682]:
+            - link "Open" [ref=e683] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A564
+            - link "JSON" [ref=e684] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A564
+        - generic [ref=e685]:
+          - generic [ref=e686]: B1
+          - generic [ref=e687]: JFまるごと:565
+          - generic [ref=e688]: 自由時間と娯楽
+          - generic [ref=e689]:
+            - link "Open" [ref=e690] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A565
+            - link "JSON" [ref=e691] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A565
+        - generic [ref=e692]:
+          - generic [ref=e693]: B1
+          - generic [ref=e694]: JF:63
+          - generic [ref=e695]: 自由時間と娯楽
+          - generic [ref=e696]:
+            - link "Open" [ref=e697] [cursor=pointer]:
+              - /url: /cando/JF%3A63
+            - link "JSON" [ref=e698] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A63
+        - generic [ref=e699]:
+          - generic [ref=e700]: B1
+          - generic [ref=e701]: JFまるごと:566
+          - generic [ref=e702]: 自由時間と娯楽
+          - generic [ref=e703]:
+            - link "Open" [ref=e704] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A566
+            - link "JSON" [ref=e705] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A566
+        - generic [ref=e706]:
+          - generic [ref=e707]: B1
+          - generic [ref=e708]: JF:64
+          - generic [ref=e709]: 仕事と職業
+          - generic [ref=e710]:
+            - link "Open" [ref=e711] [cursor=pointer]:
+              - /url: /cando/JF%3A64
+            - link "JSON" [ref=e712] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%3A64
+        - generic [ref=e713]:
+          - generic [ref=e714]: B1
+          - generic [ref=e715]: JFまるごと:567
+          - generic [ref=e716]: 健康
+          - generic [ref=e717]:
+            - link "Open" [ref=e718] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A567
+            - link "JSON" [ref=e719] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A567
+        - generic [ref=e720]:
+          - generic [ref=e721]: B1
+          - generic [ref=e722]: JFまるごと:568
+          - generic [ref=e723]: 買い物
+          - generic [ref=e724]:
+            - link "Open" [ref=e725] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A568
+            - link "JSON" [ref=e726] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A568
+        - generic [ref=e727]:
+          - generic [ref=e728]: B1
+          - generic [ref=e729]: JFまるごと:65
+          - generic [ref=e730]: 食生活
+          - generic [ref=e731]:
+            - link "Open" [ref=e732] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A65
+            - link "JSON" [ref=e733] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A65
+        - generic [ref=e734]:
+          - generic [ref=e735]: B1
+          - generic [ref=e736]: JFまるごと:66
+          - generic [ref=e737]: 言語と文化
+          - generic [ref=e738]:
+            - link "Open" [ref=e739] [cursor=pointer]:
+              - /url: /cando/JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A66
+            - link "JSON" [ref=e740] [cursor=pointer]:
+              - /url: http://localhost:8000/api/v1/cando/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%3A66
+  - button "Open Next.js Dev Tools" [ref=e746] [cursor=pointer]:
+    - img [ref=e747]
+  - alert [ref=e750]

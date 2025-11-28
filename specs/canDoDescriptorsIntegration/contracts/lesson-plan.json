@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lesson-plan.schema.json",
+  "type": "object",
+  "required": ["can_do_id", "title", "sections"],
+  "properties": {
+    "can_do_id": {"type": "string"},
+    "title": {"type": "string"},
+    "ui_lang": {"type": "string"},
+    "l1_lang": {"type": "string"},
+    "l2_lang": {"type": "string"},
+    "objectives": {"type": "array", "items": {"type": "string"}},
+    "lexicon": {"type": "array", "items": {"type": "object"}},
+    "patterns": {"type": "array", "items": {"type": "object"}},
+    "modes": {"type": "array", "items": {"type": "string"}},
+    "illustrations": {"type": "array", "items": {"type": "object"}},
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": {"type": "string"},
+          "blurb": {"type": "string"},
+          "items": {"type": "array"},
+          "prompt": {"type": "string"},
+          "constraints": {"type": "object"},
+          "accepts": {"type": "string"},
+          "media": {"type": "array"}
+        }
+      }
+    }
+  }
+}
+
+

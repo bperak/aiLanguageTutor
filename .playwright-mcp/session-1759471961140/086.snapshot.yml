@@ -1,0 +1,144 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: 血漿
+            - generic [ref=e862]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e883]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e884]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [active] [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e897]:
+          - generic [ref=e898]:
+            - generic [ref=e899]: "Search node: 血漿"
+            - generic [ref=e900]: "Nodes: 15"
+            - generic [ref=e901]: "Links: 44"
+            - combobox [ref=e902]:
+              - 'option "Depth: 1" [selected]'
+              - 'option "Depth: 2"'
+          - generic [ref=e903]:
+            - button "3D" [ref=e904]
+            - button "Fit" [ref=e905]
+            - button "Reset" [ref=e906]
+        - generic [ref=e625]:
+          - heading "Selected Node" [level=3] [ref=e626]
+          - generic [ref=e627]:
+            - generic [ref=e628]:
+              - generic [ref=e629]: 血漿
+              - generic [ref=e630]: けっしょう
+              - generic [ref=e631]: plasma
+              - generic [ref=e633]:
+                - generic [ref=e634]: "POS: -"
+                - generic [ref=e635]: "Level: -"
+                - generic [ref=e636]: "Connections: 14"
+            - generic [ref=e637]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e638]
+              - generic [ref=e639]:
+                - 'button "血清 けっせい serum Synonym: 0.90 | POS: | Level:" [ref=e907]':
+                  - generic [ref=e641]: 血清
+                  - generic [ref=e642]: けっせい
+                  - generic [ref=e643]: serum
+                  - generic [ref=e644]: "Synonym: 0.90 | POS: | Level:"
+                - 'button "血液 けつえき blood Synonym: 0.85 | POS: | Level:" [ref=e908]':
+                  - generic [ref=e646]: 血液
+                  - generic [ref=e647]: けつえき
+                  - generic [ref=e648]: blood
+                  - generic [ref=e649]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "リンパ液 りんぱえき lymph Synonym: 0.70 | POS: | Level:" [ref=e909]':
+                  - generic [ref=e651]: リンパ液
+                  - generic [ref=e652]: りんぱえき
+                  - generic [ref=e653]: lymph
+                  - generic [ref=e654]: "Synonym: 0.70 | POS: | Level:"
+                - 'button "血小板 けっしょうばん platelet Synonym: 0.65 | POS: | Level:" [ref=e910]':
+                  - generic [ref=e911]: 血小板
+                  - generic [ref=e912]: けっしょうばん
+                  - generic [ref=e913]: platelet
+                  - generic [ref=e914]: "Synonym: 0.65 | POS: | Level:"
+                - 'button "白血球 はっけっきゅう white blood cell Synonym: 0.60 | POS: | Level:" [ref=e915]':
+                  - generic [ref=e916]: 白血球
+                  - generic [ref=e917]: はっけっきゅう
+                  - generic [ref=e918]: white blood cell
+                  - generic [ref=e919]: "Synonym: 0.60 | POS: | Level:"
+                - 'button "赤血球 せっけっきゅう red blood cell Synonym: 0.60 | POS: | Level:" [ref=e920]':
+                  - generic [ref=e921]: 赤血球
+                  - generic [ref=e922]: せっけっきゅう
+                  - generic [ref=e923]: red blood cell
+                  - generic [ref=e924]: "Synonym: 0.60 | POS: | Level:"
+                - 'button "血管 けっかん blood vessel Synonym: 0.55 | POS: | Level:" [ref=e925]':
+                  - generic [ref=e926]: 血管
+                  - generic [ref=e927]: けっかん
+                  - generic [ref=e928]: blood vessel
+                  - generic [ref=e929]: "Synonym: 0.55 | POS: | Level:"
+                - 'button "血流 けつりゅう blood flow Synonym: 0.50 | POS: | Level:" [ref=e930]':
+                  - generic [ref=e931]: 血流
+                  - generic [ref=e932]: けつりゅう
+                  - generic [ref=e933]: blood flow
+                  - generic [ref=e934]: "Synonym: 0.50 | POS: | Level:"
+                - 'button "血管内皮 けっかんないひ endothelium Synonym: 0.45 | POS: | Level:" [ref=e935]':
+                  - generic [ref=e936]: 血管内皮
+                  - generic [ref=e937]: けっかんないひ
+                  - generic [ref=e938]: endothelium
+                  - generic [ref=e939]: "Synonym: 0.45 | POS: | Level:"
+                - 'button "血管壁 けっかんへき vascular wall Synonym: 0.40 | POS: | Level:" [ref=e940]':
+                  - generic [ref=e941]: 血管壁
+                  - generic [ref=e942]: けっかんへき
+                  - generic [ref=e943]: vascular wall
+                  - generic [ref=e944]: "Synonym: 0.40 | POS: | Level:"
+                - 'button "血管内 けっかんない intravascular Synonym: 0.35 | POS: | Level:" [ref=e945]':
+                  - generic [ref=e946]: 血管内
+                  - generic [ref=e947]: けっかんない
+                  - generic [ref=e948]: intravascular
+                  - generic [ref=e949]: "Synonym: 0.35 | POS: | Level:"
+                - 'button "血管外 けっかんがい extravascular Synonym: 0.30 | POS: | Level:" [ref=e950]':
+                  - generic [ref=e951]: 血管外
+                  - generic [ref=e952]: けっかんがい
+                  - generic [ref=e953]: extravascular
+                  - generic [ref=e954]: "Synonym: 0.30 | POS: | Level:"
+                - 'button "血管造影 けっかんぞうえい angiography Synonym: 0.25 | POS: | Level:" [ref=e955]':
+                  - generic [ref=e956]: 血管造影
+                  - generic [ref=e957]: けっかんぞうえい
+                  - generic [ref=e958]: angiography
+                  - generic [ref=e959]: "Synonym: 0.25 | POS: | Level:"
+                - 'button "血管拡張 けっかんかくちょう vasodilation Synonym: 0.20 | POS: | Level:" [ref=e960]':
+                  - generic [ref=e961]: 血管拡張
+                  - generic [ref=e962]: けっかんかくちょう
+                  - generic [ref=e963]: vasodilation
+                  - generic [ref=e964]: "Synonym: 0.20 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

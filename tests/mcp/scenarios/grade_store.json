@@ -1,0 +1,23 @@
+{
+  "name": "Grade and store attempt",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "async () => { const r = await fetch('http://backend:8000/api/v1/lexical/lessons/generate-exercises?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8:13&n=1',{method:'POST'}); const ex = await r.json(); return ex.exercises[0]; }",
+      "saveAs": "ex"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ex) => { const payload = { user_id:'u-demo', can_do_id:'JFまるごと:13', exercise: ex, answer: 'きょうとに行きました。' }; const r = await fetch('http://backend:8000/api/v1/lexical/lessons/grade-store',{method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)}); return r.json(); }",
+      "saveAs": "gs"
+    },
+    {
+      "action": "assert",
+      "expression": "gs && gs.grade && typeof gs.grade.score === 'number' && gs.mastery && gs.mastery.can_do_id === 'JFまるごと:13'"
+    }
+  ]
+}
+
+
+
+

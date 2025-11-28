@@ -2,15 +2,17 @@
 Conversation service for session and message management.
 """
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional, List, Dict, Any
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select
+from sqlalchemy import select, text
 from fastapi import HTTPException
 import structlog
 import uuid
+import asyncio
 
 from app.models.database_models import ConversationSession, ConversationMessage
+from app.services.embedding_service import EmbeddingService
 
 logger = structlog.get_logger()
 
@@ -115,6 +117,7 @@ class ConversationService:
         content_type: str = "text",
         ai_provider: Optional[str] = None,
         ai_model: Optional[str] = None,
+        generate_embedding: bool = True,
     ) -> ConversationMessage:
         try:
             message = ConversationMessage(
@@ -156,6 +159,10 @@ class ConversationService:
 
             await db.commit()
             await db.refresh(message)
+            
+            # Note: Embedding generation moved to endpoint level using BackgroundTasks
+            # to avoid session closure issues. See conversations.py endpoint.
+            
             return message
         except Exception as e:
             await db.rollback()
@@ -185,5 +192,388 @@ class ConversationService:
             .offset(offset)
         )
         return result.scalars().all()
+
+    @staticmethod
+    async def search_similar_past_conversations(
+        db: AsyncSession,
+        user_id: uuid.UUID,
+        query_embedding: List[float],
+        current_session_id: Optional[uuid.UUID] = None,
+        limit: int = 5,
+        session_type: Optional[str] = None,
+        days_back: Optional[int] = 30
+    ) -> List[Dict[str, Any]]:
+        """
+        Search for similar past conversations using vector similarity.
+        
+        Args:
+            db: Database session
+            user_id: User ID to filter conversations
+            query_embedding: Embedding vector of the query
+            current_session_id: Exclude current session from results
+            limit: Maximum number of results
+            session_type: Filter by session type (e.g., 'home', 'chat')
+            days_back: Only search messages from last N days
+            
+        Returns:
+            List of similar messages with similarity scores
+        """
+        try:
+            # Build query with filters
+            where_clauses = [
+                "s.user_id = :user_id",
+                "m.content_embedding IS NOT NULL",
+                "m.role = 'user'"  # Only search user messages for context
+            ]
+            params = {
+                'user_id': user_id,
+                'query_embedding': query_embedding,
+                'limit': limit
+            }
+            
+            if current_session_id:
+                where_clauses.append("m.session_id != :current_session_id")
+                params['current_session_id'] = current_session_id
+            
+            if session_type:
+                where_clauses.append("s.session_type = :session_type")
+                params['session_type'] = session_type
+            
+            if days_back:
+                where_clauses.append("m.created_at > NOW() - INTERVAL ':days_back days'")
+                params['days_back'] = days_back
+            
+            where_clause = " AND ".join(where_clauses)
+            
+            sql = f"""
+            SELECT 
+                m.id,
+                m.session_id,
+                m.content,
+                m.role,
+                m.created_at,
+                s.title as session_title,
+                s.session_type,
+                1 - (m.content_embedding <=> :query_embedding) as similarity
+            FROM conversation_messages m
+            JOIN conversation_sessions s ON m.session_id = s.id
+            WHERE {where_clause}
+            ORDER BY m.content_embedding <=> :query_embedding
+            LIMIT :limit
+            """
+            
+            result = await db.execute(text(sql), params)
+            rows = result.fetchall()
+            
+            return [
+                {
+                    'message_id': str(row.id),
+                    'session_id': str(row.session_id),
+                    'content': row.content,
+                    'role': row.role,
+                    'created_at': str(row.created_at),
+                    'session_title': row.session_title,
+                    'session_type': row.session_type,
+                    'similarity': float(row.similarity)
+                }
+                for row in rows
+            ]
+        except Exception as e:
+            logger.error("Failed to search similar conversations", error=str(e))
+            return []
+
+    @staticmethod
+    async def hybrid_search_past_conversations(
+        db: AsyncSession,
+        user_id: uuid.UUID,
+        query_text: str,
+        query_embedding: List[float],
+        current_session_id: Optional[uuid.UUID] = None,
+        limit: int = 5,
+        session_type: Optional[str] = None,
+        days_back: Optional[int] = 30
+    ) -> List[Dict[str, Any]]:
+        """
+        Hybrid search combining vector similarity and full-text search.
+        Uses reciprocal rank fusion to merge results.
+        
+        Args:
+            db: Database session
+            user_id: User ID to filter conversations
+            query_text: Text query for full-text search
+            query_embedding: Embedding vector for vector search
+            current_session_id: Exclude current session from results
+            limit: Maximum number of results
+            session_type: Filter by session type
+            days_back: Only search messages from last N days
+            
+        Returns:
+            List of similar messages with combined scores
+        """
+        try:
+            # Build common filters
+            common_filters = ["s.user_id = :user_id", "m.role = 'user'"]
+            params = {
+                'user_id': user_id,
+                'query_text': query_text,
+                'query_embedding': query_embedding,
+                'limit': limit
+            }
+            
+            if current_session_id:
+                common_filters.append("m.session_id != :current_session_id")
+                params['current_session_id'] = current_session_id
+            
+            if session_type:
+                common_filters.append("s.session_type = :session_type")
+                params['session_type'] = session_type
+            
+            if days_back:
+                common_filters.append("m.created_at > NOW() - INTERVAL ':days_back days'")
+                params['days_back'] = days_back
+            
+            common_where = " AND ".join(common_filters)
+            
+            # Hybrid search with reciprocal rank fusion
+            sql = f"""
+            WITH vector_search AS (
+                SELECT 
+                    m.id,
+                    m.session_id,
+                    m.content,
+                    m.role,
+                    m.created_at,
+                    s.title as session_title,
+                    s.session_type,
+                    ROW_NUMBER() OVER (ORDER BY m.content_embedding <=> :query_embedding) as v_rank
+                FROM conversation_messages m
+                JOIN conversation_sessions s ON m.session_id = s.id
+                WHERE {common_where}
+                AND m.content_embedding IS NOT NULL
+                ORDER BY m.content_embedding <=> :query_embedding
+                LIMIT :limit
+            ),
+            text_search AS (
+                SELECT 
+                    m.id,
+                    m.session_id,
+                    m.content,
+                    m.role,
+                    m.created_at,
+                    s.title as session_title,
+                    s.session_type,
+                    ROW_NUMBER() OVER (ORDER BY ts_rank_cd(m.textsearch, plainto_tsquery('english', :query_text)) DESC) as t_rank
+                FROM conversation_messages m
+                JOIN conversation_sessions s ON m.session_id = s.id
+                WHERE {common_where}
+                AND m.textsearch @@ plainto_tsquery('english', :query_text)
+                ORDER BY ts_rank_cd(m.textsearch, plainto_tsquery('english', :query_text)) DESC
+                LIMIT :limit
+            )
+            SELECT 
+                COALESCE(v.id, t.id) as id,
+                COALESCE(v.session_id, t.session_id) as session_id,
+                COALESCE(v.content, t.content) as content,
+                COALESCE(v.role, t.role) as role,
+                COALESCE(v.created_at, t.created_at) as created_at,
+                COALESCE(v.session_title, t.session_title) as session_title,
+                COALESCE(v.session_type, t.session_type) as session_type,
+                1.0 / (60 + COALESCE(v.v_rank, 1000)) + 1.0 / (60 + COALESCE(t.t_rank, 1000)) as score
+            FROM vector_search v
+            FULL OUTER JOIN text_search t ON v.id = t.id
+            ORDER BY score DESC
+            LIMIT :limit
+            """
+            
+            result = await db.execute(text(sql), params)
+            rows = result.fetchall()
+            
+            return [
+                {
+                    'message_id': str(row.id),
+                    'session_id': str(row.session_id),
+                    'content': row.content,
+                    'role': row.role,
+                    'created_at': str(row.created_at),
+                    'session_title': row.session_title,
+                    'session_type': row.session_type,
+                    'score': float(row.score)
+                }
+                for row in rows
+            ]
+        except Exception as e:
+            logger.error("Failed to hybrid search conversations", error=str(e))
+            # Fallback to vector search only
+            return await ConversationService.search_similar_past_conversations(
+                db, user_id, query_embedding, current_session_id, limit, session_type, days_back
+            )
+
+    @staticmethod
+    async def build_user_conversation_profile(
+        db: AsyncSession,
+        user_id: uuid.UUID,
+        days_back: int = 90
+    ) -> Dict[str, Any]:
+        """
+        Build a user conversation profile from their message embeddings.
+        This creates an average embedding vector to represent their learning patterns.
+        
+        Args:
+            db: Database session
+            user_id: User ID
+            days_back: Only consider messages from last N days
+            
+        Returns:
+            Profile dict with average embedding, topics, patterns, etc.
+        """
+        try:
+            # Get all user messages with embeddings
+            result = await db.execute(
+                text("""
+                SELECT 
+                    m.content_embedding,
+                    m.content,
+                    m.created_at,
+                    s.session_type,
+                    s.title as session_title
+                FROM conversation_messages m
+                JOIN conversation_sessions s ON m.session_id = s.id
+                WHERE s.user_id = :user_id
+                AND m.role = 'user'
+                AND m.content_embedding IS NOT NULL
+                AND m.created_at > NOW() - INTERVAL ':days_back days'
+                ORDER BY m.created_at DESC
+                LIMIT 100
+                """),
+                {
+                    'user_id': user_id,
+                    'days_back': days_back
+                }
+            )
+            
+            rows = result.fetchall()
+            if not rows:
+                return {
+                    'has_profile': False,
+                    'message_count': 0,
+                    'topics': [],
+                    'session_types': []
+                }
+            
+            # Calculate average embedding (simple mean)
+            # Note: This requires pgvector extension for vector operations
+            avg_result = await db.execute(
+                text("""
+                SELECT AVG(m.content_embedding) as avg_embedding
+                FROM conversation_messages m
+                JOIN conversation_sessions s ON m.session_id = s.id
+                WHERE s.user_id = :user_id
+                AND m.role = 'user'
+                AND m.content_embedding IS NOT NULL
+                AND m.created_at > NOW() - INTERVAL ':days_back days'
+                """),
+                {
+                    'user_id': user_id,
+                    'days_back': days_back
+                }
+            )
+            
+            avg_embedding_row = avg_result.fetchone()
+            avg_embedding = avg_embedding_row.avg_embedding if avg_embedding_row else None
+            
+            # Extract topics and session types
+            session_types = list(set([row.session_type for row in rows if row.session_type]))
+            topics = [row.session_title for row in rows if row.session_title]
+            unique_topics = list(set(topics))[:10]  # Top 10 unique topics
+            
+            # Get recent conversation patterns
+            recent_messages = [row.content for row in rows[:20]]
+            
+            return {
+                'has_profile': True,
+                'message_count': len(rows),
+                'avg_embedding': avg_embedding,
+                'session_types': session_types,
+                'topics': unique_topics,
+                'recent_patterns': recent_messages[:5],  # Sample of recent messages
+                'days_analyzed': days_back
+            }
+        except Exception as e:
+            logger.error("Failed to build user conversation profile", error=str(e))
+            return {
+                'has_profile': False,
+                'error': str(e)
+            }
+
+    @staticmethod
+    async def find_similar_users_by_profile(
+        db: AsyncSession,
+        user_id: uuid.UUID,
+        limit: int = 5
+    ) -> List[Dict[str, Any]]:
+        """
+        Find users with similar conversation profiles using embedding similarity.
+        This can be used for collaborative learning or finding study partners.
+        
+        Args:
+            db: Database session
+            user_id: User ID to find similar users for
+            limit: Maximum number of similar users
+            
+        Returns:
+            List of similar users with similarity scores
+        """
+        try:
+            # Get current user's profile
+            profile = await ConversationService.build_user_conversation_profile(db, user_id)
+            if not profile.get('has_profile') or not profile.get('avg_embedding'):
+                return []
+            
+            # Find users with similar average embeddings
+            # This is a simplified approach - in production, you'd want to store
+            # user profiles in a separate table with indexed embeddings
+            result = await db.execute(
+                text("""
+                WITH user_avg_embeddings AS (
+                    SELECT 
+                        s.user_id,
+                        AVG(m.content_embedding) as avg_embedding,
+                        COUNT(*) as message_count
+                    FROM conversation_messages m
+                    JOIN conversation_sessions s ON m.session_id = s.id
+                    WHERE m.role = 'user'
+                    AND m.content_embedding IS NOT NULL
+                    AND m.created_at > NOW() - INTERVAL '90 days'
+                    GROUP BY s.user_id
+                    HAVING COUNT(*) >= 10  -- Minimum messages for meaningful profile
+                )
+                SELECT 
+                    user_id,
+                    message_count,
+                    1 - (avg_embedding <=> :query_embedding) as similarity
+                FROM user_avg_embeddings
+                WHERE user_id != :user_id
+                ORDER BY avg_embedding <=> :query_embedding
+                LIMIT :limit
+                """),
+                {
+                    'user_id': user_id,
+                    'query_embedding': profile['avg_embedding'],
+                    'limit': limit
+                }
+            )
+            
+            rows = result.fetchall()
+            return [
+                {
+                    'user_id': str(row.user_id),
+                    'similarity': float(row.similarity),
+                    'message_count': row.message_count
+                }
+                for row in rows
+            ]
+        except Exception as e:
+            logger.error("Failed to find similar users", error=str(e))
+            return []
 
 

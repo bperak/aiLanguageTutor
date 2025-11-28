@@ -1,0 +1,142 @@
+{
+  "can_do_id": "JFまるごと:13",
+  "output_dir": "images/lessons/cando/JFまるごと_13/",
+  "model_hint": "google.gemini.flash-image (or equivalently capable image model)",
+  "image_specs": {
+    "size": "1024x1024",
+    "style": "clean, flat vector or light semi-realistic; high readability; soft color palette",
+    "lighting": "neutral, well-lit",
+    "background": "subtle, uncluttered",
+    "text_policy": "no baked-in text; use visual cues only",
+    "safety": [
+      "respectful depiction; avoid stereotypes",
+      "no logos, brands, or sensitive symbols",
+      "no faces in close-up detail; medium shots"
+    ]
+  },
+  "global_negative_prompts": [
+    "text, captions, subtitles, watermarks",
+    "brand logos, signage with readable text",
+    "exaggerated cultural stereotypes"
+  ],
+  "assets": [
+    {
+      "image_id": "scene-01",
+      "prompt_en": "Office break area in Japan: two colleagues (gender-neutral, casual-smart) exchange a small wrapped souvenir bag/box with polite body language. Subtle hint of recent travel (small desk calendar with a torii icon or postcard on a board, not readable). Clean composition, no text.",
+      "negative_en": "text, logos, faces close-up, crowded background",
+      "anchors": [
+        "explain"
+      ],
+      "alt_hr": "Predaja suvenira u uredu"
+    },
+    {
+      "image_id": "dialog-v1",
+      "prompt_en": "Four-panel storyboard (no text): 1) Person A offers a small gift bag to Person B; 2) Person B smiles and accepts; 3) Person B gestures a question; 4) Person A points to a travel photo or deer icon (Kyoto hint). Clear sequencing arrows or panel frames, clean background.",
+      "negative_en": "speech text, word balloons, brand signs",
+      "anchors": [
+        "sample_dialog"
+      ],
+      "panel_descriptions": [
+        "Offer gift",
+        "Thanks/accept",
+        "Ask destination",
+        "Reply: Kyoto (deer icon cue)"
+      ],
+      "alt_hr": "Neutralni dijalog u 4 kadra"
+    },
+    {
+      "image_id": "dialog-v2",
+      "prompt_en": "Three-panel storyboard (no text): 1) Offer gift; 2) Polite decline with hand gesture and warm smile (diet cue: small salad icon on desk); 3) Alternative suggestion (later). Maintain respectful tone, no text.",
+      "negative_en": "text, negative emotive signals",
+      "anchors": [
+        "sample_dialog"
+      ],
+      "alt_hr": "Uljudno odbijanje poklona"
+    },
+    {
+      "image_id": "dialog-v3",
+      "prompt_en": "Three-panel storyboard (no text): 1) Offer rice cracker box (senbei); 2) Recipient gestures ‘why?’; 3) Giver gestures ‘because family likes it’ with simple heart/family icon cue. No text.",
+      "negative_en": "text, logos",
+      "anchors": [
+        "sample_dialog"
+      ],
+      "alt_hr": "Objašnjenje izbora poklona"
+    },
+    {
+      "image_id": "dialog-v4",
+      "prompt_en": "Two-panel storyboard, formal register (no text): 1) Giver bows slightly handing over a neatly wrapped gift; 2) Recipient bows appreciatively. Business-casual attire, minimalistic setting.",
+      "negative_en": "text, branding",
+      "anchors": [
+        "sample_dialog"
+      ],
+      "alt_hr": "Formalnije darivanje"
+    },
+    {
+      "image_id": "expressions-omiyage-dozo",
+      "prompt_en": "Expression card (no text): close-up of two hands passing a small gift bag with a subtle heart icon, clean white background, shadow for depth.",
+      "negative_en": "text, brand marks",
+      "anchors": [
+        "explain",
+        "guided_dialogue"
+      ],
+      "alt_hr": "Konvencionalni izraz: darivanje"
+    },
+    {
+      "image_id": "vocab-omiyage",
+      "prompt_en": "Object study: small Japanese souvenir bag/box on a clean surface, minimal shadows, neutral background. No text.",
+      "negative_en": "text, logos",
+      "anchors": [
+        "explain",
+        "lexicon_and_patterns"
+      ],
+      "alt_hr": "Vokabular: おみやげ"
+    },
+    {
+      "image_id": "culture-cue",
+      "prompt_en": "Small cultural cue: shelf with a couple of regional specialty packages (abstract designs), a minimal Japan outline pin, and a postcard silhouette (unreadable). Clean, modern style.",
+      "negative_en": "text, detailed maps, brand logos",
+      "anchors": [
+        "explain"
+      ],
+      "alt_hr": "Kulturalni kontekst: おみやげ"
+    }
+  ],
+  "postprocess": {
+    "export": "PNG",
+    "optimize": true,
+    "write_manifest": true,
+    "manifest_path": "images/lessons/cando/JFまるごと_13/manifest.json",
+    "attach_to_sections": {
+      "explain": [
+        "scene-01",
+        "vocab-omiyage",
+        "expressions-omiyage-dozo",
+        "culture-cue"
+      ],
+      "sample_dialog": [
+        "dialog-v1"
+      ],
+      "guided_dialogue": [
+        "expressions-omiyage-dozo"
+      ],
+      "lexicon_and_patterns": [
+        "vocab-omiyage"
+      ]
+    }
+  },
+  "api_mapping_hint": {
+    "google_gemini": {
+      "endpoint": "images.generate",
+      "inputs_per_asset": [
+        "prompt_en",
+        "negative_en",
+        "image_specs.size"
+      ],
+      "safety_settings": [
+        "HARM_CATEGORY_HATE_SAFETY",
+        "HARM_CATEGORY_VIOLENCE_SAFETY"
+      ],
+      "output": "PNG"
+    }
+  }
+}

@@ -1,0 +1,806 @@
+{
+  "lesson": {
+    "meta": {
+      "lesson_id": "canDo_JF:105_v1",
+      "metalanguage": "en",
+      "can_do": {
+        "uid": "JF:105",
+        "level": "A1",
+        "primaryTopic_ja": "健康",
+        "primaryTopic_en": "Health",
+        "skillDomain_ja": "受容",
+        "type_ja": "活動",
+        "description": {
+          "en": "Can listen to and understand very simple instructions from the doctor, such as \"get some rest\" \"take the medicine three times a day,\" if the speech is aimed directly at oneself and is slow and clear.",
+          "ja": "自分に向かってゆっくりとはっきりと話されれば、「よく休んでください」「薬を1日3回飲んでください」など、医者のごく簡単な指示を聞いて、理解することができる。"
+        },
+        "source": "JF"
+      }
+    },
+    "graph_bindings": {
+      "words": {
+        "by_cypher": null,
+        "by_keys": [],
+        "resolve_label": null,
+        "resolve_property": null
+      },
+      "grammar_patterns": {
+        "by_cypher": null,
+        "by_keys": [],
+        "resolve_label": null,
+        "resolve_property": null
+      }
+    },
+    "ui_prefs": {
+      "text_layers_default": {
+        "std": true,
+        "furigana": true,
+        "romaji": false,
+        "translation": true
+      }
+    },
+    "cards": {
+      "objective": {
+        "type": "ObjectiveCard",
+        "title": {
+          "en": "Understand Simple Medical Instructions",
+          "ja": "簡単な医療指示を理解する"
+        },
+        "body": {
+          "en": "Learn to understand simple instructions from a doctor, like 'rest' or 'take medicine three times a day'.",
+          "ja": "医者からの「休む」「薬を1日3回飲む」などの簡単な指示を理解することを学ぶ。"
+        },
+        "success_criteria": [
+          "Correctly follows the doctor's instructions.",
+          "Asks for clarification if needed.",
+          "Repeats the instructions back to confirm understanding."
+        ],
+        "outcomes": [],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: ObjectiveCard\n\nINPUTS:\n- metalanguage: en\n- can_do: {\"uid\": \"JF:105\", \"level\": \"A1\", \"primaryTopic_ja\": \"健康\", \"primaryTopic_en\": \"Health\", \"skillDomain_ja\": \"受容\", \"type_ja\": \"活動\", \"description\": {\"en\": \"Can listen to and understand very simple instructions from the doctor, such as \\\"get some rest\\\" \\\"take the medicine three times a day,\\\" if the speech is aimed directly at oneself and is slow and clear.\", \"ja\": \"自分に向かってゆっくりとはっきりと話されれば、「よく休んでください」「薬を1日3回飲んでください」など、医者のごく簡単な指示を聞いて、理解することができる。\"}, \"source\": \"JF\"}\n- plan: {\"uid\": \"12345\", \"level\": \"A2\", \"communicative_function_en\": \"Understand simple medical instructions\", \"communicative_function_ja\": \"簡単な医療指示を理解する\", \"scenarios\": [{\"name\": \"Doctor's Office Visit\", \"setting\": \"Doctor's Office\", \"roles\": [{\"label\": \"Doctor\", \"register\": \"plain\"}, {\"label\": \"Patient\", \"register\": \"plain\"}]}, {\"name\": \"Pharmacy Visit\", \"setting\": \"Pharmacy\", \"roles\": [{\"label\": \"Pharmacist\", \"register\": \"plain\"}, {\"label\": \"Customer\", \"register\": \"plain\"}]}], \"lex_buckets\": [{\"name\": \"Health Instructions\", \"items\": [\"休む\", \"薬\", \"飲む\", \"1日3回\", \"医者\", \"指示\", \"ゆっくり\", \"はっきり\", \"聞く\", \"理解する\", \"休息\", \"服用\", \"健康\", \"指導\"]}, {\"name\": \"Basic Actions\", \"items\": [\"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"読む\", \"書く\", \"食べる\", \"飲む\", \"休む\", \"立つ\", \"座る\", \"歩く\", \"走る\"]}, {\"name\": \"Time Expressions\", \"items\": [\"朝\", \"昼\", \"夜\", \"毎日\", \"時々\", \"いつも\", \"今\", \"後で\", \"すぐに\", \"遅く\", \"早く\", \"時間\", \"日\", \"週\"]}], \"grammar_functions\": [{\"id\": \"GF1\", \"label\": \"Imperative Form\", \"pattern_ja\": \"動詞の命令形\", \"slots\": [\"休む\", \"飲む\"], \"notes_en\": \"Used to give direct instructions or commands.\"}, {\"id\": \"GF2\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"動詞の現在形\", \"slots\": [\"飲む\", \"行く\"], \"notes_en\": \"Used for habitual actions or general truths.\"}, {\"id\": \"GF3\", \"label\": \"Frequency Expressions\", \"pattern_ja\": \"頻度を表す表現\", \"slots\": [\"1日3回\", \"毎日\"], \"notes_en\": \"Used to indicate how often an action occurs.\"}], \"evaluation\": {\"success_criteria\": [\"Correctly follows the doctor's instructions.\", \"Asks for clarification if needed.\", \"Repeats the instructions back to confirm understanding.\"], \"discourse_markers\": [\"はい\", \"わかりました\", \"もう一度お願いします\", \"それはどういう意味ですか\", \"ありがとうございます\"]}, \"cultural_themes_en\": [\"Direct communication is often used in medical settings.\", \"Patients are expected to ask questions if they do not understand.\", \"Doctors may use simple language to ensure understanding.\"], \"cultural_themes_ja\": [\"医療現場では直接的なコミュニケーションが多い。\", \"理解できない場合は質問することが期待される。\", \"医者は理解を確実にするために簡単な言葉を使うことがある。\"]}\n\nTASK:\nCreate an ObjectiveCard:\n- title: {\"en\", \"ja\"} succinct.\n- body: {\"en\", \"ja\"} derived from plan.communicative_function_* (learner-facing, A1 terms).\n- success_criteria: copy/trim from plan.evaluation.success_criteria (2–5 items).\n- outcomes: optional 0–4 finer-grained outcomes.\n\nCONSTRAINTS:\n- No extra fields. Strict JSON.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "words": {
+        "type": "WordsCard",
+        "items": [
+          {
+            "id": "1",
+            "neo4j_id": null,
+            "jp": {
+              "std": "休む",
+              "furigana": "休{やす}む",
+              "romaji": "yasumu",
+              "translation": {
+                "en": "rest"
+              }
+            },
+            "tags": [
+              "Health Instructions"
+            ],
+            "image": {
+              "prompt": "A person lying down on a bed, looking relaxed, symbolizing rest.",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "2",
+            "neo4j_id": null,
+            "jp": {
+              "std": "薬",
+              "furigana": "薬{くすり}",
+              "romaji": "kusuri",
+              "translation": {
+                "en": "medicine"
+              }
+            },
+            "tags": [
+              "Health Instructions"
+            ],
+            "image": {
+              "prompt": "A bottle of pills with a cross symbol, representing medicine.",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "3",
+            "neo4j_id": null,
+            "jp": {
+              "std": "飲む",
+              "furigana": "飲{の}む",
+              "romaji": "nomu",
+              "translation": {
+                "en": "drink"
+              }
+            },
+            "tags": [
+              "Health Instructions"
+            ],
+            "image": {
+              "prompt": "A person drinking a glass of water, symbolizing the action of drinking.",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "4",
+            "neo4j_id": null,
+            "jp": {
+              "std": "1日3回",
+              "furigana": "1日{いちにち}3回{さんかい}",
+              "romaji": "ichinichi sankai",
+              "translation": {
+                "en": "three times a day"
+              }
+            },
+            "tags": [
+              "Frequency Expressions"
+            ],
+            "image": {
+              "prompt": "A calendar with three check marks on a single day, indicating frequency.",
+              "style": "infographic",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "5",
+            "neo4j_id": null,
+            "jp": {
+              "std": "医者",
+              "furigana": "医者{いしゃ}",
+              "romaji": "isha",
+              "translation": {
+                "en": "doctor"
+              }
+            },
+            "tags": [
+              "Health Instructions"
+            ],
+            "image": {
+              "prompt": "A doctor with a stethoscope around their neck, symbolizing a medical professional.",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "6",
+            "neo4j_id": null,
+            "jp": {
+              "std": "指示",
+              "furigana": "指示{しじ}",
+              "romaji": "shiji",
+              "translation": {
+                "en": "instructions"
+              }
+            },
+            "tags": [
+              "Health Instructions"
+            ],
+            "image": {
+              "prompt": "A checklist with a pencil, representing instructions or guidelines.",
+              "style": "infographic",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "7",
+            "neo4j_id": null,
+            "jp": {
+              "std": "聞く",
+              "furigana": "聞{き}く",
+              "romaji": "kiku",
+              "translation": {
+                "en": "listen"
+              }
+            },
+            "tags": [
+              "Basic Actions"
+            ],
+            "image": {
+              "prompt": "An ear with sound waves, symbolizing the action of listening.",
+              "style": "infographic",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "8",
+            "neo4j_id": null,
+            "jp": {
+              "std": "理解する",
+              "furigana": "理解{りかい}する",
+              "romaji": "rikai suru",
+              "translation": {
+                "en": "understand"
+              }
+            },
+            "tags": [
+              "Health Instructions"
+            ],
+            "image": {
+              "prompt": "A light bulb above a person's head, symbolizing understanding or realization.",
+              "style": "infographic",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          }
+        ],
+        "ui_layers_override": null,
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: WordsCard\n\nINPUTS:\n- metalanguage: en\n- plan.lex_buckets: {\"uid\": \"12345\", \"level\": \"A2\", \"communicative_function_en\": \"Understand simple medical instructions\", \"communicative_function_ja\": \"簡単な医療指示を理解する\", \"scenarios\": [{\"name\": \"Doctor's Office Visit\", \"setting\": \"Doctor's Office\", \"roles\": [{\"label\": \"Doctor\", \"register\": \"plain\"}, {\"label\": \"Patient\", \"register\": \"plain\"}]}, {\"name\": \"Pharmacy Visit\", \"setting\": \"Pharmacy\", \"roles\": [{\"label\": \"Pharmacist\", \"register\": \"plain\"}, {\"label\": \"Customer\", \"register\": \"plain\"}]}], \"lex_buckets\": [{\"name\": \"Health Instructions\", \"items\": [\"休む\", \"薬\", \"飲む\", \"1日3回\", \"医者\", \"指示\", \"ゆっくり\", \"はっきり\", \"聞く\", \"理解する\", \"休息\", \"服用\", \"健康\", \"指導\"]}, {\"name\": \"Basic Actions\", \"items\": [\"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"読む\", \"書く\", \"食べる\", \"飲む\", \"休む\", \"立つ\", \"座る\", \"歩く\", \"走る\"]}, {\"name\": \"Time Expressions\", \"items\": [\"朝\", \"昼\", \"夜\", \"毎日\", \"時々\", \"いつも\", \"今\", \"後で\", \"すぐに\", \"遅く\", \"早く\", \"時間\", \"日\", \"週\"]}], \"grammar_functions\": [{\"id\": \"GF1\", \"label\": \"Imperative Form\", \"pattern_ja\": \"動詞の命令形\", \"slots\": [\"休む\", \"飲む\"], \"notes_en\": \"Used to give direct instructions or commands.\"}, {\"id\": \"GF2\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"動詞の現在形\", \"slots\": [\"飲む\", \"行く\"], \"notes_en\": \"Used for habitual actions or general truths.\"}, {\"id\": \"GF3\", \"label\": \"Frequency Expressions\", \"pattern_ja\": \"頻度を表す表現\", \"slots\": [\"1日3回\", \"毎日\"], \"notes_en\": \"Used to indicate how often an action occurs.\"}], \"evaluation\": {\"success_criteria\": [\"Correctly follows the doctor's instructions.\", \"Asks for clarification if needed.\", \"Repeats the instructions back to confirm understanding.\"], \"discourse_markers\": [\"はい\", \"わかりました\", \"もう一度お願いします\", \"それはどういう意味ですか\", \"ありがとうございます\"]}, \"cultural_themes_en\": [\"Direct communication is often used in medical settings.\", \"Patients are expected to ask questions if they do not understand.\", \"Doctors may use simple language to ensure understanding.\"], \"cultural_themes_ja\": [\"医療現場では直接的なコミュニケーションが多い。\", \"理解できない場合は質問することが期待される。\", \"医者は理解を確実にするために簡単な言葉を使うことがある。\"]}\n\nTASK:\nSelect 6–12 items total across plan.lex_buckets that best support the function.\nFor each item:\n- Build JPText layers: std (from plan), furigana inline, Hepburn romaji with macrons where applicable,\n  translation keyed by \"en\".\n- tags: the source bucket name (e.g., \"places\",\"actions\",\"specialties\",\"connectors\").\n- image: optional flat-icon 1024x1024 prompt describing the concept.\n\nCONSTRAINTS:\n- A-level simplicity. Natural readings. No duplicates.\n- Strict JSON.\n\nOUTPUT: WordsCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "grammar_patterns": {
+        "type": "GrammarPatternsCard",
+        "patterns": [
+          {
+            "id": "GF1",
+            "neo4j_id": null,
+            "form": {
+              "ja": {
+                "std": "動詞の命令形",
+                "furigana": "どうしのめいれいけい",
+                "romaji": "doushi no meireikei",
+                "translation": {
+                  "en": "Imperative Form"
+                }
+              }
+            },
+            "explanation": {
+              "en": "Used to give direct instructions or commands, often in medical settings."
+            },
+            "slots": [
+              "休む",
+              "飲む"
+            ],
+            "examples": [
+              {
+                "ja": {
+                  "std": "薬を飲む。",
+                  "furigana": "くすりをのむ。",
+                  "romaji": "kusuri o nomu.",
+                  "translation": {
+                    "en": "Take the medicine."
+                  }
+                },
+                "audio_ref": null
+              },
+              {
+                "ja": {
+                  "std": "休む。",
+                  "furigana": "やすむ。",
+                  "romaji": "yasumu.",
+                  "translation": {
+                    "en": "Rest."
+                  }
+                },
+                "audio_ref": null
+              }
+            ],
+            "image": null
+          },
+          {
+            "id": "GF3",
+            "neo4j_id": null,
+            "form": {
+              "ja": {
+                "std": "頻度を表す表現",
+                "furigana": "ひんどをあらわすひょうげん",
+                "romaji": "hindo o arawasu hyougen",
+                "translation": {
+                  "en": "Frequency Expressions"
+                }
+              }
+            },
+            "explanation": {
+              "en": "Used to indicate how often an action occurs, important for following medical instructions."
+            },
+            "slots": [
+              "1日3回",
+              "毎日"
+            ],
+            "examples": [
+              {
+                "ja": {
+                  "std": "薬を1日3回飲む。",
+                  "furigana": "くすりをいちにちさんかいのむ。",
+                  "romaji": "kusuri o ichinichi sankai nomu.",
+                  "translation": {
+                    "en": "Take the medicine three times a day."
+                  }
+                },
+                "audio_ref": null
+              },
+              {
+                "ja": {
+                  "std": "毎日休む。",
+                  "furigana": "まいにちやすむ。",
+                  "romaji": "mainichi yasumu.",
+                  "translation": {
+                    "en": "Rest every day."
+                  }
+                },
+                "audio_ref": null
+              }
+            ],
+            "image": null
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: GrammarPatternsCard\n\nINPUTS:\n- metalanguage: en\n- plan.grammar_functions: {\"uid\": \"12345\", \"level\": \"A2\", \"communicative_function_en\": \"Understand simple medical instructions\", \"communicative_function_ja\": \"簡単な医療指示を理解する\", \"scenarios\": [{\"name\": \"Doctor's Office Visit\", \"setting\": \"Doctor's Office\", \"roles\": [{\"label\": \"Doctor\", \"register\": \"plain\"}, {\"label\": \"Patient\", \"register\": \"plain\"}]}, {\"name\": \"Pharmacy Visit\", \"setting\": \"Pharmacy\", \"roles\": [{\"label\": \"Pharmacist\", \"register\": \"plain\"}, {\"label\": \"Customer\", \"register\": \"plain\"}]}], \"lex_buckets\": [{\"name\": \"Health Instructions\", \"items\": [\"休む\", \"薬\", \"飲む\", \"1日3回\", \"医者\", \"指示\", \"ゆっくり\", \"はっきり\", \"聞く\", \"理解する\", \"休息\", \"服用\", \"健康\", \"指導\"]}, {\"name\": \"Basic Actions\", \"items\": [\"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"読む\", \"書く\", \"食べる\", \"飲む\", \"休む\", \"立つ\", \"座る\", \"歩く\", \"走る\"]}, {\"name\": \"Time Expressions\", \"items\": [\"朝\", \"昼\", \"夜\", \"毎日\", \"時々\", \"いつも\", \"今\", \"後で\", \"すぐに\", \"遅く\", \"早く\", \"時間\", \"日\", \"週\"]}], \"grammar_functions\": [{\"id\": \"GF1\", \"label\": \"Imperative Form\", \"pattern_ja\": \"動詞の命令形\", \"slots\": [\"休む\", \"飲む\"], \"notes_en\": \"Used to give direct instructions or commands.\"}, {\"id\": \"GF2\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"動詞の現在形\", \"slots\": [\"飲む\", \"行く\"], \"notes_en\": \"Used for habitual actions or general truths.\"}, {\"id\": \"GF3\", \"label\": \"Frequency Expressions\", \"pattern_ja\": \"頻度を表す表現\", \"slots\": [\"1日3回\", \"毎日\"], \"notes_en\": \"Used to indicate how often an action occurs.\"}], \"evaluation\": {\"success_criteria\": [\"Correctly follows the doctor's instructions.\", \"Asks for clarification if needed.\", \"Repeats the instructions back to confirm understanding.\"], \"discourse_markers\": [\"はい\", \"わかりました\", \"もう一度お願いします\", \"それはどういう意味ですか\", \"ありがとうございます\"]}, \"cultural_themes_en\": [\"Direct communication is often used in medical settings.\", \"Patients are expected to ask questions if they do not understand.\", \"Doctors may use simple language to ensure understanding.\"], \"cultural_themes_ja\": [\"医療現場では直接的なコミュニケーションが多い。\", \"理解できない場合は質問することが期待される。\", \"医者は理解を確実にするために簡単な言葉を使うことがある。\"]}\n\nTASK:\nChoose 2–4 grammar_functions from the plan that are core for achieving the CanDo.\nFor each chosen function:\n- id: reuse the plan function id.\n- form.ja: JPText layers where std == pattern_ja; add furigana and romaji; translation in \"en\".\n- explanation: {\"en\": \"...\"}, 1–2 sentences.\n- slots: copy from the plan function.\n- examples: 1–2 A-level examples with full JPText and ≤12 words each.\n- image: optional diagram 1280x720.\n\nCONSTRAINTS:\n- Respect the level; avoid advanced structures.\n- Strict JSON.\n\nOUTPUT: GrammarPatternsCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "lesson_dialogue": {
+        "type": "DialogueCard",
+        "title": {
+          "en": "Doctor's Office Visit"
+        },
+        "turns": [
+          {
+            "speaker": "Doctor",
+            "ja": {
+              "std": "今日はどうしましたか？",
+              "furigana": "きょうはどうしましたか？",
+              "romaji": "Kyou wa dou shimashita ka?",
+              "translation": {
+                "en": "What brings you here today?"
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Patient",
+            "ja": {
+              "std": "最近、よく休むことができません。",
+              "furigana": "さいきん、よくやすむことができません。",
+              "romaji": "Saikin, yoku yasumu koto ga dekimasen.",
+              "translation": {
+                "en": "Recently, I can't rest well."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Doctor",
+            "ja": {
+              "std": "それは大変ですね。薬を飲んでいますか？",
+              "furigana": "それはたいへんですね。くすりをのんでいますか？",
+              "romaji": "Sore wa taihen desu ne. Kusuri o nondeimasu ka?",
+              "translation": {
+                "en": "That's tough. Are you taking any medicine?"
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Patient",
+            "ja": {
+              "std": "いいえ、まだ飲んでいません。",
+              "furigana": "いいえ、まだのんでいません。",
+              "romaji": "Iie, mada nondeimasen.",
+              "translation": {
+                "en": "No, I'm not taking any yet."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Doctor",
+            "ja": {
+              "std": "この薬を1日3回飲んでください。",
+              "furigana": "このくすりをいちにちさんかいのんでください。",
+              "romaji": "Kono kusuri o ichinichi sankai nonde kudasai.",
+              "translation": {
+                "en": "Please take this medicine three times a day."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Patient",
+            "ja": {
+              "std": "わかりました。指示をよく聞きます。",
+              "furigana": "わかりました。しじをよくききます。",
+              "romaji": "Wakarimashita. Shiji o yoku kikimasu.",
+              "translation": {
+                "en": "Understood. I will follow the instructions carefully."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Doctor",
+            "ja": {
+              "std": "休息も大切です。ゆっくり休んでください。",
+              "furigana": "きゅうそくもたいせつです。ゆっくりやすんでください。",
+              "romaji": "Kyuusoku mo taisetsu desu. Yukkuri yasunde kudasai.",
+              "translation": {
+                "en": "Rest is important too. Please rest well."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Patient",
+            "ja": {
+              "std": "はい、ありがとうございます。",
+              "furigana": "はい、ありがとうございます。",
+              "romaji": "Hai, arigatou gozaimasu.",
+              "translation": {
+                "en": "Yes, thank you very much."
+              }
+            },
+            "audio_ref": null
+          }
+        ],
+        "notes_en": "A simple dialogue between a doctor and a patient discussing rest and medication.",
+        "image": null,
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: DialogueCard\n\nINPUTS:\n- metalanguage: en\n- plan.scenarios[0]: {\"name\": \"Doctor's Office Visit\", \"setting\": \"Doctor's Office\", \"roles\": [{\"label\": \"Doctor\", \"register\": \"plain\"}, {\"label\": \"Patient\", \"register\": \"plain\"}]}\n- plan.grammar_functions (ids available): [\"GF1\", \"GF2\", \"GF3\"]\n - plan.lex_items (preferred vocabulary): [\"休む\", \"薬\", \"飲む\", \"1日3回\", \"医者\", \"指示\", \"ゆっくり\", \"はっきり\", \"聞く\", \"理解する\", \"休息\", \"服用\", \"健康\", \"指導\", \"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"読む\", \"書く\", \"食べる\", \"飲む\", \"休む\", \"立つ\", \"座る\", \"歩く\", \"走る\", \"朝\", \"昼\", \"夜\", \"毎日\", \"時々\", \"いつも\", \"今\", \"後で\", \"すぐに\", \"遅く\", \"早く\", \"時間\", \"日\", \"週\"]\n\nTASK:\nCreate a DialogueCard with 8–10 turns in the first scenario. Use the scenario roles' labels for \"speaker\".\nEach turn provides JPText layers (std, furigana, romaji, translation[\"en\"]).\nGrammar alignment: naturally use at least 2 of the selected grammar function ids across the dialogue.\nVocabulary alignment: prefer content words from plan.lex_items (target ≥60% of nouns/verbs from this list); allow at most 2 new content words total.\nAdd a one-line notes_en, and optionally a scene-illustration 1280x768.\n\nCONSTRAINTS:\n- ≤12 words per turn. A-level tone/register per scenario role register. Keep continuity across turns (light back-and-forth).\n- Strict JSON.\n\nOUTPUT: DialogueCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "guided_dialogue": {
+        "type": "GuidedDialogueCard",
+        "mode": "prompted",
+        "stages": [
+          {
+            "stage_id": "stage_1",
+            "goal_en": "Correctly follows the doctor's instructions.",
+            "expected_patterns": [
+              "GF1"
+            ],
+            "hints": [
+              {
+                "en": "Listen carefully to the doctor's instructions.",
+                "ja": "医者の指示を注意深く聞いてください。"
+              },
+              {
+                "en": "Focus on the key actions you need to take.",
+                "ja": "取るべき重要な行動に集中してください。"
+              }
+            ],
+            "learner_turn_schema": {
+              "min_words": 4,
+              "max_words": 12,
+              "allow_romaji": false
+            },
+            "ai_feedback": {
+              "rubric": [
+                "pattern_correctness",
+                "fluency_a2",
+                "content_relevance"
+              ],
+              "feedback_prompt": "Ensure you are following the instructions accurately."
+            }
+          },
+          {
+            "stage_id": "stage_2",
+            "goal_en": "Asks for clarification if needed.",
+            "expected_patterns": [
+              "GF2"
+            ],
+            "hints": [
+              {
+                "en": "If unsure, ask the doctor to explain again.",
+                "ja": "不明な場合は、医者にもう一度説明してもらってください。"
+              },
+              {
+                "en": "Use polite phrases to request clarification.",
+                "ja": "丁寧な表現を使って説明を求めてください。"
+              }
+            ],
+            "learner_turn_schema": {
+              "min_words": 4,
+              "max_words": 12,
+              "allow_romaji": false
+            },
+            "ai_feedback": {
+              "rubric": [
+                "pattern_correctness",
+                "fluency_a2",
+                "content_relevance"
+              ],
+              "feedback_prompt": "Make sure to ask questions if you don't understand."
+            }
+          },
+          {
+            "stage_id": "stage_3",
+            "goal_en": "Repeats the instructions back to confirm understanding.",
+            "expected_patterns": [
+              "GF3"
+            ],
+            "hints": [
+              {
+                "en": "Repeat the instructions to confirm your understanding.",
+                "ja": "理解を確認するために指示を繰り返してください。"
+              },
+              {
+                "en": "Use your own words to paraphrase the instructions.",
+                "ja": "自分の言葉で指示を言い換えてください。"
+              }
+            ],
+            "learner_turn_schema": {
+              "min_words": 4,
+              "max_words": 12,
+              "allow_romaji": false
+            },
+            "ai_feedback": {
+              "rubric": [
+                "pattern_correctness",
+                "fluency_a2",
+                "content_relevance"
+              ],
+              "feedback_prompt": "Repeat the instructions to ensure you understood them correctly."
+            }
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: GuidedDialogueCard\n\nINPUTS:\n- metalanguage: en\n- plan.grammar_functions (ids): [\"GF1\", \"GF2\", \"GF3\"]\n- plan.evaluation.success_criteria: [\"Correctly follows the doctor's instructions.\", \"Asks for clarification if needed.\", \"Repeats the instructions back to confirm understanding.\"]\n\nTASK:\nCreate 1–3 scaffold stages moving the learner towards the success_criteria.\nEach stage:\n- stage_id\n- goal_en (align with one success criterion)\n- expected_patterns: choose relevant grammar function ids from plan\n- 1–2 bilingual hints ({\"en\",\"ja\"})\n- learner_turn_schema: {\"min_words\":4,\"max_words\":12,\"allow_romaji\":false}\n- ai_feedback: rubric [\"pattern_correctness\",\"fluency_a2\",\"content_relevance\"] and a one-line feedback prompt.\n\nCONSTRAINTS:\n- Strict JSON.\n\nOUTPUT: GuidedDialogueCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "exercises": {
+        "type": "ExercisesCard",
+        "items": [
+          {
+            "exercise_type": "match",
+            "id": "match1",
+            "instructions": {
+              "en": "Match the Japanese words with their English meanings."
+            },
+            "pairs": [
+              {
+                "left": {
+                  "std": "休む",
+                  "furigana": "やすむ",
+                  "romaji": "yasumu",
+                  "translation": {
+                    "en": "rest"
+                  }
+                },
+                "right_options_en": [
+                  "rest",
+                  "medicine",
+                  "drink",
+                  "three times a day",
+                  "doctor"
+                ],
+                "answer_en": "rest"
+              },
+              {
+                "left": {
+                  "std": "薬",
+                  "furigana": "くすり",
+                  "romaji": "kusuri",
+                  "translation": {
+                    "en": "medicine"
+                  }
+                },
+                "right_options_en": [
+                  "rest",
+                  "medicine",
+                  "drink",
+                  "three times a day",
+                  "doctor"
+                ],
+                "answer_en": "medicine"
+              },
+              {
+                "left": {
+                  "std": "飲む",
+                  "furigana": "のむ",
+                  "romaji": "nomu",
+                  "translation": {
+                    "en": "drink"
+                  }
+                },
+                "right_options_en": [
+                  "rest",
+                  "medicine",
+                  "drink",
+                  "three times a day",
+                  "doctor"
+                ],
+                "answer_en": "drink"
+              },
+              {
+                "left": {
+                  "std": "1日3回",
+                  "furigana": "いちにちさんかい",
+                  "romaji": "ichinichi sankai",
+                  "translation": {
+                    "en": "three times a day"
+                  }
+                },
+                "right_options_en": [
+                  "rest",
+                  "medicine",
+                  "drink",
+                  "three times a day",
+                  "doctor"
+                ],
+                "answer_en": "three times a day"
+              },
+              {
+                "left": {
+                  "std": "医者",
+                  "furigana": "いしゃ",
+                  "romaji": "isha",
+                  "translation": {
+                    "en": "doctor"
+                  }
+                },
+                "right_options_en": [
+                  "rest",
+                  "medicine",
+                  "drink",
+                  "three times a day",
+                  "doctor"
+                ],
+                "answer_en": "doctor"
+              }
+            ]
+          },
+          {
+            "exercise_type": "fill_blank",
+            "id": "fill1",
+            "item": {
+              "std": "医者の指示をよく聞いて、___。",
+              "furigana": "いしゃのしじをよくきいて、___。",
+              "romaji": "isha no shiji o yoku kiite, ___.",
+              "translation": {
+                "en": "Listen carefully to the doctor's instructions and ___."
+              }
+            },
+            "answer_key_en": [
+              "rest",
+              "take medicine",
+              "follow instructions"
+            ]
+          },
+          {
+            "exercise_type": "order",
+            "id": "order1",
+            "instructions": {
+              "en": "Arrange the segments in the correct order."
+            },
+            "segments_ja": [
+              "はい",
+              "わかりました",
+              "ありがとうございます"
+            ],
+            "correct_order": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: ExercisesCard\n\nINPUTS:\n- metalanguage: en\n- plan.lex_buckets: {\"uid\": \"12345\", \"level\": \"A2\", \"communicative_function_en\": \"Understand simple medical instructions\", \"communicative_function_ja\": \"簡単な医療指示を理解する\", \"scenarios\": [{\"name\": \"Doctor's Office Visit\", \"setting\": \"Doctor's Office\", \"roles\": [{\"label\": \"Doctor\", \"register\": \"plain\"}, {\"label\": \"Patient\", \"register\": \"plain\"}]}, {\"name\": \"Pharmacy Visit\", \"setting\": \"Pharmacy\", \"roles\": [{\"label\": \"Pharmacist\", \"register\": \"plain\"}, {\"label\": \"Customer\", \"register\": \"plain\"}]}], \"lex_buckets\": [{\"name\": \"Health Instructions\", \"items\": [\"休む\", \"薬\", \"飲む\", \"1日3回\", \"医者\", \"指示\", \"ゆっくり\", \"はっきり\", \"聞く\", \"理解する\", \"休息\", \"服用\", \"健康\", \"指導\"]}, {\"name\": \"Basic Actions\", \"items\": [\"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"読む\", \"書く\", \"食べる\", \"飲む\", \"休む\", \"立つ\", \"座る\", \"歩く\", \"走る\"]}, {\"name\": \"Time Expressions\", \"items\": [\"朝\", \"昼\", \"夜\", \"毎日\", \"時々\", \"いつも\", \"今\", \"後で\", \"すぐに\", \"遅く\", \"早く\", \"時間\", \"日\", \"週\"]}], \"grammar_functions\": [{\"id\": \"GF1\", \"label\": \"Imperative Form\", \"pattern_ja\": \"動詞の命令形\", \"slots\": [\"休む\", \"飲む\"], \"notes_en\": \"Used to give direct instructions or commands.\"}, {\"id\": \"GF2\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"動詞の現在形\", \"slots\": [\"飲む\", \"行く\"], \"notes_en\": \"Used for habitual actions or general truths.\"}, {\"id\": \"GF3\", \"label\": \"Frequency Expressions\", \"pattern_ja\": \"頻度を表す表現\", \"slots\": [\"1日3回\", \"毎日\"], \"notes_en\": \"Used to indicate how often an action occurs.\"}], \"evaluation\": {\"success_criteria\": [\"Correctly follows the doctor's instructions.\", \"Asks for clarification if needed.\", \"Repeats the instructions back to confirm understanding.\"], \"discourse_markers\": [\"はい\", \"わかりました\", \"もう一度お願いします\", \"それはどういう意味ですか\", \"ありがとうございます\"]}, \"cultural_themes_en\": [\"Direct communication is often used in medical settings.\", \"Patients are expected to ask questions if they do not understand.\", \"Doctors may use simple language to ensure understanding.\"], \"cultural_themes_ja\": [\"医療現場では直接的なコミュニケーションが多い。\", \"理解できない場合は質問することが期待される。\", \"医者は理解を確実にするために簡単な言葉を使うことがある。\"]}\n- plan.grammar_functions (ids & patterns available): [{\"id\": \"GF1\", \"pattern_ja\": \"動詞の命令形\"}, {\"id\": \"GF2\", \"pattern_ja\": \"動詞の現在形\"}, {\"id\": \"GF3\", \"pattern_ja\": \"頻度を表す表現\"}]\n- plan.evaluation.discourse_markers: [\"はい\", \"わかりました\", \"もう一度お願いします\", \"それはどういう意味ですか\", \"ありがとうございます\"]\n\nTASK:\nCreate 2–4 exercises:\n1) \"match\" (3–6 pairs) using lexemes from plan.lex_buckets; answers in \"en\".\n2) \"fill_blank\" using one grammar function; provide 3–6 acceptable answers in \"en\".\n3) optionally \"order\" (3 segments) if discourse markers exist.\n\nUse JPText for any Japanese stems.\n\nCONSTRAINTS:\n- A-level difficulty. Strict JSON.\n\nOUTPUT: ExercisesCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "cultural_explanation": {
+        "type": "CultureCard",
+        "title": {
+          "en": "Communication in Medical Settings",
+          "ja": "医療現場でのコミュニケーション"
+        },
+        "body": {
+          "en": "In medical settings, direct communication is often employed to ensure clarity and understanding. Patients are encouraged to ask questions if they do not comprehend the information provided. Doctors frequently use simple language to facilitate better understanding and to ensure that patients feel comfortable and informed.",
+          "ja": "医療現場では、明確さと理解を確保するために直接的なコミュニケーションがよく用いられます。患者は提供された情報を理解できない場合、質問することが奨励されています。医者は患者が快適で情報を得たと感じられるように、しばしば簡単な言葉を使って理解を促進します。"
+        },
+        "image": {
+          "prompt": "Infographic illustrating communication in medical settings",
+          "style": "infographic",
+          "size": "1280x720",
+          "negative_prompt": null,
+          "seed": null
+        },
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: CultureCard\n\nINPUTS:\n- metalanguage: en\n- plan.cultural_themes_* and plan.communicative_function_*:\n  en: [\"Direct communication is often used in medical settings.\", \"Patients are expected to ask questions if they do not understand.\", \"Doctors may use simple language to ensure understanding.\"]\n  ja: [\"医療現場では直接的なコミュニケーションが多い。\", \"理解できない場合は質問することが期待される。\", \"医者は理解を確実にするために簡単な言葉を使うことがある。\"]\n\nTASK:\nWrite a CultureCard (title/body in {\"en\",\"ja\"}) summarizing 2–4 key pragmatic/cultural themes relevant to the communicative function.\nOptional infographic image 1280x720 (style \"infographic\").\n\nCONSTRAINTS:\n- Strict JSON.\n\nOUTPUT: CultureCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "drills_ai": {
+        "type": "DrillsCard",
+        "drills": [
+          {
+            "drill_type": "substitution",
+            "id": "sub1",
+            "pattern_ref": "GF1",
+            "prompt_template": {
+              "template": "Use the following words in sentences."
+            },
+            "slots": [
+              "休む",
+              "飲む"
+            ],
+            "seed_items": [
+              {
+                "place": "薬",
+                "specialty_en": "medicine"
+              },
+              {
+                "place": "医者",
+                "specialty_en": "doctor"
+              },
+              {
+                "place": "指示",
+                "specialty_en": "instruction"
+              },
+              {
+                "place": "健康",
+                "specialty_en": "health"
+              }
+            ],
+            "ai_support": {
+              "support1": "Provide examples of using '休む' and '飲む' in sentences."
+            }
+          },
+          {
+            "drill_type": "pronunciation",
+            "id": "pron1",
+            "focus": [
+              {
+                "ja": "休む",
+                "romaji": "yasumu"
+              },
+              {
+                "ja": "飲む",
+                "romaji": "nomu"
+              },
+              {
+                "ja": "行く",
+                "romaji": "iku"
+              }
+            ],
+            "ai_support": {
+              "support2": "Explain the pronunciation differences between '休む', '飲む', and '行く'."
+            }
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: DrillsCard\n\nINPUTS:\n- metalanguage: en\n- plan.grammar_functions (ids & slots): [{\"id\": \"GF1\", \"slots\": [\"休む\", \"飲む\"]}, {\"id\": \"GF2\", \"slots\": [\"飲む\", \"行く\"]}, {\"id\": \"GF3\", \"slots\": [\"1日3回\", \"毎日\"]}]\n- plan.lex_buckets (for seed items): [{\"name\": \"Health Instructions\", \"items\": [\"休む\", \"薬\", \"飲む\", \"1日3回\", \"医者\", \"指示\", \"ゆっくり\", \"はっきり\", \"聞く\", \"理解する\", \"休息\", \"服用\", \"健康\", \"指導\"]}, {\"name\": \"Basic Actions\", \"items\": [\"行く\", \"来る\", \"見る\", \"聞く\", \"話す\", \"読む\", \"書く\", \"食べる\", \"飲む\", \"休む\", \"立つ\", \"座る\", \"歩く\", \"走る\"]}, {\"name\": \"Time Expressions\", \"items\": [\"朝\", \"昼\", \"夜\", \"毎日\", \"時々\", \"いつも\", \"今\", \"後で\", \"すぐに\", \"遅く\", \"早く\", \"時間\", \"日\", \"週\"]}]\n\nTASK:\nCreate 2 drills:\n- substitution: choose one grammar function id for pattern_ref; set slots per that function; add 2–6 seed_items from lex_buckets (simple nouns).\n- pronunciation: 2–4 targets from high-frequency lexemes or pattern chunks (provide \"ja\" and \"romaji\").\n\nInclude ai_support prompts.\n\nCONSTRAINTS:\n- Strict JSON.\n\nOUTPUT: DrillsCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      }
+    }
+  }
+}

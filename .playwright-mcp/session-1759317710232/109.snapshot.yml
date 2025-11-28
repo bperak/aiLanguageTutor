@@ -1,0 +1,114 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e27]:
+      - img [ref=e29]
+      - heading "Failed to load pattern data" [level=3] [ref=e31]
+      - paragraph [ref=e32]: The requested grammar pattern could not be loaded.
+      - button "Back to Grammar" [ref=e33]:
+        - img
+        - text: Back to Grammar
+  - generic [active]:
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - generic [ref=e57]:
+          - navigation [ref=e58]:
+            - button "previous" [disabled] [ref=e59]:
+              - img "previous" [ref=e60]
+            - generic [ref=e62]:
+              - generic [ref=e63]: 1/
+              - text: "1"
+            - button "next" [disabled] [ref=e64]:
+              - img "next" [ref=e65]
+          - img
+        - generic [ref=e67]:
+          - link "Next.js 15.5.2 (stale) Webpack" [ref=e68] [cursor=pointer]:
+            - /url: https://nextjs.org/docs/messages/version-staleness
+            - img [ref=e69]
+            - generic "There is a newer version (15.5.4) available, upgrade recommended!" [ref=e71]: Next.js 15.5.2 (stale)
+            - generic [ref=e72]: Webpack
+          - img
+      - dialog "Console AxiosError" [ref=e74]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - generic [ref=e81]: Console AxiosError
+              - generic [ref=e82]:
+                - button "Copy Error Info" [ref=e83] [cursor=pointer]:
+                  - img [ref=e84]
+                - button "No related documentation found" [disabled] [ref=e86]:
+                  - img [ref=e87]
+                - link "Learn more about enabling Node.js inspector for server code with Chrome DevTools" [ref=e89] [cursor=pointer]:
+                  - /url: https://nextjs.org/docs/app/building-your-application/configuring/debugging#server-side-code
+                  - img [ref=e90]
+            - paragraph [ref=e99]: Network Error
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - paragraph [ref=e103]:
+                - img [ref=e105]
+                - generic [ref=e109]: src/lib/api.ts (20:16) @ async apiGet
+                - button "Open in editor" [ref=e110] [cursor=pointer]:
+                  - img [ref=e112]
+              - generic [ref=e115]:
+                - generic [ref=e116]: "18 | const authToken = attachAuth ? (token ?? (typeof window !== \"undefined\" ? localStorage.getItem(\"token\") ?? undefined : undefined)) : undefined"
+                - generic [ref=e117]: "19 | if (authToken) headers[\"Authorization\"] = `Bearer ${authToken}`"
+                - generic [ref=e118]: "> 20 | const resp = await axios.get<T>(`${BASE_URL}${path}`, { ...(config || {}), headers: { ...(config?.headers || {}), ...headers } })"
+                - generic [ref=e119]: "| ^"
+                - generic [ref=e120]: 21 | return resp.data
+                - generic [ref=e121]: "22 | }"
+                - generic [ref=e122]: 23 |
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - paragraph [ref=e125]:
+                  - text: Call Stack
+                  - generic [ref=e126]: "4"
+                - button "Show 2 ignore-listed frame(s)" [ref=e127] [cursor=pointer]:
+                  - text: Show 2 ignore-listed frame(s)
+                  - img [ref=e128]
+              - generic [ref=e130]:
+                - generic [ref=e131]:
+                  - text: async apiGet
+                  - button "Open async apiGet in editor" [ref=e132] [cursor=pointer]:
+                    - img [ref=e133]
+                - text: src/lib/api.ts (20:16)
+              - generic [ref=e135]:
+                - generic [ref=e136]:
+                  - text: async GrammarStudyPage.useCallback[loadPatternData]
+                  - button "Open async GrammarStudyPage.useCallback[loadPatternData] in editor" [ref=e137] [cursor=pointer]:
+                    - img [ref=e138]
+                - text: src/app/grammar/study/[patternId]/page.tsx (143:75)
+        - generic [ref=e140]:
+          - generic [ref=e141]: "1"
+          - generic [ref=e142]: "2"
+    - generic [ref=e38] [cursor=pointer]:
+      - button "Open Next.js Dev Tools" [ref=e39]:
+        - img [ref=e40]
+      - generic [ref=e43]:
+        - button "Open issues overlay" [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]: "0"
+            - generic [ref=e47]: "1"
+          - generic [ref=e48]: Issue
+        - button "Collapse issues badge" [ref=e49]:
+          - img [ref=e50]
+  - alert [ref=e52]

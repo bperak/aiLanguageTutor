@@ -80,7 +80,8 @@ class GrammarService:
                g.textbook as textbook,
                g.topic as topic,
                g.lesson as lesson,
-               g.jfs_category as jfs_category
+               g.jfs_category as jfs_category,
+               g.what_is as what_is
         ORDER BY g.sequence_number
         SKIP $offset
         LIMIT $limit
@@ -116,7 +117,8 @@ class GrammarService:
                g.textbook as textbook,
                g.topic as topic,
                g.lesson as lesson,
-               g.jfs_category as jfs_category
+               g.jfs_category as jfs_category,
+               g.what_is as what_is
         """
         
         try:
@@ -129,6 +131,49 @@ class GrammarService:
             
         except Exception as e:
             logger.error(f"Error retrieving pattern {pattern_id}: {e}")
+            raise
+
+    async def count_patterns(
+        self,
+        level: Optional[str] = None,
+        classification: Optional[str] = None,
+        jfs_category: Optional[str] = None,
+        search: Optional[str] = None,
+    ) -> int:
+        """Count grammar patterns matching optional filters."""
+        where_clauses = []
+        params: Dict[str, Any] = {}
+
+        if level:
+            where_clauses.append("g.textbook = $level")
+            params["level"] = level
+
+        if classification:
+            where_clauses.append("g.classification = $classification")
+            params["classification"] = classification
+
+        if jfs_category:
+            where_clauses.append("g.jfs_category = $jfs_category")
+            params["jfs_category"] = jfs_category
+
+        if search:
+            where_clauses.append("(g.pattern CONTAINS $search OR g.example_sentence CONTAINS $search)")
+            params["search"] = search
+
+        where_clause = "WHERE " + " AND ".join(where_clauses) if where_clauses else ""
+
+        query = f"""
+        MATCH (g:GrammarPattern)
+        {where_clause}
+        RETURN count(g) as total
+        """
+
+        try:
+            result = await self.session.run(query, **params)
+            record = await result.single()
+            return int(record["total"]) if record else 0
+        except Exception as e:
+            logger.error(f"Error counting grammar patterns: {e}")
             raise
     
     async def get_similar_patterns(self, pattern_id: str, limit: int = 5) -> List[Dict[str, Any]]:
@@ -164,12 +209,19 @@ class GrammarService:
         query = """
         MATCH (prereq:GrammarPattern)-[:PREREQUISITE_FOR]->(target:GrammarPattern {id: $pattern_id})
         RETURN prereq.id as id,
-               prereq.pattern as pattern,
-               prereq.pattern_romaji as pattern_romaji,
-               prereq.example_sentence as example_sentence,
-               prereq.textbook as textbook,
-               prereq.classification as classification
-        ORDER BY prereq.sequence_number
+               coalesce(prereq.sequence_number, 0) as sequence_number,
+               coalesce(prereq.pattern, '') as pattern,
+               coalesce(prereq.pattern_romaji, '') as pattern_romaji,
+               coalesce(prereq.textbook_form, '') as textbook_form,
+               coalesce(prereq.textbook_form_romaji, '') as textbook_form_romaji,
+               coalesce(prereq.example_sentence, '') as example_sentence,
+               coalesce(prereq.example_romaji, '') as example_romaji,
+               coalesce(prereq.classification, '') as classification,
+               coalesce(prereq.textbook, '') as textbook,
+               coalesce(prereq.topic, '') as topic,
+               coalesce(prereq.lesson, '') as lesson,
+               coalesce(prereq.jfs_category, '') as jfs_category
+        ORDER BY coalesce(prereq.sequence_number, 0)
         """
         
         try:

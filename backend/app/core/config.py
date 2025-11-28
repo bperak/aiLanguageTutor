@@ -118,6 +118,109 @@ class Settings(BaseSettings):
         default=["ja", "ko", "zh", "hr", "sr", "es", "fr", "de"],
         description="Supported languages"
     )
+
+    # Lesson Orchestration Flags
+    LESSON_SOURCE_PRECEDENCE: str = Field(
+        default="graph_first",
+        description="Source precedence for ActivateCanDo: graph_first | compiled_first | strict_merge"
+    )
+    GATING_MODE: str = Field(
+        default="completion",
+        description="Exercise phase gating: completion | score"
+    )
+    GATING_N: int = Field(
+        default=2,
+        description="Number of exercises required to complete a phase when GATING_MODE=completion"
+    )
+
+    # Available AI Models (as of 2025)
+    AVAILABLE_OPENAI_MODELS: list = Field(
+        default=[
+            {"id": "gpt-5", "name": "GPT-5", "description": "🌟 Next-gen! Most advanced", "recommended": True, "speed": "medium"},
+            {"id": "gpt-5-mini", "name": "GPT-5 Mini", "description": "⚡ Fast next-gen model", "recommended": False, "speed": "fast"},
+            {"id": "gpt-4.1", "name": "GPT-4.1", "description": "🚀 1M context, best JSON", "recommended": False, "speed": "medium"},
+            {"id": "gpt-4o", "name": "GPT-4o", "description": "🏆 Excellent multilingual", "recommended": False, "speed": "medium"},
+            {"id": "gpt-4o-mini", "name": "GPT-4o Mini", "description": "⚡ Fastest and cheapest", "recommended": False, "speed": "fast"},
+            {"id": "gpt-4-turbo", "name": "GPT-4 Turbo", "description": "⚙️ Balanced option", "recommended": False, "speed": "medium"},
+            {"id": "o1-preview", "name": "O1 Preview", "description": "🧠 Extended reasoning", "recommended": False, "speed": "slow"},
+            {"id": "o1-mini", "name": "O1 Mini", "description": "💡 Fast reasoning", "recommended": False, "speed": "fast"},
+        ],
+        description="Available OpenAI models"
+    )
+    
+    AVAILABLE_GEMINI_MODELS: list = Field(
+        default=[
+            {"id": "gemini-2.5-flash", "name": "Gemini 2.5 Flash", "description": "⚡ Fast balanced (120s+ timeout)", "recommended": True, "speed": "fast", "min_timeout": 120},
+            {"id": "gemini-2.0-flash-exp", "name": "Gemini 2.0 Flash Exp", "description": "💨 Fastest experimental", "recommended": False, "speed": "fastest", "min_timeout": 90},
+            {"id": "gemini-2.0-flash-thinking-exp", "name": "Gemini 2.0 Flash Thinking", "description": "🧠 With reasoning", "recommended": False, "speed": "medium", "min_timeout": 150},
+            {"id": "gemini-1.5-pro", "name": "Gemini 1.5 Pro", "description": "📊 Balanced", "recommended": False, "speed": "medium", "min_timeout": 120},
+            {"id": "gemini-1.5-flash", "name": "Gemini 1.5 Flash", "description": "💨 Fast efficient", "recommended": False, "speed": "fast", "min_timeout": 90},
+            {"id": "gemini-2.5-pro", "name": "Gemini 2.5 Pro", "description": "🎯 Most capable", "recommended": False, "speed": "slow", "min_timeout": 150},
+        ],
+        description="Available Gemini models"
+    )
+
+    # CanDo AI Generation Settings (Legacy Single-Stage)
+    CANDO_AI_PROVIDER: str = Field(
+        default="openai", description="AI provider for CanDo generation (openai|gemini)"
+    )
+    CANDO_AI_MODEL: str = Field(
+        default="gpt-4o", description="Primary model for CanDo generation"
+    )
+    CANDO_AI_FALLBACK_MODEL: str = Field(
+        default="gpt-4o-mini", description="Fallback model if primary fails"
+    )
+    
+    # CanDo Two-Stage Generation Settings (Recommended)
+    CANDO_AI_STAGE1_PROVIDER: str = Field(
+        default="openai",
+        description="Stage 1 provider for content generation (openai recommended)"
+    )
+    CANDO_AI_STAGE1_MODEL: str = Field(
+        default="gpt-4o",
+        description="Stage 1 model for creative content (gpt-4o proven reliable)"
+    )
+    CANDO_AI_STAGE2_PROVIDER: str = Field(
+        default="openai",
+        description="Stage 2 provider for structuring (openai recommended)"
+    )
+    CANDO_AI_STAGE2_MODEL: str = Field(
+        default="gpt-4o-mini",
+        description="Stage 2 model for JSON structuring (fast and reliable)"
+    )
+    
+    # Feature Flag for Two-Stage Generation
+    USE_TWOSTAGE_GENERATION: bool = Field(
+        default=True,
+        description="Use two-stage generation (Stage 1: content, Stage 2: structure)"
+    )
+    
+    # CanDo Embedding Similarity Settings
+    CANDO_SIMILARITY_THRESHOLD: float = Field(
+        default=0.65,
+        description="Minimum similarity score for creating SEMANTICALLY_SIMILAR relationships (default: 0.65)"
+    )
+
+    # Timeout Settings
+    AI_REQUEST_TIMEOUT_SECONDS: int = Field(
+        default=90, description="Default timeout in seconds"
+    )
+    AI_REQUEST_MIN_TIMEOUT: int = Field(
+        default=60, description="Minimum allowed timeout"
+    )
+    AI_REQUEST_MAX_TIMEOUT: int = Field(
+        default=300, description="Maximum allowed timeout (5 minutes)"
+    )
+    
+    # Two-Stage Timeout Settings
+    AI_STAGE1_TIMEOUT_SECONDS: int = Field(
+        default=180,
+        description="Stage 1 timeout for content generation (allow more time for creativity)"
+    )
+    AI_STAGE2_TIMEOUT_SECONDS: int = Field(
+        default=60,
+        description="Stage 2 timeout per section for structuring (faster, predictable)"
+    )
     
     @validator("CORS_ORIGINS", pre=True)
     def assemble_cors_origins(cls, v: Any) -> list[str] | str:
@@ -148,7 +251,9 @@ class Settings(BaseSettings):
     
     class Config:
         """Pydantic configuration."""
-        env_file = ".env"
+        env_file = "../.env"
+        env_file_encoding = "utf-8"
+        extra = "ignore"  # Ignore extra environment variables like NEXT_PUBLIC_*
         case_sensitive = True
 
 

@@ -1,3 +1,20 @@
+- Graph model changes
+
+1) Change label JFSCategory to JFSTopic,
+change attr:
+ create source_name -> name ex. 	7　健康
+ name - extract only name without number 	ex:　健康
+
+2) MarugotoTopic - create as an attr of JFSTopic
+- look at the original .xmls file and extract with attribute MarugotoTopic
+
+
+3) TextbookLevel - put on the relation CATEGORIZED_AS with attribute named TextbookLevel
+4) rename CATEGORIZED_AS to USED_IN_TOPIC with attribute TextbookName, TextbookLevel 
+ 
+
+
+
 - on the Dashboard:
  - this looks very data science like, we want this to look inspirational for learning new words, grammatical concepts, syntactic structures, topics, pragmatic points
  - all this based on the personal data provided by the user - but intelligently moderated by the AI agent - so we should enable an agent with more intelligence - a model like o3 or gemini 2.5 pro

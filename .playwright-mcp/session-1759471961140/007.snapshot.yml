@@ -1,0 +1,52 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e47] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e49]:
+          - text: Lexical
+          - img [ref=e50]
+        - button "Grammar" [ref=e53]:
+          - text: Grammar
+          - img [ref=e54]
+        - link "Conversations" [ref=e56] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e58]:
+          - text: Profile
+          - img [ref=e59]
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - heading "Lexical Graph" [level=1] [ref=e15]
+        - generic [ref=e16]:
+          - generic [ref=e17]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e18]: 日本
+            - generic [ref=e19]: "Searching in: kanji"
+            - generic [ref=e20]:
+              - generic "Kanji (active)" [ref=e21]: K
+              - generic "Hiragana" [ref=e22]: H
+              - generic "Translation" [ref=e23]: T
+          - button "Search" [ref=e24]
+        - button "⚙️ Settings" [ref=e26]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - button "Graph" [ref=e29]:
+            - generic [ref=e30]: Graph
+          - button "Info" [ref=e31]:
+            - generic [ref=e32]: Info
+          - button "Lesson" [ref=e33]:
+            - generic [ref=e34]: Lesson
+        - generic [ref=e61]: "Error: Request failed with status code 500"
+        - generic [ref=e43]:
+          - heading "Selected Node" [level=3] [ref=e44]
+          - generic [ref=e45]: Click a node to see details
+      - paragraph [ref=e46]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e70] [cursor=pointer]:
+    - img [ref=e71]
+  - alert [ref=e74]

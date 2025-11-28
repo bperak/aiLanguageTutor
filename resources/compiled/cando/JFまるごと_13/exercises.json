@@ -1,0 +1,34 @@
+{
+  "can_do_id": "JFまるごと:13",
+  "exercises": [
+    {
+      "id": "ex-fill-01",
+      "type": "fill_in",
+      "prompt": "きょうとに（ ）。",
+      "targets": [
+        "w-ikimashita"
+      ],
+      "accepts": "text",
+      "answer_schema": "tokens"
+    },
+    {
+      "id": "ex-reorder-01",
+      "type": "reorder",
+      "prompt": "Reorder: 行きました／きょうとに／ともだちと",
+      "targets": [],
+      "accepts": "text",
+      "answer_schema": "tokens"
+    },
+    {
+      "id": "ex-write-01",
+      "type": "short_write",
+      "prompt": "In 3 sentences, present a souvenir and say why you chose it (〜から).",
+      "targets": [
+        "w-omiyage",
+        "gp-kara"
+      ],
+      "accepts": "text",
+      "answer_schema": "open"
+    }
+  ]
+}

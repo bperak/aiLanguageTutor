@@ -1,0 +1,137 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [active] [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: 日の丸
+            - generic [ref=e31]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e33]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e35]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e49]:
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - generic [ref=e99]: "Search node: 日の丸"
+              - generic [ref=e100]: "Nodes: 13"
+              - generic [ref=e101]: "Links: 32"
+              - combobox [ref=e102]:
+                - 'option "Depth: 1" [selected]'
+                - 'option "Depth: 2"'
+            - generic [ref=e103]:
+              - button "3D" [ref=e104]
+              - button "Fit" [ref=e105]
+              - button "Reset" [ref=e106]
+          - generic [ref=e62]:
+            - generic: 日本 (にほん) — Japan
+        - generic [ref=e65]:
+          - heading "Selected Node" [level=3] [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]: 日の丸
+              - generic [ref=e70]: ひのまる
+              - generic [ref=e71]: Rising Sun Flag
+              - generic [ref=e73]:
+                - generic [ref=e74]: "POS: -"
+                - generic [ref=e75]: "Level: -"
+                - generic [ref=e76]: "Connections: 12"
+            - generic [ref=e77]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e78]
+              - generic [ref=e79]:
+                - 'button "日本国旗 にほんこっき Japanese national flag Synonym: 0.90 | POS: | Level:" [ref=e107]':
+                  - generic [ref=e81]: 日本国旗
+                  - generic [ref=e82]: にほんこっき
+                  - generic [ref=e83]: Japanese national flag
+                  - generic [ref=e84]: "Synonym: 0.90 | POS: | Level:"
+                - 'button "日本の旗 にほんのはた flag of Japan Synonym: 0.90 | POS: | Level:" [ref=e108]':
+                  - generic [ref=e109]: 日本の旗
+                  - generic [ref=e110]: にほんのはた
+                  - generic [ref=e111]: flag of Japan
+                  - generic [ref=e112]: "Synonym: 0.90 | POS: | Level:"
+                - 'button "日章旗 にっしょうき Nisshōki Synonym: 0.85 | POS: | Level:" [ref=e113]':
+                  - generic [ref=e114]: 日章旗
+                  - generic [ref=e115]: にっしょうき
+                  - generic [ref=e116]: Nisshōki
+                  - generic [ref=e117]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "国旗 こっき national flag Synonym: 0.85 | POS: | Level:" [ref=e118]':
+                  - generic [ref=e119]: 国旗
+                  - generic [ref=e120]: こっき
+                  - generic [ref=e121]: national flag
+                  - generic [ref=e122]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "旗 はた flag Synonym: 0.80 | POS: | Level:" [ref=e123]':
+                  - generic [ref=e124]: 旗
+                  - generic [ref=e125]: はた
+                  - generic [ref=e126]: flag
+                  - generic [ref=e127]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "旭日旗 きょくじつき Rising Sun Flag Synonym: 0.75 | POS: | Level:" [ref=e128]':
+                  - generic [ref=e129]: 旭日旗
+                  - generic [ref=e130]: きょくじつき
+                  - generic [ref=e131]: Rising Sun Flag
+                  - generic [ref=e132]: "Synonym: 0.75 | POS: | Level:"
+                - 'button "日本 にほん Japan Synonym: 0.70 | POS: | Level:" [ref=e133]':
+                  - generic [ref=e134]: 日本
+                  - generic [ref=e135]: にほん
+                  - generic [ref=e136]: Japan
+                  - generic [ref=e137]: "Synonym: 0.70 | POS: | Level:"
+                - 'button "日章 にっしょう sun emblem Synonym: 0.65 | POS: | Level:" [ref=e138]':
+                  - generic [ref=e139]: 日章
+                  - generic [ref=e140]: にっしょう
+                  - generic [ref=e141]: sun emblem
+                  - generic [ref=e142]: "Synonym: 0.65 | POS: | Level:"
+                - 'button "日の出 ひので sunrise Synonym: 0.60 | POS: | Level:" [ref=e143]':
+                  - generic [ref=e144]: 日の出
+                  - generic [ref=e145]: ひので
+                  - generic [ref=e146]: sunrise
+                  - generic [ref=e147]: "Synonym: 0.60 | POS: | Level:"
+                - 'button "日輪 にちりん sun Synonym: 0.60 | POS: | Level:" [ref=e148]':
+                  - generic [ref=e149]: 日輪
+                  - generic [ref=e150]: にちりん
+                  - generic [ref=e151]: sun
+                  - generic [ref=e152]: "Synonym: 0.60 | POS: | Level:"
+                - 'button "太陽 たいよう sun Synonym: 0.55 | POS: | Level:" [ref=e153]':
+                  - generic [ref=e154]: 太陽
+                  - generic [ref=e155]: たいよう
+                  - generic [ref=e156]: sun
+                  - generic [ref=e157]: "Synonym: 0.55 | POS: | Level:"
+                - 'button "象徴 しょうちょう symbol Synonym: 0.50 | POS: | Level:" [ref=e158]':
+                  - generic [ref=e159]: 象徴
+                  - generic [ref=e160]: しょうちょう
+                  - generic [ref=e161]: symbol
+                  - generic [ref=e162]: "Synonym: 0.50 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

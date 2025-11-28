@@ -1,0 +1,32 @@
+{
+  "can_do_id": "JFまるごと:13",
+  "scene": "After a trip, giving a souvenir to a colleague",
+  "turns": [
+    {
+      "speaker": "A",
+      "l2": "これ、おみやげです。どうぞ。",
+      "l1": "This is a souvenir. Please accept it."
+    },
+    {
+      "speaker": "B",
+      "l2": "ありがとうございます。どこに 行きましたか。",
+      "l1": "Thank you. Where did you go?"
+    },
+    {
+      "speaker": "A",
+      "l2": "きょうとに 行きました。おいしい おかし です。",
+      "l1": "I went to Kyoto. This is a tasty sweet."
+    },
+    {
+      "speaker": "B",
+      "l2": "わあ、うれしいです。",
+      "l1": "Wow, I’m happy!"
+    }
+  ],
+  "conventional_expressions": [
+    "これ、おみやげです。どうぞ。",
+    "ありがとうございます。",
+    "どこに 行きましたか。",
+    "〜に 行きました。"
+  ]
+}

@@ -53,11 +53,14 @@ def batch_translate_priority_words(session, batch_size=50):
     result = session.run("""
         MATCH (w:Word)
         WHERE w.source = 'LeeGoi'
-        AND (w.translation IS NULL OR w.translation = '')
-        AND w.level_int <= 3
-        RETURN w.lemma as word, w.reading as reading, w.pos as pos, 
-               w.level_int as level, w.lee_id as lee_id
-        ORDER BY w.level_int ASC, w.lemma
+          AND (w.translation IS NULL OR w.translation = '')
+          AND w.level_int <= 3
+        RETURN coalesce(w.standard_orthography, w.lemma) AS word,
+               coalesce(w.reading_hiragana, '') AS reading,
+               coalesce(w.pos, w.pos_primary) AS pos,
+               w.level_int AS level,
+               w.lee_id AS lee_id
+        ORDER BY w.level_int ASC, word
         LIMIT $batch_size
     """, batch_size=batch_size)
     

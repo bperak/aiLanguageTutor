@@ -10,7 +10,7 @@ import structlog
 from pydantic import BaseModel
 import json
 from openai import AsyncOpenAI
-import google.generativeai as genai
+from google import genai
 
 from app.core.config import settings
 from app.db import get_neo4j_session
@@ -48,7 +48,9 @@ class AIContentGenerator:
         # Initialize AI clients
         self.openai_client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
         if settings.GEMINI_API_KEY:
-            genai.configure(api_key=settings.GEMINI_API_KEY)
+            self.genai_client = genai.Client(api_key=settings.GEMINI_API_KEY)
+        else:
+            self.genai_client = None
     
     async def get_word_context(
         self, 
@@ -66,7 +68,8 @@ class AIContentGenerator:
             Rich context dictionary
         """
         query = """
-        MATCH (w:Word {kanji: $kanji})
+        MATCH (w:Word)
+        WHERE coalesce(w.standard_orthography, w.kanji) = $kanji
         
         // Get basic word information
         OPTIONAL MATCH (w)-[:HAS_DIFFICULTY]->(d:DifficultyLevel)
@@ -99,24 +102,24 @@ class AIContentGenerator:
                  translation: ms.translation
              }) as mutual_senses,
              collect(DISTINCT {
-                 kanji: syn.kanji,
+                 kanji: coalesce(syn.standard_orthography, syn.kanji),
                  translation: syn.translation,
                  strength: r.synonym_strength,
                  explanation: r.synonymy_explanation
              }) as synonyms,
              collect(DISTINCT {
-                 kanji: similar.kanji,
+                 kanji: coalesce(similar.standard_orthography, similar.kanji),
                  translation: similar.translation
              })[0..5] as similar_difficulty,
              collect(DISTINCT {
-                 kanji: related.kanji,
+                 kanji: coalesce(related.standard_orthography, related.kanji),
                  translation: related.translation
              })[0..5] as related_words
         
         RETURN {
-            kanji: w.kanji,
-            katakana: w.katakana,
-            hiragana: w.hiragana,
+            kanji: coalesce(w.standard_orthography, w.kanji),
+            katakana: coalesce(w.reading_katakana, w.katakana),
+            hiragana: coalesce(w.reading_hiragana, w.hiragana),
             translation: w.translation,
             difficulty: d.level,
             difficulty_numeric: d.numeric_level,
@@ -172,15 +175,20 @@ class AIContentGenerator:
                     }
                 ],
                 temperature=0.7,
-                max_tokens=500
+                max_completion_tokens=500
             )
             
             content = response.choices[0].message.content
             model = "gpt-4o-mini"
             
         elif provider == "gemini":
-            model_instance = genai.GenerativeModel('gemini-2.5-flash')
-            response = await model_instance.generate_content_async(prompt)
+            if not self.genai_client:
+                raise ValueError("Gemini API key not configured")
+            
+            response = self.genai_client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=prompt
+            )
             content = response.text
             model = "gemini-2.5-flash"
         
@@ -227,15 +235,20 @@ class AIContentGenerator:
                     }
                 ],
                 temperature=0.8,
-                max_tokens=800
+                max_completion_tokens=800
             )
             
             content = response.choices[0].message.content
             model = "gpt-4o-mini"
         
         elif provider == "gemini":
-            model_instance = genai.GenerativeModel('gemini-2.5-flash')
-            response = await model_instance.generate_content_async(prompt)
+            if not self.genai_client:
+                raise ValueError("Gemini API key not configured")
+            
+            response = self.genai_client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=prompt
+            )
             content = response.text
             model = "gemini-2.5-flash"
         
@@ -280,7 +293,7 @@ class AIContentGenerator:
                     }
                 ],
                 temperature=0.7,
-                max_tokens=400
+                max_completion_tokens=400
             )
             
             content = response.choices[0].message.content
@@ -330,7 +343,7 @@ class AIContentGenerator:
                     }
                 ],
                 temperature=0.6,
-                max_tokens=600
+                max_completion_tokens=600
             )
             
             content = response.choices[0].message.content

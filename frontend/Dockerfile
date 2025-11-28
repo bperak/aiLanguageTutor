@@ -15,6 +15,9 @@ RUN npm ci --only=production
 FROM base AS development
 WORKDIR /app
 
+# Install curl for health checks
+RUN apk add --no-cache curl
+
 # Copy package files
 COPY package.json package-lock.json* ./
 
@@ -24,11 +27,19 @@ RUN npm ci
 # Copy source code
 COPY . .
 
+# Create .next directory with proper permissions
+RUN mkdir -p .next && chmod -R 777 .next
+
+# Note: We skip the build step in development to avoid filesystem issues
+# Next.js will build on first run when the container starts
+# This is acceptable for development mode with hot reloading
+
 # Expose port
 EXPOSE 3000
 
 # Development command (with hot reloading)
-CMD ["npm", "run", "dev"]
+# Use host 0.0.0.0 to bind to all interfaces
+CMD ["npm", "run", "dev", "--", "--hostname", "0.0.0.0"]
 
 # Rebuild the source code only when needed
 FROM base AS builder

@@ -1,0 +1,308 @@
+{
+  "patterns": [
+    {
+      "id": "pp-gift-neutral",
+      "name": "Darivanje suvenira (neutralno)",
+      "pragmaticAct": "gift_giving",
+      "register": "polite",
+      "socialDistance": "equal",
+      "locale": "JP",
+      "typicalContexts": [
+        "Ured, prijatelji nakon putovanja"
+      ],
+      "canDo_links": [
+        "JFまるごと:13"
+      ],
+      "triggers": [
+        {
+          "when": "after_trip",
+          "condition": "handing_over_souvenir",
+          "example": "これ、おみやげです。どうぞ。"
+        }
+      ],
+      "slots": [
+        {
+          "name": "item",
+          "type": "item",
+          "required": true
+        },
+        {
+          "name": "place",
+          "type": "place",
+          "required": false
+        }
+      ],
+      "expressions": [
+        {
+          "label": "offer",
+          "l2_template": "これ、{item} です。どうぞ。",
+          "l1_gloss": "Ovo je {item}. Izvolite.",
+          "conventional": true,
+          "notes": "neutralno/polite"
+        },
+        {
+          "label": "thanks_recv",
+          "l2_template": "ありがとうございます。",
+          "l1_gloss": "Hvala vam.",
+          "conventional": true,
+          "notes": "fiksirano"
+        },
+        {
+          "label": "ask_place",
+          "l2_template": "どこに 行きましたか。",
+          "l1_gloss": "Gdje ste bili?",
+          "conventional": true,
+          "notes": "pitanje o destinaciji"
+        },
+        {
+          "label": "state_place",
+          "l2_template": "{place} に 行きました。",
+          "l1_gloss": "Bio/la sam u {place}.",
+          "conventional": true,
+          "notes": "odgovor"
+        }
+      ],
+      "grammarPatterns": [
+        "gp-kara"
+      ],
+      "lexicalSets": [
+        "おみやげ",
+        "りょこう",
+        "めいぶつ(名物)"
+      ],
+      "constraints": {
+        "must_include": [
+          "おみやげ",
+          "〜に 行きました"
+        ],
+        "avoid": []
+      },
+      "evaluation": {
+        "coverage": [
+          "spomenut dar i destinaciju"
+        ],
+        "cohesion": [
+          "logičan slijed (ponuda→zahvala→pitanje→odgovor)"
+        ],
+        "language": [
+          "osnovna točnost u prošlom vremenu"
+        ]
+      },
+      "tags": [
+        "gift",
+        "travel",
+        "neutral"
+      ]
+    },
+    {
+      "id": "pp-decline-politely",
+      "name": "Uljudno odbijanje (razlog)",
+      "pragmaticAct": "polite_decline",
+      "register": "polite",
+      "socialDistance": "equal",
+      "locale": "JP",
+      "typicalContexts": [
+        "Prijatelji, kolege; dijetne restrikcije"
+      ],
+      "canDo_links": [
+        "JFまるごと:13"
+      ],
+      "triggers": [
+        {
+          "when": "offered_item",
+          "condition": "cannot_accept",
+          "example": "ありがとうございます。でも、いま ダイエット して います。"
+        }
+      ],
+      "slots": [
+        {
+          "name": "reason",
+          "type": "reason",
+          "required": true
+        }
+      ],
+      "expressions": [
+        {
+          "label": "decline_with_reason",
+          "l2_template": "ありがとうございます。でも、{reason}。",
+          "l1_gloss": "Hvala, ali {reason}.",
+          "conventional": true,
+          "notes": ""
+        },
+        {
+          "label": "postpose_offer",
+          "l2_template": "では、あとで どうぞ。",
+          "l1_gloss": "Onda kasnije.",
+          "conventional": true,
+          "notes": "face-saving"
+        }
+      ],
+      "grammarPatterns": [
+        "gp-kara"
+      ],
+      "lexicalSets": [
+        "ダイエット",
+        "アレルギー(aler gija)",
+        "にがて (ne odgovara)"
+      ],
+      "constraints": {
+        "must_include": [
+          "ありがとうございます。でも、〜"
+        ],
+        "avoid": [
+          "direktno odbacivanje bez zahvale"
+        ]
+      },
+      "evaluation": {
+        "coverage": [
+          "zahvala + jasan razlog"
+        ],
+        "cohesion": [
+          "ponuda→odbijanje→alternativa"
+        ],
+        "language": [
+          "pravilna upotreba でも / 〜から"
+        ]
+      },
+      "tags": [
+        "decline",
+        "politeness"
+      ]
+    },
+    {
+      "id": "pp-explain-choice",
+      "name": "Obrazložiti izbor poklona",
+      "pragmaticAct": "explain_choice",
+      "register": "polite",
+      "socialDistance": "equal",
+      "locale": "JP",
+      "typicalContexts": [
+        "Pojašnjenje ukusa, regionalne specijalitete"
+      ],
+      "canDo_links": [
+        "JFまるごと:13"
+      ],
+      "triggers": [
+        {
+          "when": "recipient_asks_why",
+          "condition": "explain_preference",
+          "example": "どうして これを えらびましたか。"
+        }
+      ],
+      "slots": [
+        {
+          "name": "reason",
+          "type": "reason",
+          "required": true
+        }
+      ],
+      "expressions": [
+        {
+          "label": "because_preference",
+          "l2_template": "{reason} から、これに しました。",
+          "l1_gloss": "Zato što {reason}, izabrao/la sam ovo.",
+          "conventional": false,
+          "notes": "primjena 〜から"
+        }
+      ],
+      "grammarPatterns": [
+        "gp-kara"
+      ],
+      "lexicalSets": [
+        "おせんべい",
+        "しょうゆ",
+        "あまい/しょっぱい"
+      ],
+      "constraints": {
+        "must_include": [
+          "〜から"
+        ],
+        "avoid": []
+      },
+      "evaluation": {
+        "coverage": [
+          "jasan razlog povezan s predmetom"
+        ],
+        "cohesion": [
+          "pitanje→odgovor (uzročno-posljedično)"
+        ]
+      },
+      "tags": [
+        "explain",
+        "reason"
+      ]
+    },
+    {
+      "id": "pp-gift-formal",
+      "name": "Darivanje (formalnije)",
+      "pragmaticAct": "formal_gift_giving",
+      "register": "honorific",
+      "socialDistance": "higher",
+      "locale": "JP",
+      "typicalContexts": [
+        "Nadređeni, formalni posjeti"
+      ],
+      "canDo_links": [
+        "JFまるごと:13"
+      ],
+      "triggers": [
+        {
+          "when": "formal_meeting",
+          "condition": "handing_over_souvenir",
+          "example": "こちら、ささやか ですが、おみやげ でございます。"
+        }
+      ],
+      "slots": [
+        {
+          "name": "item",
+          "type": "item",
+          "required": true
+        }
+      ],
+      "expressions": [
+        {
+          "label": "offer_honorific",
+          "l2_template": "こちら、ささやか ですが、{item} でございます。",
+          "l1_gloss": "Evo, skromno, {item}.",
+          "conventional": true,
+          "notes": "keigo"
+        },
+        {
+          "label": "thanks_honorific",
+          "l2_template": "ごていねいに どうも。",
+          "l1_gloss": "Hvala na ljubaznosti.",
+          "conventional": true,
+          "notes": "primatelj"
+        }
+      ],
+      "grammarPatterns": [
+        "gp-kara"
+      ],
+      "lexicalSets": [
+        "ていねい",
+        "ささやか"
+      ],
+      "constraints": {
+        "must_include": [
+          "〜でございます"
+        ],
+        "avoid": [
+          "plain register"
+        ]
+      },
+      "evaluation": {
+        "coverage": [
+          "keigo ponuda + odgovarajuća zahvala"
+        ],
+        "language": [
+          "ispravna keigo morfologija"
+        ]
+      },
+      "tags": [
+        "formal",
+        "keigo",
+        "gift"
+      ]
+    }
+  ]
+}

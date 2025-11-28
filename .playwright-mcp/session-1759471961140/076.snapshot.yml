@@ -1,0 +1,79 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: 日差し
+            - generic [ref=e31]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e33]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e35]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [active] [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e578]:
+          - heading "AI Language Lesson" [level=2] [ref=e579]
+          - generic [ref=e580]:
+            - generic [ref=e581]:
+              - 'heading "Learning: 日差し" [level=3] [ref=e582]'
+              - paragraph [ref=e583]: Interactive AI-powered lesson content
+            - generic [ref=e584]:
+              - generic [ref=e585]:
+                - heading "Study Points" [level=4] [ref=e586]
+                - list [ref=e587]:
+                  - listitem [ref=e588]: • Understanding the kanji components
+                  - listitem [ref=e589]: • Related vocabulary and synonyms
+                  - listitem [ref=e590]: • Cultural context and usage
+              - generic [ref=e591]:
+                - heading "Practice Exercises" [level=4] [ref=e592]
+                - paragraph [ref=e593]: Interactive exercises and quizzes
+        - generic [ref=e594]:
+          - heading "AI Chat Assistant" [level=3] [ref=e595]
+          - generic [ref=e596]:
+            - generic [ref=e597]:
+              - generic [ref=e598]: "AI Tutor:"
+              - generic [ref=e599]: Hello! I'm here to help you learn about "日差し". What would you like to know?
+            - generic [ref=e600]:
+              - textbox "Ask a question..." [ref=e601]
+              - button "Send Message" [ref=e602]
+            - generic [ref=e603]:
+              - heading "Quick Actions" [level=4] [ref=e604]
+              - generic [ref=e605]:
+                - button "Explain pronunciation" [ref=e606]
+                - button "Show usage examples" [ref=e607]
+                - button "Create practice quiz" [ref=e608]
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

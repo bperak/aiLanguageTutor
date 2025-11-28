@@ -1,0 +1,62 @@
+{
+  "can_do_id": "JFまるごと:13",
+  "phases": [
+    {
+      "phase": "lexicon_and_patterns",
+      "goal": "Integrirati ključne riječi i obrasce (〜たいです, 〜から)",
+      "exercises": [
+        {
+          "id": "ex-lex-01",
+          "type": "fill_in",
+          "targets": [
+            "w-ikimashita"
+          ],
+          "accepts": "text"
+        },
+        {
+          "id": "ex-gp-01",
+          "type": "short_write",
+          "targets": [
+            "gp-kara"
+          ],
+          "accepts": "text"
+        }
+      ]
+    },
+    {
+      "phase": "guided_dialogue",
+      "goal": "Primijeniti izraze u kratkom, vođenom dijalogu",
+      "prereq": "phase:lexicon_and_patterns",
+      "exercises": [
+        {
+          "id": "ex-dialog-01",
+          "type": "dialog_build",
+          "prompt": "Popuni replike konvencionalnim izrazima.",
+          "targets": [
+            "これ、おみやげです。どうぞ。",
+            "どこに 行きましたか。"
+          ],
+          "accepts": "text"
+        }
+      ]
+    },
+    {
+      "phase": "open_dialogue",
+      "goal": "Kratki spontani razgovor s ciljnim markerima",
+      "prereq": "phase:guided_dialogue",
+      "exercises": [
+        {
+          "id": "ex-dialog-02",
+          "type": "short_write",
+          "prompt": "Napiši 5 rečenica dijaloga (darivanje suvenira)",
+          "targets": [
+            "w-omiyage",
+            "gp-kara"
+          ],
+          "accepts": "text"
+        }
+      ]
+    }
+  ],
+  "notes": "GenerateExercises respektira faze: najprije leksik/obrasci, zatim vođeni dijalog, pa tek onda otvoreniji razgovor. Aktivacija može uključiti kratki ‘SampleDialog’."
+}

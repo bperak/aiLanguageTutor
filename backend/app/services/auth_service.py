@@ -198,6 +198,8 @@ class AuthService:
                 ),
                 is_active=True,
                 is_verified=False,
+                profile_completed=False,
+                profile_skipped=False,
                 created_at=datetime.utcnow(),
                 updated_at=datetime.utcnow(),
             )

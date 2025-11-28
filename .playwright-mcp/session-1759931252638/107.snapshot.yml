@@ -1,0 +1,50 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - link "CanDo" [ref=e18] [cursor=pointer]:
+          - /url: /cando
+        - button "Profile" [ref=e20]:
+          - text: Profile
+          - img [ref=e21]
+        - button "Toggle theme" [ref=e24]: Dark
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - heading "JF:1" [level=1] [ref=e27]
+      - generic [ref=e59]: Failed to generate exercises
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]: Lesson
+          - generic [ref=e31]: Lesson for JF:1
+          - generic [ref=e32]: Explore pragmatics and practice basic exercises
+        - generic [ref=e33]:
+          - generic [ref=e34]: Pragmatics
+          - list
+        - generic [ref=e35]:
+          - generic [ref=e36]: Phase
+          - generic [ref=e37]:
+            - button "lexicon_and_patterns" [ref=e38]
+            - button "guided_dialogue" [ref=e39]
+            - button "open_dialogue" [ref=e40]
+            - button "Generate" [active] [ref=e41]
+          - generic [ref=e52]:
+            - generic [ref=e54]: multiple_choice
+            - generic [ref=e56]: multiple_choice
+            - generic [ref=e58]: multiple_choice
+  - button "Open Next.js Dev Tools" [ref=e47] [cursor=pointer]:
+    - img [ref=e48]
+  - alert [ref=e51]

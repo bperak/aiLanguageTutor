@@ -1,0 +1,114 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [active] [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: blood
+            - generic [ref=e1016]: "Searching in: translation"
+            - generic [ref=e32]:
+              - generic "Kanji" [ref=e1017]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation (active)" [ref=e1018]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e966]:
+        - generic [ref=e967]:
+          - generic [ref=e968]: "Color by:"
+          - combobox [ref=e969]:
+            - option "Domain" [selected]
+            - option "POS"
+            - option "Level"
+        - generic [ref=e970]:
+          - generic [ref=e971]: "Search Fields:"
+          - button "Kanji, Hiragana, Translation ▼" [ref=e973]:
+            - generic [ref=e974]: Kanji, Hiragana, Translation
+            - generic [ref=e975]: ▼
+        - generic [ref=e976]:
+          - generic [ref=e977]: "Node Labels:"
+          - button "Kanji ▼" [ref=e979]:
+            - generic [ref=e980]: Kanji
+            - generic [ref=e981]: ▼
+        - generic [ref=e982]:
+          - generic [ref=e983]:
+            - checkbox "Exact Match" [checked] [ref=e984]
+            - generic [ref=e985]: Exact Match
+          - button "✕ Close" [ref=e986]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e610]:
+          - generic [ref=e1024]:
+            - generic [ref=e1025]:
+              - generic [ref=e1026]: "Search node: 赤血球"
+              - generic [ref=e1027]: "Nodes: 4"
+              - generic [ref=e1028]: "Links: 6"
+              - combobox [ref=e1029]:
+                - 'option "Depth: 1" [selected]'
+                - 'option "Depth: 2"'
+            - generic [ref=e1030]:
+              - button "3D" [ref=e1031]
+              - button "Fit" [ref=e1032]
+              - button "Reset" [ref=e1033]
+          - generic [ref=e623]:
+            - generic: 血 (ち) — blood
+        - generic [ref=e625]:
+          - heading "Selected Node" [level=3] [ref=e626]
+          - generic [ref=e627]:
+            - generic [ref=e628]:
+              - generic [ref=e629]: 赤血球
+              - generic [ref=e630]: せっけっきゅう
+              - generic [ref=e631]: red blood cell
+              - generic [ref=e633]:
+                - generic [ref=e634]: "POS: -"
+                - generic [ref=e635]: "Level: -"
+                - generic [ref=e636]: "Connections: 3"
+            - generic [ref=e637]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e638]
+              - generic [ref=e639]:
+                - 'button "血球 けっきゅう blood cell Synonym: 0.85 | POS: | Level:" [ref=e1034]':
+                  - generic [ref=e641]: 血球
+                  - generic [ref=e642]: けっきゅう
+                  - generic [ref=e643]: blood cell
+                  - generic [ref=e644]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "血 ち blood Synonym: 0.80 | POS: | Level:" [ref=e1035]':
+                  - generic [ref=e646]: 血
+                  - generic [ref=e647]: ち
+                  - generic [ref=e648]: blood
+                  - generic [ref=e649]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "血漿 けっしょう plasma Synonym: 0.60 | POS: | Level:" [ref=e1036]':
+                  - generic [ref=e651]: 血漿
+                  - generic [ref=e652]: けっしょう
+                  - generic [ref=e653]: plasma
+                  - generic [ref=e654]: "Synonym: 0.60 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

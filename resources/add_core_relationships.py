@@ -117,7 +117,8 @@ class CoreRelationshipAdder:
                     MATCH (g:GrammarPattern)
                     WHERE g.example_sentence CONTAINS $word OR g.pattern CONTAINS $word
                     MATCH (w:Word)
-                    WHERE w.kanji = $word OR w.hiragana = $reading
+                    WHERE coalesce(w.standard_orthography, w.kanji) = $word
+                       OR w.hiragana = $reading OR w.reading_hiragana = $reading
                     MERGE (g)-[:USES_WORD]->(w)
                     RETURN count(*) as connected
                 """, word=word, reading=reading)

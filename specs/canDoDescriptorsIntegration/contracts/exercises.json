@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "exercises.schema.json",
+  "type": "object",
+  "required": ["can_do_id", "exercises"],
+  "properties": {
+    "can_do_id": {"type": "string"},
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "prompt", "accepts", "answer_schema"],
+        "properties": {
+          "id": {"type": "string"},
+          "type": {"type": "string"},
+          "prompt": {"type": "string"},
+          "targets": {"type": "array"},
+          "accepts": {"type": "string"},
+          "answer_schema": {"type": "string"}
+        }
+      }
+    }
+  }
+}
+
+

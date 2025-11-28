@@ -1,0 +1,357 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - list [ref=e9]:
+            - listitem "Database Information" [ref=e11]:
+              - button "Database" [ref=e12] [cursor=pointer]:
+                - img "Database" [ref=e333]
+            - listitem "Favorites" [ref=e22]:
+              - button "Favorites" [ref=e23] [cursor=pointer]:
+                - img "Favorites" [ref=e339]
+            - listitem "Guides" [ref=e29]:
+              - button "Guides" [ref=e30] [cursor=pointer]:
+                - img "Guides" [ref=e341]
+          - list [ref=e38]:
+            - listitem "Help &amp; Resources" [ref=e40]:
+              - button "Help & Resources" [ref=e41] [cursor=pointer]:
+                - img "Help & Resources" [ref=e346]
+            - listitem "Browser Sync" [ref=e49]:
+              - button "Browser Sync" [ref=e50] [cursor=pointer]:
+                - img "Browser Sync" [ref=e350]
+            - listitem "Settings" [ref=e59]:
+              - button "Browser Settings" [ref=e60] [cursor=pointer]:
+                - img "Browser Settings" [ref=e355]
+            - listitem "About Neo4j" [ref=e67]:
+              - button "About Neo4j" [ref=e68] [cursor=pointer]:
+                - img "About Neo4j" [ref=e358]
+        - generic [ref=e366]:
+          - heading "Database Information" [level=4] [ref=e367]
+          - generic [ref=e368]:
+            - generic [ref=e369]:
+              - heading "Use database" [level=5] [ref=e370]
+              - combobox [ref=e372]:
+                - option "neo4j 🏠" [selected]
+                - option "system"
+            - generic [ref=e373]:
+              - heading "Node labels" [level=5] [ref=e374]
+              - generic [ref=e375]:
+                - generic [ref=e376] [cursor=pointer]: "*(77,330)"
+                - generic [ref=e377] [cursor=pointer]: CanDoDescriptor
+                - generic [ref=e378] [cursor=pointer]: GrammarClassification
+                - generic [ref=e379] [cursor=pointer]: GrammarPattern
+                - generic [ref=e380] [cursor=pointer]: JFSCategory
+                - generic [ref=e381] [cursor=pointer]: Lesson
+                - generic [ref=e382] [cursor=pointer]: MarugotoTopic
+                - generic [ref=e383] [cursor=pointer]: PragmaticPattern
+                - generic [ref=e384] [cursor=pointer]: TextbookLevel
+                - generic [ref=e385] [cursor=pointer]: User
+                - generic [ref=e386] [cursor=pointer]: Word
+            - generic [ref=e387]:
+              - heading "Relationship types" [level=5] [ref=e388]
+              - generic [ref=e389]:
+                - generic [ref=e390] [cursor=pointer]: "*(460,782)"
+                - generic [ref=e391] [cursor=pointer]: ANTONYM_OF
+                - generic [ref=e392] [cursor=pointer]: BELONGS_TO_DOMAIN
+                - generic [ref=e393] [cursor=pointer]: BELONGS_TO_LEVEL
+                - generic [ref=e394] [cursor=pointer]: CATEGORIZED_AS
+                - generic [ref=e395] [cursor=pointer]: DOMAIN_OF
+                - generic [ref=e396] [cursor=pointer]: FOR
+                - generic [ref=e397] [cursor=pointer]: HAS_CLASSIFICATION
+                - generic [ref=e398] [cursor=pointer]: HAS_DIFFICULTY
+                - generic [ref=e399] [cursor=pointer]: HAS_ETYMOLOGY
+                - generic [ref=e400] [cursor=pointer]: HAS_POS
+                - generic [ref=e401] [cursor=pointer]: MASTERED
+                - generic [ref=e402] [cursor=pointer]: PREREQUISITE_FOR
+                - generic [ref=e403] [cursor=pointer]: SAME_LEVEL
+                - generic [ref=e404] [cursor=pointer]: SAME_SKILLDOMAIN
+                - generic [ref=e405] [cursor=pointer]: SAME_TOPIC
+                - generic [ref=e406] [cursor=pointer]: SAME_TYPE
+                - generic [ref=e407] [cursor=pointer]: SIMILAR_TO
+                - generic [ref=e408] [cursor=pointer]: SYNOMYM_OF
+                - generic [ref=e409] [cursor=pointer]: SYNONYM_OF
+                - generic [ref=e410] [cursor=pointer]: USES_PRAGMA
+                - generic [ref=e411] [cursor=pointer]: USES_WORD
+            - generic [ref=e412]:
+              - heading "Property keys" [level=5] [ref=e413]
+              - generic [ref=e414]:
+                - generic [ref=e415] [cursor=pointer]: ai_collocations
+                - generic [ref=e416] [cursor=pointer]: ai_confidence_score
+                - generic [ref=e417] [cursor=pointer]: ai_content_version
+                - generic [ref=e418] [cursor=pointer]: ai_cultural_notes
+                - generic [ref=e419] [cursor=pointer]: ai_definitions
+                - generic [ref=e420] [cursor=pointer]: ai_examples
+                - generic [ref=e421] [cursor=pointer]: ai_generated
+                - generic [ref=e422] [cursor=pointer]: ai_generated_at
+                - generic [ref=e423] [cursor=pointer]: ai_generated_node
+                - generic [ref=e424] [cursor=pointer]: ai_grammar_patterns
+                - generic [ref=e425] [cursor=pointer]: ai_kanji_breakdown
+                - generic [ref=e426] [cursor=pointer]: ai_learning_tips
+                - generic [ref=e427] [cursor=pointer]: ai_model_used
+                - generic [ref=e428] [cursor=pointer]: ai_overview
+                - generic [ref=e429] [cursor=pointer]: ai_overview_generated_at
+                - generic [ref=e430] [cursor=pointer]: ai_overview_model
+                - generic [ref=e431] [cursor=pointer]: ai_provider
+                - generic [ref=e432] [cursor=pointer]: ai_target_level
+                - generic [ref=e433] [cursor=pointer]: ai_translated
+                - generic [ref=e434] [cursor=pointer]: antonym_antonym_explanation
+                - generic [ref=e435] [cursor=pointer]: antonym_antonym_strength
+                - generic [ref=e436] [cursor=pointer]: antonym_antonymy_domain
+                - generic [ref=e437] [cursor=pointer]: antonym_antonymy_domain_hiragana
+                - generic [ref=e438] [cursor=pointer]: antonym_antonymy_domain_translation
+                - generic [ref=e439] [cursor=pointer]: canDo_links
+                - generic [ref=e440] [cursor=pointer]: can_do_id
+                - generic [ref=e441] [cursor=pointer]: category
+                - generic [ref=e442] [cursor=pointer]: classification
+                - generic [ref=e443] [cursor=pointer]: constraints
+                - generic [ref=e444] [cursor=pointer]: created_at
+                - generic [ref=e445] [cursor=pointer]: description
+                - generic [ref=e446] [cursor=pointer]: descriptionEn
+                - generic [ref=e447] [cursor=pointer]: descriptionJa
+                - generic [ref=e448] [cursor=pointer]: difficulty_level
+                - generic [ref=e449] [cursor=pointer]: difficulty_numeric
+                - generic [ref=e450] [cursor=pointer]: edge_id
+                - generic [ref=e451] [cursor=pointer]: entryNumber
+                - generic [ref=e452] [cursor=pointer]: etymology
+                - generic [ref=e453] [cursor=pointer]: evaluation
+                - generic [ref=e454] [cursor=pointer]: example_romaji
+                - generic [ref=e455] [cursor=pointer]: example_sentence
+                - generic [ref=e456] [cursor=pointer]: examples
+                - generic [ref=e457] [cursor=pointer]: expressions
+                - generic [ref=e458] [cursor=pointer]: from_level
+                - generic [ref=e459] [cursor=pointer]: from_word
+                - generic [ref=e460] [cursor=pointer]: grammarPatterns
+                - generic [ref=e461] [cursor=pointer]: hiragana
+                - generic [ref=e462] [cursor=pointer]: id
+                - generic [ref=e463] [cursor=pointer]: illustration_created_at
+                - generic [ref=e464] [cursor=pointer]: illustration_meta_path
+              - generic [ref=e465]:
+                - button "Show 50 more" [ref=e466] [cursor=pointer]
+                - text: "|"
+                - button "Show all" [ref=e467] [cursor=pointer]
+            - generic [ref=e468]:
+              - heading "Connected as" [level=5] [ref=e469]
+              - table [ref=e471]:
+                - rowgroup [ref=e472]:
+                  - 'row "Username: neo4j" [ref=e473]':
+                    - cell "Username:" [ref=e474]
+                    - cell "neo4j" [ref=e475]
+                  - 'row "Roles: -" [ref=e476]':
+                    - cell "Roles:" [ref=e477]
+                    - cell "-" [ref=e478]
+                  - 'row "Disconnect:  :server disconnect" [ref=e479]':
+                    - cell "Disconnect:" [ref=e480]
+                    - cell " :server disconnect" [ref=e481]:
+                      - generic [ref=e482] [cursor=pointer]:
+                        - generic [ref=e483]: 
+                        - text: :server disconnect
+            - generic [ref=e484]:
+              - heading "DBMS" [level=5] [ref=e485]
+              - table [ref=e487]:
+                - rowgroup [ref=e488]:
+                  - 'row "Cluster role: primary" [ref=e489]':
+                    - cell "Cluster role:" [ref=e490]
+                    - cell "primary" [ref=e491]
+                  - 'row "Version: 5.15.0" [ref=e492]':
+                    - cell "Version:" [ref=e493]
+                    - cell "5.15.0" [ref=e494]
+                  - 'row "Edition: community" [ref=e495]':
+                    - cell "Edition:" [ref=e496]
+                    - cell "community" [ref=e497]
+                  - 'row "Name: neo4j" [ref=e498]':
+                    - cell "Name:" [ref=e499]
+                    - cell "neo4j" [ref=e500]
+                  - 'row "Databases:  :dbs" [ref=e501]':
+                    - cell "Databases:" [ref=e502]
+                    - cell " :dbs" [ref=e503]:
+                      - generic [ref=e504] [cursor=pointer]:
+                        - generic [ref=e505]: 
+                        - text: :dbs
+                  - 'row "Information:  :sysinfo" [ref=e506]':
+                    - cell "Information:" [ref=e507]
+                    - cell " :sysinfo" [ref=e508]:
+                      - generic [ref=e509] [cursor=pointer]:
+                        - generic [ref=e510]: 
+                        - text: :sysinfo
+                  - 'row "Query List:  :queries" [ref=e511]':
+                    - cell "Query List:" [ref=e512]
+                    - cell " :queries" [ref=e513]:
+                      - generic [ref=e514] [cursor=pointer]:
+                        - generic [ref=e515]: 
+                        - text: :queries
+      - generic [ref=e78]:
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - code [ref=e84]:
+              - generic [ref=e85]:
+                - generic [ref=e518]: neo4j$
+                - textbox "Editor content;Press Alt+F1 for Accessibility Options." [ref=e96]
+            - button "Run (ctrl+enter)" [ref=e97] [cursor=pointer]:
+              - img "Run (ctrl+enter)" [ref=e3373]
+          - generic [ref=e103]:
+            - button "Fullscreen (ctrl + alt + F)" [ref=e104] [cursor=pointer]:
+              - img [ref=e107]
+            - button "Clear" [ref=e112] [cursor=pointer]:
+              - img [ref=e115]
+        - generic [ref=e239]:
+          - generic [ref=e240]: To help make Neo4j Browser better we collect information on product usage. Review your settings at any time.
+          - generic [ref=e241]: ×
+        - generic [ref=e121]:
+          - article [ref=e534]:
+            - generic [ref=e535]:
+              - button "Pin at top" [ref=e536] [cursor=pointer]:
+                - img [ref=e539]
+              - button "Collapse" [ref=e542] [cursor=pointer]:
+                - img [ref=e545]
+              - button "Fullscreen" [ref=e547] [cursor=pointer]:
+                - img [ref=e550]
+              - button "Close" [ref=e555] [cursor=pointer]:
+                - img [ref=e558]
+            - generic [ref=e561]:
+              - generic [ref=e562]:
+                - generic [ref=e563]:
+                  - code [ref=e3153]:
+                    - generic [ref=e3154]:
+                      - generic [ref=e3378]: neo4j$
+                      - generic [ref=e3160]:
+                        - generic [ref=e3382]:
+                          - text: MATCH
+                          - generic [ref=e3383]: ·
+                          - text: (n:CanDoDescriptor)
+                          - generic [ref=e3384]: ·
+                          - text: RETURN
+                          - generic [ref=e3385]: ·
+                          - text: count(n)
+                        - generic [ref=e3165]: M
+                      - textbox "Editor content;Press Alt+F1 for Accessibility Options." [active] [ref=e3167]: MATCH (n:CanDoDescriptor) RETURN count(n)
+                  - button "Rerun" [ref=e565] [cursor=pointer]:
+                    - img "Rerun" [ref=e3388]
+                - list [ref=e571]:
+                  - button "Save as Favorite" [ref=e572] [cursor=pointer]:
+                    - img [ref=e575]
+                  - button "Exports" [ref=e3391] [cursor=pointer]:
+                    - img [ref=e3394]
+                    - list
+              - generic [ref=e583]:
+                - list [ref=e584]:
+                  - listitem [ref=e3397] [cursor=pointer]:
+                    - generic [ref=e3398]:
+                      - img [ref=e3401]
+                      - generic [ref=e3403]: Table
+                  - listitem [ref=e3404] [cursor=pointer]:
+                    - generic [ref=e3405]:
+                      - img [ref=e3408]
+                      - generic [ref=e3410]: Text
+                  - listitem [ref=e615] [cursor=pointer]:
+                    - generic [ref=e616]:
+                      - img [ref=e619]
+                      - generic [ref=e622]: Code
+                - table [ref=e3415]:
+                  - rowgroup [ref=e3416]:
+                    - row "count(n)" [ref=e3417]:
+                      - cell [ref=e3418]
+                      - columnheader "count(n)" [ref=e3419]
+                  - rowgroup [ref=e3420]:
+                    - row "1 604" [ref=e3421]:
+                      - cell "1" [ref=e3422]:
+                        - generic [ref=e3423]: "1"
+                      - cell "604" [ref=e3425]
+              - generic [ref=e3430]: Started streaming 1 records after 2 ms and completed after 3 ms.
+          - article [ref=e243]:
+            - generic [ref=e244]:
+              - button "Pin at top" [ref=e245] [cursor=pointer]:
+                - img [ref=e248]
+              - button "Collapse" [ref=e251] [cursor=pointer]:
+                - img [ref=e254]
+              - button "Fullscreen" [ref=e256] [cursor=pointer]:
+                - img [ref=e259]
+              - button "Close" [ref=e264] [cursor=pointer]:
+                - img [ref=e267]
+            - generic [ref=e270]:
+              - generic [ref=e271]:
+                - generic [ref=e272]:
+                  - generic "Ctrl+click to copy to main editor" [ref=e273]: $ :play start
+                  - button "Rerun" [ref=e274] [cursor=pointer]:
+                    - img "Rerun" [ref=e3431]
+                - list [ref=e280]:
+                  - button "Save as Favorite" [ref=e281] [cursor=pointer]:
+                    - img [ref=e284]
+              - generic [ref=e286]:
+                - heading "Neo4j" [level=3] [ref=e288]:
+                  - img "Neo4j" [ref=e289]
+                - generic [ref=e293]:
+                  - generic [ref=e294]:
+                    - generic [ref=e295]:
+                      - heading "Getting started with Neo4j Browser" [level=3] [ref=e296]
+                      - paragraph [ref=e297]: Neo4j Browser user interface guide
+                      - button " Get started" [ref=e298] [cursor=pointer]:
+                        - generic [ref=e299]: 
+                        - text: Get started
+                    - generic [ref=e300]:
+                      - heading "Try Neo4j with live data" [level=3] [ref=e301]
+                      - paragraph [ref=e302]: A complete example graph that demonstrates common query patterns.
+                      - paragraph [ref=e304]: Actors & movies in cross-referenced pop culture.
+                      - button " Open guide" [ref=e305] [cursor=pointer]:
+                        - generic [ref=e306]: 
+                        - text: Open guide
+                    - generic [ref=e307]:
+                      - heading "Cypher basics" [level=3] [ref=e308]
+                      - paragraph [ref=e309]: Intro to Graphs with Cypher
+                      - list [ref=e310]:
+                        - listitem [ref=e311]: What is a graph database?
+                        - listitem [ref=e312]: How can I query a graph?
+                      - button " Start querying" [ref=e314] [cursor=pointer]:
+                        - generic [ref=e315]: 
+                        - text: Start querying
+                  - paragraph [ref=e317]:
+                    - text: Copyright ©
+                    - link "Neo4j, Inc" [ref=e318] [cursor=pointer]:
+                      - /url: http://neo4j.com/
+                    - generic [ref=e319]: 2002–2025
+                  - generic [ref=e320]:
+                    - link "Sign up" [ref=e321] [cursor=pointer]:
+                      - /url: https://neo4j.com/cloud/aura/pricing/?utm_medium=browser&utm_source=ce&utm_campaign=wl_v1
+                    - text: for a free Neo4j cloud instance with
+                    - img "Neo4j" [ref=e322]
+          - article [ref=e123]:
+            - generic [ref=e124]:
+              - button "Pin at top" [ref=e125] [cursor=pointer]:
+                - img [ref=e128]
+              - button "Collapse" [ref=e131] [cursor=pointer]:
+                - img [ref=e134]
+              - button "Fullscreen" [ref=e136] [cursor=pointer]:
+                - img [ref=e139]
+              - button "Close" [ref=e144] [cursor=pointer]:
+                - img [ref=e147]
+            - generic [ref=e150]:
+              - generic [ref=e151]:
+                - generic [ref=e152]:
+                  - generic "Ctrl+click to copy to main editor" [ref=e153]: $ :server connect
+                  - button "Rerun" [ref=e154] [cursor=pointer]:
+                    - img "Rerun" [ref=e3434]
+                - list [ref=e160]:
+                  - button "Save as Favorite" [ref=e161] [cursor=pointer]:
+                    - img [ref=e164]
+              - generic [ref=e168]:
+                - generic [ref=e169]:
+                  - heading "Connected to Neo4j" [level=3] [ref=e326]
+                  - paragraph [ref=e171]: Nice to meet you.
+                - generic [ref=e327]:
+                  - generic [ref=e328]:
+                    - text: You are connected as user
+                    - code [ref=e329]: neo4j
+                  - generic [ref=e330]:
+                    - text: to
+                    - code [ref=e331]: neo4j://localhost:7687
+                  - generic [ref=e332]: Connection credentials are stored in your web browser.
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - img "Import"
+  - generic [ref=e196]:
+    - alert
+    - alert
+    - complementary
+    - complementary

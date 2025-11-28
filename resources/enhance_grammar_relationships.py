@@ -157,7 +157,8 @@ class GrammarRelationshipEnhancer:
                         # Try to find matching Word node by kanji or hiragana
                         match_result = session.run("""
                             MATCH (w:Word)
-                            WHERE w.kanji = $word OR w.hiragana = $word
+                            WHERE coalesce(w.standard_orthography, w.kanji) = $word
+                               OR w.hiragana = $word OR w.reading_hiragana = $word
                             MATCH (g:GrammarPattern {id: $grammar_id})
                             MERGE (g)-[:USES_WORD]->(w)
                             RETURN count(*) as matched

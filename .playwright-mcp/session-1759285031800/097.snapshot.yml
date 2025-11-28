@@ -1,0 +1,93 @@
+- generic:
+  - link:
+    - /url: "#main-content"
+    - text: Skip to content
+  - navigation:
+    - generic:
+      - generic:
+        - link:
+          - /url: /
+          - text: AI Language Tutor
+        - generic:
+          - button: Dark
+          - button:
+            - img
+  - main:
+    - generic:
+      - generic:
+        - heading [level=1]: Japanese Grammar Patterns
+        - paragraph: Explore 100 grammar patterns from the Marugoto textbook series
+      - generic:
+        - tablist:
+          - tab:
+            - img
+            - text: Browse Patterns
+          - tab [selected]:
+            - img
+            - text: Learning Paths
+          - tab:
+            - img
+            - text: Recommendations
+        - tabpanel:
+          - generic:
+            - generic:
+              - generic: Generate Learning Path
+            - generic:
+              - generic:
+                - generic:
+                  - text: From Pattern
+                  - combobox [expanded]:
+                    - generic: Select starting pattern
+                    - img
+                - generic:
+                  - text: To Level
+                  - combobox:
+                    - generic: Select target level
+                    - img
+                - generic:
+                  - button [disabled]: Generate Path
+  - button "Open Next.js Dev Tools" [ref=e106] [cursor=pointer]:
+    - img [ref=e107]
+  - alert
+  - listbox [ref=e282]:
+    - option "～は～です" [active] [ref=e283]:
+      - generic [ref=e285]: ～は～です
+    - option "～ができる" [ref=e286]:
+      - generic [ref=e288]: ～ができる
+    - option "～も" [ref=e289]:
+      - generic [ref=e291]: ～も
+    - option "～と～" [ref=e292]:
+      - generic [ref=e294]: ～と～
+    - option "～に住んでいる" [ref=e295]:
+      - generic [ref=e297]: ～に住んでいる
+    - option "～の～" [ref=e298]:
+      - generic [ref=e300]: ～の～
+    - option "～が好き" [ref=e301]:
+      - generic [ref=e303]: ～が好き
+    - option "～は好きじゃない" [ref=e304]:
+      - generic [ref=e306]: ～は好きじゃない
+    - option "～を～ます" [ref=e307]:
+      - generic [ref=e309]: ～を～ます
+    - option "よく" [ref=e310]:
+      - generic [ref=e312]: よく
+    - option "好きな～" [ref=e313]:
+      - generic [ref=e315]: 好きな～
+    - option "～で（～ます）" [ref=e316]:
+      - generic [ref=e318]: ～で（～ます）
+    - option "～は～です" [ref=e319]:
+      - generic [ref=e321]: ～は～です
+    - option "～に～がある" [ref=e322]:
+      - generic [ref=e324]: ～に～がある
+    - option "～に～がいる" [ref=e325]:
+      - generic [ref=e327]: ～に～がいる
+    - option "～が【数】ある" [ref=e328]:
+      - generic [ref=e330]: ～が【数】ある
+    - option "～は～です" [ref=e331]:
+      - generic [ref=e333]: ～は～です
+    - option "～は～の～" [ref=e334]:
+      - generic [ref=e336]: ～は～の～
+    - option "～時" [ref=e337]:
+      - generic [ref=e339]: ～時
+    - option "～時に（～ます）" [ref=e340]:
+      - generic [ref=e342]: ～時に（～ます）
+    - img [ref=e344]

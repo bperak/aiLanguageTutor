@@ -6,6 +6,7 @@ import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useRouter } from "next/navigation"
 import { apiPost } from "@/lib/api"
+import { setToken } from "@/lib/auth"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -51,9 +52,10 @@ export default function RegisterPage() {
       // Then login
       const data = await apiPost<{ access_token: string }>("/api/v1/auth/login", { username: values.username, password: values.password })
       if (typeof window !== "undefined") {
-        localStorage.setItem("token", data.access_token)
+        setToken(data.access_token)
       }
-      router.push("/dashboard")
+      // Redirect to home page (which will show chat interface or redirect to profile build if needed)
+      router.push("/")
     } catch (err: unknown) {
       const axiosErr = err as { response?: { data?: { detail?: unknown } } }
       const detail = axiosErr?.response?.data?.detail as unknown

@@ -10,7 +10,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import text
 import openai
 from openai import AsyncOpenAI
-import google.generativeai as genai
+from google import genai
 
 from app.core.config import settings
 from app.db import get_neo4j_session, get_postgresql_session
@@ -25,10 +25,12 @@ class EmbeddingService:
         # Initialize AI clients
         self.openai_client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
         if settings.GEMINI_API_KEY:
-            genai.configure(api_key=settings.GEMINI_API_KEY)
+            self.genai_client = genai.Client(api_key=settings.GEMINI_API_KEY)
+        else:
+            self.genai_client = None
         
-        # Embedding dimensions
-        self.openai_dimensions = 1536  # text-embedding-ada-002
+        # Embedding dimensions (text-embedding-3-small)
+        self.openai_dimensions = 1536
         self.default_provider = "openai"
     
     async def generate_content_embedding(
@@ -49,19 +51,21 @@ class EmbeddingService:
         try:
             if provider == "openai":
                 response = await self.openai_client.embeddings.create(
-                    model="text-embedding-ada-002",
+                    model="text-embedding-3-small",
                     input=text
                 )
                 return response.data[0].embedding
             
             elif provider == "gemini":
                 # Gemini embedding implementation
-                import google.generativeai as genai
-                result = genai.embed_content(
+                if not self.genai_client:
+                    raise ValueError("Gemini API key not configured")
+                
+                result = self.genai_client.models.embed_content(
                     model="models/embedding-001",
                     content=text
                 )
-                return result['embedding']
+                return result.embedding
             
             else:
                 raise ValueError(f"Unsupported provider: {provider}")
@@ -392,6 +396,142 @@ class EmbeddingService:
             }
             for row in result.fetchall()
         ]
+    
+    async def generate_and_store_message_embedding(
+        self,
+        message_id: str,
+        content: str,
+        postgresql_session: AsyncSession,
+        provider: str = "openai"
+    ) -> List[float]:
+        """
+        Generate embedding for a conversation message and store it in the database.
+        
+        Args:
+            message_id: UUID of the conversation message
+            content: Message content to embed
+            postgresql_session: PostgreSQL session
+            provider: AI provider for embeddings
+            
+        Returns:
+            Embedding vector as list of floats
+        """
+        try:
+            # Generate embedding
+            embedding = await self.generate_content_embedding(content, provider)
+            
+            # Store in conversation_messages table
+            # pgvector accepts list directly - asyncpg handles conversion
+            await postgresql_session.execute(
+                text("""
+                UPDATE conversation_messages 
+                SET content_embedding = :embedding::vector
+                WHERE id = :message_id::uuid
+                """),
+                {
+                    'message_id': message_id,
+                    'embedding': embedding  # Pass list directly - asyncpg handles it
+                }
+            )
+            
+            await postgresql_session.commit()
+            logger.info("Stored message embedding", message_id=message_id)
+            return embedding
+            
+        except Exception as e:
+            await postgresql_session.rollback()
+            logger.error("Failed to store message embedding", 
+                        message_id=message_id,
+                        error=str(e))
+            raise
+    
+    async def batch_generate_message_embeddings(
+        self,
+        postgresql_session: AsyncSession,
+        batch_size: int = 50,
+        provider: str = "openai"
+    ) -> Dict[str, int]:
+        """
+        Generate embeddings for messages that don't have embeddings yet.
+        
+        Args:
+            postgresql_session: PostgreSQL session
+            batch_size: Number of messages to process at once
+            provider: AI provider for embeddings
+            
+        Returns:
+            Statistics dict
+        """
+        logger.info("Starting batch message embedding generation",
+                   batch_size=batch_size,
+                   provider=provider)
+        
+        stats = {
+            'processed': 0,
+            'generated': 0,
+            'skipped': 0,
+            'errors': 0
+        }
+        
+        offset = 0
+        
+        while True:
+            # Fetch batch of messages without embeddings
+            result = await postgresql_session.execute(
+                text("""
+                SELECT id, content
+                FROM conversation_messages
+                WHERE content_embedding IS NULL
+                AND content IS NOT NULL
+                AND content != ''
+                ORDER BY created_at
+                LIMIT :limit
+                OFFSET :offset
+                """),
+                {'limit': batch_size, 'offset': offset}
+            )
+            
+            rows = result.fetchall()
+            if not rows:
+                break
+            
+            # Process batch
+            for row in rows:
+                try:
+                    message_id = str(row.id)
+                    content = row.content
+                    
+                    if not content or not content.strip():
+                        stats['skipped'] += 1
+                        continue
+                    
+                    stats['processed'] += 1
+                    
+                    # Generate and store embedding
+                    await self.generate_and_store_message_embedding(
+                        message_id=message_id,
+                        content=content,
+                        postgresql_session=postgresql_session,
+                        provider=provider
+                    )
+                    
+                    stats['generated'] += 1
+                    
+                    if stats['generated'] % 50 == 0:
+                        logger.info("Generated message embeddings batch",
+                                   generated=stats['generated'],
+                                   processed=stats['processed'])
+                
+                except Exception as e:
+                    logger.error("Error generating message embedding",
+                               message_id=message_id,
+                               error=str(e))
+                    stats['errors'] += 1
+            
+            offset += batch_size
+        
+        logger.info("Batch message embedding generation completed", **stats)
+        return stats
 
 
 async def generate_all_embeddings():

@@ -1,0 +1,16 @@
+{
+  "name": "UpdateMastery minimal",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "() => fetch('http://localhost:8000/api/v1/lexical/lessons/update-mastery', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ user_id: 'u-demo', can_do_id: 'JFまるごと:13', score: 0.8 })}).then(r=>r.json())",
+      "saveAs": "um"
+    },
+    {
+      "action": "assert",
+      "expression": "typeof um.p === 'number' && um.p >= 0 && um.p <= 1 && um.can_do_id === 'JFまるごと:13'"
+    }
+  ]
+}
+
+

@@ -285,9 +285,8 @@ def store_ai_synonyms(session, word, ai_synonyms):
                 MERGE (w2:Word {lemma: $synonym})
                 ON CREATE SET w2.source = 'AI_Generated',
                               w2.source_id = $synonym,
-                              w2.kanji = $synonym,
-                              w2.hiragana = $reading,
-                              w2.reading = $reading,
+                              w2.standard_orthography = $synonym,
+                              w2.reading_hiragana = $reading,
                               w2.romaji = $romaji,
                               w2.translation = $translation,
                               w2.lang = 'ja',

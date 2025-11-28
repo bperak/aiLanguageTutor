@@ -41,12 +41,90 @@ Authorization: Bearer <your_jwt_token>
 | POST | `/api/v1/conversations/sessions/{session_id}/messages` | Add message to session |
 | GET | `/api/v1/conversations/sessions/{session_id}/messages` | List session messages |
 
-### Knowledge Graph
+### Dialogue Generation (CanDo)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/v1/cando/dialogue/new` | Generate a fresh dialogue with contextual setting |
+| POST | `/api/v1/cando/dialogue/extend` | Continue an existing dialogue within same domain |
+| POST | `/api/v1/cando/dialogue/store` | Store a generated dialogue for later use |
+
+#### Request/Response Examples
+
+Generate new dialogue:
+```http
+POST /api/v1/cando/dialogue/new
+Content-Type: application/json
+
+{
+  "can_do_id": "JF_105",
+  "seed_setting": "At a city hall counter, a newcomer asks about residence registration.",
+  "vocabulary": ["住所", "申請", "必要書類"],
+  "grammar_patterns": ["〜なければならない"],
+  "num_turns": 6,
+  "characters": ["Clerk", "Newcomer"]
+}
+```
+Response (abridged):
+```json
+{
+  "setting": "市役所の窓口で…",
+  "characters": ["Clerk", "Newcomer"],
+  "dialogue_turns": [
+    { "speaker": "Clerk", "japanese": { "kanji": "いらっしゃいませ…", "romaji": "...", "furigana": [], "translation": "..." } }
+  ]
+}
+```
+
+Extend dialogue:
+```http
+POST /api/v1/cando/dialogue/extend
+Content-Type: application/json
+
+{
+  "can_do_id": "JF_105",
+  "setting": "市役所の窓口で…",
+  "dialogue_turns": [ { "speaker": "Clerk", "japanese": { "kanji": "…" } } ],
+  "num_turns": 3
+}
+```
+
+Store dialogue:
+```http
+POST /api/v1/cando/dialogue/store
+Content-Type: application/json
+
+{
+  "can_do_id": "JF_105",
+  "dialogue_card": { "setting": "…", "characters": ["A","B"], "dialogue_turns": [] }
+}
+```
+
+### Knowledge & Lexical Graph
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/api/v1/knowledge/health` | Knowledge graph health check |
 | GET | `/api/v1/knowledge/search` | Search knowledge graph |
 | GET | `/api/v1/knowledge/embeddings/status` | Check embeddings status |
+| GET | `/api/v1/lexical/graph?center=<word>&searchField=<kanji|hiragana|translation>&depth=<n>` | Get lexical ego-graph |
+| GET | `/api/v1/lexical/node/{word}` | Get lexical node details |
+#### Lexical Graph Schema Guarantees
+
+```json
+{
+  "nodes": [
+    { "id": "日本", "name": "日本", "hiragana": "にほん", "translation": "Japan", "level": 1, "pos": "noun", "domain": "geography" }
+  ],
+  "links": [
+    { "source": "日本", "target": "東京", "weight": 1.0 }
+  ],
+  "center": { "id": "日本" }
+}
+```
+
+- `nodes[*].id` is always a non-empty string and unique within the response.
+- `links[*].source` and `links[*].target` are always non-empty strings that reference existing node ids in `nodes`.
+- `weight` is numeric; if missing or invalid, defaults to 1.0.
+- Self-loop links are omitted.
 
 ### Content Analysis
 | Method | Endpoint | Description |

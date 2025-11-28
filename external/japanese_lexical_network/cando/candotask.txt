@@ -1,0 +1,30 @@
+you have a 202305_JF_Cando_Category_list.pdf file 
+
+creata a graaph structure
+
+- for each row create a node, based on the following columns
+
+
+No. - this is identifier of the specific can do 
+種別 - this is reference 
+種類 - this is a type in the JF model of communicative language competences and activities   
+レベル - this is level category CEFR
+言語活動 - this is linguistic type of activity
+カテゴリー - this is a subcategory of activity 
+第1トピック - topic
+JF Can-do (日本語) - description of can do in Japanese
+JF Can-do (English)- description of can do in English
+
+NODES: 
+No. from No.  (id:No. )
+種別 from 種別,  (id:種別 )
+種類 from 種類 (id:種類, translation: <translate> )    
+レベル - this is level category CEFR
+言語活動 - this is linguistic type of activity
+カテゴリー - this is a subcategory of activity 
+第1トピック - topic
+JF Can-do (日本語) - description of can do in Japanese
+JF Can-do (English)- description of can do in English
+
+
+

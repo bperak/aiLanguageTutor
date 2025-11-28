@@ -1,0 +1,79 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e189]:
+      - generic [ref=e190]:
+        - heading "Lexical Graph" [level=1] [ref=e191]
+        - generic [ref=e192]:
+          - generic [ref=e193]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e194]: 日本
+            - generic [ref=e195]: "Searching in: kanji"
+            - generic [ref=e196]:
+              - generic "Kanji (active)" [ref=e197]: K
+              - generic "Hiragana" [ref=e198]: H
+              - generic "Translation" [ref=e199]: T
+          - button "Search" [ref=e200]
+        - button "⚙️ Settings" [ref=e202]
+      - generic [ref=e203]:
+        - generic [ref=e204]:
+          - button "Graph" [ref=e205]:
+            - generic [ref=e206]: Graph
+          - button "Info" [ref=e207]:
+            - generic [ref=e208]: Info
+          - button "Lesson" [active] [ref=e209]:
+            - generic [ref=e210]: Lesson
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - generic [ref=e217]: "Search node: 日本"
+            - generic [ref=e218]: "Nodes: 2"
+            - generic [ref=e219]: "Links: 2"
+            - combobox [ref=e220]:
+              - 'option "Depth: 1" [selected]'
+              - 'option "Depth: 2"'
+          - generic [ref=e221]:
+            - button "3D" [ref=e222]
+            - button "Fit" [ref=e223]
+            - button "Reset" [ref=e224]
+        - generic [ref=e229]:
+          - heading "Selected Node" [level=3] [ref=e230]
+          - generic [ref=e231]:
+            - generic [ref=e232]:
+              - generic [ref=e233]: 日本
+              - generic [ref=e234]: にほん
+              - generic [ref=e235]: Japan
+              - generic [ref=e237]:
+                - generic [ref=e238]: "POS: -"
+                - generic [ref=e239]: "Level: -"
+                - generic [ref=e240]: "Connections: 1"
+            - generic [ref=e241]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e242]
+              - 'button "日の丸 ひのまる Rising Sun Flag Synonym: 0.70 | POS: | Level:" [ref=e244]':
+                - generic [ref=e245]: 日の丸
+                - generic [ref=e246]: ひのまる
+                - generic [ref=e247]: Rising Sun Flag
+                - generic [ref=e248]: "Synonym: 0.70 | POS: | Level:"
+      - paragraph [ref=e249]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e44] [cursor=pointer]:
+    - img [ref=e45]
+  - alert [ref=e48]
+  - generic [ref=e152]: "2"

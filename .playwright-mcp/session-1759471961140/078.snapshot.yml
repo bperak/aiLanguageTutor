@@ -1,0 +1,184 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: 日差し
+            - generic [ref=e31]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e33]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e35]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e612]:
+          - generic [ref=e613]:
+            - generic [ref=e614]: "Search node: 日差し"
+            - generic [ref=e615]: "Nodes: 23"
+            - generic [ref=e616]: "Links: 166"
+            - combobox [ref=e617]:
+              - 'option "Depth: 1" [selected]'
+              - 'option "Depth: 2"'
+          - generic [ref=e618]:
+            - button "3D" [ref=e619]
+            - button "Fit" [active] [ref=e620]
+            - button "Reset" [ref=e621]
+        - generic [ref=e625]:
+          - heading "Selected Node" [level=3] [ref=e626]
+          - generic [ref=e627]:
+            - generic [ref=e628]:
+              - generic [ref=e629]: 日差し
+              - generic [ref=e630]: ひざし
+              - generic [ref=e631]: sunlight
+              - generic [ref=e633]:
+                - generic [ref=e634]: "POS: -"
+                - generic [ref=e635]: "Level: -"
+                - generic [ref=e636]: "Connections: 22"
+            - generic [ref=e637]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e638]
+              - generic [ref=e639]:
+                - 'button "陽光 ようこう sunlight Synonym: 0.90 | POS: | Level:" [ref=e640]':
+                  - generic [ref=e641]: 陽光
+                  - generic [ref=e642]: ようこう
+                  - generic [ref=e643]: sunlight
+                  - generic [ref=e644]: "Synonym: 0.90 | POS: | Level:"
+                - 'button "日射 にっしゃ sunlight Synonym: 0.90 | POS: | Level:" [ref=e645]':
+                  - generic [ref=e646]: 日射
+                  - generic [ref=e647]: にっしゃ
+                  - generic [ref=e648]: sunlight
+                  - generic [ref=e649]: "Synonym: 0.90 | POS: | Level:"
+                - 'button "日光 にっこう sunlight Synonym: 0.90 | POS: | Level:" [ref=e650]':
+                  - generic [ref=e651]: 日光
+                  - generic [ref=e652]: にっこう
+                  - generic [ref=e653]: sunlight
+                  - generic [ref=e654]: "Synonym: 0.90 | POS: | Level:"
+                - 'button "日当たり ひあたり sunlight Synonym: 0.90 | POS: | Level:" [ref=e655]':
+                  - generic [ref=e656]: 日当たり
+                  - generic [ref=e657]: ひあたり
+                  - generic [ref=e658]: sunlight
+                  - generic [ref=e659]: "Synonym: 0.90 | POS: | Level:"
+                - 'button "日照 にっしょう sunshine Synonym: 0.85 | POS: | Level:" [ref=e660]':
+                  - generic [ref=e661]: 日照
+                  - generic [ref=e662]: にっしょう
+                  - generic [ref=e663]: sunshine
+                  - generic [ref=e664]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "晴れ間 はれま clear sky Synonym: 0.85 | POS: | Level:" [ref=e665]':
+                  - generic [ref=e666]: 晴れ間
+                  - generic [ref=e667]: はれま
+                  - generic [ref=e668]: clear sky
+                  - generic [ref=e669]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "日向ぼっこ ひなたぼっこ sunbathing Synonym: 0.80 | POS: | Level:" [ref=e670]':
+                  - generic [ref=e671]: 日向ぼっこ
+                  - generic [ref=e672]: ひなたぼっこ
+                  - generic [ref=e673]: sunbathing
+                  - generic [ref=e674]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "太陽 たいよう sun Synonym: 0.80 | POS: | Level:" [ref=e675]':
+                  - generic [ref=e676]: 太陽
+                  - generic [ref=e677]: たいよう
+                  - generic [ref=e678]: sun
+                  - generic [ref=e679]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "光 ひかり light Synonym: 0.75 | POS: | Level:" [ref=e680]':
+                  - generic [ref=e681]: 光
+                  - generic [ref=e682]: ひかり
+                  - generic [ref=e683]: light
+                  - generic [ref=e684]: "Synonym: 0.75 | POS: | Level:"
+                - 'button "日焼け ひやけ sunburn Synonym: 0.70 | POS: | Level:" [ref=e685]':
+                  - generic [ref=e686]: 日焼け
+                  - generic [ref=e687]: ひやけ
+                  - generic [ref=e688]: sunburn
+                  - generic [ref=e689]: "Synonym: 0.70 | POS: | Level:"
+                - 'button "太陽光 たいようこう sunlight Synonym: 0.70 | POS: | Level:" [ref=e690]':
+                  - generic [ref=e691]: 太陽光
+                  - generic [ref=e692]: たいようこう
+                  - generic [ref=e693]: sunlight
+                  - generic [ref=e694]: "Synonym: 0.70 | POS: | Level:"
+                - 'button "日 ひ day Synonym: 0.65 | POS: | Level:" [ref=e695]':
+                  - generic [ref=e696]: 日
+                  - generic [ref=e697]: ひ
+                  - generic [ref=e698]: day
+                  - generic [ref=e699]: "Synonym: 0.65 | POS: | Level:"
+                - 'button "日向 ひなた sunny place Synonym: 0.65 | POS: | Level:" [ref=e700]':
+                  - generic [ref=e701]: 日向
+                  - generic [ref=e702]: ひなた
+                  - generic [ref=e703]: sunny place
+                  - generic [ref=e704]: "Synonym: 0.65 | POS: | Level:"
+                - 'button "日中 ひなか daytime Synonym: 0.60 | POS: | Level:" [ref=e705]':
+                  - generic [ref=e706]: 日中
+                  - generic [ref=e707]: ひなか
+                  - generic [ref=e708]: daytime
+                  - generic [ref=e709]: "Synonym: 0.60 | POS: | Level:"
+                - 'button "日没 にちぼつ sunset Synonym: 0.55 | POS: | Level:" [ref=e710]':
+                  - generic [ref=e711]: 日没
+                  - generic [ref=e712]: にちぼつ
+                  - generic [ref=e713]: sunset
+                  - generic [ref=e714]: "Synonym: 0.55 | POS: | Level:"
+                - 'button "朝日 あさひ morning sun Synonym: 0.50 | POS: | Level:" [ref=e715]':
+                  - generic [ref=e716]: 朝日
+                  - generic [ref=e717]: あさひ
+                  - generic [ref=e718]: morning sun
+                  - generic [ref=e719]: "Synonym: 0.50 | POS: | Level:"
+                - 'button "日和 ひより weather Synonym: 0.50 | POS: | Level:" [ref=e720]':
+                  - generic [ref=e721]: 日和
+                  - generic [ref=e722]: ひより
+                  - generic [ref=e723]: weather
+                  - generic [ref=e724]: "Synonym: 0.50 | POS: | Level:"
+                - 'button "夕日 ゆうひ sunset Synonym: 0.45 | POS: | Level:" [ref=e725]':
+                  - generic [ref=e726]: 夕日
+                  - generic [ref=e727]: ゆうひ
+                  - generic [ref=e728]: sunset
+                  - generic [ref=e729]: "Synonym: 0.45 | POS: | Level:"
+                - 'button "日陰 ひかげ shade Synonym: 0.40 | POS: | Level:" [ref=e730]':
+                  - generic [ref=e731]: 日陰
+                  - generic [ref=e732]: ひかげ
+                  - generic [ref=e733]: shade
+                  - generic [ref=e734]: "Synonym: 0.40 | POS: | Level:"
+                - 'button "光線 こうせん ray Synonym: 0.35 | POS: | Level:" [ref=e735]':
+                  - generic [ref=e736]: 光線
+                  - generic [ref=e737]: こうせん
+                  - generic [ref=e738]: ray
+                  - generic [ref=e739]: "Synonym: 0.35 | POS: | Level:"
+                - 'button "日照り ひでり drought Synonym: 0.30 | POS: | Level:" [ref=e740]':
+                  - generic [ref=e741]: 日照り
+                  - generic [ref=e742]: ひでり
+                  - generic [ref=e743]: drought
+                  - generic [ref=e744]: "Synonym: 0.30 | POS: | Level:"
+                - 'button "白夜 びゃくや midnight sun Synonym: 0.25 | POS: | Level:" [ref=e745]':
+                  - generic [ref=e746]: 白夜
+                  - generic [ref=e747]: びゃくや
+                  - generic [ref=e748]: midnight sun
+                  - generic [ref=e749]: "Synonym: 0.25 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

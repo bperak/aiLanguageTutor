@@ -1,0 +1,36 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e21] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e23]:
+          - text: Lexical
+          - img [ref=e24]
+        - button "Grammar" [ref=e27]:
+          - text: Grammar
+          - img [ref=e28]
+        - link "Conversations" [ref=e30] [cursor=pointer]:
+          - /url: /conversations
+        - link "CanDo" [ref=e31] [cursor=pointer]:
+          - /url: /cando
+        - button "Profile" [ref=e33]:
+          - text: Profile
+          - img [ref=e34]
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - heading "CanDo Browser" [level=1] [ref=e14]
+      - generic [ref=e15]:
+        - textbox "Search CanDo or Topic" [ref=e16]
+        - textbox "Level (e.g., A2)" [ref=e17]
+        - textbox "Topic contains" [ref=e18]
+        - button "Search" [ref=e19]
+        - generic [ref=e20]: Failed to load CanDo list
+  - button "Open Next.js Dev Tools" [ref=e41] [cursor=pointer]:
+    - img [ref=e42]
+  - alert [ref=e45]

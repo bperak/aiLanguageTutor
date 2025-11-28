@@ -1,0 +1,118 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [active] [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: mother
+            - generic [ref=e312]: "Searching in: translation"
+            - generic [ref=e32]:
+              - generic "Kanji" [ref=e313]: K
+              - generic "Hiragana" [ref=e307]: H
+              - generic "Translation (active)" [ref=e314]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e280]:
+        - generic [ref=e281]:
+          - generic [ref=e282]: "Color by:"
+          - combobox [ref=e283]:
+            - option "Domain" [selected]
+            - option "POS"
+            - option "Level"
+        - generic [ref=e284]:
+          - generic [ref=e285]: "Search Fields:"
+          - button "Kanji, Hiragana, Translation ▼" [ref=e287]:
+            - generic [ref=e288]: Kanji, Hiragana, Translation
+            - generic [ref=e289]: ▼
+        - generic [ref=e290]:
+          - generic [ref=e291]: "Node Labels:"
+          - button "Kanji ▼" [ref=e293]:
+            - generic [ref=e294]: Kanji
+            - generic [ref=e295]: ▼
+        - generic [ref=e296]:
+          - generic [ref=e297]:
+            - checkbox "Exact Match" [checked] [ref=e298]
+            - generic [ref=e299]: Exact Match
+          - button "✕ Close" [ref=e300]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e49]:
+          - generic [ref=e353]:
+            - generic [ref=e354]:
+              - generic [ref=e355]: "Search node: おばあさん"
+              - generic [ref=e356]: "Nodes: 3"
+              - generic [ref=e357]: "Links: 6"
+              - combobox [ref=e358]:
+                - 'option "Depth: 1" [selected]'
+                - 'option "Depth: 2"'
+            - generic [ref=e359]:
+              - button "3D" [ref=e360]
+              - button "Fit" [ref=e361]
+              - button "Reset" [ref=e362]
+          - generic [ref=e62]:
+            - generic: 祖母 (そぼ) — grandmother
+        - generic [ref=e65]:
+          - heading "Selected Node" [level=3] [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]: おばあさん
+              - generic [ref=e70]: おばあさん
+              - generic [ref=e71]: grandmother
+              - generic [ref=e73]:
+                - generic [ref=e74]: "POS: -"
+                - generic [ref=e75]: "Level: -"
+                - generic [ref=e76]: "Connections: 2"
+            - generic [ref=e77]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e78]
+              - generic [ref=e79]:
+                - 'button "祖母 そぼ grandmother Synonym: 0.95 | POS: | Level:" [ref=e346]':
+                  - generic [ref=e81]: 祖母
+                  - generic [ref=e82]: そぼ
+                  - generic [ref=e83]: grandmother
+                  - generic [ref=e84]: "Synonym: 0.95 | POS: | Level:"
+                - 'button "祖父母 そふぼ grandparents Synonym: 0.70 | POS: | Level:" [ref=e347]':
+                  - generic [ref=e348]: 祖父母
+                  - generic [ref=e349]: そふぼ
+                  - generic [ref=e350]: grandparents
+                  - generic [ref=e351]: "Synonym: 0.70 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - generic [ref=e90] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e91]:
+      - img [ref=e92]
+    - generic [ref=e127]:
+      - button "Open issues overlay" [ref=e128]:
+        - generic [ref=e129]:
+          - generic [ref=e130]: "0"
+          - generic [ref=e131]: "1"
+        - generic [ref=e132]: Issue
+      - button "Collapse issues badge" [ref=e133]:
+        - img [ref=e134]
+  - alert [ref=e95]

@@ -1,0 +1,170 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: 祖母
+            - generic [ref=e31]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e33]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e35]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]: "Color by:"
+          - combobox [ref=e43]:
+            - option "Domain" [selected]
+            - option "POS"
+            - option "Level"
+        - generic [ref=e44]:
+          - generic [ref=e45]: "Search Fields:"
+          - button "Kanji, Hiragana, Translation ▼" [ref=e47]:
+            - generic [ref=e48]: Kanji, Hiragana, Translation
+            - generic [ref=e49]: ▼
+        - generic [ref=e50]:
+          - generic [ref=e51]: "Node Labels:"
+          - button "Kanji ▼" [ref=e53]:
+            - generic [ref=e54]: Kanji
+            - generic [ref=e55]: ▼
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - checkbox "Exact Match" [checked] [ref=e58]
+            - generic [ref=e59]: Exact Match
+          - button "✕ Close" [ref=e60]
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - button "Graph" [ref=e63]:
+            - generic [ref=e64]: Graph
+          - button "Info" [ref=e65]:
+            - generic [ref=e66]: Info
+          - button "Lesson" [ref=e67]:
+            - generic [ref=e68]: Lesson
+        - generic [ref=e72]: "Error: Request failed with status code 404"
+        - generic [ref=e77]:
+          - heading "Selected Node" [level=3] [ref=e78]
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - generic [ref=e81]: 祖母
+              - generic [ref=e82]: そぼ
+              - generic [ref=e83]: grandmother
+              - generic [ref=e85]:
+                - generic [ref=e86]: "POS: -"
+                - generic [ref=e87]: "Level: -"
+                - generic [ref=e88]: "Connections: 17"
+            - generic [ref=e89]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e90]
+              - generic [ref=e91]:
+                - 'button "おばあさん おばあさん grandmother Synonym: 0.95 | POS: | Level:" [ref=e92]':
+                  - generic [ref=e93]: おばあさん
+                  - generic [ref=e94]: おばあさん
+                  - generic [ref=e95]: grandmother
+                  - generic [ref=e96]: "Synonym: 0.95 | POS: | Level:"
+                - 'button "おばあちゃん おばあちゃん grandma Synonym: 0.90 | POS: | Level:" [ref=e97]':
+                  - generic [ref=e98]: おばあちゃん
+                  - generic [ref=e99]: おばあちゃん
+                  - generic [ref=e100]: grandma
+                  - generic [ref=e101]: "Synonym: 0.90 | POS: | Level:"
+                - 'button "祖母様 そぼさま grandmother Synonym: 0.85 | POS: | Level:" [ref=e102]':
+                  - generic [ref=e103]: 祖母様
+                  - generic [ref=e104]: そぼさま
+                  - generic [ref=e105]: grandmother
+                  - generic [ref=e106]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "おばあさま おばあさま grandmother Synonym: 0.85 | POS: | Level:" [ref=e107]':
+                  - generic [ref=e108]: おばあさま
+                  - generic [ref=e109]: おばあさま
+                  - generic [ref=e110]: grandmother
+                  - generic [ref=e111]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "祖母さん そぼさん grandmother Synonym: 0.80 | POS: | Level:" [ref=e112]':
+                  - generic [ref=e113]: 祖母さん
+                  - generic [ref=e114]: そぼさん
+                  - generic [ref=e115]: grandmother
+                  - generic [ref=e116]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "祖宗 そそう ancestor Synonym: 0.80 | POS: | Level:" [ref=e117]':
+                  - generic [ref=e118]: 祖宗
+                  - generic [ref=e119]: そそう
+                  - generic [ref=e120]: ancestor
+                  - generic [ref=e121]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "祖父母 そふぼ grandparents Synonym: 0.80 | POS: | Level:" [ref=e122]':
+                  - generic [ref=e123]: 祖父母
+                  - generic [ref=e124]: そふぼ
+                  - generic [ref=e125]: grandparents
+                  - generic [ref=e126]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "おばあ おばあ grandmother Synonym: 0.75 | POS: | Level:" [ref=e127]':
+                  - generic [ref=e128]: おばあ
+                  - generic [ref=e129]: おばあ
+                  - generic [ref=e130]: grandmother
+                  - generic [ref=e131]: "Synonym: 0.75 | POS: | Level:"
+                - 'button "婆 ばあ old woman Synonym: 0.70 | POS: | Level:" [ref=e132]':
+                  - generic [ref=e133]: 婆
+                  - generic [ref=e134]: ばあ
+                  - generic [ref=e135]: old woman
+                  - generic [ref=e136]: "Synonym: 0.70 | POS: | Level:"
+                - 'button "祖先 そせん ancestor Synonym: 0.70 | POS: | Level:" [ref=e137]':
+                  - generic [ref=e138]: 祖先
+                  - generic [ref=e139]: そせん
+                  - generic [ref=e140]: ancestor
+                  - generic [ref=e141]: "Synonym: 0.70 | POS: | Level:"
+                - 'button "従兄弟 いとこ cousin Synonym: 0.60 | POS: | Level:" [ref=e142]':
+                  - generic [ref=e143]: 従兄弟
+                  - generic [ref=e144]: いとこ
+                  - generic [ref=e145]: cousin
+                  - generic [ref=e146]: "Synonym: 0.60 | POS: | Level:"
+                - 'button "祖父 そふ grandfather Synonym: 0.50 | POS: | Level:" [ref=e147]':
+                  - generic [ref=e148]: 祖父
+                  - generic [ref=e149]: そふ
+                  - generic [ref=e150]: grandfather
+                  - generic [ref=e151]: "Synonym: 0.50 | POS: | Level:"
+                - 'button "縁者 えんじゃ relative Synonym: 0.45 | POS: | Level:" [ref=e152]':
+                  - generic [ref=e153]: 縁者
+                  - generic [ref=e154]: えんじゃ
+                  - generic [ref=e155]: relative
+                  - generic [ref=e156]: "Synonym: 0.45 | POS: | Level:"
+                - 'button "従姉 じゅうし cousin (older female) Synonym: 0.40 | POS: | Level:" [ref=e157]':
+                  - generic [ref=e158]: 従姉
+                  - generic [ref=e159]: じゅうし
+                  - generic [ref=e160]: cousin (older female)
+                  - generic [ref=e161]: "Synonym: 0.40 | POS: | Level:"
+                - 'button "従弟 じゅうてい cousin Synonym: 0.35 | POS: | Level:" [ref=e162]':
+                  - generic [ref=e163]: 従弟
+                  - generic [ref=e164]: じゅうてい
+                  - generic [ref=e165]: cousin
+                  - generic [ref=e166]: "Synonym: 0.35 | POS: | Level:"
+                - 'button "伯母 おば aunt Synonym: 0.20 | POS: | Level:" [ref=e167]':
+                  - generic [ref=e168]: 伯母
+                  - generic [ref=e169]: おば
+                  - generic [ref=e170]: aunt
+                  - generic [ref=e171]: "Synonym: 0.20 | POS: | Level:"
+                - 'button "孫息子 まごむすこ grandson Synonym: 0.20 | POS: | Level:" [ref=e172]':
+                  - generic [ref=e173]: 孫息子
+                  - generic [ref=e174]: まごむすこ
+                  - generic [ref=e175]: grandson
+                  - generic [ref=e176]: "Synonym: 0.20 | POS: | Level:"
+      - paragraph [ref=e177]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e273] [cursor=pointer]:
+    - img [ref=e274]
+  - alert [ref=e286]

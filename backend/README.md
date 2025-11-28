@@ -4,7 +4,7 @@ FastAPI backend application for the AI Language Tutor platform.
 
 ## Features
 
-- Multi-provider AI integration (OpenAI + Google Gemini)
+- Multi-provider AI integration (OpenAI + Google GenAI)
 - Neo4j graph database integration
 - PostgreSQL with pgvector for vector embeddings
 - JWT authentication

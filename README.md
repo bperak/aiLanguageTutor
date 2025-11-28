@@ -48,6 +48,14 @@ Create a "living brain" for language learning that understands connections betwe
 - OpenAI API key
 - Google Gemini API key
 
+### ⚠️ Important: Development Workflow
+
+**This project uses Docker for all services.** When making code changes:
+
+- **Frontend changes**: Run `docker-compose restart frontend` then hard refresh browser (`Ctrl+Shift+R`)
+- **Backend changes**: Run `docker-compose restart backend`
+- **See `docs/DEVELOPMENT_WORKFLOW.md`** for complete workflow guide
+
 ### 1. Environment Setup
 
 ```bash
@@ -199,6 +207,41 @@ poetry run uvicorn app.main:app --reload --port 8000
 # Run tests
 poetry run pytest
 
+## Neo4j Orthography Schema
+
+- Canonical fields: `standard_orthography`, `reading_hiragana`, `reading_katakana` (replacing legacy `kanji/hiragana/katakana`).
+- Migration steps and details: see `docs/ORTHOGRAPHY_SCHEMA.md`.
+
+## CanDo Vector Embeddings
+
+The system includes semantic similarity relationships between CanDoDescriptors using vector embeddings:
+
+- **Vector embeddings** for CanDoDescriptor descriptions (descriptionEn + descriptionJa)
+- **Semantic similarity relationships** (`SEMANTICALLY_SIMILAR`) with rich metadata
+- **API endpoint**: `GET /api/v1/cando/similar` to find similar CanDoDescriptors
+- **Adaptive learning paths** that connect concepts beyond explicit prerequisites
+
+### Quick Setup
+
+```powershell
+# 1. Create vector index
+python scripts\apply_cando_vector_index.py
+
+# 2. Generate embeddings
+python resources\generate_cando_embeddings.py --batch-size 50
+
+# 3. Create similarity relationships
+python resources\create_cando_similarity_relationships.py --threshold 0.65
+
+# 4. Validate installation
+python scripts\validate_cando_embeddings.py
+```
+
+For detailed documentation, see:
+- **Full Documentation**: `docs/CANDO_EMBEDDINGS.md`
+- **Quick Start**: `docs/CANDO_EMBEDDINGS_QUICKSTART.md`
+- **Examples**: `docs/CANDO_EMBEDDINGS_EXAMPLES.md`
+
 # Code formatting
 poetry run ruff format .
 poetry run ruff check . --fix
@@ -321,19 +364,35 @@ Planned expansions:
 
 ## 🤝 Contributing
 
-1. Follow the development workflow in `PLANNING.md`
-2. Check `TASK.md` for current tasks and priorities
-3. Use conventional commit messages
-4. Ensure all tests pass before submitting PRs
-5. Follow code quality standards (Ruff for Python, ESLint for TypeScript)
+1. **Follow the Archon-driven development workflow** in `ARCHON_INTEGRATION.md`
+2. **Check current tasks** using Archon MCP tools (`mcp_archon_list_tasks`)
+3. **Update task status** as you work (todo → doing → review)
+4. Use conventional commit messages
+5. Ensure all tests pass before submitting PRs
+6. Follow code quality standards (Ruff for Python, ESLint for TypeScript)
+
+### New Archon Workflow
+- All tasks are now managed in Archon project: `b92eed44-93e0-49d4-9cd5-011893b43edd`
+- Use RAG queries for finding relevant documentation and code examples
+- Document progress and update task status through Archon MCP tools
 
 ## 📚 Documentation
 
+### Process Schema
+- See `docs/process-schema.md` for a concise Mermaid diagram of the end-to-end data flow, chat sequence, and validation pipeline.
+
+### Legacy Documentation (Archived)
 - `PLANNING.md` - Complete project architecture and development phases
-- `TASK.md` - Current tasks and progress tracking
+- `TASK.md` - Current tasks and progress tracking (migrated to Archon)
 - `AI_ARCHITECTURE.md` - AI provider integration details
 - `CONTENT_ANALYSIS_SYSTEM.md` - Content analysis system design
 - `HUMAN_TUTOR_ENHANCEMENTS.md` - Validation interface features
+
+### New Archon-Based Documentation
+- `ARCHON_INTEGRATION.md` - **Archon integration guide and new workflow**
+- All project documentation now managed in Archon with version control
+- Use `mcp_archon_list_documents` to see all available documentation
+- Task management through Archon project: `b92eed44-93e0-49d4-9cd5-011893b43edd`
 
 ## 🆘 Troubleshooting
 
@@ -359,6 +418,18 @@ docker-compose logs backend
 
 # Restart backend
 docker-compose restart backend
+```
+
+**Frontend Changes Not Showing:**
+```bash
+# Restart frontend container (REQUIRED for code changes)
+docker-compose restart frontend
+
+# Wait 10-15 seconds, then hard refresh browser (Ctrl+Shift+R)
+
+# If still not working, clear Next.js cache
+docker-compose exec frontend rm -rf .next
+docker-compose restart frontend
 ```
 
 **Test Failures:**

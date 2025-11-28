@@ -1,0 +1,13 @@
+- banner [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - heading [level=1]
+    - generic [ref=e6]:
+      - generic [ref=e8]:
+        - link "Gmail" [ref=e10] [cursor=pointer]:
+          - /url: https://mail.google.com/mail/?tab=rm&ogbl
+        - link "Search for Images" [ref=e12] [cursor=pointer]:
+          - /url: https://www.google.com/imghp?hl=en&tab=ri&ogbl
+          - text: Images
+      - button "Google apps" [active] [ref=e17] [cursor=pointer]:
+        - img [ref=e18]

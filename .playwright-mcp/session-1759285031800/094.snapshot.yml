@@ -1,0 +1,46 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e111]:
+        - button "Toggle theme" [ref=e112]: Dark
+        - button "Toggle mobile menu" [ref=e113]:
+          - img [ref=e114]
+  - main [ref=e24]:
+    - generic [ref=e115]:
+      - generic [ref=e116]:
+        - heading "Japanese Grammar Patterns" [level=1] [ref=e117]
+        - paragraph [ref=e118]: Explore 100 grammar patterns from the Marugoto textbook series
+      - generic [ref=e119]:
+        - tablist [ref=e120]:
+          - tab "Browse Patterns" [ref=e121]:
+            - img
+            - text: Browse Patterns
+          - tab "Learning Paths" [selected] [ref=e122]:
+            - img
+            - text: Learning Paths
+          - tab "Recommendations" [ref=e123]:
+            - img
+            - text: Recommendations
+        - tabpanel "Learning Paths" [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e127]: Generate Learning Path
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - text: From Pattern
+                - combobox [ref=e131]:
+                  - generic: Select starting pattern
+                  - img
+              - generic [ref=e132]:
+                - text: To Level
+                - combobox [active] [ref=e133]:
+                  - generic: Select target level
+                  - img
+              - generic [ref=e134]:
+                - button "Generate Path" [disabled]
+  - button "Open Next.js Dev Tools" [ref=e106] [cursor=pointer]:
+    - img [ref=e107]
+  - alert [ref=e110]

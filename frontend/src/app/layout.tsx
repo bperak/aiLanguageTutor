@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
 import { ToastProvider } from "@/components/ToastProvider";
+import { DisplaySettingsProvider } from "@/contexts/DisplaySettingsContext";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -28,13 +29,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans min-h-screen bg-background text-foreground`}>
-        <ToastProvider>
-          <a href="#main-content" className="skip-link">Skip to content</a>
-          <NavBar />
-          <main id="main-content" tabIndex={-1}>
-            {children}
-          </main>
-        </ToastProvider>
+        <DisplaySettingsProvider>
+          <ToastProvider>
+            <a href="#main-content" className="skip-link">Skip to content</a>
+            <NavBar />
+            <main id="main-content" tabIndex={-1}>
+              {children}
+            </main>
+          </ToastProvider>
+        </DisplaySettingsProvider>
       </body>
     </html>
   );

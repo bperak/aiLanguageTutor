@@ -1,0 +1,547 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - navigation [ref=e3]:
+    - link "Open toolbar Pristupačnost" [ref=e5] [cursor=pointer]:
+      - /url: javascript:void(0);
+      - generic [ref=e6]: Open toolbar
+      - img "Pristupačnost" [ref=e7]
+    - generic [ref=e10]:
+      - paragraph [ref=e11]: Pristupačnost
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link "Povećaj tekst Povećaj tekst" [ref=e14] [cursor=pointer]:
+            - /url: "#"
+            - img "Povećaj tekst" [ref=e16]
+            - text: Povećaj tekst
+        - listitem [ref=e18]:
+          - link "Smanji tekst Smanji tekst" [ref=e19] [cursor=pointer]:
+            - /url: "#"
+            - img "Smanji tekst" [ref=e21]
+            - text: Smanji tekst
+        - listitem [ref=e23]:
+          - link "Sivi tonovi Sivi tonovi" [ref=e24] [cursor=pointer]:
+            - /url: "#"
+            - img "Sivi tonovi" [ref=e26]
+            - text: Sivi tonovi
+        - listitem [ref=e28]:
+          - link "Visoki kontrast Visoki kontrast" [ref=e29] [cursor=pointer]:
+            - /url: "#"
+            - img "Visoki kontrast" [ref=e31]
+            - text: Visoki kontrast
+        - listitem [ref=e33]:
+          - link "Negativni kontrast Negativni kontrast" [ref=e34] [cursor=pointer]:
+            - /url: "#"
+            - img "Negativni kontrast" [ref=e36]
+            - text: Negativni kontrast
+        - listitem [ref=e38]:
+          - link "Svijetla pozadina Svijetla pozadina" [ref=e39] [cursor=pointer]:
+            - /url: "#"
+            - img "Svijetla pozadina" [ref=e41]
+            - text: Svijetla pozadina
+        - listitem [ref=e43]:
+          - link "Podcrtaj poveznice Podcrtaj poveznice" [ref=e44] [cursor=pointer]:
+            - /url: "#"
+            - img "Podcrtaj poveznice" [ref=e46]
+            - text: Podcrtaj poveznice
+        - listitem [ref=e48]:
+          - link "Čitljivi font Čitljivi font" [ref=e49] [cursor=pointer]:
+            - /url: "#"
+            - img "Čitljivi font" [ref=e51]
+            - text: Čitljivi font
+        - listitem [ref=e53]:
+          - link "Reset Reset" [ref=e54] [cursor=pointer]:
+            - /url: "#"
+            - img "Reset" [ref=e56]
+            - text: Reset
+      - list [ref=e58]:
+        - listitem [ref=e59]:
+          - link "Pomoć Pomoć" [ref=e60] [cursor=pointer]:
+            - /url: https://uniri.hr/info/pristupacnost
+            - img "Pomoć" [ref=e62]
+            - text: Pomoć
+        - listitem [ref=e64]:
+          - link "Povratne informacije Povratne informacije" [ref=e65] [cursor=pointer]:
+            - /url: mailto:pristupacnost@uniri.hr
+            - img "Povratne informacije" [ref=e67]
+            - text: Povratne informacije
+  - link "Idi na sadržaj" [ref=e69] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=e70]:
+    - text:                 
+    - banner [ref=e71]:
+      - generic [ref=e72]:
+        - link [ref=e77] [cursor=pointer]:
+          - /url: https://ffri.uniri.hr
+        - generic [ref=e79]:
+          - generic [ref=e83]:
+            - menu [ref=e88]:
+              - link "Hrvatski" [ref=e89] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/
+                - menuitem "Hrvatski" [ref=e90]
+              - link "Switch to Engleski" [ref=e91] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/en/
+                - generic [ref=e92]: English
+            - search [ref=e95]:
+              - generic [ref=e96]:
+                - button "Search" [ref=e97] [cursor=pointer]:
+                  - generic [ref=e98]: 
+                - generic:
+                  - generic: Search
+                  - searchbox "Search"
+                  - text: 
+          - generic [ref=e100]:
+            - navigation "Menu" [ref=e101]:
+              - list [ref=e102]:
+                - listitem [ref=e103]:
+                  - link "Studiranje " [ref=e104] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/studiranje/
+                    - text: Studiranje
+                    - generic [ref=e105]:
+                      - generic: 
+                  - text:   
+                - listitem [ref=e106]:
+                  - link "Istraživanje" [ref=e107] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/istrazivanje/
+                - listitem [ref=e108]:
+                  - link "Internacionalizacija " [ref=e109] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/internacionalizacija-i-mobilnost/
+                    - text: Internacionalizacija
+                    - generic [ref=e110]:
+                      - generic: 
+                - listitem [ref=e111]:
+                  - link "Fakultet i zajednica " [ref=e112] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/fakultet-i-zajednica/
+                    - text: Fakultet i zajednica
+                    - generic [ref=e113]:
+                      - generic: 
+                - listitem [ref=e114]:
+                  - link "O Fakultetu " [ref=e115] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/o-fakultetu/
+                    - text: O Fakultetu
+                    - generic [ref=e116]:
+                      - generic: 
+                  - text:   
+            - text:            
+  - generic [ref=e117]:
+    - heading "Studiraj na Filozofskom fakultetu" [level=1] [ref=e125]:
+      - link "Studiraj na Filozofskom fakultetu" [ref=e126] [cursor=pointer]:
+        - /url: https://ffri.uniri.hr/studiranje/buduci-studenti/
+        - text: Studiraj na
+        - text: Filozofskom fakultetu
+    - generic [ref=e132]:
+      - navigation "Menu" [ref=e133]:
+        - list [ref=e134]:
+          - listitem [ref=e135]:
+            - link "Vijesti" [ref=e136] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/vijesti/
+          - listitem [ref=e137]:
+            - link "Događanja" [active] [ref=e138] [cursor=pointer]:
+              - /url: /dogadjanja/
+          - listitem [ref=e139]:
+            - link "Odsjeci i katedre " [ref=e140] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/o-fakultetu/ustroj/odsjeci-i-katedre/
+              - text: Odsjeci i katedre
+              - generic [ref=e141]:
+                - generic: 
+          - listitem [ref=e142]:
+            - link "Centri i laboratoriji" [ref=e143] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/o-fakultetu/ustroj/centri-i-laboratoriji/
+          - listitem [ref=e144]:
+            - link "Knjižnica " [ref=e145] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/knjiznica/
+              - text: Knjižnica
+              - generic [ref=e146]:
+                - generic: 
+            - text: 
+      - text:     
+    - generic [ref=e158] [cursor=pointer]:
+      - heading "O Fakultetu" [level=2] [ref=e161]
+      - paragraph [ref=e164]: Na Fakultetu studira oko 1400 studenata na 12 prijediplomskih, 20 diplomskih i 7 poslijediplomskih studija. Zaposleno je 159 nastavnika koji djeluju na 10 odsjeka, 3 samostalne katedre, 8 centara i 2 laboratorija. Provodi se 62 znanstvena i stručna projekta. Izvodi se 16 programa cjeloživotnog obrazovanja. Djeluje knjižnica s oko 80.000 monografskih te 7.600 periodičkih i drugih publikacija.
+      - img [ref=e169]
+    - generic [ref=e174]:
+      - generic [ref=e178]:
+        - heading "Događanja" [level=2] [ref=e185]
+        - link "Kalendar svih događanja" [ref=e189] [cursor=pointer]:
+          - /url: /dogadjanja/
+      - generic [ref=e195]:
+        - group "1 / 2" [ref=e196] [cursor=pointer]:
+          - generic [ref=e204]:
+            - img "placeholder-event-5" [ref=e209]
+            - generic [ref=e211]:
+              - paragraph [ref=e214]: 15.09.2025.
+              - paragraph [ref=e217]: ///
+              - paragraph [ref=e220]: 10:00
+              - paragraph [ref=e223]: — 18:00
+              - paragraph [ref=e226]: h
+              - paragraph [ref=e229]: _Radionica, Znanost
+              - paragraph [ref=e232]: Radionica – Workshop on the Linguistic Turn
+              - list [ref=e236]:
+                - listitem [ref=e237]:
+                  - generic [ref=e238]: FFRI
+        - group "2 / 2" [ref=e239] [cursor=pointer]:
+          - generic [ref=e247]:
+            - img "Logo-Enirdelm-9_2025" [ref=e252]
+            - generic [ref=e254]:
+              - paragraph [ref=e257]: 25.09.2025.
+              - paragraph [ref=e260]: — 28.09.2025.
+              - paragraph [ref=e263]: _Konferencija
+              - paragraph [ref=e266]: Collaborative Leadership for Resilient Educational Institutions
+              - list [ref=e270]:
+                - listitem [ref=e271]:
+                  - generic [ref=e272]: FFRI
+                  - generic [ref=e273]: ","
+                - listitem [ref=e274]:
+                  - generic [ref=e275]: Rijeka
+      - paragraph [ref=e278]: PREGLEDAJ
+    - generic [ref=e282]:
+      - generic [ref=e286]:
+        - heading "Vijesti" [level=2] [ref=e293]
+        - link "Pregledaj sve vijesti" [ref=e297] [cursor=pointer]:
+          - /url: /vijesti/
+      - generic [ref=e303]:
+        - article [ref=e304]:
+          - generic [ref=e312]:
+            - generic [ref=e314]:
+              - generic [ref=e317]:
+                - text: "Izdvojeno:"
+                - link "Studenti" [ref=e318] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vijesti/studenti/
+              - generic [ref=e321]: 11.09.2025.
+              - paragraph [ref=e324]:
+                - link "VAŽNA OBAVIJEST ZA STUDENTE" [ref=e325] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vazna-obavijest-za-studente-2/
+              - paragraph [ref=e328]:
+                - link "Obavijest o provjeri stanja u ISVU sustavu preuzmite ovdje." [ref=e329] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vazna-obavijest-za-studente-2/
+            - link [ref=e334] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/vazna-obavijest-za-studente-2/
+        - article [ref=e335]:
+          - generic [ref=e343]:
+            - generic [ref=e345]:
+              - generic [ref=e348]:
+                - text: "Izdvojeno:"
+                - link "Studenti" [ref=e349] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vijesti/studenti/
+              - generic [ref=e352]: 22.07.2025.
+              - paragraph [ref=e355]:
+                - link "JESENSKI UPISNI ROK" [ref=e356] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/jesenski-upisni-rok-6/
+              - paragraph [ref=e359]:
+                - link "Informacije o jesenskom upisnom roku možete preuzeti ovdje." [ref=e360] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/jesenski-upisni-rok-6/
+            - link [ref=e365] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/jesenski-upisni-rok-6/
+        - article [ref=e366]:
+          - generic [ref=e374]:
+            - generic [ref=e376]:
+              - generic [ref=e379]:
+                - text: "Izdvojeno:"
+                - link "Studenti" [ref=e380] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vijesti/studenti/
+              - generic [ref=e383]: 04.07.2025.
+              - paragraph [ref=e386]:
+                - link "Odluka o naplati oportunitetnih troškova za ak. god. 2025./2026." [ref=e387] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/odluka-o-naplati-oportunitetnih-troskova-za-ak-god-2025-2026/
+              - paragraph [ref=e390]:
+                - link "Odluka" [ref=e391] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/odluka-o-naplati-oportunitetnih-troskova-za-ak-god-2025-2026/
+            - link [ref=e396] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/odluka-o-naplati-oportunitetnih-troskova-za-ak-god-2025-2026/
+        - article [ref=e397]:
+          - generic [ref=e405]:
+            - generic [ref=e407]:
+              - generic [ref=e410]:
+                - text: "Izdvojeno:"
+                - link "Studenti" [ref=e411] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vijesti/studenti/
+              - generic [ref=e414]: 16.06.2025.
+              - paragraph [ref=e417]:
+                - link "Filozofski fakultet u Rijeci traži studente mentore za akademsku godinu 2025./2026.!" [ref=e418] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/filozofski-fakultet-u-rijeci-trazi-studente-mentore-za-akademsku-godinu-2025-2026/
+              - paragraph [ref=e421]:
+                - link "U okviru sustava vršnjačke potpore Filozofskog fakulteta, pozivaju se studenti viših godina studija da postanu FFRI studenti mentori tj. pruže podršku mlađim kolegama u procesu…" [ref=e422] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/filozofski-fakultet-u-rijeci-trazi-studente-mentore-za-akademsku-godinu-2025-2026/
+            - link [ref=e427] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/filozofski-fakultet-u-rijeci-trazi-studente-mentore-za-akademsku-godinu-2025-2026/
+        - article [ref=e428]:
+          - generic [ref=e436]:
+            - generic [ref=e438]:
+              - generic [ref=e441]:
+                - text: "Izdvojeno:"
+                - link "Studenti" [ref=e442] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vijesti/studenti/
+              - generic [ref=e445]: 05.05.2025.
+              - paragraph [ref=e448]:
+                - link "Informacije o uvjetima upisa u 1. godinu sveučilišnih prijediplomskih studija 2025./2026." [ref=e449] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/informacije-o-uvjetima-upisa-u-1-godinu-sveucilisnih-prijediplomskih-studija-2025-2026/
+              - paragraph [ref=e452]:
+                - link "Informacije o uvjetima upisa u 1. godinu sveučilišnih prijediplomskih studija 2025./2026. možete preuzeti ovdje." [ref=e453] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/informacije-o-uvjetima-upisa-u-1-godinu-sveucilisnih-prijediplomskih-studija-2025-2026/
+            - link [ref=e458] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/informacije-o-uvjetima-upisa-u-1-godinu-sveucilisnih-prijediplomskih-studija-2025-2026/
+      - generic [ref=e462]:
+        - article [ref=e463]:
+          - generic [ref=e469]:
+            - generic [ref=e473]:
+              - link "Odsjek za anglistiku" [ref=e477] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/vijesti/fakultet/odsjek-za-anglistiku/
+              - generic [ref=e480]: 12.09.2025.
+              - paragraph [ref=e483]:
+                - link "Obavijest o održavanju obrane diplomskoga rada studentice Natali Marinković" [ref=e484] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/obavijest-o-odrzavanju-obrane-diplomskoga-rada-studentice-natali-marinkovic/
+            - paragraph [ref=e487]:
+              - link "U utorak 16. rujna 2025. godine u 12:30 sati u predavaonici F-901 održat će se obrana diplomskoga rada na diplomskom sveučilišnom studiju ENGLESKI…" [ref=e488] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/obavijest-o-odrzavanju-obrane-diplomskoga-rada-studentice-natali-marinkovic/
+        - article [ref=e489]:
+          - generic [ref=e495]:
+            - generic [ref=e499]:
+              - link "Odsjek za anglistiku" [ref=e503] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/vijesti/fakultet/odsjek-za-anglistiku/
+              - generic [ref=e506]: 12.09.2025.
+              - paragraph [ref=e509]:
+                - link "Obavijest o održavanju obrane završnoga rada studentice Lare Legović" [ref=e510] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/obavijest-o-odrzavanju-obrane-zavrsnoga-rada-studentice-lare-legovic/
+            - paragraph [ref=e513]:
+              - link "U četvrtak 18. rujna 2025. godine u 11:00 sati u predavaonici F-901 održat će se obrana završnoga rada na prijediplomskom sveučilišnom studiju…" [ref=e514] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/obavijest-o-odrzavanju-obrane-zavrsnoga-rada-studentice-lare-legovic/
+        - article [ref=e515]:
+          - generic [ref=e521]:
+            - generic [ref=e525]:
+              - link "Odsjek za anglistiku" [ref=e529] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/vijesti/fakultet/odsjek-za-anglistiku/
+              - generic [ref=e532]: 12.09.2025.
+              - paragraph [ref=e535]:
+                - link "Obavijest o održavanju obrane završnoga rada studentice Alenke Strahinić" [ref=e536] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/obavijest-o-odrzavanju-obrane-zavrsnoga-rada-studentice-alenke-strahinic/
+            - paragraph [ref=e539]:
+              - link "U četvrtak 18. rujna 2025. godine u 10:30 sati u predavaonici F-901 održat će se obrana završnoga rada na prijediplomskom sveučilišnom studiju…" [ref=e540] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/obavijest-o-odrzavanju-obrane-zavrsnoga-rada-studentice-alenke-strahinic/
+        - article [ref=e541]:
+          - generic [ref=e547]:
+            - generic [ref=e551]:
+              - link "Odsjek za pedagogiju" [ref=e555] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/vijesti/fakultet/odsjek-za-pedagogiju/
+              - generic [ref=e558]: 12.09.2025.
+              - paragraph [ref=e561]:
+                - link "Obavijest o održavanju obrane diplomskog rada studentice Nine Glavaš" [ref=e562] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/obavijest-o-odrzavanju-obrane-diplomskog-rada-studentice-nine-glavas/
+            - paragraph [ref=e565]:
+              - link "U srijedu 17. rujna 2025. godine u 10:00 sati u predavaonici F-301 održat će se obrana diplomskog rada s temom SPECIFIČNOSTI RADA PEDAGOGA U SREDNJIM…" [ref=e566] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/obavijest-o-odrzavanju-obrane-diplomskog-rada-studentice-nine-glavas/
+        - article [ref=e567]:
+          - generic [ref=e573]:
+            - generic [ref=e577]:
+              - link "Odsjek za filozofiju" [ref=e581] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/vijesti/fakultet/odsjek-za-filozofiju/
+              - generic [ref=e584]: 11.09.2025.
+              - paragraph [ref=e587]:
+                - link "Obrane završnih radova 2025. – Odsjek za filozofiju" [ref=e588] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/obrane-zavrsnih-radova-2025-odsjek-za-filozofiju/
+            - paragraph [ref=e591]:
+              - link "datum Vrijeme učionica Ime studenta Mentor/mentorica Predsjednik(ca)/Član(ica) Naslov rada 11.9.25. 11 402/hibridno Leonarda Brnas Marko…" [ref=e592] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/obrane-zavrsnih-radova-2025-odsjek-za-filozofiju/
+        - article [ref=e593]:
+          - generic [ref=e599]:
+            - generic [ref=e603]:
+              - link "Odsjek za povijest" [ref=e607] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/vijesti/fakultet/odsjek-za-povijest/
+              - generic [ref=e610]: 11.09.2025.
+              - paragraph [ref=e613]:
+                - link "Obrane završnih radova 2025. – Odsjek za povijest" [ref=e614] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/obrane-zavrsnih-radova-2025-odsjek-za-povijest/
+            - paragraph [ref=e617]:
+              - link "Datum Vrijeme obrane Uč. Ime studenta Mentor/mentorica Predsjednik(ca)/Član(ica) Naslov rada 2.7.2025. 13 402 Lorena Ćejić…" [ref=e618] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/obrane-zavrsnih-radova-2025-odsjek-za-povijest/
+        - article [ref=e619]:
+          - generic [ref=e625]:
+            - generic [ref=e629]:
+              - generic [ref=e632]:
+                - link "Odsjek za filozofiju" [ref=e633] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vijesti/fakultet/odsjek-za-filozofiju/
+                - text: ","
+                - link "Znanost" [ref=e634] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vijesti/znanost/
+              - generic [ref=e637]: 10.09.2025.
+              - paragraph [ref=e640]:
+                - link "Javna obrana teme doktorske disertacije doktoranda Ivana Vitasa" [ref=e641] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/javna-obrana-teme-doktorske-disertacije-doktoranda-ivana-vitasa/
+            - paragraph [ref=e644]:
+              - link "Javna obrana teme doktorske disertacije doktoranda Ivana Vitasa održat će se u četvrtak 18. rujna 2025. godine s početkom u 10:00 sati u predavaonici…" [ref=e645] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/javna-obrana-teme-doktorske-disertacije-doktoranda-ivana-vitasa/
+        - article [ref=e646]:
+          - generic [ref=e652]:
+            - generic [ref=e656]:
+              - generic [ref=e659]:
+                - link "Odsjek za filozofiju" [ref=e660] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vijesti/fakultet/odsjek-za-filozofiju/
+                - text: ","
+                - link "Znanost" [ref=e661] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/vijesti/znanost/
+              - generic [ref=e664]: 10.09.2025.
+              - paragraph [ref=e667]:
+                - link "Javna obrana teme doktorske disertacije doktoranda Leonarda Pektora" [ref=e668] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/javna-obrana-teme-doktorske-disertacije-doktoranda-leonarda-pektora/
+            - paragraph [ref=e671]:
+              - link "Javna obrana teme doktorske disertacije doktoranda Leonarda Pektora održat će se u četvrtak 18. rujna 2025. godine s početkom u 12:00 sati u predavaonici…" [ref=e672] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/javna-obrana-teme-doktorske-disertacije-doktoranda-leonarda-pektora/
+    - generic [ref=e676]:
+      - paragraph [ref=e679]: SUSTAVI
+      - generic [ref=e683]:
+        - link [ref=e686] [cursor=pointer]:
+          - /url: https://uniri.sharepoint.com/sites/filozofski_fakultet
+        - link [ref=e689] [cursor=pointer]:
+          - /url: https://isvuri.ffri.uniri.hr/prijava/
+        - link [ref=e692] [cursor=pointer]:
+          - /url: https://www.isvu.hr/nastavnickiportal/hr/prijava
+        - link [ref=e695] [cursor=pointer]:
+          - /url: https://www.office.com/
+        - link [ref=e698] [cursor=pointer]:
+          - /url: http://prostorije.uniri.hr/week.php?area=6
+        - link [ref=e705] [cursor=pointer]:
+          - /url: https://moodle.srce.hr/
+        - link [ref=e708] [cursor=pointer]:
+          - /url: https://www.isvu.hr/studomat/hr/prijava
+        - link [ref=e711] [cursor=pointer]:
+          - /url: http://izdavastvo.ffri.hr/
+        - link [ref=e714] [cursor=pointer]:
+          - /url: https://ffri.uniri.hr/knjiznica/repozitorij-ffri/
+        - link [ref=e717] [cursor=pointer]:
+          - /url: http://www.ssc.uniri.hr/hr/
+        - link [ref=e720] [cursor=pointer]:
+          - /url: https://svjetionik.scri.hr/
+        - link [ref=e723] [cursor=pointer]:
+          - /url: https://uniri.hr/kat-vijesti/alumni-uniri/
+        - link [ref=e726] [cursor=pointer]:
+          - /url: https://revenant.uniri.hr/
+  - contentinfo [ref=e727]:
+    - generic [ref=e729]:
+      - generic [ref=e731]:
+        - paragraph [ref=e734]: // info
+        - link [ref=e737] [cursor=pointer]:
+          - /url: https://ffri.uniri.hr
+        - link [ref=e740] [cursor=pointer]:
+          - /url: https://uniri.hr/
+        - link [ref=e743] [cursor=pointer]:
+          - /url: https://uniri.hr/
+        - generic [ref=e745]:
+          - generic [ref=e747]:
+            - paragraph [ref=e750]: Filozofski Fakultet u Rijeci
+            - list [ref=e753]:
+              - listitem [ref=e754]:
+                - generic [ref=e755]: Sveučilišna avenija 4
+              - listitem [ref=e756]:
+                - generic [ref=e757]: 51000 Rijeka
+              - listitem [ref=e758]:
+                - generic [ref=e759]: Republika Hrvatska
+            - paragraph [ref=e766]:
+              - link "Vijesti" [ref=e767] [cursor=pointer]:
+                - /url: /vijesti/
+          - generic [ref=e769]:
+            - paragraph [ref=e772]: Kontakt
+            - list [ref=e775]:
+              - listitem [ref=e776]:
+                - link "Dekanat" [ref=e777] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/
+                  - generic [ref=e778]: Dekanat
+              - listitem [ref=e779]:
+                - 'link "Tel: 051/265-600" [ref=e780] [cursor=pointer]':
+                  - /url: tel:+38551265600
+                  - generic [ref=e781]: "Tel: 051/265-600"
+              - listitem [ref=e782]:
+                - generic [ref=e783]: "Fax: 051/216-099"
+              - listitem [ref=e784]:
+                - link "Studentska služba" [ref=e785] [cursor=pointer]:
+                  - /url: mailto:sanja.unkovic@ffri.uniri.hr
+                  - generic [ref=e786]: Studentska služba
+              - listitem [ref=e787]:
+                - link "Kontakti djelatnika" [ref=e788] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/kontakti/
+                  - generic [ref=e789]: Kontakti djelatnika
+            - paragraph [ref=e796]:
+              - link "Događanja" [ref=e797] [cursor=pointer]:
+                - /url: /dogadjanja/
+          - generic [ref=e799]:
+            - paragraph [ref=e802]: Studiranje
+            - list [ref=e805]:
+              - listitem [ref=e806]:
+                - link "Nastava" [ref=e807] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/postojeci-studenti/nastava/
+                  - generic [ref=e808]: Nastava
+              - listitem [ref=e809]:
+                - link "Studentska služba" [ref=e810] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/postojeci-studenti/studentska-sluzba/
+                  - generic [ref=e811]: Studentska služba
+              - listitem [ref=e812]:
+                - link "Budući studenti" [ref=e813] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/buduci-studenti/
+                  - generic [ref=e814]: Budući studenti
+              - listitem [ref=e815]:
+                - link "Ured za karijere" [ref=e816] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/fakultet-i-zajednica/ured-za-karijere/
+                  - generic [ref=e817]: Ured za karijere
+              - listitem [ref=e818]:
+                - link "Ured za akademsku podršku" [ref=e819] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/postojeci-studenti/savjetovanje-i-podrska-studentima/
+                  - generic [ref=e820]: Ured za akademsku podršku
+            - paragraph [ref=e827]:
+              - link "Webmail" [ref=e828] [cursor=pointer]:
+                - /url: https://outlook.office365.com/
+          - generic [ref=e830]:
+            - paragraph [ref=e833]: Opće informacije
+            - list [ref=e836]:
+              - listitem [ref=e837]:
+                - link "Obrasci" [ref=e838] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/obrasci/
+                  - generic [ref=e839]: Obrasci
+              - listitem [ref=e840]:
+                - link "Javna nabava" [ref=e841] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/javna-nabava/
+                  - generic [ref=e842]: Javna nabava
+              - listitem [ref=e843]:
+                - link "Pristup informacijama" [ref=e844] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/pristup-informacijama/
+                  - generic [ref=e845]: Pristup informacijama
+              - listitem [ref=e846]:
+                - link "Rezervacija prostora" [ref=e847] [cursor=pointer]:
+                  - /url: https://prostorije.uniri.hr/week.php?area=6
+                  - generic [ref=e848]: Rezervacija prostora
+            - paragraph [ref=e855]:
+              - link "SPO za djelatnike" [ref=e856] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/o-fakultetu/spo-za-djelatnike/
+          - generic [ref=e858]:
+            - paragraph [ref=e861]: Zajednica
+            - list [ref=e864]:
+              - listitem [ref=e865]:
+                - link "Cjeloživotno obrazovanje" [ref=e866] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/programi-cjelozivotnog-obrazovanja/
+                  - generic [ref=e867]: Cjeloživotno obrazovanje
+              - listitem [ref=e868]:
+                - link "Alumni FFRi" [ref=e869] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/fakultet-i-zajednica/alumni-ffri/
+                  - generic [ref=e870]: Alumni FFRi
+              - listitem [ref=e871]:
+                - link "Transfer znanja" [ref=e872] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/fakultet-i-zajednica/transfer-znanja/
+                  - generic [ref=e873]: Transfer znanja
+              - listitem [ref=e874]:
+                - link "Mediji o nama" [ref=e875] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/mediji-o-nama/
+                  - generic [ref=e876]: Mediji o nama
+            - paragraph [ref=e883]:
+              - link "Stari ffri web" [ref=e884] [cursor=pointer]:
+                - /url: https://arhiva.ffri.uniri.hr
+        - generic [ref=e888]:
+          - paragraph [ref=e891]: Filozofski Fakultet u Rijeci
+          - paragraph [ref=e894]: "@2025. Sva prava pridržana."
+      - link "Facebook-f " [ref=e901] [cursor=pointer]:
+        - /url: https://www.facebook.com/people/Filozofski-fakultet-u-Rijeci/100051375052656/
+        - generic [ref=e902]: Facebook-f
+        - generic [ref=e903]: 
+  - generic [ref=e904]: desktop
+  - generic [ref=e906]:
+    - button "close chat pop card" [ref=e907] [cursor=pointer]:
+      - img [ref=e908]
+    - button "chat now" [ref=e910] [cursor=pointer]:
+      - img "Johnson Emmanuel Sharpe, profile picture" [ref=e912]
+      - generic [ref=e913]: Chat now

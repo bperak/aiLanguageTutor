@@ -1,0 +1,114 @@
+{
+  "timestamp": "2025-09-04T04:08:27.941954",
+  "phases": [
+    {
+      "name": "Phase 1: Analysis and Preparation",
+      "description": "Analyze current state and prepare for unification",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Backup current database",
+          "description": "Create a full backup before making changes",
+          "estimated_time": "30 minutes"
+        },
+        {
+          "step": 2,
+          "action": "Create temporary indexes",
+          "description": "Add indexes for kanji+hiragana and lemma for faster processing",
+          "estimated_time": "10 minutes"
+        },
+        {
+          "step": 3,
+          "action": "Export duplicate analysis",
+          "description": "Export detailed duplicate analysis for review",
+          "estimated_time": "15 minutes"
+        }
+      ]
+    },
+    {
+      "name": "Phase 2: Duplicate Resolution",
+      "description": "Remove duplicates based on kanji+hiragana combination",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Identify master nodes",
+          "description": "For each kanji+hiragana combination, identify the best node to keep",
+          "criteria": [
+            "Prefer nodes with more complete properties",
+            "Prefer LeeGoi source over AI_Generated",
+            "Prefer nodes with translations",
+            "Prefer nodes with more relationships"
+          ],
+          "estimated_time": "45 minutes"
+        },
+        {
+          "step": 2,
+          "action": "Merge properties",
+          "description": "Merge properties from duplicate nodes into master nodes",
+          "estimated_time": "60 minutes"
+        },
+        {
+          "step": 3,
+          "action": "Transfer relationships",
+          "description": "Transfer all relationships from duplicate nodes to master nodes",
+          "estimated_time": "90 minutes"
+        },
+        {
+          "step": 4,
+          "action": "Delete duplicate nodes",
+          "description": "Remove duplicate nodes after merging",
+          "estimated_time": "30 minutes"
+        }
+      ]
+    },
+    {
+      "name": "Phase 3: Property Unification",
+      "description": "Standardize and unify properties across all nodes",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Standardize property names",
+          "description": "Ensure consistent property naming across all sources",
+          "estimated_time": "30 minutes"
+        },
+        {
+          "step": 2,
+          "action": "Fill missing properties",
+          "description": "Use AI or cross-reference to fill missing translations and other properties",
+          "estimated_time": "120 minutes"
+        },
+        {
+          "step": 3,
+          "action": "Validate data quality",
+          "description": "Run validation checks to ensure data integrity",
+          "estimated_time": "30 minutes"
+        }
+      ]
+    },
+    {
+      "name": "Phase 4: Optimization and Cleanup",
+      "description": "Optimize the unified database",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Update indexes",
+          "description": "Update and optimize indexes for the unified schema",
+          "estimated_time": "20 minutes"
+        },
+        {
+          "step": 2,
+          "action": "Run performance tests",
+          "description": "Test query performance on the unified database",
+          "estimated_time": "30 minutes"
+        },
+        {
+          "step": 3,
+          "action": "Generate final report",
+          "description": "Generate comprehensive report of the unification process",
+          "estimated_time": "15 minutes"
+        }
+      ]
+    }
+  ],
+  "total_estimated_time": "525 minutes (8.8 hours)"
+}

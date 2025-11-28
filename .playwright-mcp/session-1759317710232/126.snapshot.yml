@@ -1,0 +1,435 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - heading "Japanese Grammar Patterns" [level=1] [ref=e27]
+      - generic [ref=e28]:
+        - tablist [ref=e29]:
+          - tab "Browse Patterns" [selected] [ref=e30]:
+            - img
+            - text: Browse Patterns
+          - tab "Learning Paths" [ref=e31]:
+            - img
+            - text: Learning Paths
+          - tab "Recommendations" [ref=e32]:
+            - img
+            - text: Recommendations
+        - tabpanel "Browse Patterns" [ref=e33]:
+          - generic [ref=e34]:
+            - generic [ref=e36]:
+              - generic [ref=e37]:
+                - img [ref=e38]
+                - text: Filters
+              - button "Hide" [ref=e40]:
+                - img
+                - text: Hide
+            - generic [ref=e41]:
+              - generic [ref=e42]:
+                - generic [ref=e43]:
+                  - text: Search
+                  - generic [ref=e44]:
+                    - img [ref=e45]
+                    - textbox "Search patterns..." [ref=e48]
+                - generic [ref=e49]:
+                  - text: Level
+                  - combobox [ref=e50]:
+                    - generic: All levels
+                    - img
+                - generic [ref=e51]:
+                  - text: Classification
+                  - combobox [ref=e52]:
+                    - generic: All types
+                    - img
+                - generic [ref=e53]:
+                  - text: Topic
+                  - combobox [ref=e54]:
+                    - generic: All topics
+                    - img
+              - button "Clear Filters" [ref=e56]
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59]: Page size
+              - combobox [ref=e60]:
+                - generic: "20"
+                - img
+              - generic [ref=e61]: Showing 381–392 of 392 patterns
+            - generic [ref=e62]:
+              - generic [ref=e63]:
+                - button "1" [ref=e64]
+                - generic [ref=e602]: …
+                - button "19" [ref=e603]
+                - button "20" [ref=e604]
+              - button "Prev" [ref=e69]
+              - button "Next" [disabled]
+          - generic [ref=e71]:
+            - generic [ref=e605]:
+              - generic [ref=e607]:
+                - generic [ref=e608]:
+                  - generic [ref=e609]:
+                    - heading "一方（で）" [level=3] [ref=e610]
+                    - button [ref=e611]:
+                      - img
+                    - button "Hide Japanese" [ref=e612]:
+                      - img
+                  - paragraph [ref=e613]: ippou(de)
+                - generic [ref=e614]:
+                  - generic [ref=e615]: 中級2
+                  - generic [ref=e616]: "#381"
+              - generic [ref=e618]:
+                - generic [ref=e619]:
+                  - paragraph [ref=e620]: "Example:"
+                  - generic [ref=e621]:
+                    - paragraph [ref=e622]: ……。一方で、「正確すぎて違和感がある」という人も。
+                    - paragraph [ref=e623]: …….ippoude,(seikakusugiteiwakangaaru)toiuninmo.
+                - generic [ref=e624]:
+                  - generic [ref=e625]:
+                    - img
+                    - text: 対比
+                  - generic [ref=e626]: 6 旅行と交通
+                - generic [ref=e627]:
+                  - button "Study This Pattern" [ref=e628]
+                  - button "Quick Study" [ref=e630]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e631]:
+              - generic [ref=e633]:
+                - generic [ref=e634]:
+                  - generic [ref=e635]:
+                    - heading "～によって" [level=3] [ref=e636]
+                    - button [ref=e637]:
+                      - img
+                    - button "Hide Japanese" [ref=e638]:
+                      - img
+                  - paragraph [ref=e639]: ~niyotte
+                - generic [ref=e640]:
+                  - generic [ref=e641]: 中級2
+                  - generic [ref=e642]: "#382"
+              - generic [ref=e644]:
+                - generic [ref=e645]:
+                  - paragraph [ref=e646]: "Example:"
+                  - generic [ref=e647]:
+                    - paragraph [ref=e648]: 反応は国によっていろいろでした。
+                    - paragraph [ref=e649]: hannouhakuniniyotteiroirodeshita.
+                - generic [ref=e650]:
+                  - generic [ref=e651]:
+                    - img
+                    - text: 関連・対応
+                  - generic [ref=e652]: 6 旅行と交通
+                - generic [ref=e653]:
+                  - button "Study This Pattern" [ref=e654]
+                  - button "Quick Study" [ref=e656]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e657]:
+              - generic [ref=e659]:
+                - generic [ref=e660]:
+                  - generic [ref=e661]:
+                    - heading "とても（～ない）" [level=3] [ref=e662]
+                    - button [ref=e663]:
+                      - img
+                    - button "Hide Japanese" [ref=e664]:
+                      - img
+                  - paragraph [ref=e665]: totemo(~nai)
+                - generic [ref=e666]:
+                  - generic [ref=e667]: 中級2
+                  - generic [ref=e668]: "#383"
+              - generic [ref=e670]:
+                - generic [ref=e671]:
+                  - paragraph [ref=e672]: "Example:"
+                  - generic [ref=e673]:
+                    - paragraph [ref=e674]: 安心して寝られるなんて、とても信じられない！
+                    - paragraph [ref=e675]: anshinshitenerarerunante,totemoshinjirarenai!
+                - generic [ref=e676]:
+                  - generic [ref=e677]:
+                    - img
+                    - text: 否定
+                  - generic [ref=e678]: 6 旅行と交通
+                - generic [ref=e679]:
+                  - button "Study This Pattern" [ref=e680]
+                  - button "Quick Study" [ref=e682]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e683]:
+              - generic [ref=e685]:
+                - generic [ref=e686]:
+                  - generic [ref=e687]:
+                    - heading "～（ら）れる ＜受身＞" [level=3] [ref=e688]
+                    - button [ref=e689]:
+                      - img
+                    - button "Hide Japanese" [ref=e690]:
+                      - img
+                  - paragraph [ref=e691]: ~(ra)reru ＜ukemi＞
+                - generic [ref=e692]:
+                  - generic [ref=e693]: 中級2
+                  - generic [ref=e694]: "#384"
+              - generic [ref=e696]:
+                - generic [ref=e697]:
+                  - paragraph [ref=e698]: "Example:"
+                  - generic [ref=e699]:
+                    - paragraph [ref=e700]: 隣の人にいびきをかかれてイライラ
+                    - paragraph [ref=e701]: tonarinoninniibikiwokakareteiraira
+                - generic [ref=e702]:
+                  - generic [ref=e703]:
+                    - img
+                    - text: 受身・使役受身
+                  - generic [ref=e704]: 6 旅行と交通
+                - generic [ref=e705]:
+                  - button "Study This Pattern" [ref=e706]
+                  - button "Quick Study" [ref=e708]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e709]:
+              - generic [ref=e711]:
+                - generic [ref=e712]:
+                  - generic [ref=e713]:
+                    - heading "～わけ（が）ない" [level=3] [ref=e714]
+                    - button [ref=e715]:
+                      - img
+                    - button "Hide Japanese" [ref=e716]:
+                      - img
+                  - paragraph [ref=e717]: ~wake(ga)nai
+                - generic [ref=e718]:
+                  - generic [ref=e719]: 中級2
+                  - generic [ref=e720]: "#385"
+              - generic [ref=e722]:
+                - generic [ref=e723]:
+                  - paragraph [ref=e724]: "Example:"
+                  - generic [ref=e725]:
+                    - paragraph [ref=e726]: 忍者が今の日本に本当にいるわけないでしょう。
+                    - paragraph [ref=e727]: ninjagaimanonipponnihontouniiruwakenaideshou.
+                - generic [ref=e728]:
+                  - generic [ref=e729]:
+                    - img
+                    - text: 否定
+                  - generic [ref=e730]: 13 言語と文化
+                - generic [ref=e731]:
+                  - button "Study This Pattern" [ref=e732]
+                  - button "Quick Study" [ref=e734]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e735]:
+              - generic [ref=e737]:
+                - generic [ref=e738]:
+                  - generic [ref=e739]:
+                    - heading "～じゃない" [level=3] [ref=e740]
+                    - button [ref=e741]:
+                      - img
+                    - button "Hide Japanese" [ref=e742]:
+                      - img
+                  - paragraph [ref=e743]: ~janai
+                - generic [ref=e744]:
+                  - generic [ref=e745]: 中級2
+                  - generic [ref=e746]: "#386"
+              - generic [ref=e748]:
+                - generic [ref=e749]:
+                  - paragraph [ref=e750]: "Example:"
+                  - generic [ref=e751]:
+                    - paragraph [ref=e752]: 忍術道場なら、アメリカにだってたくさんあるじゃない。
+                    - paragraph [ref=e753]: ninjutsudoujounara,amerikanidattetakusan'arujanai.
+                - generic [ref=e754]:
+                  - generic [ref=e755]:
+                    - img
+                    - text: 説明
+                  - generic [ref=e756]: 13 言語と文化
+                - generic [ref=e757]:
+                  - button "Study This Pattern" [ref=e758]
+                  - button "Quick Study" [ref=e760]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e761]:
+              - generic [ref=e763]:
+                - generic [ref=e764]:
+                  - generic [ref=e765]:
+                    - heading "～って" [level=3] [ref=e766]
+                    - button [ref=e767]:
+                      - img
+                    - button "Hide Japanese" [ref=e768]:
+                      - img
+                  - paragraph [ref=e769]: ~tte
+                - generic [ref=e770]:
+                  - generic [ref=e771]: 中級2
+                  - generic [ref=e772]: "#387"
+              - generic [ref=e774]:
+                - generic [ref=e775]:
+                  - paragraph [ref=e776]: "Example:"
+                  - generic [ref=e777]:
+                    - paragraph [ref=e778]: 今でも忍者がいるって、本当ですか？
+                    - paragraph [ref=e779]: imademoninjagairutte,hontoudesuka？
+                - generic [ref=e780]:
+                  - generic [ref=e781]:
+                    - img
+                    - text: 伝聞・引用
+                  - generic [ref=e782]: 13 言語と文化
+                - generic [ref=e783]:
+                  - button "Study This Pattern" [ref=e784]
+                  - button "Quick Study" [ref=e786]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e787]:
+              - generic [ref=e789]:
+                - generic [ref=e790]:
+                  - generic [ref=e791]:
+                    - heading "～とはかぎらない" [level=3] [ref=e792]
+                    - button [ref=e793]:
+                      - img
+                    - button "Hide Japanese" [ref=e794]:
+                      - img
+                  - paragraph [ref=e795]: ~tohakagiranai
+                - generic [ref=e796]:
+                  - generic [ref=e797]: 中級2
+                  - generic [ref=e798]: "#388"
+              - generic [ref=e800]:
+                - generic [ref=e801]:
+                  - paragraph [ref=e802]: "Example:"
+                  - generic [ref=e803]:
+                    - paragraph [ref=e804]: まったく嘘だとはかぎらないよ。
+                    - paragraph [ref=e805]: mattakuusodatohakagiranaiyo.
+                - generic [ref=e806]:
+                  - generic [ref=e807]:
+                    - img
+                    - text: 部分否定
+                  - generic [ref=e808]: 13 言語と文化
+                - generic [ref=e809]:
+                  - button "Study This Pattern" [ref=e810]
+                  - button "Quick Study" [ref=e812]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e813]:
+              - generic [ref=e815]:
+                - generic [ref=e816]:
+                  - generic [ref=e817]:
+                    - heading "～において" [level=3] [ref=e818]
+                    - button [ref=e819]:
+                      - img
+                    - button "Hide Japanese" [ref=e820]:
+                      - img
+                  - paragraph [ref=e821]: ~nioite
+                - generic [ref=e822]:
+                  - generic [ref=e823]: 中級2
+                  - generic [ref=e824]: "#389"
+              - generic [ref=e826]:
+                - generic [ref=e827]:
+                  - paragraph [ref=e828]: "Example:"
+                  - generic [ref=e829]:
+                    - paragraph [ref=e830]: 勝負において、信玄は、……おごりが出てくるのでよくないと考えていたという。
+                    - paragraph [ref=e831]: shoubunioite,shingenha,……ogorigadetekurunodeyokunaitokangaeteitatoiu.
+                - generic [ref=e832]:
+                  - generic [ref=e833]:
+                    - img
+                    - text: 時点・場面
+                  - generic [ref=e834]: 13 言語と文化
+                - generic [ref=e835]:
+                  - button "Study This Pattern" [ref=e836]
+                  - button "Quick Study" [ref=e838]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e839]:
+              - generic [ref=e841]:
+                - generic [ref=e842]:
+                  - generic [ref=e843]:
+                    - heading "～であろう" [level=3] [ref=e844]
+                    - button [ref=e845]:
+                      - img
+                    - button "Hide Japanese" [ref=e846]:
+                      - img
+                  - paragraph [ref=e847]: ~dearou
+                - generic [ref=e848]:
+                  - generic [ref=e849]: 中級2
+                  - generic [ref=e850]: "#390"
+              - generic [ref=e852]:
+                - generic [ref=e853]:
+                  - paragraph [ref=e854]: "Example:"
+                  - generic [ref=e855]:
+                    - paragraph [ref=e856]: 自分に厳しく強い向上心を持った人物だったのであろう。
+                    - paragraph [ref=e857]: jibunniikameshikutsuyoikoujoushinwomotsutajinbutsudattanodearou.
+                - generic [ref=e858]:
+                  - generic [ref=e859]:
+                    - img
+                    - text: 推量
+                  - generic [ref=e860]: 13 言語と文化
+                - generic [ref=e861]:
+                  - button "Study This Pattern" [ref=e862]
+                  - button "Quick Study" [ref=e864]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e865]:
+              - generic [ref=e867]:
+                - generic [ref=e868]:
+                  - generic [ref=e869]:
+                    - heading "～からといって" [level=3] [ref=e870]
+                    - button [ref=e871]:
+                      - img
+                    - button "Hide Japanese" [ref=e872]:
+                      - img
+                  - paragraph [ref=e873]: ~karatoitte
+                - generic [ref=e874]:
+                  - generic [ref=e875]: 中級2
+                  - generic [ref=e876]: "#391"
+              - generic [ref=e878]:
+                - generic [ref=e879]:
+                  - paragraph [ref=e880]: "Example:"
+                  - generic [ref=e881]:
+                    - paragraph [ref=e882]: 謙信は相手が弱ったからといって、そこを攻めることはしなかった。
+                    - paragraph [ref=e883]: kenshinhaaitegayowatsutakaratoitte,sokowosemerukotohashinakatta.
+                - generic [ref=e884]:
+                  - generic [ref=e885]:
+                    - img
+                    - text: 逆接･譲歩
+                  - generic [ref=e886]: 13 言語と文化
+                - generic [ref=e887]:
+                  - button "Study This Pattern" [ref=e888]
+                  - button "Quick Study" [ref=e890]:
+                    - img
+                    - text: Quick Study
+            - generic [ref=e891]:
+              - generic [ref=e893]:
+                - generic [ref=e894]:
+                  - generic [ref=e895]:
+                    - heading "～にとって" [level=3] [ref=e896]
+                    - button [ref=e897]:
+                      - img
+                    - button "Hide Japanese" [ref=e898]:
+                      - img
+                  - paragraph [ref=e899]: ~nitotte
+                - generic [ref=e900]:
+                  - generic [ref=e901]: 中級2
+                  - generic [ref=e902]: "#392"
+              - generic [ref=e904]:
+                - generic [ref=e905]:
+                  - paragraph [ref=e906]: "Example:"
+                  - generic [ref=e907]:
+                    - paragraph [ref=e908]: 時代は違っても、人間にとって大切なものは変わらないのかもしれない。
+                    - paragraph [ref=e909]: jidaihachigatsutemo,ningennitottetaisetsunamonohakawaranainokamoshirenai.
+                - generic [ref=e910]:
+                  - generic [ref=e911]:
+                    - img
+                    - text: 判断の立場
+                  - generic [ref=e912]: 13 言語と文化
+                - generic [ref=e913]:
+                  - button "Study This Pattern" [ref=e914]
+                  - button "Quick Study" [ref=e916]:
+                    - img
+                    - text: Quick Study
+  - button "Open Next.js Dev Tools" [ref=e597] [cursor=pointer]:
+    - img [ref=e598]
+  - alert [ref=e601]

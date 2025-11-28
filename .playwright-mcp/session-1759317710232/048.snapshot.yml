@@ -1,0 +1,75 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - button "Toggle theme" [ref=e8]: Dark
+        - button "Toggle mobile menu" [ref=e9]:
+          - img [ref=e10]
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - heading "Japanese Grammar Patterns" [level=1] [ref=e1794]
+      - generic [ref=e1795]:
+        - tablist [ref=e1796]:
+          - tab "Browse Patterns" [selected] [ref=e1797]:
+            - img
+            - text: Browse Patterns
+          - tab "Learning Paths" [ref=e1798]:
+            - img
+            - text: Learning Paths
+          - tab "Recommendations" [ref=e1799]:
+            - img
+            - text: Recommendations
+        - tabpanel "Browse Patterns" [ref=e1800]:
+          - generic [ref=e1801]:
+            - generic [ref=e1803]:
+              - generic [ref=e1804]:
+                - img [ref=e1805]
+                - text: Filters
+              - button "Hide" [ref=e1807]:
+                - img
+                - text: Hide
+            - generic [ref=e1808]:
+              - generic [ref=e1809]:
+                - generic [ref=e1810]:
+                  - text: Search
+                  - generic [ref=e1811]:
+                    - img [ref=e1812]
+                    - textbox "Search patterns..." [active] [ref=e1815]: t
+                - generic [ref=e1816]:
+                  - text: Level
+                  - combobox [ref=e1817]:
+                    - generic: All levels
+                    - img
+                - generic [ref=e1818]:
+                  - text: Classification
+                  - combobox [ref=e1819]:
+                    - generic: All types
+                    - img
+                - generic [ref=e1820]:
+                  - text: Topic
+                  - combobox [ref=e1821]:
+                    - generic: All topics
+                    - img
+              - button "Clear Filters" [ref=e1823]
+          - generic [ref=e1824]:
+            - generic [ref=e1825]:
+              - generic [ref=e1826]: Page size
+              - combobox [ref=e1827]:
+                - generic: "20"
+                - img
+              - generic [ref=e1828]: Showing 0 of 0 patterns
+            - generic [ref=e1829]:
+              - button "Prev" [ref=e1830]
+              - button "Next" [disabled]
+          - generic [ref=e1832]:
+            - img [ref=e1833]
+            - heading "No patterns found" [level=3] [ref=e1835]
+            - paragraph [ref=e1836]: Try adjusting your filters or search terms
+            - button "Clear All Filters" [ref=e1837]
+  - button "Open Next.js Dev Tools" [ref=e561] [cursor=pointer]:
+    - img [ref=e562]
+  - alert [ref=e565]

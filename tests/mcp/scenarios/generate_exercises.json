@@ -1,0 +1,25 @@
+{
+  "name": "GenerateExercises phased output",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "() => fetch('http://localhost:8000/api/v1/lexical/lessons/generate-exercises?can_do_id=JFまるごと:13&n=3&modes=writing', {method:'POST'}).then(r => r.json())",
+      "saveAs": "ex"
+    },
+    {
+      "action": "assert",
+      "expression": "ex.can_do_id === 'JFまるごと:13' && Array.isArray(ex.exercises) && ex.exercises.length >= 1"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => fetch('http://localhost:8000/api/v1/lexical/lessons/phase-gate', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ phase:'lexicon_and_patterns', completed_count: 2 })}).then(r=>r.json())",
+      "saveAs": "pg"
+    },
+    {
+      "action": "assert",
+      "expression": "pg.phase === 'guided_dialogue' && pg.advanced === true"
+    }
+  ]
+}
+
+

@@ -1,0 +1,64 @@
+- generic:
+  - link:
+    - /url: "#main-content"
+    - text: Skip to content
+  - navigation:
+    - generic:
+      - generic:
+        - link:
+          - /url: /
+          - text: AI Language Tutor
+        - generic:
+          - button: Dark
+          - button:
+            - img
+  - main:
+    - generic:
+      - generic:
+        - heading [level=1]: Japanese Grammar Patterns
+        - paragraph: Explore 100 grammar patterns from the Marugoto textbook series
+      - generic:
+        - tablist:
+          - tab:
+            - img
+            - text: Browse Patterns
+          - tab [selected]:
+            - img
+            - text: Learning Paths
+          - tab:
+            - img
+            - text: Recommendations
+        - tabpanel:
+          - generic:
+            - generic:
+              - generic: Generate Learning Path
+            - generic:
+              - generic:
+                - generic:
+                  - text: From Pattern
+                  - combobox:
+                    - generic: Select starting pattern
+                    - img
+                - generic:
+                  - text: To Level
+                  - combobox [expanded]:
+                    - generic: Select target level
+                    - img
+                - generic:
+                  - button [disabled]: Generate Path
+  - button "Open Next.js Dev Tools" [ref=e106] [cursor=pointer]:
+    - img [ref=e107]
+  - alert
+  - listbox [ref=e199]:
+    - option "入門(りかい)" [active] [ref=e200]:
+      - generic [ref=e202]: 入門(りかい)
+    - option "初級1(りかい)" [ref=e203]:
+      - generic [ref=e205]: 初級1(りかい)
+    - option "初級2(りかい)" [ref=e206]:
+      - generic [ref=e208]: 初級2(りかい)
+    - option "初中級" [ref=e209]:
+      - generic [ref=e211]: 初中級
+    - option "中級1" [ref=e212]:
+      - generic [ref=e214]: 中級1
+    - option "中級2" [ref=e215]:
+      - generic [ref=e217]: 中級2

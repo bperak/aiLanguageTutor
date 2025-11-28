@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pragmatic-patterns.schema.json",
+  "type": "object",
+  "required": ["patterns"],
+  "properties": {
+    "patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "pragmaticAct", "register", "expressions"],
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "pragmaticAct": {"type": "string"},
+          "register": {"type": "string"},
+          "socialDistance": {"type": "string"},
+          "locale": {"type": "string"},
+          "typicalContexts": {"type": "array", "items": {"type": "string"}},
+          "canDo_links": {"type": "array", "items": {"type": "string"}},
+          "triggers": {"type": "array", "items": {"type": "object"}},
+          "slots": {"type": "array", "items": {"type": "object"}},
+          "expressions": {"type": "array", "items": {"type": "object"}},
+          "grammarPatterns": {"type": "array", "items": {"type": "string"}},
+          "lexicalSets": {"type": "array", "items": {"type": "string"}},
+          "constraints": {"type": "object"},
+          "evaluation": {"type": "object"},
+          "tags": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}
+
+

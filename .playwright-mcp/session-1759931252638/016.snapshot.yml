@@ -1,0 +1,99 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e211]:
+          - button "Toggle theme" [ref=e212]: Dark
+          - button "Toggle mobile menu" [expanded] [active] [ref=e213]:
+            - img [ref=e215]
+      - generic [ref=e219]:
+        - link "Home" [ref=e220] [cursor=pointer]:
+          - /url: /dashboard
+        - generic [ref=e221]:
+          - generic [ref=e222]: Lexical
+          - link "Lexical Graph" [ref=e223] [cursor=pointer]:
+            - /url: /lexical/graph
+          - link "Lexical Lessons" [ref=e224] [cursor=pointer]:
+            - /url: /lexical/lessons
+          - link "Knowledge Base" [ref=e225] [cursor=pointer]:
+            - /url: /knowledge
+        - generic [ref=e226]:
+          - generic [ref=e227]: Grammar
+          - link "Grammar Study" [ref=e228] [cursor=pointer]:
+            - /url: /grammar
+          - link "Grammar Patterns" [ref=e229] [cursor=pointer]:
+            - /url: /grammar/study
+          - link "SRS System" [ref=e230] [cursor=pointer]:
+            - /url: /srs
+        - link "Conversations" [ref=e231] [cursor=pointer]:
+          - /url: /conversations
+        - generic [ref=e232]:
+          - generic [ref=e233]: Profile
+          - link "Profile Settings" [ref=e234] [cursor=pointer]:
+            - /url: /profile
+          - link "Content Analysis" [ref=e235] [cursor=pointer]:
+            - /url: /content/analyze
+          - link "Logout" [ref=e236] [cursor=pointer]:
+            - /url: /logout
+  - main [ref=e12]:
+    - generic [ref=e155]:
+      - generic [ref=e156]:
+        - heading "Lexical Graph" [level=1] [ref=e157]
+        - generic [ref=e158]:
+          - generic [ref=e159]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e160]: 日本
+            - generic [ref=e161]: "Searching in: kanji"
+            - generic [ref=e162]:
+              - generic "Kanji (active)" [ref=e163]: K
+              - generic "Hiragana" [ref=e164]: H
+              - generic "Translation" [ref=e165]: T
+          - button "Search" [ref=e166]
+        - button "⚙️ Settings" [ref=e168]
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - button "Graph" [ref=e171]:
+            - generic [ref=e172]: Graph
+          - button "Info" [ref=e173]:
+            - generic [ref=e174]: Info
+          - button "Lesson" [ref=e175]:
+            - generic [ref=e176]: Lesson
+        - generic [ref=e178]:
+          - heading "AI Language Lesson" [level=2] [ref=e179]
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - 'heading "Learning: 日本" [level=3] [ref=e182]'
+              - paragraph [ref=e183]: Interactive AI-powered lesson content
+            - generic [ref=e184]:
+              - generic [ref=e185]:
+                - heading "Study Points" [level=4] [ref=e186]
+                - list [ref=e187]:
+                  - listitem [ref=e188]: • Understanding the kanji components
+                  - listitem [ref=e189]: • Related vocabulary and synonyms
+                  - listitem [ref=e190]: • Cultural context and usage
+              - generic [ref=e191]:
+                - heading "Practice Exercises" [level=4] [ref=e192]
+                - paragraph [ref=e193]: Interactive exercises and quizzes
+        - generic [ref=e195]:
+          - heading "AI Chat Assistant" [level=3] [ref=e196]
+          - generic [ref=e197]:
+            - generic [ref=e198]:
+              - generic [ref=e199]: "AI Tutor:"
+              - generic [ref=e200]: Hello! I'm here to help you learn about "日本". What would you like to know?
+            - generic [ref=e201]:
+              - textbox "Ask a question..." [ref=e202]
+              - button "Send Message" [ref=e203]
+            - generic [ref=e204]:
+              - heading "Quick Actions" [level=4] [ref=e205]
+              - generic [ref=e206]:
+                - button "Explain pronunciation" [ref=e207]
+                - button "Show usage examples" [ref=e208]
+                - button "Create practice quiz" [ref=e209]
+      - paragraph [ref=e210]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e46] [cursor=pointer]:
+    - img [ref=e47]
+  - alert [ref=e50]
+  - generic [ref=e147]: "2"

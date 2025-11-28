@@ -1,0 +1,767 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - navigation [ref=e3]:
+    - link "Open toolbar Pristupačnost" [ref=e5] [cursor=pointer]:
+      - /url: javascript:void(0);
+      - generic [ref=e6]: Open toolbar
+      - img "Pristupačnost" [ref=e7]
+    - generic [ref=e10]:
+      - paragraph [ref=e11]: Pristupačnost
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link "Povećaj tekst Povećaj tekst" [ref=e14] [cursor=pointer]:
+            - /url: "#"
+            - img "Povećaj tekst" [ref=e16]
+            - text: Povećaj tekst
+        - listitem [ref=e18]:
+          - link "Smanji tekst Smanji tekst" [ref=e19] [cursor=pointer]:
+            - /url: "#"
+            - img "Smanji tekst" [ref=e21]
+            - text: Smanji tekst
+        - listitem [ref=e23]:
+          - link "Sivi tonovi Sivi tonovi" [ref=e24] [cursor=pointer]:
+            - /url: "#"
+            - img "Sivi tonovi" [ref=e26]
+            - text: Sivi tonovi
+        - listitem [ref=e28]:
+          - link "Visoki kontrast Visoki kontrast" [ref=e29] [cursor=pointer]:
+            - /url: "#"
+            - img "Visoki kontrast" [ref=e31]
+            - text: Visoki kontrast
+        - listitem [ref=e33]:
+          - link "Negativni kontrast Negativni kontrast" [ref=e34] [cursor=pointer]:
+            - /url: "#"
+            - img "Negativni kontrast" [ref=e36]
+            - text: Negativni kontrast
+        - listitem [ref=e38]:
+          - link "Svijetla pozadina Svijetla pozadina" [ref=e39] [cursor=pointer]:
+            - /url: "#"
+            - img "Svijetla pozadina" [ref=e41]
+            - text: Svijetla pozadina
+        - listitem [ref=e43]:
+          - link "Podcrtaj poveznice Podcrtaj poveznice" [ref=e44] [cursor=pointer]:
+            - /url: "#"
+            - img "Podcrtaj poveznice" [ref=e46]
+            - text: Podcrtaj poveznice
+        - listitem [ref=e48]:
+          - link "Čitljivi font Čitljivi font" [ref=e49] [cursor=pointer]:
+            - /url: "#"
+            - img "Čitljivi font" [ref=e51]
+            - text: Čitljivi font
+        - listitem [ref=e53]:
+          - link "Reset Reset" [ref=e54] [cursor=pointer]:
+            - /url: "#"
+            - img "Reset" [ref=e56]
+            - text: Reset
+      - list [ref=e58]:
+        - listitem [ref=e59]:
+          - link "Pomoć Pomoć" [ref=e60] [cursor=pointer]:
+            - /url: https://uniri.hr/info/pristupacnost
+            - img "Pomoć" [ref=e62]
+            - text: Pomoć
+        - listitem [ref=e64]:
+          - link "Povratne informacije Povratne informacije" [ref=e65] [cursor=pointer]:
+            - /url: mailto:pristupacnost@uniri.hr
+            - img "Povratne informacije" [ref=e67]
+            - text: Povratne informacije
+  - link "Idi na sadržaj" [ref=e69] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=e70]:
+    - text:                 
+    - banner [ref=e71]:
+      - generic [ref=e72]:
+        - link [ref=e77] [cursor=pointer]:
+          - /url: https://ffri.uniri.hr
+        - generic [ref=e79]:
+          - generic [ref=e83]:
+            - menu [ref=e88]:
+              - link "Hrvatski" [ref=e89] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/dogadjanja/
+                - menuitem "Hrvatski" [ref=e90]
+            - search [ref=e93]:
+              - generic [ref=e94]:
+                - button "Search" [ref=e95] [cursor=pointer]:
+                  - generic [ref=e96]: 
+                - generic:
+                  - generic: Search
+                  - searchbox "Search"
+                  - text: 
+          - generic [ref=e98]:
+            - navigation "Menu" [ref=e99]:
+              - list [ref=e100]:
+                - listitem [ref=e101]:
+                  - link "Studiranje " [ref=e102] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/studiranje/
+                    - text: Studiranje
+                    - generic [ref=e103]:
+                      - generic: 
+                  - text:   
+                - listitem [ref=e104]:
+                  - link "Istraživanje" [ref=e105] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/istrazivanje/
+                - listitem [ref=e106]:
+                  - link "Internacionalizacija " [ref=e107] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/internacionalizacija-i-mobilnost/
+                    - text: Internacionalizacija
+                    - generic [ref=e108]:
+                      - generic: 
+                - listitem [ref=e109]:
+                  - link "Fakultet i zajednica " [ref=e110] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/fakultet-i-zajednica/
+                    - text: Fakultet i zajednica
+                    - generic [ref=e111]:
+                      - generic: 
+                - listitem [ref=e112]:
+                  - link "O Fakultetu " [ref=e113] [cursor=pointer]:
+                    - /url: https://ffri.uniri.hr/o-fakultetu/
+                    - text: O Fakultetu
+                    - generic [ref=e114]:
+                      - generic: 
+                  - text:   
+            - text:            
+  - generic [ref=e115]:
+    - generic [ref=e126]:
+      - navigation "Menu" [ref=e127]:
+        - list [ref=e128]:
+          - listitem [ref=e129]:
+            - link "Vijesti" [ref=e130] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/vijesti/
+          - listitem [ref=e131]:
+            - link "Događanja" [ref=e132] [cursor=pointer]:
+              - /url: /dogadjanja/
+          - listitem [ref=e133]:
+            - link "Odsjeci i katedre " [ref=e134] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/o-fakultetu/ustroj/odsjeci-i-katedre/
+              - text: Odsjeci i katedre
+              - generic [ref=e135]:
+                - generic: 
+          - listitem [ref=e136]:
+            - link "Centri i laboratoriji" [ref=e137] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/o-fakultetu/ustroj/centri-i-laboratoriji/
+          - listitem [ref=e138]:
+            - link "Knjižnica " [ref=e139] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/knjiznica/
+              - text: Knjižnica
+              - generic [ref=e140]:
+                - generic: 
+            - text: 
+      - text:     
+    - generic [ref=e146]:
+      - generic [ref=e149]:
+        - generic [ref=e151]:
+          - generic [ref=e152] [cursor=pointer]: Lokacija događanja
+          - generic [ref=e153]:
+            - checkbox "FFRI" [ref=e154] [cursor=pointer]: 
+            - generic [ref=e155]: FFRI
+          - generic [ref=e156]:
+            - checkbox "Kampus" [ref=e157] [cursor=pointer]: 
+            - generic [ref=e158]: Kampus
+          - generic [ref=e159]:
+            - checkbox "Lovran" [ref=e160] [cursor=pointer]: 
+            - generic [ref=e161]: Lovran
+          - generic [ref=e162]:
+            - checkbox "Online" [ref=e163] [cursor=pointer]: 
+            - generic [ref=e164]: Online
+          - generic [ref=e165]:
+            - checkbox "Opatija" [ref=e166] [cursor=pointer]: 
+            - generic [ref=e167]: Opatija
+          - generic [ref=e168]:
+            - checkbox "Palača Moise, Cres" [ref=e169] [cursor=pointer]: 
+            - generic [ref=e170]: Palača Moise, Cres
+          - generic [ref=e171]:
+            - checkbox "Rijeka" [ref=e172] [cursor=pointer]: 
+            - generic [ref=e173]: Rijeka
+        - generic [ref=e175]:
+          - generic [ref=e176] [cursor=pointer]: Tip događanja
+          - generic [ref=e177]:
+            - checkbox "Izložba" [ref=e178] [cursor=pointer]: 
+            - generic [ref=e179]: Izložba
+          - generic [ref=e180]:
+            - checkbox "Konferencija" [ref=e181] [cursor=pointer]: 
+            - generic [ref=e182]: Konferencija
+          - generic [ref=e183]:
+            - checkbox "Okrugli stol" [ref=e184] [cursor=pointer]: 
+            - generic [ref=e185]: Okrugli stol
+          - generic [ref=e186]:
+            - checkbox "Panel" [ref=e187] [cursor=pointer]: 
+            - generic [ref=e188]: Panel
+          - generic [ref=e189]:
+            - checkbox "Predavanje" [ref=e190] [cursor=pointer]: 
+            - generic [ref=e191]: Predavanje
+          - generic [ref=e192]:
+            - checkbox "Predstavljanje knjige" [ref=e193] [cursor=pointer]: 
+            - generic [ref=e194]: Predstavljanje knjige
+          - generic [ref=e195]:
+            - checkbox "Radionica" [ref=e196] [cursor=pointer]: 
+            - generic [ref=e197]: Radionica
+          - generic [ref=e198]:
+            - checkbox "Sajam" [ref=e199] [cursor=pointer]: 
+            - generic [ref=e200]: Sajam
+          - generic [ref=e201]:
+            - checkbox "Tjedan Filozofskoga fakulteta" [ref=e202] [cursor=pointer]: 
+            - generic [ref=e203]: Tjedan Filozofskoga fakulteta
+          - generic [ref=e204]:
+            - checkbox "Tribina" [ref=e205] [cursor=pointer]: 
+            - generic [ref=e206]: Tribina
+          - generic [ref=e207]:
+            - checkbox "Znanost" [ref=e208] [cursor=pointer]: 
+            - generic [ref=e209]: Znanost
+      - generic [ref=e212]:
+        - generic [ref=e218]:
+          - img "Logo-Enirdelm-9_2025" [ref=e223]
+          - generic [ref=e225]:
+            - generic [ref=e229]:
+              - paragraph [ref=e232]: 25.09.2025.
+              - paragraph [ref=e235]: — 28.09.2025.
+              - paragraph [ref=e238]: _Konferencija
+              - paragraph [ref=e241]:
+                - link "Collaborative Leadership for Resilient Educational Institutions" [ref=e242] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/collaborative-leadership-for-resilient-educational-institutions/
+              - list [ref=e246]:
+                - listitem [ref=e247]:
+                  - generic [ref=e248]: FFRI
+                  - generic [ref=e249]: ","
+                - listitem [ref=e250]:
+                  - generic [ref=e251]: Rijeka
+            - link "Više informacija" [ref=e255] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/collaborative-leadership-for-resilient-educational-institutions/
+              - generic [ref=e256]:
+                - img [ref=e258]
+                - generic [ref=e260]: Više informacija
+        - generic [ref=e266]:
+          - img "placeholder-event-5" [ref=e271]
+          - generic [ref=e273]:
+            - generic [ref=e277]:
+              - paragraph [ref=e280]: 15.09.2025.
+              - paragraph [ref=e283]: 10:00
+              - paragraph [ref=e286]: — 18:00
+              - paragraph [ref=e289]: _Radionica, Znanost
+              - paragraph [ref=e292]:
+                - link "Radionica – Workshop on the Linguistic Turn" [active] [ref=e293] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/radionica-workshop-on-the-linguistic-turn/
+              - list [ref=e297]:
+                - listitem [ref=e298]:
+                  - generic [ref=e299]: FFRI
+            - link "Više informacija" [ref=e303] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/radionica-workshop-on-the-linguistic-turn/
+              - generic [ref=e304]:
+                - img [ref=e306]
+                - generic [ref=e308]: Više informacija
+        - generic [ref=e314]:
+          - img "How_to_foster_education-9_2025" [ref=e319]
+          - generic [ref=e321]:
+            - generic [ref=e325]:
+              - paragraph [ref=e328]: 11.09.2025.
+              - paragraph [ref=e331]: 14:00
+              - paragraph [ref=e334]: — 15:30
+              - paragraph [ref=e337]: _Okrugli stol
+              - paragraph [ref=e340]:
+                - link "Okrugli stol ‘How to foster education in the humanities?’" [ref=e341] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/okrugli-stol-how-to-foster-education-in-the-humanities/
+              - list [ref=e345]:
+                - listitem [ref=e346]:
+                  - generic [ref=e347]: FFRI
+            - link "Više informacija" [ref=e351] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/okrugli-stol-how-to-foster-education-in-the-humanities/
+              - generic [ref=e352]:
+                - img [ref=e354]
+                - generic [ref=e356]: Više informacija
+        - generic [ref=e362]:
+          - img "M_Slugan-9_2025" [ref=e367]
+          - generic [ref=e369]:
+            - generic [ref=e373]:
+              - paragraph [ref=e376]: 11.09.2025.
+              - paragraph [ref=e379]: 10:00
+              - paragraph [ref=e382]: — 13:00
+              - paragraph [ref=e385]: _Panel, Predstavljanje knjige
+              - paragraph [ref=e388]:
+                - 'link "Predstavljanje knjige Marija Slugana ‘Taking Fiction Film Seriously: A Philosophical Approach to Cinema Studies’" [ref=e389] [cursor=pointer]':
+                  - /url: https://ffri.uniri.hr/dogadjanja/predstavljanje-knjige-marija-slugana-taking-fiction-film-seriously-a-philosophical-approach-to-cinema-studies/
+              - list [ref=e393]:
+                - listitem [ref=e394]:
+                  - generic [ref=e395]: FFRI
+            - link "Više informacija" [ref=e399] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/predstavljanje-knjige-marija-slugana-taking-fiction-film-seriously-a-philosophical-approach-to-cinema-studies/
+              - generic [ref=e400]:
+                - img [ref=e402]
+                - generic [ref=e404]: Više informacija
+        - generic [ref=e410]:
+          - img "Art_and_humanities-9_2025" [ref=e415]
+          - generic [ref=e417]:
+            - generic [ref=e421]:
+              - paragraph [ref=e424]: 09.09.2025.
+              - paragraph [ref=e427]: — 10.09.2025.
+              - paragraph [ref=e430]: 09:15
+              - paragraph [ref=e433]: — 18:15
+              - paragraph [ref=e436]: _Konferencija
+              - paragraph [ref=e439]:
+                - link "Konferencija ART AND THE HUMANITIES" [ref=e440] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/konferencija-art-and-the-humanities/
+              - list [ref=e444]:
+                - listitem [ref=e445]:
+                  - generic [ref=e446]: FFRI
+            - link "Više informacija" [ref=e450] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/konferencija-art-and-the-humanities/
+              - generic [ref=e451]:
+                - img [ref=e453]
+                - generic [ref=e455]: Više informacija
+        - generic [ref=e461]:
+          - img "Virtues_and_values-9_2025" [ref=e466]
+          - generic [ref=e468]:
+            - generic [ref=e472]:
+              - paragraph [ref=e475]: 08.09.2025.
+              - paragraph [ref=e478]: 13:30
+              - paragraph [ref=e481]: — 18:00
+              - paragraph [ref=e484]: _Radionica
+              - paragraph [ref=e487]:
+                - link "Radionica Virtues and Values in Art and Philosophy" [ref=e488] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/radionica-virtues-and-values-in-art-and-philosophy/
+              - list [ref=e492]:
+                - listitem [ref=e493]:
+                  - generic [ref=e494]: FFRI
+            - link "Više informacija" [ref=e498] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/radionica-virtues-and-values-in-art-and-philosophy/
+              - generic [ref=e499]:
+                - img [ref=e501]
+                - generic [ref=e503]: Više informacija
+        - generic [ref=e509]:
+          - img "placeholder-event-5" [ref=e514]
+          - generic [ref=e516]:
+            - generic [ref=e520]:
+              - paragraph [ref=e523]: 01.09.2025.
+              - paragraph [ref=e526]: 10:00
+              - paragraph [ref=e529]: — 18:00
+              - paragraph [ref=e532]: _Radionica, Znanost
+              - paragraph [ref=e535]:
+                - link "Radionica o metafilozofiji" [ref=e536] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/radionica-o-metafilozofiji/
+              - list [ref=e540]:
+                - listitem [ref=e541]:
+                  - generic [ref=e542]: FFRI
+            - link "Više informacija" [ref=e546] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/radionica-o-metafilozofiji/
+              - generic [ref=e547]:
+                - img [ref=e549]
+                - generic [ref=e551]: Više informacija
+        - generic [ref=e557]:
+          - img "Logika_i_kriticko_misljenje-7_2025" [ref=e562]
+          - generic [ref=e564]:
+            - generic [ref=e568]:
+              - paragraph [ref=e571]: 21.07.2025.
+              - paragraph [ref=e574]: — 24.07.2025.
+              - paragraph [ref=e577]: 10:00
+              - paragraph [ref=e580]: — 14:00
+              - paragraph [ref=e583]: _Konferencija, Znanost
+              - paragraph [ref=e586]:
+                - link "Ljetna škola logike ‘Logika i kritičko mišljenje’, 21. – 24. srpnja 2025." [ref=e587] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/ljetna-skola-logike-logika-i-kriticko-misljenje-21-24-srpnja-2025/
+              - list [ref=e591]:
+                - listitem [ref=e592]:
+                  - generic [ref=e593]: FFRI
+            - link "Više informacija" [ref=e597] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/ljetna-skola-logike-logika-i-kriticko-misljenje-21-24-srpnja-2025/
+              - generic [ref=e598]:
+                - img [ref=e600]
+                - generic [ref=e602]: Više informacija
+        - generic [ref=e608]:
+          - img "Anthropocene_fictions-5_2025" [ref=e613]
+          - generic [ref=e615]:
+            - generic [ref=e619]:
+              - paragraph [ref=e622]: 02.07.2025.
+              - paragraph [ref=e625]: 21:15
+              - paragraph [ref=e628]: — 23:00
+              - paragraph [ref=e631]: _Radionica
+              - paragraph [ref=e634]:
+                - 'link "BIP Anthropocene Fictions: projekcija filma Okja (2017) Bonga Joona Hoa u Art-kinu Croatia" [ref=e635] [cursor=pointer]':
+                  - /url: https://ffri.uniri.hr/dogadjanja/bip-anthropocene-fictions-projekcija-filma-okja-2017-bonga-joona-hoa-u-art-kinu-croatia/
+              - list [ref=e639]:
+                - listitem [ref=e640]:
+                  - generic [ref=e641]: Rijeka
+            - link "Više informacija" [ref=e645] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/bip-anthropocene-fictions-projekcija-filma-okja-2017-bonga-joona-hoa-u-art-kinu-croatia/
+              - generic [ref=e646]:
+                - img [ref=e648]
+                - generic [ref=e650]: Više informacija
+        - generic [ref=e656]:
+          - img "placeholder-event-5" [ref=e661]
+          - generic [ref=e663]:
+            - generic [ref=e667]:
+              - paragraph [ref=e670]: 27.06.2025.
+              - paragraph [ref=e673]: — 28.06.2025.
+              - paragraph [ref=e676]: 12:00
+              - paragraph [ref=e679]: — 14:00
+              - paragraph [ref=e682]: _Predavanje
+              - paragraph [ref=e685]:
+                - link "Predavanja dr. Jennifer Whyte – 27. i 28. lipnja 2025." [ref=e686] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/predavanja-dr-jennifer-whyte-27-i-28-lipnja-2025/
+              - list [ref=e690]:
+                - listitem [ref=e691]:
+                  - generic [ref=e692]: FFRI
+            - link "Više informacija" [ref=e696] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/predavanja-dr-jennifer-whyte-27-i-28-lipnja-2025/
+              - generic [ref=e697]:
+                - img [ref=e699]
+                - generic [ref=e701]: Više informacija
+        - generic [ref=e707]:
+          - img "placeholder-event-5" [ref=e712]
+          - generic [ref=e714]:
+            - generic [ref=e718]:
+              - paragraph [ref=e721]: 25.06.2025.
+              - paragraph [ref=e724]: — 26.06.2025.
+              - paragraph [ref=e727]: 10:00
+              - paragraph [ref=e730]: — 17:05
+              - paragraph [ref=e733]: _Radionica
+              - paragraph [ref=e736]:
+                - 'link "TIPPS workshop: The Interface Problem in the Philosophy of Law and Psychiatry" [ref=e737] [cursor=pointer]':
+                  - /url: https://ffri.uniri.hr/dogadjanja/tipps-workshop-the-interface-problem-in-the-philosophy-of-law-and-psychiatry/
+              - list [ref=e741]:
+                - listitem [ref=e742]:
+                  - generic [ref=e743]: FFRI
+            - link "Više informacija" [ref=e747] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/tipps-workshop-the-interface-problem-in-the-philosophy-of-law-and-psychiatry/
+              - generic [ref=e748]:
+                - img [ref=e750]
+                - generic [ref=e752]: Više informacija
+        - generic [ref=e758]:
+          - generic [ref=e760]:
+            - generic:
+              - generic:
+                - img "Plakat-T_Dabovic-6_2025"
+          - generic [ref=e762]:
+            - generic [ref=e766]:
+              - paragraph [ref=e769]: 13.06.2025.
+              - paragraph [ref=e772]: 18:30
+              - paragraph [ref=e775]: — 19:30
+              - paragraph [ref=e778]: _Predstavljanje knjige
+              - paragraph [ref=e781]:
+                - link "Predstavljanje zbirke pjesama na fijumanskom dijalektu „S’ciafe salade“ autorice Tiziane Dabović" [ref=e782] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/predstavljanje-zbirke-pjesama-na-fijumanskom-dijalektu-sciafe-salade-autorice-tiziane-dabovic/
+              - list [ref=e786]:
+                - listitem [ref=e787]:
+                  - generic [ref=e788]: Rijeka
+            - link "Više informacija" [ref=e792] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/predstavljanje-zbirke-pjesama-na-fijumanskom-dijalektu-sciafe-salade-autorice-tiziane-dabovic/
+              - generic [ref=e793]:
+                - img [ref=e795]
+                - generic [ref=e797]: Više informacija
+        - generic [ref=e803]:
+          - generic [ref=e805]:
+            - generic:
+              - generic:
+                - img "Predstavljanje-Santarcangeli_Ramous-6_2025"
+          - generic [ref=e807]:
+            - generic [ref=e811]:
+              - paragraph [ref=e814]: 12.06.2025.
+              - paragraph [ref=e817]: 18:30
+              - paragraph [ref=e820]: — 20:00
+              - paragraph [ref=e823]: _Predstavljanje knjige
+              - paragraph [ref=e826]:
+                - link "Predstavljanje zbornika radova s međunarodnih znanstvenih skupova posvećenih Paolu Santarcangeliju i Osvaldu Ramousu" [ref=e827] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/predstavljanje-zbornika-radova-s-medunarodnih-znanstvenih-skupova-posvecenih-paolu-santarcangeliju-i-osvaldu-ramousu/
+              - list [ref=e831]:
+                - listitem [ref=e832]:
+                  - generic [ref=e833]: Rijeka
+            - link "Više informacija" [ref=e837] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/predstavljanje-zbornika-radova-s-medunarodnih-znanstvenih-skupova-posvecenih-paolu-santarcangeliju-i-osvaldu-ramousu/
+              - generic [ref=e838]:
+                - img [ref=e840]
+                - generic [ref=e842]: Više informacija
+        - generic [ref=e848]:
+          - generic [ref=e850]:
+            - generic:
+              - generic:
+                - img "Plakat-Pedagogija_sporta-6_2025"
+          - generic [ref=e852]:
+            - generic [ref=e856]:
+              - paragraph [ref=e859]: 10.06.2025.
+              - paragraph [ref=e862]: 13:00
+              - paragraph [ref=e865]: — 15:00
+              - paragraph [ref=e868]: _Tribina
+              - paragraph [ref=e871]:
+                - link "Pedagoška perspektiva sporta – sport kao jedinica društva" [ref=e872] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/pedagoska-perspektiva-sporta-sport-kao-jedinica-drustva/
+              - list [ref=e876]:
+                - listitem [ref=e877]:
+                  - generic [ref=e878]: FFRI
+            - link "Više informacija" [ref=e882] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/pedagoska-perspektiva-sporta-sport-kao-jedinica-drustva/
+              - generic [ref=e883]:
+                - img [ref=e885]
+                - generic [ref=e887]: Više informacija
+        - generic [ref=e893]:
+          - generic [ref=e895]:
+            - generic:
+              - generic:
+                - img "Poziv-D_Sourek-6_2025"
+          - generic [ref=e897]:
+            - generic [ref=e901]:
+              - paragraph [ref=e904]: 10.06.2025.
+              - paragraph [ref=e907]: 11:15
+              - paragraph [ref=e910]: — 12:30
+              - paragraph [ref=e913]: _Predavanje, Radionica, Znanost
+              - paragraph [ref=e916]:
+                - link "Gostujuće predavanje i studentska radionica izv. prof. dr. sc. Danka Šoureka" [ref=e917] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/gostujuce-predavanje-i-studentska-radionica-izv-prof-dr-sc-danka-soureka/
+              - list [ref=e921]:
+                - listitem [ref=e922]:
+                  - generic [ref=e923]: FFRI
+            - link "Više informacija" [ref=e927] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/gostujuce-predavanje-i-studentska-radionica-izv-prof-dr-sc-danka-soureka/
+              - generic [ref=e928]:
+                - img [ref=e930]
+                - generic [ref=e932]: Više informacija
+        - generic [ref=e938]:
+          - img "placeholder-event-5" [ref=e943]
+          - generic [ref=e945]:
+            - generic [ref=e949]:
+              - paragraph [ref=e952]: 05.06.2025.
+              - paragraph [ref=e955]: 15:15
+              - paragraph [ref=e958]: — 17:00
+              - paragraph [ref=e961]: _Predavanje
+              - paragraph [ref=e964]:
+                - link "Predavanje prof. dr. Karen Leigh Harris" [ref=e965] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/predavanje-prof-dr-karen-leigh-harris-2/
+              - list [ref=e969]:
+                - listitem [ref=e970]:
+                  - generic [ref=e971]: FFRI
+            - link "Više informacija" [ref=e975] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/predavanje-prof-dr-karen-leigh-harris-2/
+              - generic [ref=e976]:
+                - img [ref=e978]
+                - generic [ref=e980]: Više informacija
+        - generic [ref=e986]:
+          - img "placeholder-event-5" [ref=e991]
+          - generic [ref=e993]:
+            - generic [ref=e997]:
+              - paragraph [ref=e1000]: 03.06.2025.
+              - paragraph [ref=e1003]: 16:15
+              - paragraph [ref=e1006]: — 17:45
+              - paragraph [ref=e1009]: _Predavanje
+              - paragraph [ref=e1012]:
+                - link "Predavanje prof. dr. Karen Leigh Harris" [ref=e1013] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/predavanje-prof-dr-karen-leigh-harris/
+              - list [ref=e1017]:
+                - listitem [ref=e1018]:
+                  - generic [ref=e1019]: FFRI
+            - link "Više informacija" [ref=e1023] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/predavanje-prof-dr-karen-leigh-harris/
+              - generic [ref=e1024]:
+                - img [ref=e1026]
+                - generic [ref=e1028]: Više informacija
+        - generic [ref=e1034]:
+          - generic [ref=e1036]:
+            - generic:
+              - generic:
+                - img "Poziv-A_Vingerhoets-5_2025"
+          - generic [ref=e1038]:
+            - generic [ref=e1042]:
+              - paragraph [ref=e1045]: 28.05.2025.
+              - paragraph [ref=e1048]: 10:15
+              - paragraph [ref=e1051]: — 11:15
+              - paragraph [ref=e1054]: _Predavanje
+              - paragraph [ref=e1057]:
+                - link "Gostujuće predavanje prof. emeritusa Ada Vingerhoetsa (Sveučilište u Tilburgu, Nizozemska)" [ref=e1058] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/gostujuce-predavanje-prof-emeritusa-ada-vingerhoetsa-sveuciliste-u-tilburgu-nizozemska/
+              - list [ref=e1062]:
+                - listitem [ref=e1063]:
+                  - generic [ref=e1064]: FFRI
+            - link "Više informacija" [ref=e1068] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/gostujuce-predavanje-prof-emeritusa-ada-vingerhoetsa-sveuciliste-u-tilburgu-nizozemska/
+              - generic [ref=e1069]:
+                - img [ref=e1071]
+                - generic [ref=e1073]: Više informacija
+        - generic [ref=e1079]:
+          - generic [ref=e1081]:
+            - generic:
+              - generic:
+                - img "M_Klemencic-5_2025"
+          - generic [ref=e1083]:
+            - generic [ref=e1087]:
+              - paragraph [ref=e1090]: 28.05.2025.
+              - paragraph [ref=e1093]: 12:30
+              - paragraph [ref=e1096]: — 13:30
+              - paragraph [ref=e1099]: _Predavanje, Radionica, Znanost
+              - paragraph [ref=e1102]:
+                - link "Gostujuće predavanje i studentska radionica prof. dr. sc. Mateja Klemenčiča" [ref=e1103] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/gostujuce-predavanje-i-studentska-radionica-prof-dr-sc-mateja-klemencica/
+              - list [ref=e1107]:
+                - listitem [ref=e1108]:
+                  - generic [ref=e1109]: FFRI
+            - link "Više informacija" [ref=e1113] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/gostujuce-predavanje-i-studentska-radionica-prof-dr-sc-mateja-klemencica/
+              - generic [ref=e1114]:
+                - img [ref=e1116]
+                - generic [ref=e1118]: Više informacija
+        - generic [ref=e1124]:
+          - img "Anthropocene_fictions-5_2025" [ref=e1129]
+          - generic [ref=e1131]:
+            - generic [ref=e1135]:
+              - paragraph [ref=e1138]: 27.05.2025.
+              - paragraph [ref=e1141]: — 04.06.2025.
+              - paragraph [ref=e1144]: 16:00
+              - paragraph [ref=e1147]: — 19:00
+              - paragraph [ref=e1150]: _Predavanje, Radionica
+              - paragraph [ref=e1153]:
+                - link "Anthropocene Fictions (Blended Intensive Programme) / Antropocenske fikcije (kombinirani intenzivni program)" [ref=e1154] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/dogadjanja/anthropocene-fictions-blended-intensive-programme-antropocenske-fikcije-kombinirani-intenzivni-program/
+              - list [ref=e1158]:
+                - listitem [ref=e1159]:
+                  - generic [ref=e1160]: FFRI
+                  - generic [ref=e1161]: ","
+                - listitem [ref=e1162]:
+                  - generic [ref=e1163]: Rijeka
+            - link "Više informacija" [ref=e1167] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/anthropocene-fictions-blended-intensive-programme-antropocenske-fikcije-kombinirani-intenzivni-program/
+              - generic [ref=e1168]:
+                - img [ref=e1170]
+                - generic [ref=e1172]: Više informacija
+      - navigation [ref=e1174]:
+        - list [ref=e1175]:
+          - listitem [ref=e1176]:
+            - link "1" [ref=e1177] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/?eid=011b452&pag=1
+          - listitem [ref=e1178]:
+            - link "2" [ref=e1179] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/?eid=011b452&pag=2
+          - listitem [ref=e1180]:
+            - link "3" [ref=e1181] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/?eid=011b452&pag=3
+          - listitem [ref=e1182]: …
+          - listitem [ref=e1183]:
+            - link "17" [ref=e1184] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/?eid=011b452&pag=17
+          - listitem [ref=e1185]:
+            - link "»" [ref=e1186] [cursor=pointer]:
+              - /url: https://ffri.uniri.hr/dogadjanja/?eid=011b452&pag=2
+  - contentinfo [ref=e1187]:
+    - generic [ref=e1189]:
+      - generic [ref=e1191]:
+        - paragraph [ref=e1194]: // info
+        - link [ref=e1197] [cursor=pointer]:
+          - /url: https://ffri.uniri.hr
+        - link [ref=e1200] [cursor=pointer]:
+          - /url: https://uniri.hr/
+        - link [ref=e1203] [cursor=pointer]:
+          - /url: https://uniri.hr/
+        - generic [ref=e1205]:
+          - generic [ref=e1207]:
+            - paragraph [ref=e1210]: Filozofski Fakultet u Rijeci
+            - list [ref=e1213]:
+              - listitem [ref=e1214]:
+                - generic [ref=e1215]: Sveučilišna avenija 4
+              - listitem [ref=e1216]:
+                - generic [ref=e1217]: 51000 Rijeka
+              - listitem [ref=e1218]:
+                - generic [ref=e1219]: Republika Hrvatska
+            - paragraph [ref=e1226]:
+              - link "Vijesti" [ref=e1227] [cursor=pointer]:
+                - /url: /vijesti/
+          - generic [ref=e1229]:
+            - paragraph [ref=e1232]: Kontakt
+            - list [ref=e1235]:
+              - listitem [ref=e1236]:
+                - link "Dekanat" [ref=e1237] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/
+                  - generic [ref=e1238]: Dekanat
+              - listitem [ref=e1239]:
+                - 'link "Tel: 051/265-600" [ref=e1240] [cursor=pointer]':
+                  - /url: tel:+38551265600
+                  - generic [ref=e1241]: "Tel: 051/265-600"
+              - listitem [ref=e1242]:
+                - generic [ref=e1243]: "Fax: 051/216-099"
+              - listitem [ref=e1244]:
+                - link "Studentska služba" [ref=e1245] [cursor=pointer]:
+                  - /url: mailto:sanja.unkovic@ffri.uniri.hr
+                  - generic [ref=e1246]: Studentska služba
+              - listitem [ref=e1247]:
+                - link "Kontakti djelatnika" [ref=e1248] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/kontakti/
+                  - generic [ref=e1249]: Kontakti djelatnika
+            - paragraph [ref=e1256]:
+              - link "Događanja" [ref=e1257] [cursor=pointer]:
+                - /url: /dogadjanja/
+          - generic [ref=e1259]:
+            - paragraph [ref=e1262]: Studiranje
+            - list [ref=e1265]:
+              - listitem [ref=e1266]:
+                - link "Nastava" [ref=e1267] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/postojeci-studenti/nastava/
+                  - generic [ref=e1268]: Nastava
+              - listitem [ref=e1269]:
+                - link "Studentska služba" [ref=e1270] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/postojeci-studenti/studentska-sluzba/
+                  - generic [ref=e1271]: Studentska služba
+              - listitem [ref=e1272]:
+                - link "Budući studenti" [ref=e1273] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/buduci-studenti/
+                  - generic [ref=e1274]: Budući studenti
+              - listitem [ref=e1275]:
+                - link "Ured za karijere" [ref=e1276] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/fakultet-i-zajednica/ured-za-karijere/
+                  - generic [ref=e1277]: Ured za karijere
+              - listitem [ref=e1278]:
+                - link "Ured za akademsku podršku" [ref=e1279] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/postojeci-studenti/savjetovanje-i-podrska-studentima/
+                  - generic [ref=e1280]: Ured za akademsku podršku
+            - paragraph [ref=e1287]:
+              - link "Webmail" [ref=e1288] [cursor=pointer]:
+                - /url: https://outlook.office365.com/
+          - generic [ref=e1290]:
+            - paragraph [ref=e1293]: Opće informacije
+            - list [ref=e1296]:
+              - listitem [ref=e1297]:
+                - link "Obrasci" [ref=e1298] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/obrasci/
+                  - generic [ref=e1299]: Obrasci
+              - listitem [ref=e1300]:
+                - link "Javna nabava" [ref=e1301] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/javna-nabava/
+                  - generic [ref=e1302]: Javna nabava
+              - listitem [ref=e1303]:
+                - link "Pristup informacijama" [ref=e1304] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/pristup-informacijama/
+                  - generic [ref=e1305]: Pristup informacijama
+              - listitem [ref=e1306]:
+                - link "Rezervacija prostora" [ref=e1307] [cursor=pointer]:
+                  - /url: https://prostorije.uniri.hr/week.php?area=6
+                  - generic [ref=e1308]: Rezervacija prostora
+            - paragraph [ref=e1315]:
+              - link "SPO za djelatnike" [ref=e1316] [cursor=pointer]:
+                - /url: https://ffri.uniri.hr/o-fakultetu/spo-za-djelatnike/
+          - generic [ref=e1318]:
+            - paragraph [ref=e1321]: Zajednica
+            - list [ref=e1324]:
+              - listitem [ref=e1325]:
+                - link "Cjeloživotno obrazovanje" [ref=e1326] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/studiranje/programi-cjelozivotnog-obrazovanja/
+                  - generic [ref=e1327]: Cjeloživotno obrazovanje
+              - listitem [ref=e1328]:
+                - link "Alumni FFRi" [ref=e1329] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/fakultet-i-zajednica/alumni-ffri/
+                  - generic [ref=e1330]: Alumni FFRi
+              - listitem [ref=e1331]:
+                - link "Transfer znanja" [ref=e1332] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/fakultet-i-zajednica/transfer-znanja/
+                  - generic [ref=e1333]: Transfer znanja
+              - listitem [ref=e1334]:
+                - link "Mediji o nama" [ref=e1335] [cursor=pointer]:
+                  - /url: https://ffri.uniri.hr/o-fakultetu/mediji-o-nama/
+                  - generic [ref=e1336]: Mediji o nama
+            - paragraph [ref=e1343]:
+              - link "Stari ffri web" [ref=e1344] [cursor=pointer]:
+                - /url: https://arhiva.ffri.uniri.hr
+        - generic [ref=e1348]:
+          - paragraph [ref=e1351]: Filozofski Fakultet u Rijeci
+          - paragraph [ref=e1354]: "@2025. Sva prava pridržana."
+      - link "Facebook-f " [ref=e1361] [cursor=pointer]:
+        - /url: https://www.facebook.com/people/Filozofski-fakultet-u-Rijeci/100051375052656/
+        - generic [ref=e1362]: Facebook-f
+        - generic [ref=e1363]: 
+  - generic [ref=e1364]: desktop
+  - generic [ref=e1366]:
+    - button "close chat pop card" [ref=e1367] [cursor=pointer]:
+      - img [ref=e1368]
+    - button "chat now" [ref=e1370] [cursor=pointer]:
+      - img "Gabriel Palavra Vučković, profile picture" [ref=e1372]
+      - generic [ref=e1373]: Chat now

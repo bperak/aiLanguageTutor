@@ -1,0 +1,141 @@
+- complementary [ref=e7]:
+  - generic "Google apps" [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - list [ref=e12]:
+          - listitem [ref=e13]:
+            - link "Account, row 1 of 5 and column 1 of 3 in the first section" [ref=e14] [cursor=pointer]:
+              - /url: https://myaccount.google.com/?utm_source=OGB&utm_medium=app
+              - generic [ref=e17]: Account
+          - listitem [ref=e18]:
+            - link "Search, row 1 of 5 and column 2 of 3 in the first section" [ref=e19] [cursor=pointer]:
+              - /url: https://www.google.com/
+              - generic [ref=e22]: Search
+          - listitem [ref=e23]:
+            - link "Maps, row 1 of 5 and column 3 of 3 in the first section" [ref=e24] [cursor=pointer]:
+              - /url: https://maps.google.com/
+              - generic [ref=e27]: Maps
+          - listitem [ref=e28]:
+            - link "YouTube, row 2 of 5 and column 1 of 3 in the first section" [ref=e29] [cursor=pointer]:
+              - /url: https://www.youtube.com
+              - generic [ref=e32]: YouTube
+          - listitem [ref=e33]:
+            - link "News, row 2 of 5 and column 2 of 3 in the first section" [ref=e34] [cursor=pointer]:
+              - /url: https://news.google.com
+              - generic [ref=e37]: News
+          - listitem [ref=e38]:
+            - link "Gmail, row 2 of 5 and column 3 of 3 in the first section" [ref=e39] [cursor=pointer]:
+              - /url: https://mail.google.com/mail/
+              - generic [ref=e42]: Gmail
+          - listitem [ref=e43]:
+            - link "Meet, row 3 of 5 and column 1 of 3 in the first section" [ref=e44] [cursor=pointer]:
+              - /url: https://meet.google.com?hs=197
+              - generic [ref=e47]: Meet
+          - listitem [ref=e48]:
+            - link "Chat, row 3 of 5 and column 2 of 3 in the first section" [ref=e49] [cursor=pointer]:
+              - /url: https://chat.google.com
+              - generic [ref=e52]: Chat
+          - listitem [ref=e53]:
+            - link "Contacts, row 3 of 5 and column 3 of 3 in the first section" [ref=e54] [cursor=pointer]:
+              - /url: https://contacts.google.com/
+              - generic [ref=e57]: Contacts
+          - listitem [ref=e58]:
+            - link "Drive, row 4 of 5 and column 1 of 3 in the first section" [active] [ref=e59] [cursor=pointer]:
+              - /url: https://drive.google.com/
+              - generic [ref=e62]: Drive
+          - listitem [ref=e63]:
+            - link "Calendar, row 4 of 5 and column 2 of 3 in the first section" [ref=e64] [cursor=pointer]:
+              - /url: https://calendar.google.com/calendar
+              - generic [ref=e67]: Calendar
+          - listitem [ref=e68]:
+            - link "Play, row 4 of 5 and column 3 of 3 in the first section" [ref=e69] [cursor=pointer]:
+              - /url: https://play.google.com/
+              - generic [ref=e72]: Play
+          - listitem [ref=e73]:
+            - link "Translate, row 5 of 5 and column 1 of 3 in the first section" [ref=e74] [cursor=pointer]:
+              - /url: https://translate.google.com/
+              - generic [ref=e77]: Translate
+          - listitem [ref=e78]:
+            - link "Photos, row 5 of 5 and column 2 of 3 in the first section" [ref=e79] [cursor=pointer]:
+              - /url: https://photos.google.com/
+              - generic [ref=e82]: Photos
+          - listitem [ref=e83]:
+            - link "Shopping, row 5 of 5 and column 3 of 3 in the first section" [ref=e84] [cursor=pointer]:
+              - /url: https://www.google.com/shopping?source=og
+              - generic [ref=e87]: Shopping
+        - list [ref=e89]:
+          - listitem [ref=e90]:
+            - link "Finance, row 1 of 6 and column 1 of 3 in the second section" [ref=e91] [cursor=pointer]:
+              - /url: https://www.google.com/finance
+              - generic [ref=e94]: Finance
+          - listitem [ref=e95]:
+            - link "Docs, row 1 of 6 and column 2 of 3 in the second section" [ref=e96] [cursor=pointer]:
+              - /url: https://docs.google.com/document/?usp=docs_alc
+              - generic [ref=e99]: Docs
+          - listitem [ref=e100]:
+            - link "Sheets, row 1 of 6 and column 3 of 3 in the second section" [ref=e101] [cursor=pointer]:
+              - /url: https://docs.google.com/spreadsheets/?usp=sheets_alc
+              - generic [ref=e104]: Sheets
+          - listitem [ref=e105]:
+            - link "Slides, row 2 of 6 and column 1 of 3 in the second section" [ref=e106] [cursor=pointer]:
+              - /url: https://docs.google.com/presentation/?usp=slides_alc
+              - generic [ref=e109]: Slides
+          - listitem [ref=e110]:
+            - link "Books, row 2 of 6 and column 2 of 3 in the second section" [ref=e111] [cursor=pointer]:
+              - /url: https://books.google.com/
+              - generic [ref=e114]: Books
+          - listitem [ref=e115]:
+            - link "Blogger, row 2 of 6 and column 3 of 3 in the second section" [ref=e116] [cursor=pointer]:
+              - /url: https://www.blogger.com/
+              - generic [ref=e119]: Blogger
+          - listitem [ref=e120]:
+            - link "Keep, row 3 of 6 and column 1 of 3 in the second section" [ref=e121] [cursor=pointer]:
+              - /url: https://keep.google.com
+              - generic [ref=e124]: Keep
+          - listitem [ref=e125]:
+            - link "Earth, row 3 of 6 and column 2 of 3 in the second section" [ref=e126] [cursor=pointer]:
+              - /url: https://earth.google.com/web/
+              - generic [ref=e129]: Earth
+          - listitem [ref=e130]:
+            - link "Saved, row 3 of 6 and column 3 of 3 in the second section" [ref=e131] [cursor=pointer]:
+              - /url: https://www.google.com/save
+              - generic [ref=e134]: Saved
+          - listitem [ref=e135]:
+            - link "Arts and Culture, row 4 of 6 and column 1 of 3 in the second section" [ref=e136] [cursor=pointer]:
+              - /url: https://artsandculture.google.com/?utm_source=ogs.google.com&utm_medium=referral
+              - generic [ref=e139]: Arts and Culture
+          - listitem [ref=e140]:
+            - link "Google Ads, row 4 of 6 and column 2 of 3 in the second section" [ref=e141] [cursor=pointer]:
+              - /url: https://ads.google.com/ups/routing?subid=ww-ww-xs-ip-awhc-a-ogb_cons!o2&source=203
+              - generic [ref=e144]: Google Ads
+          - listitem [ref=e145]:
+            - link "Merchant Center, row 4 of 6 and column 3 of 3 in the second section" [ref=e146] [cursor=pointer]:
+              - /url: https://merchants.google.com
+              - generic [ref=e149]: Merchant Center
+          - listitem [ref=e150]:
+            - link "Travel, row 5 of 6 and column 1 of 3 in the second section" [ref=e151] [cursor=pointer]:
+              - /url: https://www.google.com/travel/?dest_src=al
+              - generic [ref=e154]: Travel
+          - listitem [ref=e155]:
+            - link "Forms, row 5 of 6 and column 2 of 3 in the second section" [ref=e156] [cursor=pointer]:
+              - /url: https://docs.google.com/forms/
+              - generic [ref=e159]: Forms
+          - listitem [ref=e160]:
+            - link "Store, row 5 of 6 and column 3 of 3 in the second section" [ref=e161] [cursor=pointer]:
+              - /url: https://store.google.com?utm_source=app_launcher&utm_medium=google_oo&utm_campaign=GS107345
+              - generic [ref=e164]: Store
+          - listitem [ref=e165]:
+            - link "Chrome Web Store, row 6 of 6 and column 1 of 3 in the second section" [ref=e166] [cursor=pointer]:
+              - /url: https://chrome.google.com/webstore?utm_source=app-launcher
+              - generic [ref=e169]: Chrome Web Store
+          - listitem [ref=e170]:
+            - link "Google Analytics, row 6 of 6 and column 2 of 3 in the second section" [ref=e171] [cursor=pointer]:
+              - /url: https://analytics.google.com/analytics/web?utm_source=OGB&utm_medium=app
+              - generic [ref=e174]: Google Analytics
+          - listitem [ref=e175]:
+            - link "YouTube Music, row 6 of 6 and column 3 of 3 in the second section" [ref=e176] [cursor=pointer]:
+              - /url: https://music.youtube.com?utm_source=app_launcher
+              - generic [ref=e179]: YouTube Music
+      - link "More from Google (opens a new tab)" [ref=e181] [cursor=pointer]:
+        - /url: https://about.google/products/
+        - text: More from Google

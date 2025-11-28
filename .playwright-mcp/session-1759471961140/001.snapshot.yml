@@ -1,0 +1,42 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Login" [ref=e8] [cursor=pointer]:
+          - /url: /login
+        - link "Sign Up" [ref=e9] [cursor=pointer]:
+          - /url: /register
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - heading "Lexical Graph" [level=1] [ref=e15]
+        - generic [ref=e16]:
+          - generic [ref=e17]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e18]: 日本
+            - generic [ref=e19]: "Searching in: kanji"
+            - generic [ref=e20]:
+              - generic "Kanji (active)" [ref=e21]: K
+              - generic "Hiragana" [ref=e22]: H
+              - generic "Translation" [ref=e23]: T
+          - button "Search" [ref=e24]
+        - button "⚙️ Settings" [ref=e26]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - button "Graph" [ref=e29]:
+            - generic [ref=e30]: Graph
+          - button "Info" [ref=e31]:
+            - generic [ref=e32]: Info
+          - button "Lesson" [ref=e33]:
+            - generic [ref=e34]: Lesson
+        - generic [ref=e39]:
+          - generic [ref=e40]: No data found
+          - generic [ref=e41]: Check if the backend API is running at http://localhost:8000
+        - generic [ref=e43]:
+          - heading "Selected Node" [level=3] [ref=e44]
+          - generic [ref=e45]: Click a node to see details
+      - paragraph [ref=e46]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.

@@ -1,0 +1,149 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [active] [ref=e30]: 母御
+            - generic [ref=e104]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e253]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e254]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e449]:
+          - generic [ref=e450]:
+            - generic [ref=e451]: "Search node: 母御"
+            - generic [ref=e452]: "Nodes: 51"
+            - generic [ref=e453]: "Links: 194"
+            - combobox [ref=e454]:
+              - 'option "Depth: 1"'
+              - 'option "Depth: 2" [selected]'
+          - generic [ref=e455]:
+            - button "3D" [ref=e456]
+            - button "Fit" [ref=e457]
+            - button "Reset" [ref=e458]
+        - generic [ref=e65]:
+          - heading "Selected Node" [level=3] [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e462]:
+              - generic [ref=e463]: 母御
+              - generic [ref=e464]: ははご
+              - generic [ref=e465]: mother
+              - generic [ref=e467]:
+                - generic [ref=e468]: "POS: -"
+                - generic [ref=e469]: "Level: -"
+                - generic [ref=e470]: "Connections: 15"
+            - generic [ref=e471]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e472]
+              - generic [ref=e473]:
+                - 'button "お母さん おかあさん mother Synonym: 0.85 | POS: | Level:" [ref=e474]':
+                  - generic [ref=e475]: お母さん
+                  - generic [ref=e476]: おかあさん
+                  - generic [ref=e477]: mother
+                  - generic [ref=e478]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "母さん かあさん mother Synonym: 0.80 | POS: | Level:" [ref=e479]':
+                  - generic [ref=e480]: 母さん
+                  - generic [ref=e481]: かあさん
+                  - generic [ref=e482]: mother
+                  - generic [ref=e483]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "おふくろ おふくろ Mom Synonym: 0.75 | POS: | Level:" [ref=e484]':
+                  - generic [ref=e485]: おふくろ
+                  - generic [ref=e486]: おふくろ
+                  - generic [ref=e487]: Mom
+                  - generic [ref=e488]: "Synonym: 0.75 | POS: | Level:"
+                - 'button "母堂 ぼどう mother Synonym: 0.75 | POS: | Level:" [ref=e489]':
+                  - generic [ref=e490]: 母堂
+                  - generic [ref=e491]: ぼどう
+                  - generic [ref=e492]: mother
+                  - generic [ref=e493]: "Synonym: 0.75 | POS: | Level:"
+                - 'button "おっかあ おっかあ Mom Synonym: 0.70 | POS: | Level:" [ref=e494]':
+                  - generic [ref=e495]: おっかあ
+                  - generic [ref=e496]: おっかあ
+                  - generic [ref=e497]: Mom
+                  - generic [ref=e498]: "Synonym: 0.70 | POS: | Level:"
+                - 'button "母上 ははうえ mother Synonym: 0.70 | POS: | Level:" [ref=e499]':
+                  - generic [ref=e500]: 母上
+                  - generic [ref=e501]: ははうえ
+                  - generic [ref=e502]: mother
+                  - generic [ref=e503]: "Synonym: 0.70 | POS: | Level:"
+                - 'button "おっ母さん おっかあさん mom Synonym: 0.65 | POS: | Level:" [ref=e504]':
+                  - generic [ref=e505]: おっ母さん
+                  - generic [ref=e506]: おっかあさん
+                  - generic [ref=e507]: mom
+                  - generic [ref=e508]: "Synonym: 0.65 | POS: | Level:"
+                - 'button "母親 ははおや mother Synonym: 0.65 | POS: | Level:" [ref=e509]':
+                  - generic [ref=e510]: 母親
+                  - generic [ref=e511]: ははおや
+                  - generic [ref=e512]: mother
+                  - generic [ref=e513]: "Synonym: 0.65 | POS: | Level:"
+                - 'button "御母堂 ごぼどう mother Synonym: 0.60 | POS: | Level:" [ref=e514]':
+                  - generic [ref=e515]: 御母堂
+                  - generic [ref=e516]: ごぼどう
+                  - generic [ref=e517]: mother
+                  - generic [ref=e518]: "Synonym: 0.60 | POS: | Level:"
+                - 'button "実母 じつぼ biological mother Synonym: 0.60 | POS: | Level:" [ref=e519]':
+                  - generic [ref=e520]: 実母
+                  - generic [ref=e521]: じつぼ
+                  - generic [ref=e522]: biological mother
+                  - generic [ref=e523]: "Synonym: 0.60 | POS: | Level:"
+                - 'button "生母 せいぼ birth mother Synonym: 0.55 | POS: | Level:" [ref=e524]':
+                  - generic [ref=e525]: 生母
+                  - generic [ref=e526]: せいぼ
+                  - generic [ref=e527]: birth mother
+                  - generic [ref=e528]: "Synonym: 0.55 | POS: | Level:"
+                - 'button "ママ まま Mom Synonym: 0.55 | POS: | Level:" [ref=e529]':
+                  - generic [ref=e530]: ママ
+                  - generic [ref=e531]: まま
+                  - generic [ref=e532]: Mom
+                  - generic [ref=e533]: "Synonym: 0.55 | POS: | Level:"
+                - 'button "御袋 おふくろ mother Synonym: 0.55 | POS: | Level:" [ref=e534]':
+                  - generic [ref=e535]: 御袋
+                  - generic [ref=e536]: おふくろ
+                  - generic [ref=e537]: mother
+                  - generic [ref=e538]: "Synonym: 0.55 | POS: | Level:"
+                - 'button "養母 ようぼ foster mother Synonym: 0.40 | POS: | Level:" [ref=e539]':
+                  - generic [ref=e540]: 養母
+                  - generic [ref=e541]: ようぼ
+                  - generic [ref=e542]: foster mother
+                  - generic [ref=e543]: "Synonym: 0.40 | POS: | Level:"
+                - 'button "乳母 うば nursemaid Synonym: 0.30 | POS: | Level:" [ref=e544]':
+                  - generic [ref=e545]: 乳母
+                  - generic [ref=e546]: うば
+                  - generic [ref=e547]: nursemaid
+                  - generic [ref=e548]: "Synonym: 0.30 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

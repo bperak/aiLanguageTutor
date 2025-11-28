@@ -1,0 +1,44 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e27] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e29]:
+          - text: Lexical
+          - img [ref=e30]
+        - button "Grammar" [ref=e33]:
+          - text: Grammar
+          - img [ref=e34]
+        - link "Conversations" [ref=e36] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e38]:
+          - text: Profile
+          - img [ref=e39]
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - generic [ref=e52]:
+      - heading "Welcome back" [level=1] [ref=e53]
+      - paragraph [ref=e54]: Sign in to continue your learning journey.
+      - form "Login form" [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]: Username
+          - textbox "Username" [ref=e58]:
+            - /placeholder: yourname
+        - generic [ref=e59]:
+          - generic [ref=e60]: Password
+          - textbox "Password" [ref=e61]:
+            - /placeholder: ••••••••
+        - button "Sign in" [ref=e62]
+      - paragraph [ref=e63]:
+        - text: Don’t have an account?
+        - link "Create one" [ref=e64] [cursor=pointer]:
+          - /url: /register
+  - button "Open Next.js Dev Tools" [ref=e46] [cursor=pointer]:
+    - img [ref=e47]
+  - alert [ref=e50]
+  - generic [ref=e65]: "2"

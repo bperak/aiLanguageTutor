@@ -1,0 +1,72 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e18] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e20]:
+          - text: Lexical
+          - img [ref=e21]
+        - button "Grammar" [ref=e24]:
+          - text: Grammar
+          - img [ref=e25]
+        - link "Conversations" [ref=e27] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e29]:
+          - text: Profile
+          - img [ref=e30]
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - button "Back to Grammar" [ref=e32]:
+          - img
+          - text: Back to Grammar
+        - generic [ref=e34]:
+          - heading "～は～です" [level=1] [ref=e35]:
+            - text: ～は～です
+            - button [ref=e36]:
+              - img
+          - paragraph [ref=e37]: ~ha~desu
+          - generic [ref=e38]:
+            - generic [ref=e39]: 入門(りかい)
+            - generic [ref=e40]: 説明
+            - generic [ref=e41]: 1 自分と家族
+      - generic [ref=e42]:
+        - tablist [ref=e43]:
+          - tab "Overview" [selected] [ref=e44]
+          - tab "Similar Patterns" [ref=e45]
+          - tab "Prerequisites" [ref=e46]
+          - tab "Practice" [ref=e47]
+          - tab "🤖 AI Chat" [ref=e48]
+        - tabpanel "Overview" [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e52]: Pattern Details
+            - generic [ref=e53]:
+              - generic [ref=e54]:
+                - heading "Textbook Form" [level=3] [ref=e55]
+                - generic [ref=e56]:
+                  - paragraph [ref=e57]: N1はN2です（か）／じゃないです Nはなんですか
+                  - paragraph [ref=e58]: N1haN2desu(ka)/janaidesu Nhanandesuka
+              - generic [ref=e59]:
+                - heading "Example Sentence" [level=3] [ref=e60]
+                - generic [ref=e61]:
+                  - paragraph [ref=e62]: 私はカーラです。
+                  - paragraph [ref=e63]: watashihakaaradesu.
+                  - button "Play Audio" [ref=e64]:
+                    - img
+                    - text: Play Audio
+              - generic [ref=e65]:
+                - generic [ref=e66]:
+                  - heading "Topic" [level=3] [ref=e67]
+                  - paragraph [ref=e68]: 2 わたし
+                - generic [ref=e69]:
+                  - heading "Lesson" [level=3] [ref=e70]
+                  - paragraph [ref=e71]: 3 どうぞよろしく
+  - button "Open Next.js Dev Tools" [ref=e77] [cursor=pointer]:
+    - img [ref=e78]
+  - alert [ref=e81]

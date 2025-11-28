@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "manifest.schema.json",
+  "type": "object",
+  "required": ["can_do_id", "images"],
+  "properties": {
+    "can_do_id": {"type": "string"},
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["image_id", "path"],
+        "properties": {
+          "image_id": {"type": "string"},
+          "path": {"type": "string"},
+          "alt_hr": {"type": "string"},
+          "anchors": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "attach_to_sections": {
+      "type": "object",
+      "additionalProperties": {"type": "array", "items": {"type": "string"}}
+    }
+  }
+}
+
+

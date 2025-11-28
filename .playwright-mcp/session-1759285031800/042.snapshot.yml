@@ -1,0 +1,56 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e20] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e22]:
+          - text: Lexical
+          - img [ref=e23]
+        - button "Grammar" [ref=e26]:
+          - text: Grammar
+          - img [ref=e27]
+        - link "Conversations" [ref=e29] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e31]:
+          - text: Profile
+          - img [ref=e32]
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - heading "Your Learning Dashboard" [level=1] [ref=e15]
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]: Total Sessions
+            - generic [ref=e38]: All time
+          - paragraph [ref=e40]: "0"
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: Total Messages
+            - generic [ref=e44]: All time
+          - paragraph [ref=e46]: "0"
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: Last Session
+            - generic [ref=e50]: Most recent
+          - paragraph [ref=e52]: —
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - generic [ref=e56]: Messages per day
+            - generic [ref=e57]: Last 14 days
+          - application [ref=e62]
+        - generic [ref=e63]:
+          - generic [ref=e64]:
+            - generic [ref=e65]: Sessions per week
+            - generic [ref=e66]: Last 8 weeks
+          - application [ref=e71]
+      - paragraph [ref=e72]: No recent sessions yet. Start a conversation to see analytics here.
+  - button "Open Next.js Dev Tools" [ref=e78] [cursor=pointer]:
+    - img [ref=e79]
+  - alert [ref=e82]

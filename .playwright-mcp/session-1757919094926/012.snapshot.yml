@@ -1,0 +1,102 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e8]:
+          - link "SyntAgent" [ref=e10] [cursor=pointer]:
+            - /url: https://syntagent.com/
+            - img "SyntAgent" [ref=e11]
+          - heading [level=1]
+        - generic [ref=e14]:
+          - generic: 
+          - generic [ref=e15]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - link "HR" [ref=e19] [cursor=pointer]:
+                  - /url: https://syntagent.com/hr/
+                  - generic [ref=e20]: HR
+            - generic:
+              - generic: 
+    - generic [ref=e26]:
+      - generic [ref=e36]:
+        - heading "Empowering" [level=1] [ref=e37]
+        - heading "Innovation" [level=1] [ref=e38]
+        - heading "With AI-Driven" [level=1] [ref=e39]
+        - heading "Solutions" [level=1] [ref=e40]
+      - generic [ref=e56]:
+        - generic [ref=e59]: 
+        - heading "Innovation" [level=2] [ref=e62]: Innovation
+    - generic [ref=e77]:
+      - generic [ref=e82]:
+        - generic [ref=e85]: 
+        - heading "About" [level=3] [ref=e88]: About
+      - heading "We are a forward-thinking AI solutions provider, combining academic excellence and industry expertise to transform ideas into impactful results." [level=2] [ref=e92]:
+        - generic [ref=e93]:
+          - text: We are a forward-thinking AI solutions provider, combining
+          - mark [ref=e94]: academic excellence
+          - text: and
+          - mark [ref=e95]: industry expertise
+          - text: to transform ideas into
+        - text: impactful results.
+    - generic [ref=e111]:
+      - generic [ref=e117]:
+        - generic [ref=e120]: 
+        - heading "Projects" [level=3] [ref=e123]: Projects
+      - heading "Sample of our recent projects featuring use of artificial intelligence." [level=4] [ref=e127]
+      - generic [ref=e128]:
+        - button [ref=e129] [cursor=pointer]:
+          - img [ref=e130]
+        - generic [ref=e133]:
+          - button [ref=e134] [cursor=pointer]
+          - button [ref=e135] [cursor=pointer]
+          - button [ref=e136] [cursor=pointer]
+          - button [ref=e137] [cursor=pointer]
+          - button [ref=e138] [cursor=pointer]
+          - button [ref=e139] [cursor=pointer]
+          - button [ref=e140] [cursor=pointer]
+          - button [ref=e141] [cursor=pointer]
+        - button [ref=e143] [cursor=pointer]:
+          - img [ref=e144]
+    - contentinfo [ref=e155]:
+      - generic [ref=e156]:
+        - generic [ref=e157]:
+          - heading [level=2] [ref=e161]
+          - generic [ref=e164]:
+            - heading "Contact Info" [level=3] [ref=e165]
+            - generic [ref=e166]:
+              - paragraph [ref=e167]:
+                - link "info@syntagent.com" [ref=e168] [cursor=pointer]:
+                  - /url: info@syntagent.com
+                  - strong [ref=e169]: info@syntagent.com
+              - paragraph [ref=e170]:
+                - link "Radmile Matejčić 10, HR-51000 Rijeka" [ref=e171] [cursor=pointer]:
+                  - /url: "#"
+              - paragraph [ref=e172]:
+                - link "Croatia, EU" [ref=e173] [cursor=pointer]:
+                  - /url: "#"
+              - paragraph [ref=e174]:
+                - link "+385 98 622793" [ref=e175] [cursor=pointer]:
+                  - /url: "#"
+        - generic [ref=e179]:
+          - paragraph [ref=e180]: Copyright © 2025. All rights reserved.
+          - paragraph [ref=e181]: Synatagent d.o.o.
+  - generic [ref=e184]:
+    - generic [ref=e185]:
+      - img "Brand" [ref=e187]
+      - generic [ref=e188]:
+        - button "Options" [ref=e189]:
+          - img [ref=e190]
+        - button "Close" [ref=e192]:
+          - img [ref=e193]
+    - generic [ref=e196]:
+      - generic [ref=e199]:
+        - paragraph [ref=e200]: We’re excited to have you here—where academic excellence meets industry expertise to power AI-driven innovation. At SyntAgent, we transform ideas into impactful solutions by automating data collection, enabling advanced natural language processing, and tailoring AI applications for public administration, enterprises, and academia. Join us on our journey as we empower organizations to harness the full potential of artificial intelligence for transformative results.
+        - generic [ref=e201]:
+          - button "What is Syntagent?" [ref=e202] [cursor=pointer]
+          - button "How to start a collaboration with Syntagent?" [ref=e203] [cursor=pointer]
+      - generic [ref=e208]:
+        - textbox "Send a message" [active] [ref=e209]: k
+        - button "Send message" [ref=e210] [cursor=pointer]:
+          - img [ref=e211]
+          - generic [ref=e213]: Send message
+    - button "Reset Chat" [ref=e216]

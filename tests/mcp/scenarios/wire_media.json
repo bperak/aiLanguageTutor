@@ -1,0 +1,16 @@
+{
+  "name": "LessonPlan has section media per manifest",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "() => fetch('http://localhost:8000/api/lessons/activate?can_do_id=JFまるごと:13').then(r => r.json())",
+      "saveAs": "lp"
+    },
+    {
+      "action": "assert",
+      "expression": "lp.sections.some(s => s.type==='explain' && Array.isArray(s.media) && s.media.length>0)"
+    }
+  ]
+}
+
+

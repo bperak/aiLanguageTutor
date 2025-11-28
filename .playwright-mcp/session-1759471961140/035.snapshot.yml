@@ -1,0 +1,251 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: 祖母
+            - generic [ref=e312]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e363]: K
+              - generic "Hiragana" [ref=e307]: H
+              - generic "Translation" [ref=e364]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e280]:
+        - generic [ref=e281]:
+          - generic [ref=e282]: "Color by:"
+          - combobox [ref=e283]:
+            - option "Domain" [selected]
+            - option "POS"
+            - option "Level"
+        - generic [ref=e284]:
+          - generic [ref=e285]: "Search Fields:"
+          - button "Kanji, Hiragana, Translation ▼" [ref=e287]:
+            - generic [ref=e288]: Kanji, Hiragana, Translation
+            - generic [ref=e289]: ▼
+        - generic [ref=e290]:
+          - generic [ref=e291]: "Node Labels:"
+          - button "Kanji ▼" [ref=e293]:
+            - generic [ref=e294]: Kanji
+            - generic [ref=e295]: ▼
+        - generic [ref=e296]:
+          - generic [ref=e297]:
+            - checkbox "Exact Match" [checked] [ref=e298]
+            - generic [ref=e299]: Exact Match
+          - button "✕ Close" [ref=e300]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e365]: "Error: Request failed with status code 404"
+        - generic [ref=e65]:
+          - heading "Selected Node" [level=3] [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]: 祖母
+              - generic [ref=e70]: そぼ
+              - generic [ref=e71]: grandmother
+              - generic [ref=e73]:
+                - generic [ref=e74]: "POS: -"
+                - generic [ref=e75]: "Level: -"
+                - generic [ref=e76]: "Connections: 17"
+            - generic [ref=e77]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e78]
+              - generic [ref=e79]:
+                - 'button "おばあさん おばあさん grandmother Synonym: 0.95 | POS: | Level:" [ref=e366]':
+                  - generic [ref=e81]: おばあさん
+                  - generic [ref=e82]: おばあさん
+                  - generic [ref=e83]: grandmother
+                  - generic [ref=e84]: "Synonym: 0.95 | POS: | Level:"
+                - 'button "おばあちゃん おばあちゃん grandma Synonym: 0.90 | POS: | Level:" [ref=e367]':
+                  - generic [ref=e348]: おばあちゃん
+                  - generic [ref=e349]: おばあちゃん
+                  - generic [ref=e350]: grandma
+                  - generic [ref=e351]: "Synonym: 0.90 | POS: | Level:"
+                - 'button "祖母様 そぼさま grandmother Synonym: 0.85 | POS: | Level:" [ref=e368]':
+                  - generic [ref=e369]: 祖母様
+                  - generic [ref=e370]: そぼさま
+                  - generic [ref=e371]: grandmother
+                  - generic [ref=e372]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "おばあさま おばあさま grandmother Synonym: 0.85 | POS: | Level:" [ref=e373]':
+                  - generic [ref=e374]: おばあさま
+                  - generic [ref=e375]: おばあさま
+                  - generic [ref=e376]: grandmother
+                  - generic [ref=e377]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "祖母さん そぼさん grandmother Synonym: 0.80 | POS: | Level:" [ref=e378]':
+                  - generic [ref=e379]: 祖母さん
+                  - generic [ref=e380]: そぼさん
+                  - generic [ref=e381]: grandmother
+                  - generic [ref=e382]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "祖宗 そそう ancestor Synonym: 0.80 | POS: | Level:" [ref=e383]':
+                  - generic [ref=e384]: 祖宗
+                  - generic [ref=e385]: そそう
+                  - generic [ref=e386]: ancestor
+                  - generic [ref=e387]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "祖父母 そふぼ grandparents Synonym: 0.80 | POS: | Level:" [ref=e388]':
+                  - generic [ref=e389]: 祖父母
+                  - generic [ref=e390]: そふぼ
+                  - generic [ref=e391]: grandparents
+                  - generic [ref=e392]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "おばあ おばあ grandmother Synonym: 0.75 | POS: | Level:" [ref=e393]':
+                  - generic [ref=e394]: おばあ
+                  - generic [ref=e395]: おばあ
+                  - generic [ref=e396]: grandmother
+                  - generic [ref=e397]: "Synonym: 0.75 | POS: | Level:"
+                - 'button "婆 ばあ old woman Synonym: 0.70 | POS: | Level:" [ref=e398]':
+                  - generic [ref=e399]: 婆
+                  - generic [ref=e400]: ばあ
+                  - generic [ref=e401]: old woman
+                  - generic [ref=e402]: "Synonym: 0.70 | POS: | Level:"
+                - 'button "祖先 そせん ancestor Synonym: 0.70 | POS: | Level:" [ref=e403]':
+                  - generic [ref=e404]: 祖先
+                  - generic [ref=e405]: そせん
+                  - generic [ref=e406]: ancestor
+                  - generic [ref=e407]: "Synonym: 0.70 | POS: | Level:"
+                - 'button "従兄弟 いとこ cousin Synonym: 0.60 | POS: | Level:" [ref=e408]':
+                  - generic [ref=e409]: 従兄弟
+                  - generic [ref=e410]: いとこ
+                  - generic [ref=e411]: cousin
+                  - generic [ref=e412]: "Synonym: 0.60 | POS: | Level:"
+                - 'button "祖父 そふ grandfather Synonym: 0.50 | POS: | Level:" [ref=e413]':
+                  - generic [ref=e414]: 祖父
+                  - generic [ref=e415]: そふ
+                  - generic [ref=e416]: grandfather
+                  - generic [ref=e417]: "Synonym: 0.50 | POS: | Level:"
+                - 'button "縁者 えんじゃ relative Synonym: 0.45 | POS: | Level:" [ref=e418]':
+                  - generic [ref=e419]: 縁者
+                  - generic [ref=e420]: えんじゃ
+                  - generic [ref=e421]: relative
+                  - generic [ref=e422]: "Synonym: 0.45 | POS: | Level:"
+                - 'button "従姉 じゅうし cousin (older female) Synonym: 0.40 | POS: | Level:" [ref=e423]':
+                  - generic [ref=e424]: 従姉
+                  - generic [ref=e425]: じゅうし
+                  - generic [ref=e426]: cousin (older female)
+                  - generic [ref=e427]: "Synonym: 0.40 | POS: | Level:"
+                - 'button "従弟 じゅうてい cousin Synonym: 0.35 | POS: | Level:" [ref=e428]':
+                  - generic [ref=e429]: 従弟
+                  - generic [ref=e430]: じゅうてい
+                  - generic [ref=e431]: cousin
+                  - generic [ref=e432]: "Synonym: 0.35 | POS: | Level:"
+                - 'button "伯母 おば aunt Synonym: 0.20 | POS: | Level:" [ref=e433]':
+                  - generic [ref=e434]: 伯母
+                  - generic [ref=e435]: おば
+                  - generic [ref=e436]: aunt
+                  - generic [ref=e437]: "Synonym: 0.20 | POS: | Level:"
+                - 'button "孫息子 まごむすこ grandson Synonym: 0.20 | POS: | Level:" [ref=e438]':
+                  - generic [ref=e439]: 孫息子
+                  - generic [ref=e440]: まごむすこ
+                  - generic [ref=e441]: grandson
+                  - generic [ref=e442]: "Synonym: 0.20 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - generic [active]:
+    - generic [ref=e445]:
+      - generic [ref=e446]:
+        - generic [ref=e447]:
+          - navigation [ref=e448]:
+            - button "previous" [disabled] [ref=e449]:
+              - img "previous" [ref=e450]
+            - generic [ref=e452]:
+              - generic [ref=e453]: 1/
+              - text: "1"
+            - button "next" [disabled] [ref=e454]:
+              - img "next" [ref=e455]
+          - img
+        - generic [ref=e457]:
+          - link "Next.js 15.5.2 (stale) Webpack" [ref=e458] [cursor=pointer]:
+            - /url: https://nextjs.org/docs/messages/version-staleness
+            - img [ref=e459]
+            - generic "There is a newer version (15.5.4) available, upgrade recommended!" [ref=e461]: Next.js 15.5.2 (stale)
+            - generic [ref=e462]: Webpack
+          - img
+      - dialog "Console AxiosError" [ref=e464]:
+        - generic [ref=e467]:
+          - generic [ref=e468]:
+            - generic [ref=e469]:
+              - generic [ref=e471]: Console AxiosError
+              - generic [ref=e472]:
+                - button "Copy Error Info" [ref=e473] [cursor=pointer]:
+                  - img [ref=e474]
+                - button "No related documentation found" [disabled] [ref=e476]:
+                  - img [ref=e477]
+                - link "Learn more about enabling Node.js inspector for server code with Chrome DevTools" [ref=e479] [cursor=pointer]:
+                  - /url: https://nextjs.org/docs/app/building-your-application/configuring/debugging#server-side-code
+                  - img [ref=e480]
+            - paragraph [ref=e489]: Request failed with status code 404
+          - generic [ref=e490]:
+            - generic [ref=e491]:
+              - paragraph [ref=e493]:
+                - img [ref=e495]
+                - generic [ref=e499]: src/lib/api.ts (20:16) @ async apiGet
+                - button "Open in editor" [ref=e500] [cursor=pointer]:
+                  - img [ref=e502]
+              - generic [ref=e505]:
+                - generic [ref=e506]: "18 | const authToken = attachAuth ? (token ?? (typeof window !== \"undefined\" ? localStorage.getItem(\"token\") ?? undefined : undefined)) : undefined"
+                - generic [ref=e507]: "19 | if (authToken) headers[\"Authorization\"] = `Bearer ${authToken}`"
+                - generic [ref=e508]: "> 20 | const resp = await axios.get<T>(`${BASE_URL}${path}`, { ...(config || {}), headers: { ...(config?.headers || {}), ...headers } })"
+                - generic [ref=e509]: "| ^"
+                - generic [ref=e510]: 21 | return resp.data
+                - generic [ref=e511]: "22 | }"
+                - generic [ref=e512]: 23 |
+            - generic [ref=e513]:
+              - generic [ref=e514]:
+                - paragraph [ref=e515]:
+                  - text: Call Stack
+                  - generic [ref=e516]: "5"
+                - button "Show 3 ignore-listed frame(s)" [ref=e517] [cursor=pointer]:
+                  - text: Show 3 ignore-listed frame(s)
+                  - img [ref=e518]
+              - generic [ref=e520]:
+                - generic [ref=e521]:
+                  - text: async apiGet
+                  - button "Open async apiGet in editor" [ref=e522] [cursor=pointer]:
+                    - img [ref=e523]
+                - text: src/lib/api.ts (20:16)
+              - generic [ref=e525]:
+                - generic [ref=e526]:
+                  - text: async handleNodeClick
+                  - button "Open async handleNodeClick in editor" [ref=e527] [cursor=pointer]:
+                    - img [ref=e528]
+                - text: src/components/lexical/LexicalGraph2D.tsx (301:22)
+        - generic [ref=e530]:
+          - generic [ref=e531]: "1"
+          - generic [ref=e532]: "2"
+    - generic [ref=e90] [cursor=pointer]:
+      - button "Open Next.js Dev Tools" [ref=e91]:
+        - img [ref=e92]
+      - generic [ref=e127]:
+        - button "Open issues overlay" [ref=e128]:
+          - generic [ref=e129]:
+            - generic [ref=e130]: "0"
+            - generic [ref=e131]: "1"
+          - generic [ref=e132]: Issue
+        - button "Collapse issues badge" [ref=e133]:
+          - img [ref=e134]
+  - alert [ref=e95]

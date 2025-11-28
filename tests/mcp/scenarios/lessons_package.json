@@ -1,0 +1,18 @@
+{
+  "name": "Lessons Package returns combined data",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "async () => { const r = await fetch('http://backend:8000/api/v1/lexical/lessons/package?can_do_id=JF%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8:13'); return r.json(); }",
+      "saveAs": "pkg"
+    },
+    {
+      "action": "assert",
+      "expression": "pkg && pkg.can_do_id === 'JFまるごと:13' && pkg.lesson_plan && typeof pkg.lesson_plan.title === 'string' && Array.isArray(pkg.exercises) && Array.isArray(pkg.pragmatics)"
+    }
+  ]
+}
+
+
+
+

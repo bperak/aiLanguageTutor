@@ -6,7 +6,7 @@ routers, and configuration for the AI Language Tutor platform.
 """
 
 from contextlib import asynccontextmanager
-from typing import AsyncGenerator
+from typing import AsyncGenerator, Dict, Any
 
 import structlog
 from fastapi import FastAPI
@@ -16,6 +16,7 @@ from fastapi.responses import JSONResponse
 from app.api.v1.api import api_router
 from app.core.config import settings
 from app.db import close_db_connections, init_db_connections
+from app.services.lexical_lessons_service import lexical_lessons
 
 
 logger = structlog.get_logger()
@@ -58,14 +59,25 @@ def create_application() -> FastAPI:
         lifespan=lifespan,
     )
     
-    # Configure CORS
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=settings.CORS_ORIGINS,
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
+    # Configure CORS (widen in DEBUG to simplify Docker-based E2E tests)
+    if settings.DEBUG:
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origins=["http://localhost:3000", "http://localhost:3001"],  # Specific origins when credentials are used
+            allow_origin_regex=r"https?://localhost(:\d+)?",
+            allow_credentials=True,  # Allow credentials for cookie-based auth
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
+    else:
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origins=settings.CORS_ORIGINS,
+            allow_origin_regex=r"https?://localhost(:\d+)?",
+            allow_credentials=True,
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
     
     # Include API router
     app.include_router(api_router, prefix="/api/v1")
@@ -107,3 +119,14 @@ async def root() -> dict[str, str]:
         "docs": "/docs",
         "health": "/health",
     }
+
+
+@app.get("/api/lessons/activate")
+async def activate_lesson_compat(can_do_id: str) -> Dict[str, Any]:
+    """
+    Compatibility endpoint expected by MCP scenarios:
+    /api/lessons/activate?can_do_id=...
+
+    Internally delegates to lexical_lessons.activate_cando.
+    """
+    return await lexical_lessons.activate_cando(can_do_id=can_do_id)

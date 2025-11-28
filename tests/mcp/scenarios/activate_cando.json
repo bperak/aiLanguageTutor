@@ -1,0 +1,20 @@
+{
+  "name": "Activate CanDo returns LessonPlan with media",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "http://localhost:3000"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => fetch('http://localhost:8000/api/lessons/activate?can_do_id=JFまるごと:13').then(r => r.json())",
+      "saveAs": "lp"
+    },
+    {
+      "action": "assert",
+      "expression": "lp.can_do_id === 'JFまるごと:13' && Array.isArray(lp.sections) && Array.isArray(lp.illustrations)"
+    }
+  ]
+}
+
+

@@ -126,6 +126,7 @@
 
 #### Documentation Tasks
 - [ ] Update PLANNING.md with Phase 3 details
+- [x] Add process schema diagrams (docs/process-schema.md)
 - [ ] Create frontend development guide
 - [ ] Document UI component library
 - [ ] Add deployment documentation
@@ -456,6 +457,9 @@
 - [ ] Add auth guard/redirect to `dashboard` when token missing
 - [ ] Add logout control and token invalidation UI
 - [ ] Add `.env` var `NEXT_PUBLIC_API_BASE_URL` to `.env.template` and README
+- [x] Investigate and diagnose why the entire site is running slowly, checking database queries, API performance, and resource usage. (Discovered: 2025-10-25)
+- [x] Review and improve CanDo lesson generation process, addressing the two layers of code and why it performs poorly. (Discovered: 2025-10-25)
+  - Implemented schema-driven two-stage generation with batching, caching TTL, deterministic fallbacks, and validators.
 
 ---
 

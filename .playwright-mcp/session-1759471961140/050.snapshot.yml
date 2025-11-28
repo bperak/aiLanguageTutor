@@ -1,0 +1,94 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [active] [ref=e30]: 日章
+            - generic [ref=e31]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e33]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e35]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e243]:
+          - generic [ref=e244]:
+            - generic [ref=e245]: "Search node: 日章"
+            - generic [ref=e246]: "Nodes: 5"
+            - generic [ref=e247]: "Links: 18"
+            - combobox [ref=e248]:
+              - 'option "Depth: 1" [selected]'
+              - 'option "Depth: 2"'
+          - generic [ref=e249]:
+            - button "3D" [ref=e250]
+            - button "Fit" [ref=e251]
+            - button "Reset" [ref=e252]
+        - generic [ref=e65]:
+          - heading "Selected Node" [level=3] [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]: 日章
+              - generic [ref=e70]: にっしょう
+              - generic [ref=e71]: sun emblem
+              - generic [ref=e73]:
+                - generic [ref=e74]: "POS: -"
+                - generic [ref=e75]: "Level: -"
+                - generic [ref=e76]: "Connections: 4"
+            - generic [ref=e77]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e78]
+              - generic [ref=e79]:
+                - 'button "太陽 たいよう sun Synonym: 0.85 | POS: | Level:" [ref=e253]':
+                  - generic [ref=e81]: 太陽
+                  - generic [ref=e82]: たいよう
+                  - generic [ref=e83]: sun
+                  - generic [ref=e84]: "Synonym: 0.85 | POS: | Level:"
+                - 'button "日輪 にちりん sun Synonym: 0.80 | POS: | Level:" [ref=e254]':
+                  - generic [ref=e188]: 日輪
+                  - generic [ref=e189]: にちりん
+                  - generic [ref=e190]: sun
+                  - generic [ref=e191]: "Synonym: 0.80 | POS: | Level:"
+                - 'button "日光 にっこう sunlight Synonym: 0.75 | POS: | Level:" [ref=e255]':
+                  - generic [ref=e193]: 日光
+                  - generic [ref=e194]: にっこう
+                  - generic [ref=e195]: sunlight
+                  - generic [ref=e196]: "Synonym: 0.75 | POS: | Level:"
+                - 'button "日の丸 ひのまる Rising Sun Flag Synonym: 0.65 | POS: | Level:" [ref=e256]':
+                  - generic [ref=e198]: 日の丸
+                  - generic [ref=e199]: ひのまる
+                  - generic [ref=e200]: Rising Sun Flag
+                  - generic [ref=e201]: "Synonym: 0.65 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

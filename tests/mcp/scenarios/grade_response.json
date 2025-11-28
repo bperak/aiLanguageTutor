@@ -1,0 +1,21 @@
+{
+  "name": "GradeResponse minimal",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "() => fetch('http://localhost:8000/api/v1/lexical/lessons/generate-exercises?can_do_id=JFまるごと:13&n=1', {method:'POST'}).then(r => r.json())",
+      "saveAs": "ex"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => (async()=>{ const ex = await (await fetch('http://localhost:8000/api/v1/lexical/lessons/generate-exercises?can_do_id=JFまるごと:13&n=1', {method:'POST'})).json(); const ex0 = ex.exercises[0]; return fetch('http://localhost:8000/api/v1/lexical/lessons/grade', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ exercise: ex0, answer: 'きょうとに行きました。' }) }).then(r=>r.json()); })()",
+      "saveAs": "gr"
+    },
+    {
+      "action": "assert",
+      "expression": "typeof gr.score === 'number' && gr.score >= 0 && gr.score <= 1 && typeof gr.type === 'string'"
+    }
+  ]
+}
+
+

@@ -1,0 +1,96 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e20] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e22]:
+          - text: Lexical
+          - img [ref=e23]
+        - button "Grammar" [ref=e26]:
+          - text: Grammar
+          - img [ref=e27]
+        - link "Conversations" [ref=e29] [cursor=pointer]:
+          - /url: /conversations
+        - link "CanDo" [ref=e30] [cursor=pointer]:
+          - /url: /cando
+        - button "Profile" [ref=e32]:
+          - text: Profile
+          - img [ref=e33]
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - heading "Your Learning Dashboard" [level=1] [ref=e15]
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: Total Sessions
+            - generic [ref=e39]: All time
+          - paragraph [ref=e41]: "9"
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - generic [ref=e44]: Total Messages
+            - generic [ref=e45]: All time
+          - paragraph [ref=e47]: "181"
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: Last Session
+            - generic [ref=e51]: Most recent
+          - paragraph [ref=e53]: 8/17/2025
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - generic [ref=e57]: Messages per day
+            - generic [ref=e58]: Last 14 days
+          - application [ref=e63]:
+            - generic [ref=e65]:
+              - generic [ref=e67]: "25"
+              - generic [ref=e69]: "50"
+              - generic [ref=e71]: "75"
+              - generic [ref=e73]: "100"
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]: Sessions per week
+            - generic [ref=e79]: Last 8 weeks
+          - application [ref=e84]:
+            - generic [ref=e86]:
+              - generic [ref=e88]: "2"
+              - generic [ref=e90]: "4"
+              - generic [ref=e92]: "6"
+              - generic [ref=e94]: "8"
+      - generic [ref=e102]:
+        - heading "Recent Sessions" [level=2] [ref=e103]
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - generic [ref=e106]:
+              - generic [ref=e107]: Visiting home
+              - generic [ref=e108]: 8/17/2025, 8:50:57 PM
+            - generic [ref=e110]: "Messages: 57"
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - generic [ref=e113]: New chat
+              - generic [ref=e114]: 8/17/2025, 8:46:16 PM
+            - generic [ref=e116]: "Messages: 9"
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - generic [ref=e119]: Doručak
+              - generic [ref=e120]: 8/17/2025, 6:17:32 PM
+            - generic [ref=e122]: "Messages: 60"
+          - generic [ref=e123]:
+            - generic [ref=e124]:
+              - generic [ref=e125]: New chat
+              - generic [ref=e126]: 8/9/2025, 7:20:57 AM
+            - generic [ref=e128]: "Messages: 11"
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - generic [ref=e131]: s
+              - generic [ref=e132]: 8/9/2025, 7:18:52 AM
+            - generic [ref=e134]: "Messages: 6"
+  - button "Open Next.js Dev Tools" [ref=e140] [cursor=pointer]:
+    - img [ref=e141]
+  - alert [ref=e144]
+  - generic [ref=e145]: "2"

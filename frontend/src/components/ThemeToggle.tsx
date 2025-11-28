@@ -20,8 +20,13 @@ export default function ThemeToggle() {
   }
 
   return (
-    <button onClick={toggle} className="text-sm px-2 py-1 rounded border hover:bg-slate-50" aria-label="Toggle theme">
-      {theme === "light" ? "Dark" : "Light"}
+    <button 
+      onClick={toggle} 
+      className="px-2 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" 
+      aria-label="Toggle theme"
+      title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+    >
+      {theme === "light" ? "🌙" : "☀️"}
     </button>
   )
 }

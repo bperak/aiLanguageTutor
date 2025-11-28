@@ -1,0 +1,47 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e27] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e29]:
+          - text: Lexical
+          - img [ref=e30]
+        - button "Grammar" [ref=e33]:
+          - text: Grammar
+          - img [ref=e34]
+        - link "Conversations" [ref=e36] [cursor=pointer]:
+          - /url: /conversations
+        - link "CanDo" [ref=e37] [cursor=pointer]:
+          - /url: /cando
+        - button "Profile" [ref=e39]:
+          - text: Profile
+          - img [ref=e40]
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - heading "Welcome back" [level=1] [ref=e15]
+      - paragraph [ref=e16]: Sign in to continue your learning journey.
+      - form "Login form" [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]: Username
+          - textbox "Username" [active] [ref=e20]:
+            - /placeholder: yourname
+          - paragraph [ref=e52]: Username required
+        - generic [ref=e21]:
+          - generic [ref=e22]: Password
+          - textbox "Password" [ref=e23]:
+            - /placeholder: ••••••••
+          - paragraph [ref=e53]: Password required
+        - button "Sign in" [ref=e24]
+      - paragraph [ref=e25]:
+        - text: Don’t have an account?
+        - link "Create one" [ref=e26] [cursor=pointer]:
+          - /url: /register
+  - button "Open Next.js Dev Tools" [ref=e47] [cursor=pointer]:
+    - img [ref=e48]
+  - alert [ref=e51]

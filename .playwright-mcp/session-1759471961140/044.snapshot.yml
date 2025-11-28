@@ -1,0 +1,87 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [active] [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: mother
+            - generic [ref=e104]: "Searching in: translation"
+            - generic [ref=e32]:
+              - generic "Kanji" [ref=e105]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation (active)" [ref=e106]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e49]:
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e114]: "Search node: おばあさん"
+              - generic [ref=e115]: "Nodes: 3"
+              - generic [ref=e116]: "Links: 6"
+              - combobox [ref=e117]:
+                - 'option "Depth: 1" [selected]'
+                - 'option "Depth: 2"'
+            - generic [ref=e118]:
+              - button "3D" [ref=e119]
+              - button "Fit" [ref=e120]
+              - button "Reset" [ref=e121]
+          - generic [ref=e62]:
+            - generic: 祖父母 (そふぼ) — grandparents
+        - generic [ref=e65]:
+          - heading "Selected Node" [level=3] [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]: おばあさん
+              - generic [ref=e70]: おばあさん
+              - generic [ref=e71]: grandmother
+              - generic [ref=e73]:
+                - generic [ref=e74]: "POS: -"
+                - generic [ref=e75]: "Level: -"
+                - generic [ref=e76]: "Connections: 2"
+            - generic [ref=e77]:
+              - heading "Neighbors (Synonyms)" [level=4] [ref=e78]
+              - generic [ref=e79]:
+                - 'button "祖母 そぼ grandmother Synonym: 0.95 | POS: | Level:" [ref=e122]':
+                  - generic [ref=e81]: 祖母
+                  - generic [ref=e82]: そぼ
+                  - generic [ref=e83]: grandmother
+                  - generic [ref=e84]: "Synonym: 0.95 | POS: | Level:"
+                - 'button "祖父母 そふぼ grandparents Synonym: 0.70 | POS: | Level:" [ref=e123]':
+                  - generic [ref=e124]: 祖父母
+                  - generic [ref=e125]: そふぼ
+                  - generic [ref=e126]: grandparents
+                  - generic [ref=e127]: "Synonym: 0.70 | POS: | Level:"
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

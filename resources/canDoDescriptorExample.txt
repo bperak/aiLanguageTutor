@@ -1,0 +1,661 @@
+A2 CanDo-driven lesson example and schema walkthrough
+
+Target can_do_id: "JFまるごと:13"  (A2, domain: 旅行と交通)
+UI language: hr  | L1: hr  | L2: ja
+
+Schema overview (what happens at each stage)
+- ActivateCanDo: Load CanDoDescriptor and linked Level/Topic/Unit; fetch linked Word and GrammarPattern; if missing, propose candidates. Return LessonPlan JSON with sections: explain, socratic, micro_ex, mini_quiz, final_task, reflection. Log lesson_activated.
+- GenerateExercises: Produce diverse task types (fill_in, reorder, dialog_build, short_write, listen_repeat) with explicit constraints and target words/patterns.
+- GradeResponse: Score coverage/cohesion/language; return hints and next_actions; log attempt/score with timestamps.
+- UpdateMastery: Update (:User)-[:MASTERED {p, ts}]->(:CanDoDescriptor) with p_new = p_old + K*(overall - p_old), K bounded; return status bucket.
+- RecommendNext: Combine prerequisites, current mastery p, and textbook mappings; return 3–5 candidates with reasons and optional (Textbook→Unit→CanDo) path.
+
+LessonPlan JSON (ActivateCanDo output)
+
+{
+  "can_do_id": "JFまるごと:13",
+  "title": "A2: Pričaj o putovanju i poklonima",
+  "ui_lang": "hr",
+  "l1_lang": "hr",
+  "l2_lang": "ja",
+  "objectives": [
+    "Reći gdje si bio/la i što se dogodilo",
+    "Predati suvenir uz kratak komentar (ja)"
+  ],
+  "lexicon": [
+    {
+      "word_id": "w-omiyage",
+      "lemma": "おみやげ",
+      "gloss_l1": "suvenir"
+    },
+    {
+      "word_id": "w-ryokou",
+      "lemma": "りょこう",
+      "gloss_l1": "putovanje"
+    },
+    {
+      "word_id": "w-ikimashita",
+      "lemma": "行きました",
+      "gloss_l1": "išao/la sam"
+    }
+  ],
+  "patterns": [
+    {
+      "pattern_id": "gp-tai",
+      "name": "〜たいです (želim)"
+    },
+    {
+      "pattern_id": "gp-kara",
+      "name": "〜から (jer)"
+    }
+  ],
+  "modes": [
+    "speaking",
+    "writing"
+  ],
+  "sections": [
+    {
+      "type": "explain",
+      "blurb": "Cilj: ispričaj kamo si putovao/la i daruj suvenir uz kratko objašnjenje.",
+      "useful_expressions": [
+        {
+          "l2": "きょうとに 行きました。",
+          "l1": "Bio/la sam u Kyotu."
+        },
+        {
+          "l2": "おみやげです。どうぞ。",
+          "l1": "Donio/la sam suvenir. Izvoli."
+        },
+        {
+          "l2": "〜から、すきです。",
+          "l1": "Sviđa mi se jer ~."
+        },
+        {
+          "l2": "しゃしんを とりました。",
+          "l1": "Slikao/la sam."
+        },
+        {
+          "l2": "おいしかったです。",
+          "l1": "Bilo je ukusno."
+        }
+      ],
+      "media": [
+        {
+          "image_id": "scene-01"
+        },
+        {
+          "image_id": "vocab-omiyage"
+        },
+        {
+          "image_id": "expressions-omiyage-dozo"
+        },
+        {
+          "image_id": "culture-cue"
+        }
+      ]
+    },
+    {
+      "type": "socratic",
+      "items": [
+        {
+          "q": "Što znači おみやげ?",
+          "a": "suvenir"
+        },
+        {
+          "q": "Koji se obrazac koristi za ‘želim’?",
+          "a": "〜たいです"
+        },
+        {
+          "q": "Koji marker uvodi razlog?",
+          "a": "〜から"
+        }
+      ]
+    },
+    {
+      "type": "micro_ex",
+      "prompt": "Napiši 4–6 rečenica: kamo si išao/la, što si vidio/la, i predaj suvenir uz razlog zašto si ga izabrao/la.",
+      "constraints": {
+        "min_sentences": 4,
+        "required_patterns": [
+          "gp-tai",
+          "gp-kara"
+        ],
+        "required_words": [
+          "w-omiyage",
+          "w-ryokou"
+        ]
+      },
+      "accepts": "text"
+    },
+    {
+      "type": "mini_quiz",
+      "items": [
+        {
+          "id": "q1",
+          "stem": "Odaberi ispravno: ‘Želim kupiti suvenir.’",
+          "options": [
+            "おみやげを かいたいです。",
+            "おみやげを かいます。",
+            "おみやげが すきです。"
+          ],
+          "correct_option": 0
+        },
+        {
+          "id": "q2",
+          "stem": "Koji nastavak znači ‘jer’?",
+          "options": [
+            "〜ので",
+            "〜から",
+            "〜けど"
+          ],
+          "correct_option": 1
+        },
+        {
+          "id": "q3",
+          "stem": "‘Bio sam u Kyotu.’",
+          "options": [
+            "きょうとに 行きました。",
+            "きょうとが 行きました。",
+            "きょうとを 行きました。"
+          ],
+          "correct_option": 0
+        }
+      ]
+    },
+    {
+      "type": "final_task",
+      "prompt": "Napiši 5–7 rečenica ili snimi do 90 s: predstavi suvenir (što je, odakle je), zašto si ga izabrao/la (〜から), i kome ga daješ.",
+      "accepts": "text"
+    },
+    {
+      "type": "reflection",
+      "questions": [
+        "Kako bi isti sadržaj prenio/la u e‑mail poruci?",
+        "Koje riječi/obrasci su ti najviše pomogli i zašto?"
+      ]
+    }
+  ],
+  "illustrations": [
+    {
+      "image_id": "culture-cue"
+    },
+    {
+      "image_id": "dialog-v1"
+    },
+    {
+      "image_id": "expressions-omiyage-dozo"
+    },
+    {
+      "image_id": "scene-01"
+    },
+    {
+      "image_id": "vocab-omiyage"
+    }
+  ]
+}
+
+
+
+ExerciseBundle JSON (GenerateExercises output — sample)
+{
+  "can_do_id": "JFまるごと:13",
+  "exercises": [
+    {
+      "id": "ex-fill-01",
+      "type": "fill_in",
+      "prompt": "きょうとに（ ）。",
+      "targets": ["w-ikimashita"],
+      "accepts": "text",
+      "answer_schema": "tokens"
+    },
+    {
+      "id": "ex-reorder-01",
+      "type": "reorder",
+      "prompt": "Poredaj: 行きました／きょうとに／ともだちと",
+      "targets": [],
+      "accepts": "text",
+      "answer_schema": "tokens"
+    },
+    {
+      "id": "ex-write-01",
+      "type": "short_write",
+      "prompt": "U 3 rečenice predstavi suvenir i reci zašto si ga izabrao/la (〜から).",
+      "targets": ["w-omiyage", "gp-kara"],
+      "accepts": "text",
+      "answer_schema": "open"
+    }
+  ]
+}
+
+ScoreReport JSON (GradeResponse output — sample)
+{
+  "exercise_id": "ex-write-01",
+  "can_do_id": "JFまるごと:13",
+  "rubrics": {
+    "coverage": {"score": 0.8, "evidence": "spomenut suvenir i razlog"},
+    "cohesion": {"score": 0.7, "evidence": "jedan kohezijski marker"},
+    "language": {"score": 0.65, "evidence": "morf. pogreške, ali razumljivo"}
+  },
+  "overall": 0.72,
+  "hints": [
+    "Dodaj 〜から za jasan razlog.",
+    "Provjeri glagolski oblik u prošlom vremenu."
+  ],
+  "next_actions": [
+    {"type": "drill", "pattern_id": "gp-kara", "reps": 3}
+  ]
+}
+
+UpdateMastery JSON (result — sample)
+{
+  "user_id": "u-123",
+  "can_do_id": "JFまるごと:13",
+  "p_old": 0.45,
+  "overall_score": 0.72,
+  "difficulty": 0.5,
+  "p_new": 0.54,
+  "status": "retry with hints"
+}
+
+RecommendNext JSON (sample)
+{
+  "candidates": [
+    {"can_do_id": "JF:150", "reason": "sličan Topic; p=0.42; pokriva Unit 2"},
+    {"can_do_id": "JFまるごと:19", "reason": "A2 razina; dopunjuje leksik; Unit 3"},
+    {"can_do_id": "JF:101", "reason": "lagani PREREQ uz GP 〜たいです"}
+  ]
+}
+
+Notes
+- All JSON objects are examples; IDs like word_id/pattern_id are placeholders.
+- In production, events (view, attempt, score, hint, time_on_task) are logged per interaction.
+
+---
+Meta fields (lesson context)
+{
+  "short_description": "Učiti kako opisati putovanje i darovati suvenir uz kratko objašnjenje.",
+  "theme_intro": "Tema: kratki izvještaj o putovanju + društvena konvencija darivanja suvenira u Japanu (おみやげ).",
+  "cultural_context": "U Japanu je uobičajeno donijeti おみやげ s putovanja kolegama/prijateljima. Kratka fraza pri predaji: これ、おみやげです。どうぞ。",
+  "user_goal_links": [
+    {"goal_id": "goal-travel-conversation", "reason": "želi bolje komunicirati tijekom putovanja"},
+    {"goal_id": "goal-workplace-etiquette", "reason": "razumjeti poslovni bonton (おみやげ)"}
+  ]
+}
+
+SampleDialog JSON (conventional expressions)
+{
+  "can_do_id": "JFまるごと:13",
+  "scene": "After a trip, giving a souvenir to a colleague",
+  "turns": [
+    {"speaker": "A", "l2": "これ、おみやげです。どうぞ。", "l1": "Ovo je suvenir. Izvoli."},
+    {"speaker": "B", "l2": "ありがとうございます。どこに 行きましたか。", "l1": "Hvala vam. Gdje ste bili?"},
+    {"speaker": "A", "l2": "きょうとに 行きました。おいしい おかし です。", "l1": "Bio/la sam u Kyotu. Ovo je ukusna slastica."},
+    {"speaker": "B", "l2": "わあ、うれしいです。", "l1": "Vau, baš mi je drago."}
+  ],
+  "conventional_expressions": [
+    "これ、おみやげです。どうぞ。",
+    "ありがとうございます。",
+    "どこに 行きましたか。",
+    "〜に 行きました。"
+  ]
+}
+
+StagedExercises JSON (phased integration)
+{
+  "can_do_id": "JFまるごと:13",
+  "phases": [
+    {
+      "phase": "lexicon_and_patterns",
+      "goal": "Integrirati ključne riječi i obrasce (〜たいです, 〜から)",
+      "exercises": [
+        {"id": "ex-lex-01", "type": "fill_in", "targets": ["w-ikimashita"], "accepts": "text"},
+        {"id": "ex-gp-01", "type": "short_write", "targets": ["gp-kara"], "accepts": "text"}
+      ]
+    },
+    {
+      "phase": "guided_dialogue",
+      "goal": "Primijeniti izraze u kratkom, vođenom dijalogu",
+      "prereq": "phase:lexicon_and_patterns",
+      "exercises": [
+        {"id": "ex-dialog-01", "type": "dialog_build", "prompt": "Popuni replike konvencionalnim izrazima.", "targets": ["これ、おみやげです。どうぞ。", "どこに 行きましたか。"], "accepts": "text"}
+      ]
+    },
+    {
+      "phase": "open_dialogue",
+      "goal": "Kratki spontani razgovor s ciljnim markerima",
+      "prereq": "phase:guided_dialogue",
+      "exercises": [
+        {"id": "ex-dialog-02", "type": "short_write", "prompt": "Napiši 5 rečenica dijaloga (darivanje suvenira)", "targets": ["w-omiyage", "gp-kara"], "accepts": "text"}
+      ]
+    }
+  ],
+  "notes": "GenerateExercises respektira faze: najprije leksik/obrasci, zatim vođeni dijalog, pa tek onda otvoreniji razgovor. Aktivacija može uključiti kratki ‘SampleDialog’."
+}
+
+---
+ExtendedSampleDialog JSON (branching variants and pragmatic vocabulary)
+{
+  "can_do_id": "JFまるごと:13",
+  "domain": "旅行と交通 / darivanje suvenira",
+  "variants": [
+    {
+      "id": "v1_basic_gift",
+      "context": "Kolega u uredu (neutralno)",
+      "turns": [
+        {"speaker": "A", "l2": "これ、おみやげです。どうぞ。", "l1": "Ovo je suvenir. Izvolite."},
+        {"speaker": "B", "l2": "お気づかい ありがとうございます。", "l1": "Hvala na pažnji."},
+        {"speaker": "B", "l2": "どこに 行きましたか。", "l1": "Gdje ste bili?"},
+        {"speaker": "A", "l2": "ならに 行きました。しか で ゆうめいです。", "l1": "Bio/la sam u Nari. Poznata je po srnama."}
+      ],
+      "expressions": ["お気づかい ありがとうございます。", "〜に 行きました。", "〜で 有名です。"],
+      "vocabulary": ["しか (srna)", "ゆうめい (poznat)", "おみやげ (suvenir)"]
+    },
+    {
+      "id": "v2_decline_politely",
+      "context": "Prijatelj koji posti drži dijetu (odbijanje uz zahvalu)",
+      "turns": [
+        {"speaker": "A", "l2": "これ、おみやげです。どうぞ。", "l1": "Ovo je suvenir. Izvoli."},
+        {"speaker": "B", "l2": "ありがとうございます。でも、いま ダイエット して います。", "l1": "Hvala, ali sam sada na dijeti."},
+        {"speaker": "A", "l2": "そうですか。では、あとで どうぞ。", "l1": "Razumijem. Onda kasnije."}
+      ],
+      "expressions": ["ありがとうございます。でも、〜", "では、あとで どうぞ。"],
+      "vocabulary": ["ダイエット (dijeta)", "あとで (kasnije)"]
+    },
+    {
+      "id": "v3_explain_choice",
+      "context": "Objašnjenje zašto je izabrao suvenir",
+      "turns": [
+        {"speaker": "A", "l2": "これ、おせんべい です。しょうゆ あじ です。どうぞ。", "l1": "Ovo su krekere, okus soje. Izvoli."},
+        {"speaker": "B", "l2": "どうして これを えらびましたか。", "l1": "Zašto si ovo izabrao/la?"},
+        {"speaker": "A", "l2": "かぞくが すきだから、これに しました。", "l1": "Jer moja obitelj voli, zato sam izabrao/la ovo."}
+      ],
+      "expressions": ["どうして 〜?", "〜から、〜", "これに しました。"],
+      "vocabulary": ["おせんべい (keksi od riže)", "しょうゆ (soja)"]
+    },
+    {
+      "id": "v4_formal_register",
+      "context": "Formalnije (nadređeni)",
+      "turns": [
+        {"speaker": "A", "l2": "こちら、ささやか ですが、おみやげ でございます。", "l1": "Evo, skromno, ali mali suvenir."},
+        {"speaker": "B", "l2": "ごていねいに どうも。", "l1": "Hvala na ljubaznosti."}
+      ],
+      "expressions": ["ささやかですが", "〜でございます", "ごていねいに どうも"],
+      "vocabulary": ["ていねい (uljudno)"]
+    }
+  ],
+  "notes": "Varijante pokrivaju: neutralno darivanje, uljudno odbijanje, obrazlaganje izbora (〜から), formalniji registar; daju uvid u pragmatične obrasce i tipični leksik."
+}
+
+---
+PragmaticPatternSchema (for DB filtering and learning)
+{
+  "$schema": "pragmatic-patterns.v1",
+  "language": "ja",
+  "cefr_levels": ["A2"],
+  "domain": "旅行と交通 / social_exchange",
+  "schema": {
+    "id": "string",
+    "name": "string",
+    "pragmaticAct": "enum[gift_giving, polite_decline, explain_choice, formal_gift_giving]",
+    "register": "enum[neutral, polite, honorific]",
+    "socialDistance": "enum[equal, higher, lower]",
+    "locale": "enum[JP]",
+    "typicalContexts": ["string"],
+    "canDo_links": ["string"],
+    "triggers": [
+      {"when": "string", "condition": "string", "example": "string"}
+    ],
+    "slots": [
+      {"name": "string", "type": "enum[item, place, reason, person]", "required": "boolean"}
+    ],
+    "expressions": [
+      {
+        "label": "string",
+        "l2_template": "string with {slots}",
+        "l1_gloss": "string",
+        "conventional": "boolean",
+        "notes": "string"
+      }
+    ],
+    "grammarPatterns": ["pattern_id"],
+    "lexicalSets": ["string"],
+    "constraints": {"must_include": ["string"], "avoid": ["string"]},
+    "evaluation": {
+      "coverage": ["criterion"],
+      "cohesion": ["criterion"],
+      "language": ["criterion"]
+    },
+    "tags": ["string"]
+  }
+}
+
+PragmaticPatterns (instances)
+{
+  "patterns": [
+    {
+      "id": "pp-gift-neutral",
+      "name": "Darivanje suvenira (neutralno)",
+      "pragmaticAct": "gift_giving",
+      "register": "polite",
+      "socialDistance": "equal",
+      "locale": "JP",
+      "typicalContexts": ["Ured, prijatelji nakon putovanja"],
+      "canDo_links": ["JFまるごと:13"],
+      "triggers": [
+        {"when": "after_trip", "condition": "handing_over_souvenir", "example": "これ、おみやげです。どうぞ。"}
+      ],
+      "slots": [
+        {"name": "item", "type": "item", "required": true},
+        {"name": "place", "type": "place", "required": false}
+      ],
+      "expressions": [
+        {"label": "offer", "l2_template": "これ、{item} です。どうぞ。", "l1_gloss": "Ovo je {item}. Izvolite.", "conventional": true, "notes": "neutralno/polite"},
+        {"label": "thanks_recv", "l2_template": "ありがとうございます。", "l1_gloss": "Hvala vam.", "conventional": true, "notes": "fiksirano"},
+        {"label": "ask_place", "l2_template": "どこに 行きましたか。", "l1_gloss": "Gdje ste bili?", "conventional": true, "notes": "pitanje o destinaciji"},
+        {"label": "state_place", "l2_template": "{place} に 行きました。", "l1_gloss": "Bio/la sam u {place}.", "conventional": true, "notes": "odgovor"}
+      ],
+      "grammarPatterns": ["gp-kara"],
+      "lexicalSets": ["おみやげ", "りょこう", "めいぶつ(名物)"],
+      "constraints": {"must_include": ["おみやげ", "〜に 行きました"], "avoid": []},
+      "evaluation": {
+        "coverage": ["spomenut dar i destinaciju"],
+        "cohesion": ["logičan slijed (ponuda→zahvala→pitanje→odgovor)"],
+        "language": ["osnovna točnost u prošlom vremenu"]
+      },
+      "tags": ["gift", "travel", "neutral"]
+    },
+    {
+      "id": "pp-decline-politely",
+      "name": "Uljudno odbijanje (razlog)",
+      "pragmaticAct": "polite_decline",
+      "register": "polite",
+      "socialDistance": "equal",
+      "locale": "JP",
+      "typicalContexts": ["Prijatelji, kolege; dijetne restrikcije"],
+      "canDo_links": ["JFまるごと:13"],
+      "triggers": [
+        {"when": "offered_item", "condition": "cannot_accept", "example": "ありがとうございます。でも、いま ダイエット して います。"}
+      ],
+      "slots": [
+        {"name": "reason", "type": "reason", "required": true}
+      ],
+      "expressions": [
+        {"label": "decline_with_reason", "l2_template": "ありがとうございます。でも、{reason}。", "l1_gloss": "Hvala, ali {reason}.", "conventional": true, "notes": ""},
+        {"label": "postpose_offer", "l2_template": "では、あとで どうぞ。", "l1_gloss": "Onda kasnije.", "conventional": true, "notes": "face-saving"}
+      ],
+      "grammarPatterns": ["gp-kara"],
+      "lexicalSets": ["ダイエット", "アレルギー(aler gija)", "にがて (ne odgovara)"],
+      "constraints": {"must_include": ["ありがとうございます。でも、〜"], "avoid": ["direktno odbacivanje bez zahvale"]},
+      "evaluation": {
+        "coverage": ["zahvala + jasan razlog"],
+        "cohesion": ["ponuda→odbijanje→alternativa"],
+        "language": ["pravilna upotreba でも / 〜から"]
+      },
+      "tags": ["decline", "politeness"]
+    },
+    {
+      "id": "pp-explain-choice",
+      "name": "Obrazložiti izbor poklona",
+      "pragmaticAct": "explain_choice",
+      "register": "polite",
+      "socialDistance": "equal",
+      "locale": "JP",
+      "typicalContexts": ["Pojašnjenje ukusa, regionalne specijalitete"],
+      "canDo_links": ["JFまるごと:13"],
+      "triggers": [
+        {"when": "recipient_asks_why", "condition": "explain_preference", "example": "どうして これを えらびましたか。"}
+      ],
+      "slots": [
+        {"name": "reason", "type": "reason", "required": true}
+      ],
+      "expressions": [
+        {"label": "because_preference", "l2_template": "{reason} から、これに しました。", "l1_gloss": "Zato što {reason}, izabrao/la sam ovo.", "conventional": false, "notes": "primjena 〜から"}
+      ],
+      "grammarPatterns": ["gp-kara"],
+      "lexicalSets": ["おせんべい", "しょうゆ", "あまい/しょっぱい"],
+      "constraints": {"must_include": ["〜から"], "avoid": []},
+      "evaluation": {
+        "coverage": ["jasan razlog povezan s predmetom"],
+        "cohesion": ["pitanje→odgovor (uzročno-posljedično)"]
+      },
+      "tags": ["explain", "reason"]
+    },
+    {
+      "id": "pp-gift-formal",
+      "name": "Darivanje (formalnije)",
+      "pragmaticAct": "formal_gift_giving",
+      "register": "honorific",
+      "socialDistance": "higher",
+      "locale": "JP",
+      "typicalContexts": ["Nadređeni, formalni posjeti"],
+      "canDo_links": ["JFまるごと:13"],
+      "triggers": [
+        {"when": "formal_meeting", "condition": "handing_over_souvenir", "example": "こちら、ささやか ですが、おみやげ でございます。"}
+      ],
+      "slots": [
+        {"name": "item", "type": "item", "required": true}
+      ],
+      "expressions": [
+        {"label": "offer_honorific", "l2_template": "こちら、ささやか ですが、{item} でございます。", "l1_gloss": "Evo, skromno, {item}.", "conventional": true, "notes": "keigo"},
+        {"label": "thanks_honorific", "l2_template": "ごていねいに どうも。", "l1_gloss": "Hvala na ljubaznosti.", "conventional": true, "notes": "primatelj"}
+      ],
+      "grammarPatterns": ["gp-kara"],
+      "lexicalSets": ["ていねい", "ささやか"],
+      "constraints": {"must_include": ["〜でございます"], "avoid": ["plain register"]},
+      "evaluation": {
+        "coverage": ["keigo ponuda + odgovarajuća zahvala"],
+        "language": ["ispravna keigo morfologija"]
+      },
+      "tags": ["formal", "keigo", "gift"]
+    }
+  ]
+}
+
+---
+IllustrationGenerationPrompts (for Gemini Flash Image or similar)
+{
+  "can_do_id": "JFまるごと:13",
+  "output_dir": "images/lessons/cando/JFまるごと_13/",
+  "model_hint": "google.gemini.flash-image (or equivalently capable image model)",
+  "image_specs": {
+    "size": "1024x1024",
+    "style": "clean, flat vector or light semi-realistic; high readability; soft color palette",
+    "lighting": "neutral, well-lit",
+    "background": "subtle, uncluttered",
+    "text_policy": "no baked-in text; use visual cues only",
+    "safety": [
+      "respectful depiction; avoid stereotypes",
+      "no logos, brands, or sensitive symbols",
+      "no faces in close-up detail; medium shots"
+    ]
+  },
+  "global_negative_prompts": [
+    "text, captions, subtitles, watermarks",
+    "brand logos, signage with readable text",
+    "exaggerated cultural stereotypes"
+  ],
+  "assets": [
+    {
+      "image_id": "scene-01",
+      "prompt_en": "Office break area in Japan: two colleagues (gender-neutral, casual-smart) exchange a small wrapped souvenir bag/box with polite body language. Subtle hint of recent travel (small desk calendar with a torii icon or postcard on a board, not readable). Clean composition, no text.",
+      "negative_en": "text, logos, faces close-up, crowded background",
+      "anchors": ["explain"],
+      "alt_hr": "Predaja suvenira u uredu"
+    },
+    {
+      "image_id": "dialog-v1",
+      "prompt_en": "Four-panel storyboard (no text): 1) Person A offers a small gift bag to Person B; 2) Person B smiles and accepts; 3) Person B gestures a question; 4) Person A points to a travel photo or deer icon (Kyoto hint). Clear sequencing arrows or panel frames, clean background.",
+      "negative_en": "speech text, word balloons, brand signs",
+      "anchors": ["sample_dialog"],
+      "panel_descriptions": [
+        "Offer gift",
+        "Thanks/accept",
+        "Ask destination",
+        "Reply: Kyoto (deer icon cue)"
+      ],
+      "alt_hr": "Neutralni dijalog u 4 kadra"
+    },
+    {
+      "image_id": "dialog-v2",
+      "prompt_en": "Three-panel storyboard (no text): 1) Offer gift; 2) Polite decline with hand gesture and warm smile (diet cue: small salad icon on desk); 3) Alternative suggestion (later). Maintain respectful tone, no text.",
+      "negative_en": "text, negative emotive signals",
+      "anchors": ["sample_dialog"],
+      "alt_hr": "Uljudno odbijanje poklona"
+    },
+    {
+      "image_id": "dialog-v3",
+      "prompt_en": "Three-panel storyboard (no text): 1) Offer rice cracker box (senbei); 2) Recipient gestures ‘why?’; 3) Giver gestures ‘because family likes it’ with simple heart/family icon cue. No text.",
+      "negative_en": "text, logos",
+      "anchors": ["sample_dialog"],
+      "alt_hr": "Objašnjenje izbora poklona"
+    },
+    {
+      "image_id": "dialog-v4",
+      "prompt_en": "Two-panel storyboard, formal register (no text): 1) Giver bows slightly handing over a neatly wrapped gift; 2) Recipient bows appreciatively. Business-casual attire, minimalistic setting.",
+      "negative_en": "text, branding",
+      "anchors": ["sample_dialog"],
+      "alt_hr": "Formalnije darivanje"
+    },
+    {
+      "image_id": "expressions-omiyage-dozo",
+      "prompt_en": "Expression card (no text): close-up of two hands passing a small gift bag with a subtle heart icon, clean white background, shadow for depth.",
+      "negative_en": "text, brand marks",
+      "anchors": ["explain", "guided_dialogue"],
+      "alt_hr": "Konvencionalni izraz: darivanje"
+    },
+    {
+      "image_id": "vocab-omiyage",
+      "prompt_en": "Object study: small Japanese souvenir bag/box on a clean surface, minimal shadows, neutral background. No text.",
+      "negative_en": "text, logos",
+      "anchors": ["explain", "lexicon_and_patterns"],
+      "alt_hr": "Vokabular: おみやげ"
+    },
+    {
+      "image_id": "culture-cue",
+      "prompt_en": "Small cultural cue: shelf with a couple of regional specialty packages (abstract designs), a minimal Japan outline pin, and a postcard silhouette (unreadable). Clean, modern style.",
+      "negative_en": "text, detailed maps, brand logos",
+      "anchors": ["explain"],
+      "alt_hr": "Kulturalni kontekst: おみやげ"
+    }
+  ],
+  "postprocess": {
+    "export": "PNG",
+    "optimize": true,
+    "write_manifest": true,
+    "manifest_path": "images/lessons/cando/JFまるごと_13/manifest.json",
+    "attach_to_sections": {
+      "explain": ["scene-01", "vocab-omiyage", "expressions-omiyage-dozo", "culture-cue"],
+      "sample_dialog": ["dialog-v1"],
+      "guided_dialogue": ["expressions-omiyage-dozo"],
+      "lexicon_and_patterns": ["vocab-omiyage"]
+    }
+  },
+  "api_mapping_hint": {
+    "google_gemini": {
+      "endpoint": "images.generate",
+      "inputs_per_asset": ["prompt_en", "negative_en", "image_specs.size"],
+      "safety_settings": ["HARM_CATEGORY_HATE_SAFETY", "HARM_CATEGORY_VIOLENCE_SAFETY"],
+      "output": "PNG"
+    }
+  }
+}

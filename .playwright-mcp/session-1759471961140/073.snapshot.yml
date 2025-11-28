@@ -1,0 +1,136 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: 日差し
+            - generic [ref=e31]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e33]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e35]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [active] [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e472]:
+          - generic [ref=e473]:
+            - heading "Word Information" [level=3] [ref=e474]
+            - button "Regenerate" [ref=e503]:
+              - img [ref=e504]
+              - text: Regenerate
+          - generic [ref=e475]:
+            - generic [ref=e476]:
+              - heading "日差し" [level=4] [ref=e477]
+              - generic [ref=e478]: ひざし
+            - generic [ref=e479]: sunlight
+            - generic [ref=e480]:
+              - generic [ref=e481]: "Part of Speech: N/A"
+              - generic [ref=e482]: "Level: N/A"
+              - generic [ref=e483]: "Connections: 22"
+          - generic [ref=e509]:
+            - generic [ref=e510]:
+              - heading "Definitions" [level=5] [ref=e511]:
+                - img [ref=e512]
+                - text: Definitions
+              - generic [ref=e514]:
+                - paragraph [ref=e516]: The rays of the sun as they fall on a surface; sunlight that provides warmth or brightness, often implying direct exposure.
+                - paragraph [ref=e518]: The feel or experience of sunlight, focusing on its quality (e.g., warm, strong, gentle) rather than just light itself.
+            - generic [ref=e519]:
+              - heading "Usage Examples" [level=5] [ref=e520]:
+                - img [ref=e521]
+                - text: Usage Examples
+              - generic [ref=e524]:
+                - paragraph [ref=e526]: 窓から暖かい日差しが差し込む。(Mado kara atatakai hizashi ga sashikomu.) - Warm sunlight streams in through the window.
+                - paragraph [ref=e528]: 強い日差しを避けるために帽子をかぶった。(Tsuyoi hizashi o sakeru tame ni bōshi o kabutta.) - I wore a hat to avoid the strong sunlight.
+                - paragraph [ref=e530]: 公園で日差しを浴びて気持ちよかった。(Kōen de hizashi o abite kimochiyokatta.) - It felt good to bask in the sunlight at the park.
+            - generic [ref=e531]:
+              - heading "Cultural Context" [level=5] [ref=e532]:
+                - img [ref=e533]
+                - text: Cultural Context
+              - paragraph [ref=e537]:
+                - text: 「日差し」 (hizashi) is commonly used to describe the
+                - emphasis [ref=e538]: presence
+                - text: or
+                - emphasis [ref=e539]: quality
+                - text: of sunlight. It often carries a nuance of feeling its warmth or intensity, unlike the more general term 「日光」 (nikkō) which refers to sunlight as a phenomenon. It's frequently used when discussing pleasant weather or the need to protect oneself from strong sun.
+            - generic [ref=e540]:
+              - heading "Kanji Analysis" [level=5] [ref=e541]:
+                - img [ref=e542]
+                - text: Kanji Analysis
+              - paragraph [ref=e545]: "日 (hi): sun, day. 差し (sashi): from the verb 差す (sasu), meaning 'to shine, to extend, to pour down'. Together, they convey the image of the sun's rays 'shining down' or 'extending' to a place."
+            - generic [ref=e546]:
+              - heading "Grammar Patterns" [level=5] [ref=e547]:
+                - img [ref=e548]
+                - text: Grammar Patterns
+              - generic [ref=e550]:
+                - paragraph [ref=e552]: "Noun + の + 日差し: e.g., 夏の強い日差し (natsu no tsuyoi hizashi - the strong summer sunlight)"
+                - paragraph [ref=e554]: "日差し + が + Adjective: e.g., 日差しが暖かい (hizashi ga atatakai - the sunlight is warm)"
+                - paragraph [ref=e556]: "日差しを浴びる (hizashi o abiru): to bask/bathe in the sunlight"
+            - generic [ref=e557]:
+              - heading "Common Combinations" [level=5] [ref=e558]:
+                - img [ref=e559]
+                - text: Common Combinations
+              - generic [ref=e561]:
+                - generic [ref=e562]: 暖かい日差し (atatakai hizashi - warm sunlight)
+                - generic [ref=e563]: 強い日差し (tsuyoi hizashi - strong sunlight)
+                - generic [ref=e564]: 優しい日差し (yasashii hizashi - gentle sunlight)
+                - generic [ref=e565]: 日差しが降り注ぐ (hizashi ga furisosogu - sunlight pours down)
+            - generic [ref=e566]:
+              - heading "Learning Tips" [level=5] [ref=e567]:
+                - img [ref=e568]
+                - text: Learning Tips
+              - paragraph [ref=e571]:
+                - text: Distinguish 「日差し」 (hizashi) from 「日光」 (nikkō) by remembering that 「日差し」 often describes the
+                - emphasis [ref=e572]: experience
+                - text: of sunlight. Think of it as 'sun's rays' or 'the way the sun shines down' and its associated qualities. It pairs well with adjectives describing its warmth, strength, or gentleness.
+            - generic [ref=e573]:
+              - generic [ref=e574]:
+                - generic [ref=e575]: Generated by gemini-2.5-flash
+                - generic [ref=e576]: "Confidence: 98%"
+              - generic [ref=e577]: "Generated: 10/3/2025, 6:39:35 AM"
+        - generic [ref=e491]:
+          - heading "Additional Information" [level=3] [ref=e492]
+          - generic [ref=e493]:
+            - generic [ref=e494]:
+              - heading "Etymology" [level=4] [ref=e495]
+              - paragraph [ref=e496]: Word origin and history
+            - generic [ref=e497]:
+              - heading "Related Words" [level=4] [ref=e498]
+              - paragraph [ref=e499]: Synonyms, antonyms, and related terms
+            - generic [ref=e500]:
+              - heading "Cultural Notes" [level=4] [ref=e501]
+              - paragraph [ref=e502]: Cultural context and usage
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

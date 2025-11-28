@@ -1,0 +1,134 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [active] [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: 家
+            - generic [ref=e557]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e564]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e565]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e698]:
+          - generic [ref=e699]:
+            - heading "Word Information" [level=3] [ref=e700]
+            - button "Regenerate" [ref=e701]:
+              - img [ref=e702]
+              - text: Regenerate
+          - generic [ref=e707]:
+            - generic [ref=e708]:
+              - heading "家" [level=4] [ref=e709]
+              - generic [ref=e710]: いえ
+            - generic [ref=e711]: house
+            - generic [ref=e712]:
+              - generic [ref=e713]: "Part of Speech: N/A"
+              - generic [ref=e714]: "Level: N/A"
+              - generic [ref=e715]: "Connections: 32"
+          - generic [ref=e716]:
+            - generic [ref=e717]:
+              - heading "Definitions" [level=5] [ref=e718]:
+                - img [ref=e719]
+                - text: Definitions
+              - generic [ref=e721]:
+                - paragraph [ref=e723]: A physical building where people live; 'house' or 'residence'.
+                - paragraph [ref=e725]: The concept of 'home' or one's dwelling place, often implying comfort and belonging.
+                - paragraph [ref=e727]: Can refer to 'family' or 'household' in certain contexts, particularly when discussing one's own family lineage or professional family (e.g., business family).
+            - generic [ref=e728]:
+              - heading "Usage Examples" [level=5] [ref=e729]:
+                - img [ref=e730]
+                - text: Usage Examples
+              - generic [ref=e733]:
+                - paragraph [ref=e735]: 私の家はここです。
+                - paragraph [ref=e737]: Watashi no ie wa koko desu.
+                - paragraph [ref=e739]: My house is here.
+                - paragraph [ref=e741]: 家に帰ります。
+                - paragraph [ref=e743]: Ie ni kaerimasu.
+                - paragraph [ref=e745]: I am going home.
+                - paragraph [ref=e747]: 家で日本語を勉強します。
+                - paragraph [ref=e749]: Ie de Nihongo o benkyō shimasu.
+                - paragraph [ref=e751]: I study Japanese at home.
+            - generic [ref=e752]:
+              - heading "Cultural Context" [level=5] [ref=e753]:
+                - img [ref=e754]
+                - text: Cultural Context
+              - paragraph [ref=e758]: 家 (ie) is a neutral term. When referring to someone else's house, it's more polite to use 宅 (taku) or the honorific お宅 (otaku). It commonly refers to your own residence or family.
+            - generic [ref=e759]:
+              - heading "Kanji Analysis" [level=5] [ref=e760]:
+                - img [ref=e761]
+                - text: Kanji Analysis
+              - paragraph [ref=e764]: The kanji 家 (ie) is composed of 宀 (ukammuri - roof radical) and 豕 (inoko - pig radical). Historically, it depicted a pig under a roof, symbolizing a dwelling or home where animals were kept alongside humans.
+            - generic [ref=e765]:
+              - heading "Grammar Patterns" [level=5] [ref=e766]:
+                - img [ref=e767]
+                - text: Grammar Patterns
+              - generic [ref=e769]:
+                - paragraph [ref=e771]: "[Noun] の 家 ([noun] no ie): 's house (e.g., 私の家 - my house)"
+                - paragraph [ref=e773]: "家に ([ie ni]): to/at home (used with verbs like 帰る - to return, or いる - to be at a place)"
+                - paragraph [ref=e775]: "家で ([ie de]): at home (used when an action takes place at home, e.g., 家で勉強する - study at home)"
+            - generic [ref=e776]:
+              - heading "Common Combinations" [level=5] [ref=e777]:
+                - img [ref=e778]
+                - text: Common Combinations
+              - generic [ref=e780]:
+                - generic [ref=e781]: "家賃 (yachin): rent"
+                - generic [ref=e782]: "家事 (kaji): housework"
+                - generic [ref=e783]: "家にいる (ie ni iru): to be at home"
+            - generic [ref=e784]:
+              - heading "Learning Tips" [level=5] [ref=e785]:
+                - img [ref=e786]
+                - text: Learning Tips
+              - paragraph [ref=e789]: "Remember the kanji components (roof + pig) to visualize a home. Pay close attention to particles: に for direction (going home) and で for action location (doing something at home). For politeness, use お宅 (otaku) when talking about someone else's house."
+            - generic [ref=e790]:
+              - generic [ref=e791]:
+                - generic [ref=e792]: Generated by gemini-2.5-flash
+                - generic [ref=e793]: "Confidence: 95%"
+              - generic [ref=e794]: "Generated: 9/5/2025, 8:27:41 PM"
+        - generic [ref=e795]:
+          - heading "Additional Information" [level=3] [ref=e796]
+          - generic [ref=e797]:
+            - generic [ref=e798]:
+              - heading "Etymology" [level=4] [ref=e799]
+              - paragraph [ref=e800]: Word origin and history
+            - generic [ref=e801]:
+              - heading "Related Words" [level=4] [ref=e802]
+              - paragraph [ref=e803]: Synonyms, antonyms, and related terms
+            - generic [ref=e804]:
+              - heading "Cultural Notes" [level=4] [ref=e805]
+              - paragraph [ref=e806]: Cultural context and usage
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

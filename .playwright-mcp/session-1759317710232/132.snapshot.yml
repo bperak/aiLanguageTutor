@@ -1,0 +1,15 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Login" [ref=e8] [cursor=pointer]:
+          - /url: /login
+        - link "Sign Up" [ref=e9] [cursor=pointer]:
+          - /url: /register
+        - button "Toggle theme" [ref=e11]: Dark
+  - main [ref=e12]:
+    - paragraph [ref=e17]: Loading grammar patterns...

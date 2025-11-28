@@ -7,9 +7,12 @@ Uses real provider APIs configured via environment variables in `app.core.config
 from __future__ import annotations
 
 from typing import List, Literal, Dict, Any, AsyncIterator
+import asyncio
 import structlog
 from openai import AsyncOpenAI
-import google.generativeai as genai
+from google import genai
+from google.genai import types
+import time
 
 from app.core.config import settings
 
@@ -27,6 +30,7 @@ class AIChatService:
         session_metadata: Dict[str, Any] | None,
         corrections_memory: List[str] | None,
         knowledge_terms: List[str] | None,
+        past_conversation_context: List[str] | None = None,
     ) -> str:
         meta_lines: List[str] = []
         if session_metadata:
@@ -44,6 +48,10 @@ class AIChatService:
         if knowledge_terms:
             meta_lines.append("Consider weaving in 1 relevant term naturally (optional):")
             meta_lines.append(", ".join(knowledge_terms[:5]))
+        if past_conversation_context:
+            meta_lines.append("Relevant past conversation context:")
+            for ctx in past_conversation_context[:3]:
+                meta_lines.append(f"- {ctx}")
 
         system_prompt = (
             (base_prompt or "")
@@ -71,10 +79,13 @@ class AIChatService:
     def __init__(self) -> None:
         self._openai = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
         if settings.GEMINI_API_KEY:
-            genai.configure(api_key=settings.GEMINI_API_KEY)
+            self._genai_client = genai.Client(api_key=settings.GEMINI_API_KEY)
+        else:
+            self._genai_client = None
 
     async def generate_reply(
         self,
+        *,
         provider: Literal["openai", "gemini"] = "openai",
         model: str = "gpt-4o-mini",
         messages: List[Dict[str, str]] | None = None,
@@ -82,6 +93,15 @@ class AIChatService:
         session_metadata: Dict[str, Any] | None = None,
         corrections_memory: List[str] | None = None,
         knowledge_terms: List[str] | None = None,
+        past_conversation_context: List[str] | None = None,
+        trace_id: str | None = None,
+        # Generation config knobs (mainly for Gemini)
+        force_json: bool = False,
+        temperature: float | None = None,
+        max_output_tokens: int | None = None,
+        response_schema: Any | None = None,
+        response_json_schema: Dict[str, Any] | None = None,
+        timeout: int | None = None,
     ) -> Dict[str, Any]:
         """
         Generate a chat completion based on prior messages.
@@ -102,42 +122,104 @@ class AIChatService:
             session_metadata=session_metadata,
             corrections_memory=corrections_memory,
             knowledge_terms=knowledge_terms,
+            past_conversation_context=past_conversation_context,
         )
 
+        start_time = time.perf_counter()
         try:
             if provider == "gemini":
+                if not self._genai_client:
+                    raise ValueError("Gemini API key not configured")
                 # Gemini simple chat: concatenate to a prompt
                 # Format prior messages as simple transcript
                 transcript = [f"System: {system_prompt}"]
                 for m in messages:
                     transcript.append(f"{m['role'].capitalize()}: {m['content']}")
                 prompt = "\n".join(transcript)
-                model_instance = genai.GenerativeModel(model)
-                response = await model_instance.generate_content_async(prompt)
-                return {
-                    "content": getattr(response, "text", ""),
+                # Prefer explicit Content/Part and config for JSON
+                gen_config = None
+                if force_json or temperature is not None or max_output_tokens is not None or response_schema is not None or response_json_schema is not None:
+                    gen_config = types.GenerateContentConfig(
+                        response_mime_type=("application/json" if force_json else None),
+                        temperature=(0.0 if temperature is None else float(temperature)),
+                        max_output_tokens=(max_output_tokens if max_output_tokens is not None else None),
+                        # Map dict JSON schema to response_schema; avoid unsupported response_json_schema param
+                        response_schema=(response_schema if response_schema is not None else response_json_schema),
+                    )
+                # Wrap Gemini call with timeout
+                timeout_seconds = timeout or settings.AI_REQUEST_TIMEOUT_SECONDS
+                try:
+                    response = await asyncio.wait_for(
+                        asyncio.to_thread(
+                            self._genai_client.models.generate_content,
+                            model=model,
+                            contents=[types.Content(role="user", parts=[types.Part.from_text(text=prompt)])],
+                            config=gen_config if gen_config is not None else None,
+                        ),
+                        timeout=timeout_seconds
+                    )
+                except asyncio.TimeoutError:
+                    logger.error("gemini_request_timeout", model=model, timeout=timeout_seconds)
+                    raise TimeoutError(f"Gemini API request timed out after {timeout_seconds} seconds")
+                elapsed_ms = int((time.perf_counter() - start_time) * 1000)
+                
+                # Safely extract text content
+                content_text = ""
+                try:
+                    content_text = response.text if response.text else ""
+                except (AttributeError, ValueError) as e:
+                    logger.warning(
+                        "gemini_response_text_extraction_failed",
+                        model=model,
+                        error=str(e),
+                        response_type=type(response).__name__)
+                    # Try alternate extraction methods
+                    if hasattr(response, 'candidates') and response.candidates:
+                        candidate = response.candidates[0]
+                        if hasattr(candidate, 'content') and hasattr(candidate.content, 'parts'):
+                            for part in candidate.content.parts:
+                                if hasattr(part, 'text'):
+                                    content_text += part.text
+                
+                result: Dict[str, Any] = {
+                    "content": content_text,
                     "provider": "gemini",
                     "model": model,
+                    "elapsed_ms": elapsed_ms,
                 }
+                if trace_id:
+                    result["trace_id"] = trace_id
+                return result
 
             # Default: OpenAI
+            timeout_seconds = timeout or settings.AI_REQUEST_TIMEOUT_SECONDS
             chat_messages = [{"role": "system", "content": system_prompt}] + messages
-            resp = await self._openai.chat.completions.create(
+            
+            # GPT-5 models don't support temperature=0.0, use default (1.0)
+            # Other models work better with temperature=0.0 for structured output
+            temp = 1.0 if model.startswith("gpt-5") or model.startswith("o1") else 0.0
+            
+            client = self._openai.with_options(timeout=timeout_seconds)
+            resp = await client.chat.completions.create(
                 model=model,
                 messages=chat_messages,  # type: ignore[arg-type]
-                temperature=0.3,
-                max_tokens=300,
+                temperature=temp,
+                max_tokens=4000,
             )
             choice = resp.choices[0]
+            elapsed_ms = int((time.perf_counter() - start_time) * 1000)
             result = {
                 "content": choice.message.content or "",
                 "provider": "openai",
                 "model": model,
                 "prompt_tokens": getattr(resp.usage, "prompt_tokens", None),
                 "completion_tokens": getattr(resp.usage, "completion_tokens", None),
+                "elapsed_ms": elapsed_ms,
             }
             # Expose the enriched system prompt so stream builder can reuse it
             result["system_prompt"] = system_prompt
+            if trace_id:
+                result["trace_id"] = trace_id
             return result
         except Exception as e:  # noqa: BLE001
             logger.error("AI reply generation failed", provider=provider, model=model, error=str(e))
@@ -154,6 +236,7 @@ class AIChatService:
         session_metadata: Dict[str, Any] | None = None,
         corrections_memory: List[str] | None = None,
         knowledge_terms: List[str] | None = None,
+        past_conversation_context: List[str] | None = None,
     ) -> AsyncIterator[str]:
         """Yield reply chunks for streaming.
 
@@ -166,6 +249,7 @@ class AIChatService:
             session_metadata=session_metadata,
             corrections_memory=corrections_memory,
             knowledge_terms=knowledge_terms,
+            past_conversation_context=past_conversation_context,
         ) or (
             "You are a friendly Japanese language tutor."
             " Rules:"
@@ -185,10 +269,10 @@ class AIChatService:
 
             # OpenAI streaming
             chat_messages = [{"role": "system", "content": system_prompt}] + messages
-            stream = await self._openai.chat.completions.create(
+            stream = await self._openai.with_options(timeout=settings.AI_REQUEST_TIMEOUT_SECONDS).chat.completions.create(
                 model=model,
                 messages=chat_messages,  # type: ignore[arg-type]
-                temperature=0.3,
+                temperature=0.0,
                 max_tokens=300,
                 stream=True,
             )

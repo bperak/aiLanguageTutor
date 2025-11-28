@@ -1,0 +1,23 @@
+1) učitati Lee
+
+No -> lee_id
+Standard orthography (kanji or other) 標準的な表記 -> u bazi lemma >> pretvoriti u lexeme, u bazi kanji >> pretvoriti u standard_writing 	
+Katakana reading 読み -> 	u bazi reading >> pretvoriti u katakana_reading
+Level 語彙の難易度	
+品詞1	
+品詞2(詳細)	
+語種
+
+
+pitanja - kako dobiti hiragana_reading?
+odgovor: prebaciti katakana_reading u hiragana_reading koristeći transkripciju slovo po slovo alatom cutlet
+
+kako biljeziti otkud dolazi riječ?
+ključ source pretvoriti u listu [] i tamo spremati izvor
+
+
+
+2)
+mapirati riječi 
+iz VDRJ
+"見出し語彙素 Lexeme" -> lexeme

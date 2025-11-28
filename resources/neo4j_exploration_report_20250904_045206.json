@@ -1,0 +1,765 @@
+{
+  "timestamp": "2025-09-04 04:52:06",
+  "database_overview": {
+    "version": "5.15.0",
+    "edition": "community",
+    "node_count": 76744,
+    "relationship_count": 180677,
+    "total_elements": 257421
+  },
+  "node_labels": [
+    {
+      "label": "Word",
+      "count": 76203
+    },
+    {
+      "label": "GrammarPattern",
+      "count": 392
+    },
+    {
+      "label": "GrammarClassification",
+      "count": 63
+    },
+    {
+      "label": "MarugotoTopic",
+      "count": 55
+    },
+    {
+      "label": "JFSCategory",
+      "count": 25
+    },
+    {
+      "label": "TextbookLevel",
+      "count": 6
+    }
+  ],
+  "relationship_types": [
+    {
+      "type": "SYNONYM_OF",
+      "count": 127360
+    },
+    {
+      "type": "RELATIONSHIP_TRANSFERRED",
+      "count": 41754
+    },
+    {
+      "type": "SIMILAR_TO",
+      "count": 4448
+    },
+    {
+      "type": "PREREQUISITE_FOR",
+      "count": 3654
+    },
+    {
+      "type": "USES_WORD",
+      "count": 1441
+    },
+    {
+      "type": "DOMAIN_OF",
+      "count": 617
+    },
+    {
+      "type": "BELONGS_TO_LEVEL",
+      "count": 392
+    },
+    {
+      "type": "HAS_CLASSIFICATION",
+      "count": 392
+    },
+    {
+      "type": "CATEGORIZED_AS",
+      "count": 392
+    },
+    {
+      "type": "ANTONYM_OF",
+      "count": 227
+    },
+    {
+      "type": "HAS_DIFFICULTY",
+      "count": 0
+    },
+    {
+      "type": "HAS_POS",
+      "count": 0
+    },
+    {
+      "type": "HAS_ETYMOLOGY",
+      "count": 0
+    },
+    {
+      "type": "BELONGS_TO_DOMAIN",
+      "count": 0
+    },
+    {
+      "type": "SYNOMYM_OF",
+      "count": 0
+    }
+  ],
+  "node_properties": {
+    "classification": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "created_at": {
+      "Word": 1000,
+      "TextbookLevel": 6,
+      "GrammarPattern": 392,
+      "GrammarClassification": 63,
+      "MarugotoTopic": 55,
+      "JFSCategory": 25
+    },
+    "difficulty_level": {
+      "Word": 1000,
+      "TextbookLevel": 0,
+      "GrammarPattern": 0,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "difficulty_numeric": {
+      "Word": 1000,
+      "TextbookLevel": 0,
+      "GrammarPattern": 0,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "etymology": {
+      "Word": 1000,
+      "TextbookLevel": 0,
+      "GrammarPattern": 0,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "example_romaji": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "example_sentence": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "id": {
+      "Word": 0,
+      "TextbookLevel": 6,
+      "GrammarPattern": 392,
+      "GrammarClassification": 63,
+      "MarugotoTopic": 55,
+      "JFSCategory": 25
+    },
+    "jfs_category": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "kanji": {
+      "Word": 1000,
+      "TextbookLevel": 0,
+      "GrammarPattern": 0,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "katakana": {
+      "Word": 1000,
+      "TextbookLevel": 0,
+      "GrammarPattern": 0,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "lee_id": {
+      "Word": 1000,
+      "TextbookLevel": 0,
+      "GrammarPattern": 0,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "lesson": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "level_order": {
+      "Word": 0,
+      "TextbookLevel": 6,
+      "GrammarPattern": 0,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "name": {
+      "Word": 0,
+      "TextbookLevel": 6,
+      "GrammarPattern": 0,
+      "GrammarClassification": 63,
+      "MarugotoTopic": 55,
+      "JFSCategory": 25
+    },
+    "pattern": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "pattern_romaji": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "pos_detailed": {
+      "Word": 1000,
+      "TextbookLevel": 0,
+      "GrammarPattern": 0,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "pos_primary": {
+      "Word": 1000,
+      "TextbookLevel": 0,
+      "GrammarPattern": 0,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "romaji": {
+      "Word": 1000,
+      "TextbookLevel": 0,
+      "GrammarPattern": 0,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "sequence_number": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "source": {
+      "Word": 1000,
+      "TextbookLevel": 6,
+      "GrammarPattern": 392,
+      "GrammarClassification": 63,
+      "MarugotoTopic": 55,
+      "JFSCategory": 25
+    },
+    "status": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "textbook": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 55,
+      "JFSCategory": 0
+    },
+    "textbook_form": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "textbook_form_romaji": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "topic": {
+      "Word": 0,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    },
+    "updated_at": {
+      "Word": 1000,
+      "TextbookLevel": 0,
+      "GrammarPattern": 392,
+      "GrammarClassification": 0,
+      "MarugotoTopic": 0,
+      "JFSCategory": 0
+    }
+  },
+  "relationship_properties": {
+    "ai_generated": {
+      "0": 3,
+      "182": 0
+    },
+    "ai_provider": {
+      "0": 3,
+      "182": 0
+    },
+    "antonym_antonym_explanation": {
+      "0": 0,
+      "182": 227
+    },
+    "antonym_antonym_strength": {
+      "0": 0,
+      "182": 227
+    },
+    "antonym_antonymy_domain": {
+      "0": 0,
+      "182": 227
+    },
+    "antonym_antonymy_domain_hiragana": {
+      "0": 0,
+      "182": 227
+    },
+    "antonym_antonymy_domain_translation": {
+      "0": 0,
+      "182": 227
+    },
+    "created_at": {
+      "0": 1000,
+      "182": 0
+    },
+    "edge_id": {
+      "0": 0,
+      "182": 227
+    },
+    "from_level": {
+      "0": 0,
+      "182": 0
+    },
+    "from_word": {
+      "0": 0,
+      "182": 227
+    },
+    "mutual_sense": {
+      "0": 1000,
+      "182": 0
+    },
+    "mutual_sense_hiragana": {
+      "0": 3,
+      "182": 0
+    },
+    "mutual_sense_translation": {
+      "0": 3,
+      "182": 0
+    },
+    "reason": {
+      "0": 0,
+      "182": 0
+    },
+    "relation_type": {
+      "0": 6,
+      "182": 0
+    },
+    "source": {
+      "0": 1000,
+      "182": 0
+    },
+    "subtype": {
+      "0": 0,
+      "182": 0
+    },
+    "synonym_strength": {
+      "0": 1000,
+      "182": 0
+    },
+    "synonymy_domain": {
+      "0": 3,
+      "182": 0
+    },
+    "synonymy_domain_hiragana": {
+      "0": 3,
+      "182": 0
+    },
+    "synonymy_domain_translation": {
+      "0": 3,
+      "182": 0
+    },
+    "synonymy_explanation": {
+      "0": 1000,
+      "182": 0
+    },
+    "to_level": {
+      "0": 0,
+      "182": 0
+    },
+    "to_word": {
+      "0": 0,
+      "182": 227
+    },
+    "updated_at": {
+      "0": 997,
+      "182": 0
+    },
+    "weight": {
+      "0": 1000,
+      "182": 227
+    }
+  },
+  "data_quality": {
+    "unlabeled_nodes": 0,
+    "isolated_nodes": 14842,
+    "duplicate_lemmas": 195,
+    "word_stats": [
+      76203,
+      68566,
+      76088
+    ]
+  },
+  "performance": {
+    "indexes": [
+      {
+        "name": "belongs_to_domain_index_v2",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "BELONGS_TO_DOMAIN"
+        ],
+        "properties": [
+          "synonym_strength"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "has_difficulty_index_v2",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "HAS_DIFFICULTY"
+        ],
+        "properties": [
+          "synonym_strength"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "has_etymology_index_v2",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "HAS_ETYMOLOGY"
+        ],
+        "properties": [
+          "synonym_strength"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "has_pos_index_v2",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "HAS_POS"
+        ],
+        "properties": [
+          "synonym_strength"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "index_343aff4e",
+        "type": "LOOKUP",
+        "labelsOrTypes": null,
+        "properties": null,
+        "state": "ONLINE"
+      },
+      {
+        "name": "index_f7700477",
+        "type": "LOOKUP",
+        "labelsOrTypes": null,
+        "properties": null,
+        "state": "ONLINE"
+      },
+      {
+        "name": "kanji_hiragana_combo",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "kanji",
+          "hiragana"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "synonym_relation_type",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "SYNONYM_OF"
+        ],
+        "properties": [
+          "relation_type"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "synonym_relation_type_index_v2",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "SYNOMYM_OF"
+        ],
+        "properties": [
+          "relation_type"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "synonym_weight_index",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "SYNONYM_OF"
+        ],
+        "properties": [
+          "synonym_strength"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_difficulty_numeric_perf",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "difficulty_numeric"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_etymology",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "etymology"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_hiragana_text",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "hiragana"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_id_unique",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "lee_id"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_jlpt_level",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "jlpt_level"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_kanji_difficulty",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "kanji",
+          "difficulty_numeric"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_kanji_etymology",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "kanji",
+          "etymology"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_kanji_lookup",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "kanji"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_kanji_pos",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "kanji",
+          "pos_primary"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_katakana_text",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "katakana"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_lemma",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "lemma"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_pos",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "pos"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_pos_primary_perf",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "pos_primary"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_reading",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "reading"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_source",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "source"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_source_id_unique",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "source",
+          "source_id"
+        ],
+        "state": "ONLINE"
+      },
+      {
+        "name": "word_translation_text",
+        "type": "RANGE",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "translation"
+        ],
+        "state": "ONLINE"
+      }
+    ],
+    "constraints": [
+      {
+        "name": "word_id_unique",
+        "type": "UNIQUENESS",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "lee_id"
+        ]
+      },
+      {
+        "name": "word_source_id_unique",
+        "type": "UNIQUENESS",
+        "labelsOrTypes": [
+          "Word"
+        ],
+        "properties": [
+          "source",
+          "source_id"
+        ]
+      }
+    ]
+  }
+}

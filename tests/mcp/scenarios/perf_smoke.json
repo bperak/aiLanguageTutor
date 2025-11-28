@@ -1,0 +1,16 @@
+{
+  "name": "Latency smoke for ActivateCanDo",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "() => { const t0 = performance.now(); return fetch('http://localhost:8000/api/lessons/activate?can_do_id=JFまるごと:13').then(r => r.json()).then(j => ({j, dt: performance.now()-t0})); }",
+      "saveAs": "res"
+    },
+    {
+      "action": "assert",
+      "expression": "res.dt <= 1200 && res.j.can_do_id === 'JFまるごと:13'"
+    }
+  ]
+}
+
+

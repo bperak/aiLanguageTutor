@@ -1,0 +1,89 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e116]:
+      - heading "Japanese Grammar Patterns" [level=1] [ref=e118]
+      - generic [ref=e119]:
+        - tablist [ref=e120]:
+          - tab "Browse Patterns" [selected] [ref=e121]:
+            - img
+            - text: Browse Patterns
+          - tab "Learning Paths" [ref=e122]:
+            - img
+            - text: Learning Paths
+          - tab "Recommendations" [ref=e123]:
+            - img
+            - text: Recommendations
+        - tabpanel "Browse Patterns" [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e127]:
+              - generic [ref=e128]:
+                - img [ref=e129]
+                - text: Filters
+              - button "Hide" [ref=e677]:
+                - img
+                - text: Hide
+            - generic [ref=e678]:
+              - generic [ref=e679]:
+                - generic [ref=e680]:
+                  - text: Search
+                  - generic [ref=e681]:
+                    - img [ref=e682]
+                    - textbox "Search patterns..." [active] [ref=e685]
+                - generic [ref=e686]:
+                  - text: Level
+                  - combobox [ref=e687]:
+                    - generic: All levels
+                    - img
+                - generic [ref=e688]:
+                  - text: Classification
+                  - combobox [ref=e689]:
+                    - generic: All types
+                    - img
+                - generic [ref=e690]:
+                  - text: Topic
+                  - combobox [ref=e691]:
+                    - generic: All topics
+                    - img
+              - button "Clear Filters" [ref=e693]
+          - generic [ref=e132]:
+            - generic [ref=e133]:
+              - generic [ref=e134]: Page size
+              - combobox [ref=e135]:
+                - generic: "20"
+                - img
+              - generic [ref=e136]:
+                - text: Showing 0 of 0 patterns
+                - img [ref=e694]
+            - generic [ref=e137]:
+              - button "1" [ref=e139]
+              - button "Prev" [disabled]
+              - button "Next" [disabled]
+          - generic [ref=e697]:
+            - img [ref=e698]
+            - heading "No patterns found" [level=3] [ref=e700]
+            - paragraph [ref=e701]: Try adjusting your filters or search terms
+            - button "Clear All Filters" [ref=e702]
+  - button "Open Next.js Dev Tools" [ref=e110] [cursor=pointer]:
+    - img [ref=e111]
+  - alert [ref=e114]

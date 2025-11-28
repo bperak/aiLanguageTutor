@@ -43,6 +43,11 @@ class User(Base):
     max_conversation_length = Column(Integer)
     auto_save_conversations = Column(Boolean)
     
+    # Profile completion tracking
+    profile_completed = Column(Boolean, default=False)
+    profile_completed_at = Column(DateTime(timezone=True))
+    profile_skipped = Column(Boolean, default=False)
+    
     def __repr__(self):
         return f"<User(id={self.id}, username={self.username}, email={self.email})>"
 
@@ -130,3 +135,66 @@ class ConversationMessage(Base):
 
     def __repr__(self):
         return f"<ConversationMessage(id={self.id}, session_id={self.session_id}, role={self.role}, order={self.message_order})>"
+
+
+class UserProfile(Base):
+    """User profile model for detailed profile information."""
+    
+    __tablename__ = "user_profiles"
+    __table_args__ = {'extend_existing': True}
+    
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id = Column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False, unique=True)
+    
+    # Profile data (JSONB)
+    previous_knowledge = Column(JSON, default=dict)
+    learning_experiences = Column(JSON, default=dict)
+    usage_context = Column(JSON, default=dict)
+    learning_goals = Column(JSON, default=list)
+    additional_notes = Column(Text)
+    
+    # Link to conversation where profile was built
+    profile_building_conversation_id = Column(UUID(as_uuid=True), ForeignKey("conversation_sessions.id", ondelete="SET NULL"))
+    
+    # Timestamps
+    created_at = Column(DateTime(timezone=True))
+    updated_at = Column(DateTime(timezone=True))
+    
+    # Relationships
+    user = relationship("User", backref="profile")
+    
+    def __repr__(self):
+        return f"<UserProfile(id={self.id}, user_id={self.user_id})>"
+
+
+class LearningPath(Base):
+    """Learning path model with versioning support."""
+    
+    __tablename__ = "learning_paths"
+    __table_args__ = {'extend_existing': True}
+    
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id = Column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    
+    # Versioning
+    version = Column(Integer, nullable=False, default=1)
+    path_name = Column(String(255), nullable=False, default="Initial Path")
+    
+    # Path data (JSONB)
+    path_data = Column(JSON, nullable=False, default=dict)
+    progress_data = Column(JSON, default=dict)
+    
+    # Status
+    is_active = Column(Boolean, default=True)
+    superseded_by = Column(UUID(as_uuid=True), ForeignKey("learning_paths.id", ondelete="SET NULL"))
+    
+    # Timestamps
+    created_at = Column(DateTime(timezone=True))
+    updated_at = Column(DateTime(timezone=True))
+    
+    # Relationships
+    user = relationship("User", backref="learning_paths")
+    superseded_path = relationship("LearningPath", remote_side=[id], backref="superseding_paths")
+    
+    def __repr__(self):
+        return f"<LearningPath(id={self.id}, user_id={self.user_id}, version={self.version}, is_active={self.is_active})>"

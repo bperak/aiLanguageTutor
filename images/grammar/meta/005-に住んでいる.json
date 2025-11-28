@@ -1,0 +1,13 @@
+{
+  "pattern_id": "grammar_005",
+  "pattern": "～に住んでいる",
+  "pattern_romaji": "~nisundeiru",
+  "grammar_essence": "Identity/Classification",
+  "metaphor_title": "Red thread of identity",
+  "no_text_in_image": true,
+  "image_path": "images/grammar/005-に住んでいる.png",
+  "ai_model": "gemini-2.5-flash-image-preview",
+  "usage_examples": [],
+  "teaching_points": [],
+  "created_at": "2025-10-01T21:15:39.912420Z"
+}

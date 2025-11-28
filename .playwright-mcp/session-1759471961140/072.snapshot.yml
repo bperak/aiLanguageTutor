@@ -1,0 +1,77 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main" [ref=e3]:
+    - generic [ref=e5]:
+      - link "AI Language Tutor" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+        - button "Lexical" [ref=e10]:
+          - text: Lexical
+          - img [ref=e11]
+        - button "Grammar" [ref=e14]:
+          - text: Grammar
+          - img [ref=e15]
+        - link "Conversations" [ref=e17] [cursor=pointer]:
+          - /url: /conversations
+        - button "Profile" [ref=e19]:
+          - text: Profile
+          - img [ref=e20]
+        - button "Toggle theme" [ref=e23]: Dark
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "Lexical Graph" [level=1] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Enter kanji/hiragana/translation" [ref=e30]: 日差し
+            - generic [ref=e31]: "Searching in: kanji"
+            - generic [ref=e32]:
+              - generic "Kanji (active)" [ref=e33]: K
+              - generic "Hiragana" [ref=e34]: H
+              - generic "Translation" [ref=e35]: T
+          - button "Search" [ref=e36]
+        - button "⚙️ Settings" [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - button "Graph" [ref=e41]:
+            - generic [ref=e42]: Graph
+          - button "Info" [ref=e43]:
+            - generic [ref=e44]: Info
+          - button "Lesson" [ref=e45]:
+            - generic [ref=e46]: Lesson
+        - generic [ref=e472]:
+          - heading "Word Information" [level=3] [ref=e474]
+          - generic [ref=e475]:
+            - generic [ref=e476]:
+              - heading "日差し" [level=4] [ref=e477]
+              - generic [ref=e478]: ひざし
+            - generic [ref=e479]: sunlight
+            - generic [ref=e480]:
+              - generic [ref=e481]: "Part of Speech: N/A"
+              - generic [ref=e482]: "Level: N/A"
+              - generic [ref=e483]: "Connections: 22"
+          - generic [ref=e484]:
+            - img [ref=e485]
+            - paragraph [ref=e487]: No AI-enhanced content available yet
+            - button "Generate AI Content" [active] [ref=e488]:
+              - img [ref=e489]
+              - text: Generate AI Content
+        - generic [ref=e491]:
+          - heading "Additional Information" [level=3] [ref=e492]
+          - generic [ref=e493]:
+            - generic [ref=e494]:
+              - heading "Etymology" [level=4] [ref=e495]
+              - paragraph [ref=e496]: Word origin and history
+            - generic [ref=e497]:
+              - heading "Related Words" [level=4] [ref=e498]
+              - paragraph [ref=e499]: Synonyms, antonyms, and related terms
+            - generic [ref=e500]:
+              - heading "Cultural Notes" [level=4] [ref=e501]
+              - paragraph [ref=e502]: Cultural context and usage
+      - paragraph [ref=e85]: Powered by react-force-graph (2D/3D). Data from Neo4j lexical network.
+  - button "Open Next.js Dev Tools" [ref=e91] [cursor=pointer]:
+    - img [ref=e92]
+  - alert [ref=e95]

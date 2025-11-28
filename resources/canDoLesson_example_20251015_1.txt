@@ -1,0 +1,1068 @@
+{
+  "uiVersion": 1,
+  "lessonId": "6c4b9b2e-7443-4a6f-8d2a-1e4e3b7b9f3a",
+  "canDoId": "JF:21",
+  "originalLevel": 1,
+  "metadata": {
+    "topic": "自分と家族",
+    "languageCode": "ja",
+    "createdAt": 1700000000000,
+    "estimatedDurationMin": 35,
+    "tags": [
+      "自分と家族",
+      "写真",
+      "A1"
+    ]
+  },
+  "learningObjectives": [
+    "Identify people in a photo using 'これは [person] です'",
+    "State possession using the particle 'の'",
+    "Ask who is in a photo using 'だれの写真ですか'",
+    "Identify the location of a photo using 'ここは [place] です'",
+    "Ask where a photo was taken using 'ここはどこですか'"
+  ],
+  "variantGuidelines": {
+    "1": {},
+    "2": {},
+    "3": {},
+    "4": {},
+    "5": {},
+    "6": {}
+  },
+  "ui": {
+    "header": {
+      "title": {
+        "jp": "これはだれの写真ですか？",
+        "en": "Whose Photo Is This?"
+      },
+      "subtitle": {
+        "jp": "家族やペットの写真を見せながら、だれの写真か、場所はどこかなど、友人に紹介することができる。",
+        "en": "Can tell a friend who is in the photo, where it was taken, etc. while showing the friend photos of family members and pets."
+      },
+      "chips": [
+        "objective",
+        "level",
+        "topic"
+      ]
+    },
+    "sections": [
+      {
+        "id": "e6f4a3b1-0f7e-4b9d-9c4a-6f9c8d0e7f6a",
+        "type": "lesson_plan",
+        "title": {
+          "jp": "レッスンプラン",
+          "en": "Lesson Plan"
+        },
+        "cards": [
+          {
+            "id": "c1a9b8d7-5e3f-4a1b-9c8d-7e6f5a4b3c2d",
+            "kind": "plan",
+            "steps": [
+              {
+                "name": {
+                  "jp": "ウォームアップ",
+                  "en": "Warm-up"
+                },
+                "teacherNotes": {
+                  "jp": "学習者の家族やペットについて質問し、今日のトピック「自分と家族」に繋げます。「家族の写真はありますか？」など。",
+                  "en": "Ask the learner about their family and pets to lead into today's topic, 'Myself and Family.' For example, 'Do you have photos of your family?'"
+                },
+                "studentTask": {
+                  "jp": "先生の質問に答えてください。自分の家族やペットについて話しましょう。",
+                  "en": "Please answer the teacher's questions. Let's talk about your family and pets."
+                }
+              },
+              {
+                "name": {
+                  "jp": "読解 (CI)",
+                  "en": "Reading (CI)"
+                },
+                "teacherNotes": {
+                  "jp": "二人の友達が写真について話している短い物語を提示します。学習者にまず読んでもらい、文脈から主要な語彙を推測させます。",
+                  "en": "Present the short story of two friends discussing a photo. Have the learner read it first to infer key vocabulary from context."
+                },
+                "studentTask": {
+                  "jp": "短いテキストを読んで、話の要点を理解しましょう。誰が、どこにいるかに注目してください。",
+                  "en": "Read the short text and understand the main points of the story. Pay attention to who is in the photo and where they are."
+                }
+              },
+              {
+                "name": {
+                  "jp": "教える",
+                  "en": "Teach"
+                },
+                "teacherNotes": {
+                  "jp": "写真を描写するための重要な文法ポイントを明確に説明します：所有格の「の」、指示詞「これ/この」、疑問詞「だれ/どこ」。",
+                  "en": "Explicitly explain the key grammar points for describing photos: the possessive particle 'の', demonstratives 'これ/この', and question words 'だれ/どこ'."
+                },
+                "studentTask": {
+                  "jp": "説明を聞いて、例文を確認してください。わからないことがあれば質問しましょう。",
+                  "en": "Listen to the explanations and review the example sentences. Ask questions if you don't understand something."
+                }
+              },
+              {
+                "name": {
+                  "jp": "制限付き練習",
+                  "en": "Controlled Practice"
+                },
+                "teacherNotes": {
+                  "jp": "学習者の文法理解度を確認するために、選択問題を出題します。各回答の理由を説明できるように準備しておきます。",
+                  "en": "Guide the learner through multiple-choice questions to check their understanding of the grammar. Be ready to explain the reasoning for each answer."
+                },
+                "studentTask": {
+                  "jp": "文を完成させるために、正しい単語や助詞を選んでください。",
+                  "en": "Choose the correct word or particle to complete the sentences."
+                }
+              },
+              {
+                "name": {
+                  "jp": "ガイド付き会話",
+                  "en": "Guided Dialogue"
+                },
+                "teacherNotes": {
+                  "jp": "モデル会話を学習者と一緒に読みます。一つの役を自分が担当し、もう一つを学習者に読んでもらいます。自然な発音とイントネーションを促します。",
+                  "en": "Read the model dialogue with the learner. Take on one role and have the learner read the other. Encourage natural pronunciation and intonation."
+                },
+                "studentTask": {
+                  "jp": "会話を声に出して読み、自然な発音とイントネーションを練習しましょう。",
+                  "en": "Read the dialogue aloud to practice natural pronunciation and intonation."
+                }
+              },
+              {
+                "name": {
+                  "jp": "産出活動",
+                  "en": "Production"
+                },
+                "teacherNotes": {
+                  "jp": "学習者に自分の写真（本物または想像上のもの）を見せてもらい、学んだパターンを使って説明するように促します。「この人はだれですか？」と質問します。",
+                  "en": "Ask the learner to show you a photo (their own or an imaginary one) and describe it using the patterns learned. Ask questions like 'Who is this person?'"
+                },
+                "studentTask": {
+                  "jp": "あなたの写真を見せて説明してください。誰が写っているか、どこで撮ったかを教えてください。",
+                  "en": "Show and describe your photo. Tell me who is in it and where it was taken."
+                }
+              },
+              {
+                "name": {
+                  "jp": "評価",
+                  "en": "Assessment"
+                },
+                "teacherNotes": {
+                  "jp": "学習者が「これは〜の〜です」と「ここは〜です」を正しく使って写真を描写できるかを確認します。必要に応じて訂正とフィードバックを提供します。",
+                  "en": "Check if the learner can correctly use 'これは〜の〜です' and 'ここは〜です' to describe a photo. Provide correction and feedback as needed."
+                },
+                "studentTask": {
+                  "jp": "先生の写真に関する質問に答えて、Can-Do目標を達成できたか確認しましょう。",
+                  "en": "Answer the teacher's questions about the photo to confirm you have met the Can-Do objective."
+                }
+              },
+              {
+                "name": {
+                  "jp": "宿題",
+                  "en": "Homework"
+                },
+                "teacherNotes": {
+                  "jp": "別の写真について2〜3文で説明を書くように指示します。これにより、学習内容を強化します。",
+                  "en": "Assign homework to write 2-3 sentences describing a different photo. This will reinforce the lesson's content."
+                },
+                "studentTask": {
+                  "jp": "別の写真を選び、それについて短い説明文を書いて提出してください。",
+                  "en": "Choose a different photo, write a short description of it, and submit it."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+        "type": "reading",
+        "title": {
+          "jp": "読む",
+          "en": "Reading Text"
+        },
+        "cards": [
+          {
+            "id": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "kind": "text",
+            "body": {
+              "jp": "ユミさんがケンさんに自分のスマートフォンの写真を見せています。\n\nユミ：けんさん、見て！この写真。\nケン：わあ、いい写真ですね。\nユミ：これは私の家族の写真です。これは私の父です。そして、隣は母です。\nケン：そうですか。このかわいい犬はだれのですか？\nユミ：それは私の犬です。名前はポチです。\nケン：ポチ！かわいい名前ですね。ここはどこですか？\nユミ：ここは私の家です。庭で撮りました。",
+              "en": "Yumi is showing Ken a photo on her smartphone.\n\nYumi: Ken, look! This photo.\nKen: Wow, that's a nice photo.\nYumi: This is a photo of my family. This is my father. And next to him is my mother.\nKen: I see. Whose cute dog is this?\nYumi: That is my dog. His name is Pochi.\nKen: Pochi! What a cute name. Where is this place?\nYumi: This is my house. We took it in the yard.",
+              "romaji": "Yumi-san ga Ken-san ni jibun no sumaatofon no shashin o misete imasu.\n\nYumi: Ken-san, mite! Kono shashin.\nKen: Waa, ii shashin desu ne.\nYumi: Kore wa watashi no kazoku no shashin desu. Kore wa watashi no chichi desu. Soshite, tonari wa haha desu.\nKen: Sou desu ka. Kono kawaii inu wa dare no desu ka?\nYumi: Sore wa watashi no inu desu. Namae wa Pochi desu.\nKen: Pochi! Kawaii namae desu ne. Koko wa doko desu ka?\nYumi: Koko wa watashi no ie desu. Niwa de torimashita."
+            },
+            "paragraphs": [
+              {
+                "jp": "ユミさんがケンさんに自分のスマートフォンの写真を見せています。",
+                "en": "Yumi is showing Ken a photo on her smartphone.",
+                "romaji": "Yumi-san ga Ken-san ni jibun no sumaatofon no shashin o misete imasu."
+              },
+              {
+                "jp": "ユミ：けんさん、見て！この写真。",
+                "en": "Yumi: Ken, look! This photo.",
+                "romaji": "Yumi: Ken-san, mite! Kono shashin."
+              },
+              {
+                "jp": "ケン：わあ、いい写真ですね。",
+                "en": "Ken: Wow, that's a nice photo.",
+                "romaji": "Ken: Waa, ii shashin desu ne."
+              },
+              {
+                "jp": "ユミ：これは私の家族の写真です。これは私の父です。そして、隣は母です。",
+                "en": "Yumi: This is a photo of my family. This is my father. And next to him is my mother.",
+                "romaji": "Yumi: Kore wa watashi no kazoku no shashin desu. Kore wa watashi no chichi desu. Soshite, tonari wa haha desu."
+              },
+              {
+                "jp": "ケン：そうですか。このかわいい犬はだれのですか？",
+                "en": "Ken: I see. Whose cute dog is this?",
+                "romaji": "Ken: Sou desu ka. Kono kawaii inu wa dare no desu ka?"
+              },
+              {
+                "jp": "ユミ：それは私の犬です。名前はポチです。",
+                "en": "Yumi: That is my dog. His name is Pochi.",
+                "romaji": "Yumi: Sore wa watashi no inu desu. Namae wa Pochi desu."
+              },
+              {
+                "jp": "ケン：ポチ！かわいい名前ですね。ここはどこですか？",
+                "en": "Ken: Pochi! What a cute name. Where is this place?",
+                "romaji": "Ken: Pochi! Kawaii namae desu ne. Koko wa doko desu ka?"
+              },
+              {
+                "jp": "ユミ：ここは私の家です。庭で撮りました。",
+                "en": "Yumi: This is my house. We took it in the yard.",
+                "romaji": "Yumi: Koko wa watashi no ie desu. Niwa de torimashita."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c4d5e6f7-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
+        "type": "dialogue",
+        "title": {
+          "jp": "会話",
+          "en": "Dialogue"
+        },
+        "cards": [
+          {
+            "id": "d5e6f7a8-9b0c-1d2e-3f4a-5b6c7d8e9f0a",
+            "kind": "dialogue",
+            "body": {
+              "jp": "マリアさんがたけるさんの家で、壁にかかっている写真について話しています。",
+              "en": "Maria is at Takeru's house, talking about a photo hanging on the wall."
+            },
+            "turns": [
+              {
+                "speaker": {
+                  "name": "マリア"
+                },
+                "jp": "たけるさん、その写真、すてきですね。",
+                "romaji": "Takeru-san, sono shashin, suteki desu ne.",
+                "en": "Takeru, that's a lovely photo."
+              },
+              {
+                "speaker": {
+                  "name": "たける"
+                },
+                "jp": "ああ、これですか？ありがとうございます。",
+                "romaji": "Aa, kore desu ka? Arigatou gozaimasu.",
+                "en": "Oh, this one? Thank you."
+              },
+              {
+                "speaker": {
+                  "name": "マリア"
+                },
+                "jp": "はい。これはだれの写真ですか？",
+                "romaji": "Hai. Kore wa dare no shashin desu ka?",
+                "en": "Yes. Whose photo is it?"
+              },
+              {
+                "speaker": {
+                  "name": "たける"
+                },
+                "jp": "これは私の姉の写真です。",
+                "romaji": "Kore wa watashi no ane no shashin desu.",
+                "en": "This is a photo of my older sister."
+              },
+              {
+                "speaker": {
+                  "name": "マリア"
+                },
+                "jp": "お姉さんですか。きれいな人ですね。",
+                "romaji": "Oneesan desu ka. Kirei na hito desu ne.",
+                "en": "Your sister? She's beautiful."
+              },
+              {
+                "speaker": {
+                  "name": "たける"
+                },
+                "jp": "そうですか？姉が喜びます。",
+                "romaji": "Sou desu ka? Ane ga yorokobimasu.",
+                "en": "You think so? She'll be happy to hear that."
+              },
+              {
+                "speaker": {
+                  "name": "マリア"
+                },
+                "jp": "この場所はどこですか？とてもきれいです。",
+                "romaji": "Kono basho wa doko desu ka? Totemo kirei desu.",
+                "en": "Where is this place? It's very beautiful."
+              },
+              {
+                "speaker": {
+                  "name": "たける"
+                },
+                "jp": "ここは京都です。去年の春、旅行しました。",
+                "romaji": "Koko wa Kyouto desu. Kyonen no haru, ryokou shimashita.",
+                "en": "This is Kyoto. She traveled there last spring."
+              },
+              {
+                "speaker": {
+                  "name": "マリア"
+                },
+                "jp": "京都ですか。私も行きたいです。",
+                "romaji": "Kyouto desu ka. Watashi mo ikitai desu.",
+                "en": "Kyoto? I want to go there too."
+              },
+              {
+                "speaker": {
+                  "name": "たける"
+                },
+                "jp": "ええ、とてもいい所ですよ。",
+                "romaji": "Ee, totemo ii tokoro desu yo.",
+                "en": "Yeah, it's a very nice place."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "e6f7a8b9-0c1d-2e3f-4a5b-6c7d8e9f0a1b",
+        "type": "teach",
+        "title": {
+          "jp": "教える",
+          "en": "Teach"
+        },
+        "cards": [
+          {
+            "id": "f7a8b9c0-1d2e-3f4a-5b6c-7d8e9f0a1b2c",
+            "kind": "text",
+            "explanation": {
+              "jp": "所有を表す助詞「の」は、2つの名詞をつなげて「AのB」（A's B）という意味を作ります。",
+              "en": "The possessive particle 'の' (no) connects two nouns to show ownership or relationship, like 'A's B'."
+            },
+            "examples": [
+              {
+                "jp": "これは私「の」猫です。",
+                "furigana": "これはわたし「の」ねこです。",
+                "romaji": "Kore wa watashi no neko desu.",
+                "en": "This is my cat."
+              },
+              {
+                "jp": "あれは田中さん「の」家です。",
+                "furigana": "あれはたなかさん「の」うちです。",
+                "romaji": "Are wa Tanaka-san no uchi desu.",
+                "en": "That is Mr. Tanaka's house."
+              }
+            ],
+            "notes": [],
+            "body": {
+              "jp": "所有を表す助詞「の」は、2つの名詞をつなげて「AのB」（A's B）という意味を作ります。",
+              "en": "The possessive particle 'の' (no) connects two nouns to show ownership or relationship, like 'A's B'."
+            }
+          },
+          {
+            "id": "a8b9c0d1-2e3f-4a5b-6c7d-8e9f0a1b2c3d",
+            "kind": "text",
+            "explanation": {
+              "jp": "「これ」は物事を指す代名詞です。「この」は名詞の前に置いて、その名詞を特定します（この〇〇）。",
+              "en": "'これ' (kore) is a pronoun that points to an object ('This is...'). 'この' (kono) comes before a noun to specify it ('This [noun]...')."
+            },
+            "examples": [
+              {
+                "jp": "「これ」は写真です。",
+                "furigana": "「これ」はしゃしんです。",
+                "romaji": "Kore wa shashin desu.",
+                "en": "This is a photo."
+              },
+              {
+                "jp": "「この」写真はきれいです。",
+                "furigana": "「この」しゃしんはきれいです。",
+                "romaji": "Kono shashin wa kirei desu.",
+                "en": "This photo is beautiful."
+              }
+            ],
+            "notes": [],
+            "body": {
+              "jp": "「これ」は物事を指す代名詞です。「この」は名詞の前に置いて、その名詞を特定します（この〇〇）。",
+              "en": "'これ' (kore) is a pronoun that points to an object ('This is...'). 'この' (kono) comes before a noun to specify it ('This [noun]...')."
+            }
+          },
+          {
+            "id": "b9c0d1e2-3f4a-5b6c-7d8e-9f0a1b2c3d4e",
+            "kind": "text",
+            "explanation": {
+              "jp": "疑問詞「だれ」は「誰」を意味します。人について質問するときに使います。",
+              "en": "The question word 'だれ' (dare) means 'who'. Use it to ask about a person."
+            },
+            "examples": [
+              {
+                "jp": "この人は「だれ」ですか？",
+                "furigana": "このひとは「だれ」ですか？",
+                "romaji": "Kono hito wa dare desu ka?",
+                "en": "Who is this person?"
+              },
+              {
+                "jp": "これは「だれ」の写真ですか？",
+                "furigana": "これは「だれ」のしゃしんですか？",
+                "romaji": "Kore wa dare no shashin desu ka?",
+                "en": "Whose photo is this?"
+              }
+            ],
+            "notes": [],
+            "body": {
+              "jp": "疑問詞「だれ」は「誰」を意味します。人について質問するときに使います。",
+              "en": "The question word 'だれ' (dare) means 'who'. Use it to ask about a person."
+            }
+          },
+          {
+            "id": "c0d1e2f3-4a5b-6c7d-8e9f-0a1b2c3d4e5f",
+            "kind": "text",
+            "explanation": {
+              "jp": "疑問詞「どこ」は「どこ」を意味します。場所について質問するときに使います。",
+              "en": "The question word 'どこ' (doko) means 'where'. Use it to ask about a location."
+            },
+            "examples": [
+              {
+                "jp": "ここは「どこ」ですか？",
+                "furigana": "ここは「どこ」ですか？",
+                "romaji": "Koko wa doko desu ka?",
+                "en": "Where is this place?"
+              },
+              {
+                "jp": "あなたの家は「どこ」ですか？",
+                "furigana": "あなたのいえは「どこ」ですか？",
+                "romaji": "Anata no ie wa doko desu ka?",
+                "en": "Where is your house?"
+              }
+            ],
+            "notes": [],
+            "body": {
+              "jp": "疑問詞「どこ」は「どこ」を意味します。場所について質問するときに使います。",
+              "en": "The question word 'どこ' (doko) means 'where'. Use it to ask about a location."
+            }
+          }
+        ]
+      },
+      {
+        "id": "f8a9b0c1-d2e3-f4a5-b6c7-d8e9f0a1b2c3",
+        "type": "practice",
+        "title": {
+          "jp": "練習",
+          "en": "Practice"
+        },
+        "cards": [
+          {
+            "id": "a9b0c1d2-e3f4-a5b6-c7d8-e9f0a1b2c3d4",
+            "kind": "list",
+            "stem": {
+              "jp": "これは私【　】母の写真です。",
+              "en": "This is a photo of my mother."
+            },
+            "choices": [
+              {
+                "jp": "の",
+                "en": "no"
+              },
+              {
+                "jp": "は",
+                "en": "wa"
+              },
+              {
+                "jp": "を",
+                "en": "o"
+              }
+            ],
+            "rationale": {
+              "jp": "助詞「の」は所有を示します。この場合、「私の母」となります。",
+              "en": "The particle 'の' (no) indicates possession. In this case, 'my mother'."
+            },
+            "bullets": []
+          },
+          {
+            "id": "b0c1d2e3-f4a5-b6c7-d8e9-f0a1b2c3d4e5",
+            "kind": "list",
+            "stem": {
+              "jp": "【　】はどこですか？",
+              "en": "Where is this place?"
+            },
+            "choices": [
+              {
+                "jp": "この",
+                "en": "kono"
+              },
+              {
+                "jp": "これ",
+                "en": "kore"
+              },
+              {
+                "jp": "ここ",
+                "en": "koko"
+              }
+            ],
+            "rationale": {
+              "jp": "「ここ」は場所を指す言葉です。「どこ」は場所を尋ねる疑問詞なので、「ここ」が適切です。",
+              "en": "'ここ' (koko) refers to a place. Since 'どこ' (doko) asks about a location, 'ここ' is the appropriate word."
+            },
+            "bullets": []
+          },
+          {
+            "id": "c1d2e3f4-a5b6-c7d8-e9f0-a1b2c3d4e5f6",
+            "kind": "list",
+            "stem": {
+              "jp": "この人は【　】ですか？",
+              "en": "Who is this person?"
+            },
+            "choices": [
+              {
+                "jp": "どこ",
+                "en": "doko"
+              },
+              {
+                "jp": "だれ",
+                "en": "dare"
+              },
+              {
+                "jp": "なに",
+                "en": "nani"
+              }
+            ],
+            "rationale": {
+              "jp": "「だれ」は「誰」を意味し、人について尋ねるときに使います。",
+              "en": "'だれ' (dare) means 'who' and is used to ask about a person."
+            },
+            "bullets": []
+          },
+          {
+            "id": "d2e3f4a5-b6c7-d8e9-f0a1-b2c3d4e5f6a7",
+            "kind": "list",
+            "stem": {
+              "jp": "【　】犬はかわいいですね。",
+              "en": "This dog is cute, isn't it?"
+            },
+            "choices": [
+              {
+                "jp": "これ",
+                "en": "kore"
+              },
+              {
+                "jp": "ここ",
+                "en": "koko"
+              },
+              {
+                "jp": "この",
+                "en": "kono"
+              }
+            ],
+            "rationale": {
+              "jp": "「この」は名詞「犬」の前に来て、特定の犬を指します。",
+              "en": "'この' (kono) comes before the noun '犬' (inu) to specify a particular dog."
+            },
+            "bullets": []
+          }
+        ]
+      },
+      {
+        "id": "0b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e",
+        "type": "culture",
+        "title": {
+          "jp": "文化",
+          "en": "Culture"
+        },
+        "cards": [
+          {
+            "id": "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f",
+            "kind": "tips",
+            "body": {
+              "jp": "日本では、友人や同僚とスマートフォンの写真を見せ合うのは、一般的なコミュニケーションの一つです。旅行や食べ物、そしてもちろん家族やペットの写真が人気の話題です。",
+              "en": "In Japan, sharing photos on a smartphone with friends and colleagues is a common way to communicate and bond. Popular topics include photos from trips, food, and of course, family and pets."
+            },
+            "examples": []
+          },
+          {
+            "id": "2d3e4f5a-6b7c-8d9e-0f1a-2b3c4d5e6f7g",
+            "kind": "tips",
+            "body": {
+              "jp": "ペットはしばしば「家族の一員（かぞくのいちいん）」と見なされます。そのため、人々は自分のペットについて話すことをとても喜びます。",
+              "en": "Pets are often considered 'a member of the family' (kazoku no ichi'in). Because of this, people are very happy to talk about their pets."
+            },
+            "examples": []
+          },
+          {
+            "id": "3e4f5a6b-7c8d-9e0f-1a2b-3c4d5e6f7g8h",
+            "kind": "tips",
+            "body": {
+              "jp": "自分の家族について話すとき（例：「母」）と、他人の家族について話すとき（例：「お母さん」）では、言葉が違うことがあります。友人同士ではそれほど厳密ではありませんが、知っておくと便利な知識です。",
+              "en": "The words used to refer to your own family (e.g., 'haha' for mother) can be different from those used for someone else's family (e.g., 'okaasan'). This is less strict among friends, but it's a useful distinction to know."
+            },
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "a9b0c1d2-e3f4-a5b6-c7d8-e9f0a1b2c3d4",
+      "kind": "list",
+      "stem": {
+        "jp": "これは私【　】母の写真です。",
+        "en": "This is a photo of my mother."
+      },
+      "choices": [
+        {
+          "jp": "の",
+          "en": "no"
+        },
+        {
+          "jp": "は",
+          "en": "wa"
+        },
+        {
+          "jp": "を",
+          "en": "o"
+        }
+      ],
+      "rationale": {
+        "jp": "助詞「の」は所有を示します。この場合、「私の母」となります。",
+        "en": "The particle 'の' (no) indicates possession. In this case, 'my mother'."
+      },
+      "answerKey": "の"
+    },
+    {
+      "id": "b0c1d2e3-f4a5-b6c7-d8e9-f0a1b2c3d4e5",
+      "kind": "list",
+      "stem": {
+        "jp": "【　】はどこですか？",
+        "en": "Where is this place?"
+      },
+      "choices": [
+        {
+          "jp": "この",
+          "en": "kono"
+        },
+        {
+          "jp": "これ",
+          "en": "kore"
+        },
+        {
+          "jp": "ここ",
+          "en": "koko"
+        }
+      ],
+      "rationale": {
+        "jp": "「ここ」は場所を指す言葉です。「どこ」は場所を尋ねる疑問詞なので、「ここ」が適切です。",
+        "en": "'ここ' (koko) refers to a place. Since 'どこ' (doko) asks about a location, 'ここ' is the appropriate word."
+      },
+      "answerKey": "ここ"
+    },
+    {
+      "id": "c1d2e3f4-a5b6-c7d8-e9f0-a1b2c3d4e5f6",
+      "kind": "list",
+      "stem": {
+        "jp": "この人は【　】ですか？",
+        "en": "Who is this person?"
+      },
+      "choices": [
+        {
+          "jp": "どこ",
+          "en": "doko"
+        },
+        {
+          "jp": "だれ",
+          "en": "dare"
+        },
+        {
+          "jp": "なに",
+          "en": "nani"
+        }
+      ],
+      "rationale": {
+        "jp": "「だれ」は「誰」を意味し、人について尋ねるときに使います。",
+        "en": "'だれ' (dare) means 'who' and is used to ask about a person."
+      },
+      "answerKey": "だれ"
+    },
+    {
+      "id": "d2e3f4a5-b6c7-d8e9-f0a1-b2c3d4e5f6a7",
+      "kind": "list",
+      "stem": {
+        "jp": "【　】犬はかわいいですね。",
+        "en": "This dog is cute, isn't it?"
+      },
+      "choices": [
+        {
+          "jp": "これ",
+          "en": "kore"
+        },
+        {
+          "jp": "ここ",
+          "en": "koko"
+        },
+        {
+          "jp": "この",
+          "en": "kono"
+        }
+      ],
+      "rationale": {
+        "jp": "「この」は名詞「犬」の前に来て、特定の犬を指します。",
+        "en": "'この' (kono) comes before the noun '犬' (inu) to specify a particular dog."
+      },
+      "answerKey": "この"
+    }
+  ],
+  "extractedEntities": {
+    "words": [
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:118938",
+        "orth": "家",
+        "katakana": "イエ",
+        "hiragana": "いえ",
+        "romaji": "Ie",
+        "pos": null,
+        "translation": "house",
+        "source_text": "イエ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 73,
+            "end": 74
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:130890",
+        "orth": "庭",
+        "katakana": "ニワ",
+        "hiragana": "にわ",
+        "romaji": "Niwa",
+        "pos": null,
+        "translation": "garden",
+        "source_text": "ニワ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 185,
+            "end": 186
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:119316",
+        "orth": "犬",
+        "katakana": "イヌ",
+        "hiragana": "いぬ",
+        "romaji": "Inu",
+        "pos": null,
+        "translation": "dog",
+        "source_text": "イヌ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 116,
+            "end": 117
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:125495",
+        "orth": "写真",
+        "katakana": "シャシン",
+        "hiragana": "しゃしん",
+        "romaji": "Shashin",
+        "pos": null,
+        "translation": "photograph",
+        "source_text": "シャシン",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 21,
+            "end": 23
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:124807",
+        "orth": "私",
+        "katakana": "ワタシ",
+        "hiragana": "わたし",
+        "romaji": "Watashi",
+        "pos": null,
+        "translation": "I",
+        "source_text": "ワタシ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 71,
+            "end": 72
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:140598",
+        "orth": "隣り",
+        "katakana": "トナリ",
+        "hiragana": "となり",
+        "romaji": "Tonari",
+        "pos": null,
+        "translation": "neighbor",
+        "source_text": "トナリ",
+        "matchedField": "reading_katakana"
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:130101",
+        "orth": "どこ",
+        "katakana": "ドコ",
+        "hiragana": "どこ",
+        "romaji": "Doko",
+        "pos": null,
+        "translation": "where",
+        "source_text": "ドコ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 166,
+            "end": 168
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:125352",
+        "orth": "自分",
+        "katakana": "ジブン",
+        "hiragana": "じぶん",
+        "romaji": "Jibun",
+        "pos": null,
+        "translation": "self",
+        "source_text": "ジブン",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 10,
+            "end": 12
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:121576",
+        "orth": "かわいい",
+        "katakana": "カワイイ",
+        "hiragana": "かわいい",
+        "romaji": "Kawaii",
+        "pos": null,
+        "translation": "Cute, lovely",
+        "source_text": "カワイイ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 112,
+            "end": 116
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:121198",
+        "orth": "家族",
+        "katakana": "カゾク",
+        "hiragana": "かぞく",
+        "romaji": "Kazoku",
+        "pos": null,
+        "translation": "family",
+        "source_text": "カゾク",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 73,
+            "end": 75
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:128703",
+        "orth": "父",
+        "katakana": "チチ",
+        "hiragana": "ちち",
+        "romaji": "Chichi",
+        "pos": null,
+        "translation": "father",
+        "source_text": "チチ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 86,
+            "end": 87
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:130603",
+        "orth": "名前",
+        "katakana": "ナマエ",
+        "hiragana": "なまえ",
+        "romaji": "Namae",
+        "pos": null,
+        "translation": "name",
+        "source_text": "ナマエ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 138,
+            "end": 140
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:121428",
+        "orth": "壁",
+        "katakana": "カベ",
+        "hiragana": "かべ",
+        "romaji": "Ka be",
+        "pos": null,
+        "translation": "wall",
+        "source_text": "カベ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "c4d5e6f7-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
+            "cardId": "d5e6f7a8-9b0c-1d2e-3f4a-5b6c7d8e9f0a",
+            "start": 15,
+            "end": 16
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:131750",
+        "orth": "母",
+        "katakana": "ハハ",
+        "hiragana": "はは",
+        "romaji": "Haha",
+        "pos": null,
+        "translation": "mother",
+        "source_text": "ハハ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 96,
+            "end": 97
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:128491",
+        "orth": "誰",
+        "katakana": "ダレ",
+        "hiragana": "だれ",
+        "romaji": "Dare",
+        "pos": null,
+        "translation": "who",
+        "source_text": "ダレ",
+        "matchedField": "reading_katakana",
+        "mentions": [
+          {
+            "sectionId": "e6f7a8b9-0c1d-2e3f-4a5b-6c7d8e9f0a1b",
+            "cardId": "b9c0d1e2-3f4a-5b6c-7d8e-9f0a1b2c3d4e",
+            "start": 9,
+            "end": 10
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:134316",
+        "orth": "見せる",
+        "katakana": "ミセル",
+        "hiragana": "みせる",
+        "romaji": "Miseru",
+        "pos": null,
+        "translation": "to show",
+        "source_text": "見せる",
+        "matchedField": "standard_orthography"
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:134453",
+        "orth": "見る",
+        "katakana": "ミル",
+        "hiragana": "みる",
+        "romaji": "Miru",
+        "pos": null,
+        "translation": "to see",
+        "source_text": "見る",
+        "matchedField": "standard_orthography"
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:130207",
+        "orth": "隣",
+        "katakana": null,
+        "hiragana": null,
+        "romaji": "Tonari",
+        "pos": null,
+        "translation": "neighbor",
+        "source_text": "隣",
+        "matchedField": "standard_orthography",
+        "mentions": [
+          {
+            "sectionId": "a2b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+            "cardId": "b3c4d5e6-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+            "start": 94,
+            "end": 95
+          }
+        ]
+      },
+      {
+        "elementId": "4:ea425db1-88a5-4cca-aba4-b6b48154f621:130371",
+        "orth": "撮る",
+        "katakana": "トル",
+        "hiragana": "とる",
+        "romaji": "Toru",
+        "pos": null,
+        "translation": "to take (a photo)",
+        "source_text": "撮る",
+        "matchedField": "standard_orthography"
+      }
+    ],
+    "grammarPatterns": []
+  },
+  "readability": {
+    "jlptEstimate": "N5",
+    "metrics": {
+      "chars": 204,
+      "sentences": 10
+    }
+  },
+  "pdf": {
+    "renderTemplate": "default-a4",
+    "assetPaths": []
+  }
+}

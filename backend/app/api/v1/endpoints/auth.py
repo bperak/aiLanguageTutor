@@ -4,7 +4,7 @@ Authentication endpoints for user registration, login, and management.
 
 from datetime import timedelta
 from typing import Dict, Any
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, Header
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -42,6 +42,24 @@ async def get_current_active_user_dep(
     return current_user
 
 
+async def get_optional_user(
+    authorization: str | None = Header(default=None),
+    db: AsyncSession = Depends(get_postgresql_session)
+) -> User | None:
+    """Return the user if a valid Bearer token is present, otherwise None.
+
+    This lets public endpoints glean user context for analytics without enforcing auth.
+    """
+    if not authorization or not authorization.lower().startswith("bearer "):
+        return None
+    token = authorization.split(" ", 1)[1].strip()
+    try:
+        user = await AuthService.get_current_user(db, token)
+        return user
+    except Exception:
+        return None
+
+
 @router.post("/register", response_model=UserResponse, status_code=status.HTTP_201_CREATED)
 async def register_user(
     user_create: UserCreate,
@@ -55,7 +73,12 @@ async def register_user(
     """
     try:
         user = await AuthService.create_user(db, user_create)
-        return UserResponse.from_orm(user)
+        response = UserResponse.from_orm(user)
+        # Add profile_completed flag to response
+        response_dict = response.dict()
+        response_dict["profile_completed"] = False
+        response_dict["profile_skipped"] = False
+        return response_dict
         
     except HTTPException:
         raise
@@ -146,6 +169,22 @@ async def read_users_me(
     Returns the authenticated user's profile information.
     """
     return UserResponse.from_orm(current_user)
+
+
+@router.get("/profile-status")
+async def get_profile_status(
+    current_user: User = Depends(get_current_active_user_dep),
+    db: AsyncSession = Depends(get_postgresql_session)
+):
+    """Get profile completion status for guards."""
+    from app.services.profile_building_service import profile_building_service
+    status_data = await profile_building_service.check_profile_completion(
+        db, current_user.id
+    )
+    return {
+        "profile_completed": status_data["completed"],
+        "profile_skipped": status_data["skipped"]
+    }
 
 
 @router.get("/profile", response_model=UserProfile)
