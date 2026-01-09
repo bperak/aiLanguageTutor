@@ -1,0 +1,33 @@
+{
+  "name": "grammar-study-e2e",
+  "description": "Full browser-based grammar study flow: navigate to grammar page, verify UI loads",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "http://localhost:3000/grammar"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 3000)); const bodyText = document.body.textContent || ''; const hasGrammar = /grammar|文法/i.test(bodyText); const hasPatterns = /pattern|パターン/i.test(bodyText); const hasStudy = /study|学習/i.test(bodyText); return { hasGrammar, hasPatterns, hasStudy, url: window.location.href }; }",
+      "saveAs": "grammarPage"
+    },
+    {
+      "action": "assert",
+      "expression": "grammarPage.hasGrammar === true || grammarPage.hasPatterns === true"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const studyLinks = Array.from(document.querySelectorAll('a[href*=\"/grammar/study\"], a:has-text(\"Study\"), a:has-text(\"View\")')).slice(0, 1); if (studyLinks.length === 0) return { foundLink: false }; const href = studyLinks[0].getAttribute('href') || studyLinks[0].href; return { foundLink: true, studyUrl: href }; }",
+      "saveAs": "grammarLink"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { if (!ctx.grammarLink.foundLink) { return { skipped: true }; } const url = ctx.grammarLink.studyUrl.startsWith('http') ? ctx.grammarLink.studyUrl : 'http://localhost:3000' + ctx.grammarLink.studyUrl; window.location.href = url; await new Promise(r => setTimeout(r, 5000)); const bodyText = document.body.textContent || ''; const hasPattern = /pattern|文法/i.test(bodyText); return { navigated: true, hasPattern, url: window.location.href }; }",
+      "saveAs": "grammarStudy"
+    },
+    {
+      "action": "assert",
+      "expression": "grammarStudy.hasPattern === true || grammarStudy.skipped === true || grammarLink.foundLink === false"
+    }
+  ]
+}

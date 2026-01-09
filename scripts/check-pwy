@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Convenience wrapper to run Playwright-MCP scenarios inside the running Docker stack.
+#
+# Usage:
+#   ./scripts/check-pwy
+#   ./scripts/check-pwy /work/scenarios/smoke.json
+#   ./scripts/check-pwy /work/scenarios/smoke.json /work/scenarios/no_dev_next_endpoints.json
+#
+# Environment Variables:
+#   COMPOSE_FILE_PATH     - Docker compose file (default: docker-compose.server.yml)
+#   MCP_RUNNER_SERVICE    - MCP runner service name (default: mcp-runner)
+#   INCLUDE_REGISTRATION_E2E - Set to "1" to include full browser registration test
+#
+# Examples:
+#   INCLUDE_REGISTRATION_E2E=1 ./scripts/check-pwy   # Include registration e2e
+#   ./scripts/check-registration-e2e                  # Run only registration e2e
+#
+# Notes:
+# - Uses docker-compose.server.yml by default (server/Cloudflare tunnel setup).
+# - Override with COMPOSE_FILE_PATH if needed.
+
+COMPOSE_FILE_PATH="${COMPOSE_FILE_PATH:-docker-compose.server.yml}"
+SERVICE="${MCP_RUNNER_SERVICE:-mcp-runner}"
+
+if [[ $# -gt 0 ]]; then
+  SCENARIOS=("$@")
+else
+  SCENARIOS=(
+    "/work/scenarios/smoke.json"
+    "/work/scenarios/no_dev_next_endpoints.json"
+    "/work/scenarios/profile_build_schema.json"
+  )
+fi
+
+# Reason: If INCLUDE_REGISTRATION_E2E is set, add the full browser-based registration test
+if [[ "${INCLUDE_REGISTRATION_E2E:-0}" == "1" ]]; then
+  SCENARIOS+=("/work/scenarios/full_registration_e2e.json")
+fi
+
+docker compose -f "${COMPOSE_FILE_PATH}" exec -T "${SERVICE}" \
+  node /work/scripts/mcp_runner.mjs "${SCENARIOS[@]}"
+
+

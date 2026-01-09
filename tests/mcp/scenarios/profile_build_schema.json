@@ -1,0 +1,43 @@
+{
+  "name": "profile-build-schema",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "async () => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; const now = Date.now(); const email = `mcp_${now}@example.com`; const username = `mcp_${now}`; const password = 'TestPass123'; const r = await fetch(base + '/api/v1/auth/register', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email, username, password, native_language: 'en', target_languages: ['ja'], learning_goals: ['travel'] }) }); return { status: r.status, body: await r.json(), email, username, password }; }",
+      "saveAs": "register"
+    },
+    {
+      "action": "assert",
+      "expression": "register.status === 201"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; const r = await fetch(base + '/api/v1/auth/login', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ username: ctx.register.username, password: ctx.register.password }) }); return { status: r.status, body: await r.json() }; }",
+      "saveAs": "login"
+    },
+    {
+      "action": "assert",
+      "expression": "login.status === 200 && !!login.body.access_token"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; const r = await fetch(base + '/api/v1/conversations/sessions', { method: 'POST', headers: { 'content-type': 'application/json', authorization: `Bearer ${ctx.login.body.access_token}` }, body: JSON.stringify({ session_type: 'profile_building', language_code: 'ja', ai_provider: 'openai', ai_model: 'gpt-4o-mini', title: 'MCP Profile Build' }) }); return { status: r.status, body: await r.json() }; }",
+      "saveAs": "session"
+    },
+    {
+      "action": "assert",
+      "expression": "session.status === 200 && !!session.body.id"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; const r = await fetch(base + '/api/v1/profile/complete', { method: 'POST', headers: { 'content-type': 'application/json', authorization: `Bearer ${ctx.login.body.access_token}` }, body: JSON.stringify({ conversation_id: ctx.session.body.id, profile_data: { learning_goals: ['travel'], previous_knowledge: { has_experience: false }, learning_experiences: { preferred_methods: ['conversation'] }, usage_context: { contexts: ['travel'] }, current_level: 'beginner_1', additional_notes: 'MCP schema smoke' } }) }); return { status: r.status, body: await r.json() }; }",
+      "saveAs": "complete"
+    },
+    {
+      "action": "assert",
+      "expression": "complete.status === 200 && complete.body.status === 'completed'"
+    }
+  ]
+}
+
+

@@ -1,0 +1,34 @@
+{
+  "name": "prelesson-kit-flow",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "async () => { const base = process.env.TARGET_FRONTEND || 'http://localhost:3000'; const r = await fetch(base + '/'); return { status: r.status }; }",
+      "saveAs": "frontendCheck"
+    },
+    {
+      "action": "assert",
+      "expression": "frontendCheck.status === 200"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; try { const r = await fetch(base + '/api/v1/cando/lessons/session/create', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ can_do_id: 'JF:21' }) }); let data; try { data = await r.json(); } catch(e) { const text = await r.text(); data = { error: 'No JSON', text: text.substring(0, 100) }; } return { status: r.status, hasSessionId: data && 'session_id' in data, isNot500: r.status !== 500, isNot400: r.status !== 400, error: data?.detail || data?.error || null, dataKeys: data ? Object.keys(data) : [] }; } catch(e) { return { status: 0, error: e.message, isNot500: false }; } }",
+      "saveAs": "sessionCreate"
+    },
+    {
+      "action": "assert",
+      "expression": "sessionCreate.isNot500 === true",
+      "message": "Session creation should not return 500. Status: ${sessionCreate.status}, Error: ${sessionCreate.error || 'none'}, Data keys: ${sessionCreate.dataKeys || []}"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; const r = await fetch(base + '/health'); return { status: r.status, body: await r.json() }; }",
+      "saveAs": "health"
+    },
+    {
+      "action": "assert",
+      "expression": "health.status === 200"
+    }
+  ]
+}
+

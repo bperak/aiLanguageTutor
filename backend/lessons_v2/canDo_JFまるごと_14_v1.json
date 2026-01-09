@@ -1,0 +1,841 @@
+{
+  "lesson": {
+    "meta": {
+      "lesson_id": "canDo_JFまるごと:14_v1",
+      "metalanguage": "en",
+      "can_do": {
+        "uid": "JFまるごと:14",
+        "level": "A2",
+        "primaryTopic_ja": "旅行と交通",
+        "primaryTopic_en": "Travel and Transportation",
+        "skillDomain_ja": "産出",
+        "type_ja": "活動",
+        "description": {
+          "en": "Can introduce in short simple terms famous sights, local specialties and other features when giving a friend a tour of one's hometown or other cities familiar to oneself.",
+          "ja": "友人に自分の出身地など、よく知っている町を案内するとき、名所や名物などを短い簡単な言葉で紹介することができる。"
+        },
+        "source": "JFまるごと"
+      }
+    },
+    "graph_bindings": {
+      "words": {
+        "by_cypher": null,
+        "by_keys": [],
+        "resolve_label": null,
+        "resolve_property": null
+      },
+      "grammar_patterns": {
+        "by_cypher": null,
+        "by_keys": [],
+        "resolve_label": null,
+        "resolve_property": null
+      }
+    },
+    "ui_prefs": {
+      "text_layers_default": {
+        "std": true,
+        "furigana": true,
+        "romaji": false,
+        "translation": true
+      }
+    },
+    "cards": {
+      "objective": {
+        "type": "ObjectiveCard",
+        "title": {
+          "en": "Introduce Sights and Specialties",
+          "ja": "名所と名物を紹介する"
+        },
+        "body": {
+          "en": "Learn to introduce famous sights and local specialties in simple terms.",
+          "ja": "名所や名物を簡単な言葉で紹介することを学ぶ。"
+        },
+        "success_criteria": [
+          "The friend understands the main features of the sights.",
+          "The friend can identify local specialties mentioned.",
+          "The guide uses simple and clear language.",
+          "The guide maintains the friend's interest."
+        ],
+        "outcomes": [],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: ObjectiveCard\n\nINPUTS:\n- metalanguage: en\n- can_do: {\"uid\": \"JFまるごと:14\", \"level\": \"A2\", \"primaryTopic_ja\": \"旅行と交通\", \"primaryTopic_en\": \"Travel and Transportation\", \"skillDomain_ja\": \"産出\", \"type_ja\": \"活動\", \"description\": {\"en\": \"Can introduce in short simple terms famous sights, local specialties and other features when giving a friend a tour of one's hometown or other cities familiar to oneself.\", \"ja\": \"友人に自分の出身地など、よく知っている町を案内するとき、名所や名物などを短い簡単な言葉で紹介することができる。\"}, \"source\": \"JFまるごと\"}\n- plan: {\"uid\": \"12345\", \"level\": \"A2\", \"communicative_function_en\": \"Introduce famous sights and local specialties in simple terms.\", \"communicative_function_ja\": \"名所や名物を簡単な言葉で紹介する。\", \"scenarios\": [{\"name\": \"Hometown Tour\", \"setting\": \"A friend visits your hometown and you give them a tour.\", \"roles\": [{\"label\": \"Guide\", \"register\": \"plain\"}, {\"label\": \"Friend\", \"register\": \"plain\"}]}, {\"name\": \"City Tour\", \"setting\": \"You are showing a familiar city to a visiting friend.\", \"roles\": [{\"label\": \"Local\", \"register\": \"plain\"}, {\"label\": \"Visitor\", \"register\": \"plain\"}]}], \"lex_buckets\": [{\"name\": \"Famous Sights\", \"items\": [\"お城\", \"博物館\", \"公園\", \"神社\", \"寺\", \"美術館\", \"展望台\", \"動物園\", \"水族館\", \"歴史的建物\"]}, {\"name\": \"Local Specialties\", \"items\": [\"ラーメン\", \"寿司\", \"お好み焼き\", \"たこ焼き\", \"うどん\", \"そば\", \"抹茶\", \"和菓子\", \"焼き鳥\", \"天ぷら\"]}, {\"name\": \"Descriptive Adjectives\", \"items\": [\"有名な\", \"美しい\", \"古い\", \"新しい\", \"人気の\", \"静かな\", \"にぎやかな\", \"大きい\", \"小さい\", \"面白い\"]}, {\"name\": \"Basic Verbs\", \"items\": [\"見る\", \"食べる\", \"行く\", \"歩く\", \"訪れる\", \"紹介する\", \"楽しむ\", \"知る\", \"案内する\", \"話す\"]}, {\"name\": \"Directional Phrases\", \"items\": [\"ここ\", \"そこ\", \"あそこ\", \"右\", \"左\", \"まっすぐ\", \"近く\", \"遠く\", \"前\", \"後ろ\"]}], \"grammar_functions\": [{\"id\": \"1\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"名詞 + は + 形容詞 + です。\", \"slots\": [\"名詞\", \"形容詞\"], \"notes_en\": \"Use to describe features of sights or specialties.\"}, {\"id\": \"2\", \"label\": \"Basic Verb Conjugation\", \"pattern_ja\": \"動詞 + ます。\", \"slots\": [\"動詞\"], \"notes_en\": \"Use to express actions related to the tour.\"}, {\"id\": \"3\", \"label\": \"Location Phrases\", \"pattern_ja\": \"名詞 + は + 場所 + にあります。\", \"slots\": [\"名詞\", \"場所\"], \"notes_en\": \"Use to indicate where something is located.\"}], \"evaluation\": {\"success_criteria\": [\"The friend understands the main features of the sights.\", \"The friend can identify local specialties mentioned.\", \"The guide uses simple and clear language.\", \"The guide maintains the friend's interest.\"], \"discourse_markers\": [\"まず\", \"次に\", \"それから\", \"最後に\", \"ここは\"]}, \"cultural_themes_en\": [\"Understanding the importance of local specialties in Japanese culture.\", \"Recognizing the historical significance of famous sights.\", \"Appreciating the balance between modern and traditional elements in cities.\"], \"cultural_themes_ja\": [\"日本文化における名物の重要性を理解する。\", \"名所の歴史的な意義を認識する。\", \"都市における現代と伝統のバランスを評価する。\"]}\n\nTASK:\nCreate an ObjectiveCard:\n- title: {\"en\", \"ja\"} succinct.\n- body: {\"en\", \"ja\"} derived from plan.communicative_function_* (learner-facing, A2 terms).\n- success_criteria: copy/trim from plan.evaluation.success_criteria (2–5 items).\n- outcomes: optional 0–4 finer-grained outcomes.\n\nCONSTRAINTS:\n- No extra fields. Strict JSON.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "words": {
+        "type": "WordsCard",
+        "items": [
+          {
+            "id": "1",
+            "neo4j_id": null,
+            "jp": {
+              "std": "お城",
+              "furigana": "おしろ",
+              "romaji": "oshirō",
+              "translation": {
+                "en": "castle"
+              }
+            },
+            "tags": [
+              "Famous Sights"
+            ],
+            "image": {
+              "prompt": "castle, historical building",
+              "style": "scene-illustration",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "2",
+            "neo4j_id": null,
+            "jp": {
+              "std": "寿司",
+              "furigana": "すし",
+              "romaji": "sushi",
+              "translation": {
+                "en": "sushi"
+              }
+            },
+            "tags": [
+              "Local Specialties"
+            ],
+            "image": {
+              "prompt": "sushi, Japanese food",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "3",
+            "neo4j_id": null,
+            "jp": {
+              "std": "美しい",
+              "furigana": "うつくしい",
+              "romaji": "utsukushii",
+              "translation": {
+                "en": "beautiful"
+              }
+            },
+            "tags": [
+              "Descriptive Adjectives"
+            ],
+            "image": {
+              "prompt": "beautiful scenery",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "4",
+            "neo4j_id": null,
+            "jp": {
+              "std": "見る",
+              "furigana": "みる",
+              "romaji": "miru",
+              "translation": {
+                "en": "to see"
+              }
+            },
+            "tags": [
+              "Basic Verbs"
+            ],
+            "image": {
+              "prompt": "eye, seeing",
+              "style": "diagram",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "5",
+            "neo4j_id": null,
+            "jp": {
+              "std": "近く",
+              "furigana": "ちかく",
+              "romaji": "chikaku",
+              "translation": {
+                "en": "near"
+              }
+            },
+            "tags": [
+              "Directional Phrases"
+            ],
+            "image": {
+              "prompt": "nearby location",
+              "style": "infographic",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "6",
+            "neo4j_id": null,
+            "jp": {
+              "std": "神社",
+              "furigana": "じんじゃ",
+              "romaji": "jinja",
+              "translation": {
+                "en": "shrine"
+              }
+            },
+            "tags": [
+              "Famous Sights"
+            ],
+            "image": {
+              "prompt": "shrine, traditional building",
+              "style": "scene-illustration",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "7",
+            "neo4j_id": null,
+            "jp": {
+              "std": "抹茶",
+              "furigana": "まっちゃ",
+              "romaji": "matcha",
+              "translation": {
+                "en": "matcha"
+              }
+            },
+            "tags": [
+              "Local Specialties"
+            ],
+            "image": {
+              "prompt": "matcha tea, Japanese drink",
+              "style": "photo",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "8",
+            "neo4j_id": null,
+            "jp": {
+              "std": "にぎやかな",
+              "furigana": "にぎやかな",
+              "romaji": "nigiyakana",
+              "translation": {
+                "en": "lively"
+              }
+            },
+            "tags": [
+              "Descriptive Adjectives"
+            ],
+            "image": {
+              "prompt": "lively street",
+              "style": "scene-illustration",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          },
+          {
+            "id": "9",
+            "neo4j_id": null,
+            "jp": {
+              "std": "行く",
+              "furigana": "いく",
+              "romaji": "iku",
+              "translation": {
+                "en": "to go"
+              }
+            },
+            "tags": [
+              "Basic Verbs"
+            ],
+            "image": {
+              "prompt": "walking, going",
+              "style": "diagram",
+              "size": "1024x1024",
+              "negative_prompt": null,
+              "seed": null
+            }
+          }
+        ],
+        "ui_layers_override": null,
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: WordsCard\n\nINPUTS:\n- metalanguage: en\n- plan.lex_buckets: {\"uid\": \"12345\", \"level\": \"A2\", \"communicative_function_en\": \"Introduce famous sights and local specialties in simple terms.\", \"communicative_function_ja\": \"名所や名物を簡単な言葉で紹介する。\", \"scenarios\": [{\"name\": \"Hometown Tour\", \"setting\": \"A friend visits your hometown and you give them a tour.\", \"roles\": [{\"label\": \"Guide\", \"register\": \"plain\"}, {\"label\": \"Friend\", \"register\": \"plain\"}]}, {\"name\": \"City Tour\", \"setting\": \"You are showing a familiar city to a visiting friend.\", \"roles\": [{\"label\": \"Local\", \"register\": \"plain\"}, {\"label\": \"Visitor\", \"register\": \"plain\"}]}], \"lex_buckets\": [{\"name\": \"Famous Sights\", \"items\": [\"お城\", \"博物館\", \"公園\", \"神社\", \"寺\", \"美術館\", \"展望台\", \"動物園\", \"水族館\", \"歴史的建物\"]}, {\"name\": \"Local Specialties\", \"items\": [\"ラーメン\", \"寿司\", \"お好み焼き\", \"たこ焼き\", \"うどん\", \"そば\", \"抹茶\", \"和菓子\", \"焼き鳥\", \"天ぷら\"]}, {\"name\": \"Descriptive Adjectives\", \"items\": [\"有名な\", \"美しい\", \"古い\", \"新しい\", \"人気の\", \"静かな\", \"にぎやかな\", \"大きい\", \"小さい\", \"面白い\"]}, {\"name\": \"Basic Verbs\", \"items\": [\"見る\", \"食べる\", \"行く\", \"歩く\", \"訪れる\", \"紹介する\", \"楽しむ\", \"知る\", \"案内する\", \"話す\"]}, {\"name\": \"Directional Phrases\", \"items\": [\"ここ\", \"そこ\", \"あそこ\", \"右\", \"左\", \"まっすぐ\", \"近く\", \"遠く\", \"前\", \"後ろ\"]}], \"grammar_functions\": [{\"id\": \"1\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"名詞 + は + 形容詞 + です。\", \"slots\": [\"名詞\", \"形容詞\"], \"notes_en\": \"Use to describe features of sights or specialties.\"}, {\"id\": \"2\", \"label\": \"Basic Verb Conjugation\", \"pattern_ja\": \"動詞 + ます。\", \"slots\": [\"動詞\"], \"notes_en\": \"Use to express actions related to the tour.\"}, {\"id\": \"3\", \"label\": \"Location Phrases\", \"pattern_ja\": \"名詞 + は + 場所 + にあります。\", \"slots\": [\"名詞\", \"場所\"], \"notes_en\": \"Use to indicate where something is located.\"}], \"evaluation\": {\"success_criteria\": [\"The friend understands the main features of the sights.\", \"The friend can identify local specialties mentioned.\", \"The guide uses simple and clear language.\", \"The guide maintains the friend's interest.\"], \"discourse_markers\": [\"まず\", \"次に\", \"それから\", \"最後に\", \"ここは\"]}, \"cultural_themes_en\": [\"Understanding the importance of local specialties in Japanese culture.\", \"Recognizing the historical significance of famous sights.\", \"Appreciating the balance between modern and traditional elements in cities.\"], \"cultural_themes_ja\": [\"日本文化における名物の重要性を理解する。\", \"名所の歴史的な意義を認識する。\", \"都市における現代と伝統のバランスを評価する。\"]}\n\nTASK:\nSelect 6–12 items total across plan.lex_buckets that best support the function.\nFor each item:\n- Build JPText layers: std (from plan), furigana inline, Hepburn romaji with macrons where applicable,\n  translation keyed by \"en\".\n- tags: the source bucket name (e.g., \"places\",\"actions\",\"specialties\",\"connectors\").\n- image: optional flat-icon 1024x1024 prompt describing the concept.\n\nCONSTRAINTS:\n- A-level simplicity. Natural readings. No duplicates.\n- Strict JSON.\n\nOUTPUT: WordsCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "grammar_patterns": {
+        "type": "GrammarPatternsCard",
+        "patterns": [
+          {
+            "id": "1",
+            "neo4j_id": null,
+            "form": {
+              "ja": {
+                "std": "名詞 + は + 形容詞 + です。",
+                "furigana": "めいし + は + けいようし + です。",
+                "romaji": "meishi + wa + keiyoushi + desu.",
+                "translation": {
+                  "en": "Noun + is + adjective."
+                }
+              }
+            },
+            "explanation": {
+              "en": "Use this pattern to describe the features of sights or specialties in simple terms."
+            },
+            "slots": [
+              "名詞",
+              "形容詞"
+            ],
+            "examples": [
+              {
+                "ja": {
+                  "std": "お城は有名です。",
+                  "furigana": "おしろはゆうめいです。",
+                  "romaji": "oshiro wa yuumei desu.",
+                  "translation": {
+                    "en": "The castle is famous."
+                  }
+                },
+                "audio_ref": null
+              },
+              {
+                "ja": {
+                  "std": "寿司は美味しいです。",
+                  "furigana": "すしはおいしいです。",
+                  "romaji": "sushi wa oishii desu.",
+                  "translation": {
+                    "en": "Sushi is delicious."
+                  }
+                },
+                "audio_ref": null
+              }
+            ],
+            "image": null
+          },
+          {
+            "id": "2",
+            "neo4j_id": null,
+            "form": {
+              "ja": {
+                "std": "動詞 + ます。",
+                "furigana": "どうし + ます。",
+                "romaji": "doushi + masu.",
+                "translation": {
+                  "en": "Verb + masu form."
+                }
+              }
+            },
+            "explanation": {
+              "en": "Use this pattern to express actions related to the tour in a polite manner."
+            },
+            "slots": [
+              "動詞"
+            ],
+            "examples": [
+              {
+                "ja": {
+                  "std": "公園を歩きます。",
+                  "furigana": "こうえんをあるきます。",
+                  "romaji": "kouen o arukimasu.",
+                  "translation": {
+                    "en": "I walk in the park."
+                  }
+                },
+                "audio_ref": null
+              },
+              {
+                "ja": {
+                  "std": "神社を訪れます。",
+                  "furigana": "じんじゃをおとずれます。",
+                  "romaji": "jinja o otozuremasu.",
+                  "translation": {
+                    "en": "I visit the shrine."
+                  }
+                },
+                "audio_ref": null
+              }
+            ],
+            "image": null
+          },
+          {
+            "id": "3",
+            "neo4j_id": null,
+            "form": {
+              "ja": {
+                "std": "名詞 + は + 場所 + にあります。",
+                "furigana": "めいし + は + ばしょ + にあります。",
+                "romaji": "meishi + wa + basho + ni arimasu.",
+                "translation": {
+                  "en": "Noun + is located at + place."
+                }
+              }
+            },
+            "explanation": {
+              "en": "Use this pattern to indicate the location of a sight or specialty."
+            },
+            "slots": [
+              "名詞",
+              "場所"
+            ],
+            "examples": [
+              {
+                "ja": {
+                  "std": "美術館はここにあります。",
+                  "furigana": "びじゅつかんはここにあります。",
+                  "romaji": "bijutsukan wa koko ni arimasu.",
+                  "translation": {
+                    "en": "The museum is located here."
+                  }
+                },
+                "audio_ref": null
+              },
+              {
+                "ja": {
+                  "std": "寺はあそこにあります。",
+                  "furigana": "てらはあそこにあります。",
+                  "romaji": "tera wa asoko ni arimasu.",
+                  "translation": {
+                    "en": "The temple is located over there."
+                  }
+                },
+                "audio_ref": null
+              }
+            ],
+            "image": null
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: GrammarPatternsCard\n\nINPUTS:\n- metalanguage: en\n- plan.grammar_functions: {\"uid\": \"12345\", \"level\": \"A2\", \"communicative_function_en\": \"Introduce famous sights and local specialties in simple terms.\", \"communicative_function_ja\": \"名所や名物を簡単な言葉で紹介する。\", \"scenarios\": [{\"name\": \"Hometown Tour\", \"setting\": \"A friend visits your hometown and you give them a tour.\", \"roles\": [{\"label\": \"Guide\", \"register\": \"plain\"}, {\"label\": \"Friend\", \"register\": \"plain\"}]}, {\"name\": \"City Tour\", \"setting\": \"You are showing a familiar city to a visiting friend.\", \"roles\": [{\"label\": \"Local\", \"register\": \"plain\"}, {\"label\": \"Visitor\", \"register\": \"plain\"}]}], \"lex_buckets\": [{\"name\": \"Famous Sights\", \"items\": [\"お城\", \"博物館\", \"公園\", \"神社\", \"寺\", \"美術館\", \"展望台\", \"動物園\", \"水族館\", \"歴史的建物\"]}, {\"name\": \"Local Specialties\", \"items\": [\"ラーメン\", \"寿司\", \"お好み焼き\", \"たこ焼き\", \"うどん\", \"そば\", \"抹茶\", \"和菓子\", \"焼き鳥\", \"天ぷら\"]}, {\"name\": \"Descriptive Adjectives\", \"items\": [\"有名な\", \"美しい\", \"古い\", \"新しい\", \"人気の\", \"静かな\", \"にぎやかな\", \"大きい\", \"小さい\", \"面白い\"]}, {\"name\": \"Basic Verbs\", \"items\": [\"見る\", \"食べる\", \"行く\", \"歩く\", \"訪れる\", \"紹介する\", \"楽しむ\", \"知る\", \"案内する\", \"話す\"]}, {\"name\": \"Directional Phrases\", \"items\": [\"ここ\", \"そこ\", \"あそこ\", \"右\", \"左\", \"まっすぐ\", \"近く\", \"遠く\", \"前\", \"後ろ\"]}], \"grammar_functions\": [{\"id\": \"1\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"名詞 + は + 形容詞 + です。\", \"slots\": [\"名詞\", \"形容詞\"], \"notes_en\": \"Use to describe features of sights or specialties.\"}, {\"id\": \"2\", \"label\": \"Basic Verb Conjugation\", \"pattern_ja\": \"動詞 + ます。\", \"slots\": [\"動詞\"], \"notes_en\": \"Use to express actions related to the tour.\"}, {\"id\": \"3\", \"label\": \"Location Phrases\", \"pattern_ja\": \"名詞 + は + 場所 + にあります。\", \"slots\": [\"名詞\", \"場所\"], \"notes_en\": \"Use to indicate where something is located.\"}], \"evaluation\": {\"success_criteria\": [\"The friend understands the main features of the sights.\", \"The friend can identify local specialties mentioned.\", \"The guide uses simple and clear language.\", \"The guide maintains the friend's interest.\"], \"discourse_markers\": [\"まず\", \"次に\", \"それから\", \"最後に\", \"ここは\"]}, \"cultural_themes_en\": [\"Understanding the importance of local specialties in Japanese culture.\", \"Recognizing the historical significance of famous sights.\", \"Appreciating the balance between modern and traditional elements in cities.\"], \"cultural_themes_ja\": [\"日本文化における名物の重要性を理解する。\", \"名所の歴史的な意義を認識する。\", \"都市における現代と伝統のバランスを評価する。\"]}\n\nTASK:\nChoose 2–4 grammar_functions from the plan that are core for achieving the CanDo.\nFor each chosen function:\n- id: reuse the plan function id.\n- form.ja: JPText layers where std == pattern_ja; add furigana and romaji; translation in \"en\".\n- explanation: {\"en\": \"...\"}, 1–2 sentences.\n- slots: copy from the plan function.\n- examples: 1–2 A-level examples with full JPText and ≤12 words each.\n- image: optional diagram 1280x720.\n\nCONSTRAINTS:\n- Respect the level; avoid advanced structures.\n- Strict JSON.\n\nOUTPUT: GrammarPatternsCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "lesson_dialogue": {
+        "type": "DialogueCard",
+        "title": {
+          "en": "Hometown Tour"
+        },
+        "turns": [
+          {
+            "speaker": "Guide",
+            "ja": {
+              "std": "ここが私の学校です。",
+              "furigana": "ここがわたしのがっこうです。",
+              "romaji": "Koko ga watashi no gakkou desu.",
+              "translation": {
+                "en": "This is my school."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Friend",
+            "ja": {
+              "std": "大きいですね！",
+              "furigana": "おおきいですね！",
+              "romaji": "Ookii desu ne!",
+              "translation": {
+                "en": "It's big!"
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Guide",
+            "ja": {
+              "std": "あそこに公園があります。",
+              "furigana": "あそこにこうえんがあります。",
+              "romaji": "Asoko ni kouen ga arimasu.",
+              "translation": {
+                "en": "There's a park over there."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Friend",
+            "ja": {
+              "std": "行ってみたいです。",
+              "furigana": "いってみたいです。",
+              "romaji": "Itte mitai desu.",
+              "translation": {
+                "en": "I want to go."
+              }
+            },
+            "audio_ref": null
+          },
+          {
+            "speaker": "Guide",
+            "ja": {
+              "std": "じゃあ、行きましょう。",
+              "furigana": "じゃあ、いきましょう。",
+              "romaji": "Jaa, ikimashou.",
+              "translation": {
+                "en": "Let's go then."
+              }
+            },
+            "audio_ref": null
+          }
+        ],
+        "notes_en": "A simple tour of the guide's hometown.",
+        "image": null,
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: DialogueCard\n\nINPUTS:\n- metalanguage: en\n- plan.scenarios[0]: {\"name\": \"Hometown Tour\", \"setting\": \"A friend visits your hometown and you give them a tour.\", \"roles\": [{\"label\": \"Guide\", \"register\": \"plain\"}, {\"label\": \"Friend\", \"register\": \"plain\"}]}\n- plan.grammar_functions (ids available): [\"1\", \"2\", \"3\"]\n\nTASK:\nCreate a DialogueCard with 4–8 turns in the first scenario. Use the scenario roles' labels for \"speaker\".\nEach turn provides JPText layers (std, furigana, romaji, translation[\"en\"]).\nInclude at least one natural use of a selected grammar function (implicitly through the content).\nAdd a one-line notes_en, and optionally a scene-illustration 1280x768.\n\nCONSTRAINTS:\n- ≤12 words per turn. A-level tone/register per scenario role register.\n- Strict JSON.\n\nOUTPUT: DialogueCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "guided_dialogue": {
+        "type": "GuidedDialogueCard",
+        "mode": "prompted",
+        "stages": [
+          {
+            "stage_id": "1",
+            "goal_en": "The friend understands the main features of the sights.",
+            "expected_patterns": [
+              "1",
+              "2"
+            ],
+            "hints": [
+              {
+                "en": "Describe the main features of the sight.",
+                "ja": "観光地の主な特徴を説明してください。"
+              },
+              {
+                "en": "Use simple sentences to highlight key points.",
+                "ja": "簡単な文を使って重要な点を強調してください。"
+              }
+            ],
+            "learner_turn_schema": {
+              "min_words": 4,
+              "max_words": 12,
+              "allow_romaji": false
+            },
+            "ai_feedback": {
+              "rubric": [
+                "pattern_correctness",
+                "fluency_a2",
+                "content_relevance"
+              ],
+              "feedback_prompt": "Ensure you mention the main features clearly."
+            }
+          },
+          {
+            "stage_id": "2",
+            "goal_en": "The friend can identify local specialties mentioned.",
+            "expected_patterns": [
+              "2",
+              "3"
+            ],
+            "hints": [
+              {
+                "en": "Mention any local food or products.",
+                "ja": "地元の食べ物や製品を言及してください。"
+              },
+              {
+                "en": "Use specific names to make it clear.",
+                "ja": "具体的な名前を使って明確にしてください。"
+              }
+            ],
+            "learner_turn_schema": {
+              "min_words": 4,
+              "max_words": 12,
+              "allow_romaji": false
+            },
+            "ai_feedback": {
+              "rubric": [
+                "pattern_correctness",
+                "fluency_a2",
+                "content_relevance"
+              ],
+              "feedback_prompt": "Make sure to specify the local specialties."
+            }
+          },
+          {
+            "stage_id": "3",
+            "goal_en": "The guide maintains the friend's interest.",
+            "expected_patterns": [
+              "1",
+              "3"
+            ],
+            "hints": [
+              {
+                "en": "Ask questions to engage your friend.",
+                "ja": "友達を引き込むために質問をしてください。"
+              },
+              {
+                "en": "Use interesting facts to keep attention.",
+                "ja": "興味深い事実を使って注意を引き続けてください。"
+              }
+            ],
+            "learner_turn_schema": {
+              "min_words": 4,
+              "max_words": 12,
+              "allow_romaji": false
+            },
+            "ai_feedback": {
+              "rubric": [
+                "pattern_correctness",
+                "fluency_a2",
+                "content_relevance"
+              ],
+              "feedback_prompt": "Try to keep the conversation engaging."
+            }
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: GuidedDialogueCard\n\nINPUTS:\n- metalanguage: en\n- plan.grammar_functions (ids): [\"1\", \"2\", \"3\"]\n- plan.evaluation.success_criteria: [\"The friend understands the main features of the sights.\", \"The friend can identify local specialties mentioned.\", \"The guide uses simple and clear language.\", \"The guide maintains the friend's interest.\"]\n\nTASK:\nCreate 1–3 scaffold stages moving the learner towards the success_criteria.\nEach stage:\n- stage_id\n- goal_en (align with one success criterion)\n- expected_patterns: choose relevant grammar function ids from plan\n- 1–2 bilingual hints ({\"en\",\"ja\"})\n- learner_turn_schema: {\"min_words\":4,\"max_words\":12,\"allow_romaji\":false}\n- ai_feedback: rubric [\"pattern_correctness\",\"fluency_a2\",\"content_relevance\"] and a one-line feedback prompt.\n\nCONSTRAINTS:\n- Strict JSON.\n\nOUTPUT: GuidedDialogueCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "exercises": {
+        "type": "ExercisesCard",
+        "items": [
+          {
+            "exercise_type": "match",
+            "id": "match1",
+            "instructions": {
+              "en": "Match the Japanese words with their English meanings."
+            },
+            "pairs": [
+              {
+                "left": {
+                  "std": "お城",
+                  "furigana": "おしろ",
+                  "romaji": "oshiro",
+                  "translation": {
+                    "en": "Castle"
+                  }
+                },
+                "right_options_en": [
+                  "Castle",
+                  "Museum",
+                  "Ramen",
+                  "Matcha",
+                  "Beautiful"
+                ],
+                "answer_en": "Castle"
+              },
+              {
+                "left": {
+                  "std": "博物館",
+                  "furigana": "はくぶつかん",
+                  "romaji": "hakubutsukan",
+                  "translation": {
+                    "en": "Museum"
+                  }
+                },
+                "right_options_en": [
+                  "Castle",
+                  "Museum",
+                  "Ramen",
+                  "Matcha",
+                  "Beautiful"
+                ],
+                "answer_en": "Museum"
+              },
+              {
+                "left": {
+                  "std": "ラーメン",
+                  "furigana": "ラーメン",
+                  "romaji": "raamen",
+                  "translation": {
+                    "en": "Ramen"
+                  }
+                },
+                "right_options_en": [
+                  "Castle",
+                  "Museum",
+                  "Ramen",
+                  "Matcha",
+                  "Beautiful"
+                ],
+                "answer_en": "Ramen"
+              },
+              {
+                "left": {
+                  "std": "抹茶",
+                  "furigana": "まっちゃ",
+                  "romaji": "matcha",
+                  "translation": {
+                    "en": "Matcha"
+                  }
+                },
+                "right_options_en": [
+                  "Castle",
+                  "Museum",
+                  "Ramen",
+                  "Matcha",
+                  "Beautiful"
+                ],
+                "answer_en": "Matcha"
+              },
+              {
+                "left": {
+                  "std": "美しい",
+                  "furigana": "うつくしい",
+                  "romaji": "utsukushii",
+                  "translation": {
+                    "en": "Beautiful"
+                  }
+                },
+                "right_options_en": [
+                  "Castle",
+                  "Museum",
+                  "Ramen",
+                  "Matcha",
+                  "Beautiful"
+                ],
+                "answer_en": "Beautiful"
+              }
+            ]
+          },
+          {
+            "exercise_type": "fill_blank",
+            "id": "fill1",
+            "item": {
+              "std": "お城は ______ です。",
+              "furigana": "おしろは ______ です。",
+              "romaji": "oshiro wa ______ desu.",
+              "translation": {
+                "en": "The castle is ______."
+              }
+            },
+            "answer_key_en": [
+              "famous",
+              "beautiful",
+              "old",
+              "big",
+              "interesting"
+            ]
+          },
+          {
+            "exercise_type": "order",
+            "id": "order1",
+            "instructions": {
+              "en": "Put the sentences in the correct order."
+            },
+            "segments_ja": [
+              "まず、ここはお城です。",
+              "次に、博物館に行きます。",
+              "最後に、ラーメンを食べます。"
+            ],
+            "correct_order": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: ExercisesCard\n\nINPUTS:\n- metalanguage: en\n- plan.lex_buckets: {\"uid\": \"12345\", \"level\": \"A2\", \"communicative_function_en\": \"Introduce famous sights and local specialties in simple terms.\", \"communicative_function_ja\": \"名所や名物を簡単な言葉で紹介する。\", \"scenarios\": [{\"name\": \"Hometown Tour\", \"setting\": \"A friend visits your hometown and you give them a tour.\", \"roles\": [{\"label\": \"Guide\", \"register\": \"plain\"}, {\"label\": \"Friend\", \"register\": \"plain\"}]}, {\"name\": \"City Tour\", \"setting\": \"You are showing a familiar city to a visiting friend.\", \"roles\": [{\"label\": \"Local\", \"register\": \"plain\"}, {\"label\": \"Visitor\", \"register\": \"plain\"}]}], \"lex_buckets\": [{\"name\": \"Famous Sights\", \"items\": [\"お城\", \"博物館\", \"公園\", \"神社\", \"寺\", \"美術館\", \"展望台\", \"動物園\", \"水族館\", \"歴史的建物\"]}, {\"name\": \"Local Specialties\", \"items\": [\"ラーメン\", \"寿司\", \"お好み焼き\", \"たこ焼き\", \"うどん\", \"そば\", \"抹茶\", \"和菓子\", \"焼き鳥\", \"天ぷら\"]}, {\"name\": \"Descriptive Adjectives\", \"items\": [\"有名な\", \"美しい\", \"古い\", \"新しい\", \"人気の\", \"静かな\", \"にぎやかな\", \"大きい\", \"小さい\", \"面白い\"]}, {\"name\": \"Basic Verbs\", \"items\": [\"見る\", \"食べる\", \"行く\", \"歩く\", \"訪れる\", \"紹介する\", \"楽しむ\", \"知る\", \"案内する\", \"話す\"]}, {\"name\": \"Directional Phrases\", \"items\": [\"ここ\", \"そこ\", \"あそこ\", \"右\", \"左\", \"まっすぐ\", \"近く\", \"遠く\", \"前\", \"後ろ\"]}], \"grammar_functions\": [{\"id\": \"1\", \"label\": \"Simple Present Tense\", \"pattern_ja\": \"名詞 + は + 形容詞 + です。\", \"slots\": [\"名詞\", \"形容詞\"], \"notes_en\": \"Use to describe features of sights or specialties.\"}, {\"id\": \"2\", \"label\": \"Basic Verb Conjugation\", \"pattern_ja\": \"動詞 + ます。\", \"slots\": [\"動詞\"], \"notes_en\": \"Use to express actions related to the tour.\"}, {\"id\": \"3\", \"label\": \"Location Phrases\", \"pattern_ja\": \"名詞 + は + 場所 + にあります。\", \"slots\": [\"名詞\", \"場所\"], \"notes_en\": \"Use to indicate where something is located.\"}], \"evaluation\": {\"success_criteria\": [\"The friend understands the main features of the sights.\", \"The friend can identify local specialties mentioned.\", \"The guide uses simple and clear language.\", \"The guide maintains the friend's interest.\"], \"discourse_markers\": [\"まず\", \"次に\", \"それから\", \"最後に\", \"ここは\"]}, \"cultural_themes_en\": [\"Understanding the importance of local specialties in Japanese culture.\", \"Recognizing the historical significance of famous sights.\", \"Appreciating the balance between modern and traditional elements in cities.\"], \"cultural_themes_ja\": [\"日本文化における名物の重要性を理解する。\", \"名所の歴史的な意義を認識する。\", \"都市における現代と伝統のバランスを評価する。\"]}\n- plan.grammar_functions (ids & patterns available): [{\"id\": \"1\", \"pattern_ja\": \"名詞 + は + 形容詞 + です。\"}, {\"id\": \"2\", \"pattern_ja\": \"動詞 + ます。\"}, {\"id\": \"3\", \"pattern_ja\": \"名詞 + は + 場所 + にあります。\"}]\n- plan.evaluation.discourse_markers: [\"まず\", \"次に\", \"それから\", \"最後に\", \"ここは\"]\n\nTASK:\nCreate 2–4 exercises:\n1) \"match\" (3–6 pairs) using lexemes from plan.lex_buckets; answers in \"en\".\n2) \"fill_blank\" using one grammar function; provide 3–6 acceptable answers in \"en\".\n3) optionally \"order\" (3 segments) if discourse markers exist.\n\nUse JPText for any Japanese stems.\n\nCONSTRAINTS:\n- A-level difficulty. Strict JSON.\n\nOUTPUT: ExercisesCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "cultural_explanation": {
+        "type": "CultureCard",
+        "title": {
+          "en": "Exploring Japanese Culture: A Blend of Tradition and Modernity",
+          "ja": "日本文化を探る: 伝統と現代の融合"
+        },
+        "body": {
+          "en": "Japan is a country where the past and present coexist harmoniously. Understanding the importance of local specialties is crucial, as they offer a glimpse into the region's history and traditions. Famous sights like temples and shrines hold historical significance, reflecting the country's rich cultural heritage. Meanwhile, cities like Tokyo showcase a unique balance between modern skyscrapers and traditional architecture, embodying the dynamic blend of old and new.",
+          "ja": "日本は過去と現在が調和して共存する国です。地域の歴史や伝統を垣間見ることができる名物の重要性を理解することは非常に重要です。寺院や神社のような名所は、国の豊かな文化遺産を反映し、歴史的な意義を持っています。一方で、東京のような都市は、現代の高層ビルと伝統的な建築が独自のバランスを保ち、古き良きものと新しいもののダイナミックな融合を体現しています。"
+        },
+        "image": null,
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: CultureCard\n\nINPUTS:\n- metalanguage: en\n- plan.cultural_themes_* and plan.communicative_function_*:\n  en: [\"Understanding the importance of local specialties in Japanese culture.\", \"Recognizing the historical significance of famous sights.\", \"Appreciating the balance between modern and traditional elements in cities.\"]\n  ja: [\"日本文化における名物の重要性を理解する。\", \"名所の歴史的な意義を認識する。\", \"都市における現代と伝統のバランスを評価する。\"]\n\nTASK:\nWrite a CultureCard (title/body in {\"en\",\"ja\"}) summarizing 2–4 key pragmatic/cultural themes relevant to the communicative function.\nOptional infographic image 1280x720 (style \"infographic\").\n\nCONSTRAINTS:\n- Strict JSON.\n\nOUTPUT: CultureCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      },
+      "drills_ai": {
+        "type": "DrillsCard",
+        "drills": [
+          {
+            "drill_type": "substitution",
+            "id": "sub1",
+            "pattern_ref": "1",
+            "prompt_template": {
+              "template": "Create sentences using the pattern."
+            },
+            "slots": [
+              "名詞",
+              "形容詞"
+            ],
+            "seed_items": [
+              {
+                "place": "お城",
+                "specialty_en": "castle"
+              },
+              {
+                "place": "博物館",
+                "specialty_en": "museum"
+              },
+              {
+                "place": "公園",
+                "specialty_en": "park"
+              },
+              {
+                "place": "神社",
+                "specialty_en": "shrine"
+              },
+              {
+                "place": "寺",
+                "specialty_en": "temple"
+              }
+            ],
+            "ai_support": {
+              "prompt": "Can you create sentences using the substitution pattern with the given seed items?"
+            }
+          },
+          {
+            "drill_type": "pronunciation",
+            "id": "pron1",
+            "focus": [
+              {
+                "ja": "見る",
+                "romaji": "miru"
+              },
+              {
+                "ja": "食べる",
+                "romaji": "taberu"
+              },
+              {
+                "ja": "行く",
+                "romaji": "iku"
+              }
+            ],
+            "ai_support": {
+              "prompt": "Practice pronouncing the following verbs in Japanese."
+            }
+          }
+        ],
+        "gen": {
+          "system": "You output a SINGLE JSON object that must validate the target Pydantic model. Return STRICT JSON only. No Markdown, no comments, no explanations.",
+          "instruction": "TARGET_MODEL: DrillsCard\n\nINPUTS:\n- metalanguage: en\n- plan.grammar_functions (ids & slots): [{\"id\": \"1\", \"slots\": [\"名詞\", \"形容詞\"]}, {\"id\": \"2\", \"slots\": [\"動詞\"]}, {\"id\": \"3\", \"slots\": [\"名詞\", \"場所\"]}]\n- plan.lex_buckets (for seed items): [{\"name\": \"Famous Sights\", \"items\": [\"お城\", \"博物館\", \"公園\", \"神社\", \"寺\", \"美術館\", \"展望台\", \"動物園\", \"水族館\", \"歴史的建物\"]}, {\"name\": \"Local Specialties\", \"items\": [\"ラーメン\", \"寿司\", \"お好み焼き\", \"たこ焼き\", \"うどん\", \"そば\", \"抹茶\", \"和菓子\", \"焼き鳥\", \"天ぷら\"]}, {\"name\": \"Descriptive Adjectives\", \"items\": [\"有名な\", \"美しい\", \"古い\", \"新しい\", \"人気の\", \"静かな\", \"にぎやかな\", \"大きい\", \"小さい\", \"面白い\"]}, {\"name\": \"Basic Verbs\", \"items\": [\"見る\", \"食べる\", \"行く\", \"歩く\", \"訪れる\", \"紹介する\", \"楽しむ\", \"知る\", \"案内する\", \"話す\"]}, {\"name\": \"Directional Phrases\", \"items\": [\"ここ\", \"そこ\", \"あそこ\", \"右\", \"左\", \"まっすぐ\", \"近く\", \"遠く\", \"前\", \"後ろ\"]}]\n\nTASK:\nCreate 2 drills:\n- substitution: choose one grammar function id for pattern_ref; set slots per that function; add 2–6 seed_items from lex_buckets (simple nouns).\n- pronunciation: 2–4 targets from high-frequency lexemes or pattern chunks (provide \"ja\" and \"romaji\").\n\nInclude ai_support prompts.\n\nCONSTRAINTS:\n- Strict JSON.\n\nOUTPUT: DrillsCard JSON only.\n",
+          "constraints": [],
+          "examples": null
+        }
+      }
+    }
+  }
+}

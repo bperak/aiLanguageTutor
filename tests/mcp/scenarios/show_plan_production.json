@@ -1,0 +1,21 @@
+{
+  "name": "show-plan-production",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://ailanguagetutor.syntagent.com/profile/build",
+      "waitFor": "networkidle"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { await new Promise(resolve => setTimeout(resolve, 3000)); const bodyText = document.body.innerText; const hasLogin = /login|sign in/i.test(bodyText); const hasProfileBuild = /build.*profile|profile.*build/i.test(bodyText); return { hasLogin, hasProfileBuild, pageTitle: document.title, bodyTextPreview: bodyText.substring(0, 500) }; }",
+      "saveAs": "initialPageCheck"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { const pageText = document.body.innerText.toLowerCase(); const hasNextStep = /next step|learning path|your path/i.test(pageText); const hasBuilding = /building|generating|please check back/i.test(pageText); const hasProfileForm = /conversation|ai tutor|ready to build/i.test(pageText); return { hasNextStep, hasBuilding, hasProfileForm, pageTextLength: pageText.length }; }",
+      "saveAs": "contentCheck"
+    }
+  ]
+}
+

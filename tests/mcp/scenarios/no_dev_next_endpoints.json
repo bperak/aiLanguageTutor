@@ -1,0 +1,16 @@
+{
+  "name": "no-dev-next-endpoints",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "async () => { const base = process.env.TARGET_FRONTEND || 'http://localhost:3000'; const r = await fetch(base + '/__nextjs_original-stack-frames', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ frames: [] }) }); return { status: r.status, text: await r.text() }; }",
+      "saveAs": "stackFrames"
+    },
+    {
+      "action": "assert",
+      "expression": "stackFrames.status === 404"
+    }
+  ]
+}
+
+

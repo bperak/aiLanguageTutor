@@ -1,0 +1,4 @@
+{
+  "status": "error",
+  "error": "generation_failed: ValueError('AI generated lesson with invalid structure for JF22. Validation errors: 5. Please retry.')"
+}

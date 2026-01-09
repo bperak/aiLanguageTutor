@@ -29,7 +29,7 @@ export default function ProfileStatusWidget({
 
   if (profileSkipped) {
     return (
-      <Card className="border-amber-200 bg-amber-50">
+      <Card className="border-amber-500/30 bg-amber-500/10">
         <CardHeader>
           <CardTitle className="text-lg">Profile Building</CardTitle>
         </CardHeader>
@@ -102,4 +102,3 @@ export default function ProfileStatusWidget({
     </Card>
   )
 }
-

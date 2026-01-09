@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Run the full browser-based registration E2E test via MCP runner.
+#
+# Usage:
+#   ./scripts/check-registration-e2e
+#
+# This script runs the full_registration_e2e.json scenario which:
+# 1. Navigates to /register
+# 2. Fills and submits the registration form
+# 3. Interacts with profile building chat
+# 4. Completes the profile
+# 5. Verifies learning path generation
+#
+# Notes:
+# - Requires the Docker stack to be running (docker-compose.server.yml)
+# - Uses the mcp-runner container with headless Chromium
+# - Takes ~2-3 minutes due to AI response waits
+
+COMPOSE_FILE_PATH="${COMPOSE_FILE_PATH:-docker-compose.server.yml}"
+SERVICE="${MCP_RUNNER_SERVICE:-mcp-runner}"
+
+echo "🚀 Running full registration E2E test..."
+echo "   Compose file: ${COMPOSE_FILE_PATH}"
+echo "   Service: ${SERVICE}"
+echo ""
+
+docker compose -f "${COMPOSE_FILE_PATH}" exec -T "${SERVICE}" \
+  node /work/scripts/mcp_runner.mjs /work/scenarios/full_registration_e2e.json
+
+echo ""
+echo "✅ Registration E2E test completed!"
+

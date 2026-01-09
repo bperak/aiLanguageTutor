@@ -1,0 +1,23 @@
+# reduce docker build context for frontend
+node_modules
+.next
+out
+build
+coverage
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+.turbo
+.cache
+.DS_Store
+.git
+.gitignore
+.env
+.env.local
+.vscode
+.idea
+Thumbs.db
+server.js
+standalone

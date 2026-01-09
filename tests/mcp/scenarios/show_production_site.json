@@ -1,0 +1,16 @@
+{
+  "name": "show-production-site",
+  "description": "Open production site in browser tab",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://ailanguagetutor.syntagent.com/"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(resolve => setTimeout(resolve, 3000)); return { url: window.location.href, title: document.title, readyState: document.readyState }; }",
+      "saveAs": "pageInfo"
+    }
+  ]
+}
+

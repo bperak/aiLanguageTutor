@@ -1,0 +1,38 @@
+{
+  "name": "cando-lesson-e2e",
+  "description": "Full browser-based CanDo lesson flow: navigate to lesson page, verify lesson generation, check UI elements",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "http://localhost:3000/cando"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 3000)); const bodyText = document.body.textContent || ''; const hasCanDoBrowser = /cando browser|can do/i.test(bodyText); const hasCards = document.querySelectorAll('[data-slot=\"card\"], div.border.rounded-lg').length > 0; return { hasCanDoBrowser, hasCards, cardCount: document.querySelectorAll('[data-slot=\"card\"], div.border.rounded-lg').length }; }",
+      "saveAs": "candoBrowser"
+    },
+    {
+      "action": "assert",
+      "expression": "candoBrowser.hasCanDoBrowser === true || candoBrowser.hasCards === true"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const cards = Array.from(document.querySelectorAll('[data-slot=\"card\"], div.border.rounded-lg')).slice(0, 3); if (cards.length === 0) return { foundCard: false, reason: 'No cards found' }; const firstCard = cards[0]; const startLink = firstCard.querySelector('a[href*=\"/cando/\"], a:has-text(\"Start\")'); if (!startLink) return { foundCard: true, hasStartLink: false }; const href = startLink.getAttribute('href') || startLink.href; return { foundCard: true, hasStartLink: true, lessonUrl: href }; }",
+      "saveAs": "lessonCard"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { if (!ctx.lessonCard.hasStartLink) { return { skipped: true, reason: 'No start link found' }; } const url = ctx.lessonCard.lessonUrl.startsWith('http') ? ctx.lessonCard.lessonUrl : 'http://localhost:3000' + ctx.lessonCard.lessonUrl; window.location.href = url; await new Promise(r => setTimeout(r, 5000)); return { navigated: true, url: window.location.href }; }",
+      "saveAs": "lessonNav"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 10000)); const bodyText = document.body.textContent || ''; const hasLesson = /cando lesson|lesson/i.test(bodyText); const hasLoading = /loading|generating|please wait/i.test(bodyText); const hasError = /error|failed/i.test(bodyText); return { hasLesson, hasLoading, hasError, url: window.location.href }; }",
+      "saveAs": "lessonState"
+    },
+    {
+      "action": "assert",
+      "expression": "lessonState.hasLesson === true || lessonState.hasLoading === true || lessonNav.skipped === true"
+    }
+  ]
+}

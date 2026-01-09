@@ -1,0 +1,146 @@
+{
+  "name": "test-production-e2e-path",
+  "description": "E2E test: Register, complete profile, verify learning path creation on production",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://ailanguagetutor.syntagent.com/"
+    },
+    {
+      "action": "wait",
+      "timeout": 3000,
+      "description": "Wait for page to load"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const start = performance.now(); return { start, url: window.location.href, readyState: document.readyState }; }",
+      "description": "Measure page load start"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const registerLink = Array.from(document.querySelectorAll('a')).find(a => a.href.includes('/register') || a.textContent.includes('Get started')); if (registerLink) { registerLink.click(); } return { clicked: !!registerLink, url: window.location.href }; }",
+      "description": "Click register/get started link"
+    },
+    {
+      "action": "wait",
+      "timeout": 5000,
+      "description": "Wait for register page"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const url = window.location.href; const hasForm = !!document.querySelector('form'); const emailInput = document.querySelector('input[type=\"email\"], input[name=\"email\"]'); const usernameInput = document.querySelector('input[name=\"username\"], input[placeholder*=\"name\"]'); const passwordInput = document.querySelector('input[type=\"password\"]'); return { url, hasForm, hasEmail: !!emailInput, hasUsername: !!usernameInput, hasPassword: !!passwordInput }; }",
+      "description": "Check register page loaded"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const timestamp = Date.now(); const username = `e2etest_${timestamp}`; const email = `e2etest_${timestamp}@example.com`; const password = 'TestPass123'; return { username, email, password, timestamp }; }",
+      "description": "Generate test user credentials"
+    },
+    {
+      "action": "evaluate",
+      "function": "(ctx) => { const emailInput = document.querySelector('input[type=\"email\"], input[name=\"email\"]'); const usernameInput = document.querySelector('input[name=\"username\"]'); const passwordInput = document.querySelector('input[type=\"password\"]'); if (emailInput) { emailInput.value = ctx.email; emailInput.dispatchEvent(new Event('input', { bubbles: true })); emailInput.dispatchEvent(new Event('change', { bubbles: true })); } if (usernameInput) { usernameInput.value = ctx.username; usernameInput.dispatchEvent(new Event('input', { bubbles: true })); usernameInput.dispatchEvent(new Event('change', { bubbles: true })); } if (passwordInput) { passwordInput.value = ctx.password; passwordInput.dispatchEvent(new Event('input', { bubbles: true })); passwordInput.dispatchEvent(new Event('change', { bubbles: true })); } return { filled: { email: !!emailInput, username: !!usernameInput, password: !!passwordInput } }; }",
+      "description": "Fill registration form"
+    },
+    {
+      "action": "wait",
+      "timeout": 2000,
+      "description": "Wait for form validation"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const button = document.querySelector('button[type=\"submit\"]'); const isDisabled = button?.disabled || false; const buttonText = button?.textContent?.trim(); return { buttonExists: !!button, isDisabled, buttonText, canSubmit: !isDisabled && !!button }; }",
+      "description": "Check submit button state"
+    },
+    {
+      "action": "evaluate",
+      "function": "(ctx) => { const button = document.querySelector('button[type=\"submit\"]'); if (button && !button.disabled) { const clickStart = performance.now(); button.click(); return { clicked: true, clickTime: performance.now() - clickStart }; } return { clicked: false, reason: button ? 'disabled' : 'not found' }; }",
+      "description": "Click register button"
+    },
+    {
+      "action": "wait",
+      "timeout": 10000,
+      "description": "Wait for registration and redirect"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const url = window.location.href; const isProfilePage = url.includes('/profile/build') || url.includes('/profile'); const hasChat = !!document.querySelector('[class*=\"chat\"], [class*=\"Chat\"]'); const hasForm = !!document.querySelector('form'); return { url, isProfilePage, hasChat, hasForm, readyState: document.readyState }; }",
+      "description": "Check if redirected to profile building"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const start = performance.now(); return { start, timestamp: Date.now() }; }",
+      "description": "Start profile building session"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const sessionButton = Array.from(document.querySelectorAll('button')).find(b => ['Start', 'Begin', 'Create'].some(text => b.textContent.includes(text))); if (sessionButton) { sessionButton.click(); } return { clicked: !!sessionButton }; }",
+      "description": "Start profile building session if button exists"
+    },
+    {
+      "action": "wait",
+      "timeout": 3000,
+      "description": "Wait for session creation"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const textarea = document.querySelector('textarea, input[type=\"text\"]'); const sendButton = Array.from(document.querySelectorAll('button')).find(b => b.type === 'submit' || ['Send', 'Submit'].some(text => b.textContent.includes(text))); return { hasTextarea: !!textarea, hasSendButton: !!sendButton }; }",
+      "description": "Check for chat interface"
+    },
+    {
+      "action": "evaluate",
+      "function": "(ctx) => { const textarea = document.querySelector('textarea, input[type=\"text\"]'); if (textarea) { textarea.value = 'I want to learn Japanese for travel. I have no prior experience.'; textarea.dispatchEvent(new Event('input', { bubbles: true })); textarea.dispatchEvent(new Event('change', { bubbles: true })); const sendButton = Array.from(document.querySelectorAll('button')).find(b => (b.type === 'submit' || ['Send', 'Submit'].some(text => b.textContent.includes(text))) && !b.disabled); if (sendButton) { sendButton.click(); return { sent: true }; } } return { sent: false }; }",
+      "description": "Send initial profile message"
+    },
+    {
+      "action": "wait",
+      "timeout": 5000,
+      "description": "Wait for response"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const messages = document.querySelectorAll('[class*=\"message\"], [class*=\"Message\"]'); const lastMessage = messages.length > 0 ? messages[messages.length - 1].textContent : ''; return { messageCount: messages.length, hasResponse: messages.length > 1, lastMessagePreview: lastMessage.substring(0, 100) }; }",
+      "description": "Check for response messages"
+    },
+    {
+      "action": "evaluate",
+      "function": "(ctx) => { const textarea = document.querySelector('textarea, input[type=\"text\"]'); if (textarea) { textarea.value = 'I prefer interactive learning with conversations. I can study 30 minutes per day.'; textarea.dispatchEvent(new Event('input', { bubbles: true })); const sendButton = Array.from(document.querySelectorAll('button')).find(b => (b.type === 'submit' || ['Send', 'Submit'].some(text => b.textContent.includes(text))) && !b.disabled); if (sendButton) { sendButton.click(); return { sent: true }; } } return { sent: false }; }",
+      "description": "Send follow-up message"
+    },
+    {
+      "action": "wait",
+      "timeout": 5000,
+      "description": "Wait for response"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const completeButton = Array.from(document.querySelectorAll('button')).find(b => ['Complete', 'Finish', 'Done'].some(text => b.textContent.includes(text)) && !b.disabled); if (completeButton) { const clickStart = performance.now(); completeButton.click(); return { clicked: true, clickTime: performance.now() - clickStart }; } return { clicked: false }; }",
+      "description": "Click complete profile button if available"
+    },
+    {
+      "action": "wait",
+      "timeout": 10000,
+      "description": "Wait for profile completion and redirect"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const url = window.location.href; const isHomePage = url.endsWith('/') || url.includes('/home'); const hasLearningPath = !!document.querySelector('[class*=\"path\"], [class*=\"Path\"], [class*=\"plan\"], [class*=\"Plan\"]'); const hasNextStep = !!document.querySelector('[class*=\"step\"], [class*=\"Step\"], [class*=\"next\"]'); const pathGenerating = document.body.textContent.includes('building') || document.body.textContent.includes('generating'); return { url, isHomePage, hasLearningPath, hasNextStep, pathGenerating }; }",
+      "description": "Check if on home page with learning path"
+    },
+    {
+      "action": "wait",
+      "timeout": 15000,
+      "description": "Wait for learning path generation (polling should handle this)"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const url = window.location.href; const hasLearningPath = !!document.querySelector('[class*=\"path\"], [class*=\"Path\"], [class*=\"plan\"], [class*=\"Plan\"]'); const hasNextStep = !!document.querySelector('[class*=\"step\"], [class*=\"Step\"], [class*=\"next\"]'); const pathText = document.body.textContent; const pathVisible = !pathText.includes('building in background') && !pathText.includes('generating'); const steps = document.querySelectorAll('[class*=\"step\"], [class*=\"Step\"]'); return { url, hasLearningPath, hasNextStep, pathVisible, stepCount: steps.length, pathTextPreview: pathText.substring(0, 200) }; }",
+      "description": "Check learning path visibility after wait"
+    },
+    {
+      "action": "evaluate",
+      "function": "() => { const perf = performance.getEntriesByType('navigation')[0]; const resources = performance.getEntriesByType('resource'); const apiCalls = resources.filter(r => r.name.includes('/api/') || r.name.includes('api/v1')); return { pageLoad: perf?.loadEventEnd - perf?.loadEventStart || 0, domContentLoaded: perf?.domContentLoadedEventEnd - perf?.domContentLoadedEventStart || 0, apiCallsCount: apiCalls.length, apiCallsTotal: apiCalls.reduce((sum, r) => sum + (r.responseEnd - r.requestStart), 0), totalResources: resources.length }; }",
+      "description": "Get final performance metrics"
+    }
+  ]
+}
+

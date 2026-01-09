@@ -1,0 +1,80 @@
+{
+  "name": "test-production-performance",
+  "description": "Test performance of login and register buttons on production site",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://ailanguagetutor.syntagent.com/"
+    },
+    {
+      "action": "evaluate",
+      "code": "() => { const start = performance.now(); return { start, url: window.location.href }; }",
+      "description": "Measure page load start time"
+    },
+    {
+      "action": "wait",
+      "timeout": 3000,
+      "description": "Wait for page to fully load"
+    },
+    {
+      "action": "evaluate",
+      "code": "() => { const end = performance.now(); const loadTime = end - performance.timing?.navigationStart || 0; return { loadTime, readyState: document.readyState }; }",
+      "description": "Measure page load time"
+    },
+    {
+      "action": "evaluate",
+      "code": "() => { const loginLink = document.querySelector('a[href=\"/login\"]'); const registerLink = document.querySelector('a[href=\"/register\"]'); return { hasLoginLink: !!loginLink, hasRegisterLink: !!registerLink, loginText: loginLink?.textContent?.trim(), registerText: registerLink?.textContent?.trim() }; }",
+      "description": "Check if login and register links exist"
+    },
+    {
+      "action": "evaluate",
+      "code": "() => { const start = performance.now(); const loginLink = document.querySelector('a[href=\"/login\"]'); if (loginLink) { loginLink.click(); } return { clickTime: performance.now() - start, clicked: !!loginLink }; }",
+      "description": "Click login link and measure click response time"
+    },
+    {
+      "action": "wait",
+      "timeout": 5000,
+      "description": "Wait for login page to load"
+    },
+    {
+      "action": "evaluate",
+      "code": "() => { const end = performance.now(); const url = window.location.href; const hasLoginForm = !!document.querySelector('form'); const hasUsernameInput = !!document.querySelector('input[name=\"username\"], input[placeholder*=\"name\"], input[placeholder*=\"username\"]'); const hasPasswordInput = !!document.querySelector('input[type=\"password\"]'); return { url, loadTime: end - performance.timing?.navigationStart || 0, hasLoginForm, hasUsernameInput, hasPasswordInput, readyState: document.readyState }; }",
+      "description": "Check login page loaded correctly"
+    },
+    {
+      "action": "evaluate",
+      "code": "() => { const start = performance.now(); const button = document.querySelector('button[type=\"submit\"], button:contains(\"Sign in\"), button:contains(\"Login\")'); const isDisabled = button?.disabled || false; return { buttonExists: !!button, isDisabled, checkTime: performance.now() - start, buttonText: button?.textContent?.trim() }; }",
+      "description": "Check login button state and responsiveness"
+    },
+    {
+      "action": "navigate",
+      "url": "https://ailanguagetutor.syntagent.com/register"
+    },
+    {
+      "action": "wait",
+      "timeout": 5000,
+      "description": "Wait for register page to load"
+    },
+    {
+      "action": "evaluate",
+      "code": "() => { const end = performance.now(); const url = window.location.href; const hasRegisterForm = !!document.querySelector('form'); const hasEmailInput = !!document.querySelector('input[type=\"email\"], input[name=\"email\"]'); const hasPasswordInput = !!document.querySelector('input[type=\"password\"]'); const button = document.querySelector('button[type=\"submit\"], button:contains(\"Create\"), button:contains(\"Register\")'); return { url, loadTime: end - performance.timing?.navigationStart || 0, hasRegisterForm, hasEmailInput, hasPasswordInput, buttonExists: !!button, buttonText: button?.textContent?.trim(), readyState: document.readyState }; }",
+      "description": "Check register page loaded correctly"
+    },
+    {
+      "action": "evaluate",
+      "code": "() => { const start = performance.now(); const button = document.querySelector('button[type=\"submit\"]'); const isDisabled = button?.disabled || false; const clickable = !isDisabled && button && window.getComputedStyle(button).pointerEvents !== 'none'; return { buttonExists: !!button, isDisabled, clickable, checkTime: performance.now() - start }; }",
+      "description": "Check register button state and responsiveness"
+    },
+    {
+      "action": "screenshot",
+      "path": "/tmp/production_performance_test.png",
+      "description": "Capture final state"
+    },
+    {
+      "action": "evaluate",
+      "code": "() => { const perf = performance.getEntriesByType('navigation')[0]; const resources = performance.getEntriesByType('resource'); const apiCalls = resources.filter(r => r.name.includes('/api/') || r.name.includes('api/v1')); return { pageLoad: perf?.loadEventEnd - perf?.loadEventStart || 0, domContentLoaded: perf?.domContentLoadedEventEnd - perf?.domContentLoadedEventStart || 0, apiCallsCount: apiCalls.length, apiCallsTotal: apiCalls.reduce((sum, r) => sum + (r.responseEnd - r.requestStart), 0), resourcesCount: resources.length }; }",
+      "description": "Get performance metrics"
+    }
+  ]
+}
+

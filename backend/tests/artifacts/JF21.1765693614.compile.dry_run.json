@@ -1,0 +1,5 @@
+{
+  "status": "error",
+  "error": "validation_failed: 1 validation error for LessonMaster\nmetadata.topic_ja\n  Value error, topic_ja must contain Japanese characters [type=value_error, input_value='general', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/value_error",
+  "exercises_preview": []
+}

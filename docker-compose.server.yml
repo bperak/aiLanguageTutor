@@ -1,0 +1,185 @@
+services:
+  # PostgreSQL Database with pgvector for user data and conversations
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: ai-tutor-postgres
+    restart: unless-stopped
+    # Reason: DB should not be publicly exposed; only accessible to other containers.
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/migrations/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_DB=ai_language_tutor
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=testpassword123
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8 --lc-collate=C --lc-ctype=C
+    networks:
+      - ai-tutor-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d ai_language_tutor"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Neo4j Graph Database
+  neo4j:
+    image: neo4j:5.15-community
+    container_name: ai-tutor-neo4j
+    restart: unless-stopped
+    # Reason: DB should not be publicly exposed; only accessible to other containers.
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    environment:
+      - NEO4J_AUTH=neo4j/testpassword123
+      - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      - NEO4J_dbms_security_procedures_allowlist=apoc.*
+      - LC_ALL=en_US.UTF-8
+      - LANG=en_US.UTF-8
+    networks:
+      - ai-tutor-network
+
+  # Backend FastAPI Application (production)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: production
+    container_name: ai-tutor-backend
+    restart: unless-stopped
+    # Reason: Option A - do not publish ports; reachable only from Docker network (cloudflared).
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://postgres:testpassword123@postgres:5432/ai_language_tutor
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USERNAME=neo4j
+      - NEO4J_PASSWORD=testpassword123
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GOOGLE_CLOUD_PROJECT_ID=${GOOGLE_CLOUD_PROJECT_ID}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - JWT_ALGORITHM=${JWT_ALGORITHM:-HS256}
+      - ENVIRONMENT=production
+      - DEBUG=false
+      - PGVECTOR_ENABLED=true
+      - EMBEDDING_DIMENSIONS=1536
+      - NEO4J_VECTOR_ENABLED=true
+    depends_on:
+      postgres:
+        condition: service_healthy
+      neo4j:
+        condition: service_started
+    networks:
+      - ai-tutor-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Frontend Next.js Application (production)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: production
+    container_name: ai-tutor-frontend
+    restart: unless-stopped
+    # Reason: Option A - do not publish ports; reachable only from Docker network (cloudflared).
+    environment:
+      - NODE_ENV=production
+      # Used by Next.js server route proxy: src/app/api/v1/[...path]/route.ts
+      - BACKEND_URL=http://backend:8000
+      # Optional (some components read this directly); safe production default.
+      - NEXT_PUBLIC_API_BASE_URL=${NEXT_PUBLIC_API_BASE_URL:-https://api.ailanguagetutor.syntagent.com}
+      - NEXT_PUBLIC_APP_NAME=AI Language Tutor
+    depends_on:
+      - backend
+    networks:
+      - ai-tutor-network
+
+  # Cloudflare Tunnel (Option A)
+  # Reason: single entry point for multiple hostnames -> internal Docker services.
+  cloudflared:
+    image: cloudflare/cloudflared:2025.11.1
+    container_name: ai-tutor-cloudflared
+    restart: unless-stopped
+    # Reason: token file is root-only; run as root in container to read it.
+    user: "0:0"
+    command: tunnel --no-autoupdate run --token-file /etc/cloudflared/token
+    environment:
+      # Reason: QUIC uses UDP and may be blocked in some server environments, causing 502s.
+      - TUNNEL_TRANSPORT_PROTOCOL=http2
+    # Reason: remotely-managed tunnel points to http://localhost:3000
+    # IMPORTANT: Because this uses `network_mode: service:frontend`, recreating the
+    # `frontend` container (e.g. `up -d --build frontend`) changes its network namespace.
+    # In that case you MUST recreate `cloudflared` too, otherwise the public site may show
+    # Cloudflare Tunnel Error 1033 / Bad Gateway:
+    #   docker compose -f docker-compose.server.yml up -d --force-recreate cloudflared
+    network_mode: service:frontend
+    volumes:
+      # IMPORTANT: put the token somewhere accessible to Compose without /root access (see SERVER_SETUP.md)
+      - /etc/cloudflared/tunnel-token:/etc/cloudflared/token:ro
+
+  # Playwright MCP Runner (headless Chromium)
+  mcp-runner:
+    build:
+      context: ./tests/mcp
+      dockerfile: Dockerfile
+    container_name: ai-tutor-mcp-runner
+    working_dir: /work
+    volumes:
+      - ./frontend/scripts:/work/scripts
+      - ./tests/mcp/scenarios:/work/scenarios
+    environment:
+      - TARGET_BACKEND=http://backend:8000
+      - TARGET_FRONTEND=http://frontend:3000
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - ai-tutor-network
+    entrypoint: ["sleep", "infinity"]
+
+  # Human Validation Interface (Streamlit)
+  validation-ui:
+    build:
+      context: ./validation-ui
+      dockerfile: Dockerfile
+    container_name: ai-tutor-validation
+    restart: unless-stopped
+    # Reason: Option A - do not publish ports; reachable only from Docker network (cloudflared).
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://postgres:testpassword123@postgres:5432/ai_language_tutor
+      - NEO4J_URI=${NEO4J_URI}
+      - NEO4J_USERNAME=${NEO4J_USERNAME}
+      - NEO4J_PASSWORD=${NEO4J_PASSWORD}
+      - PGVECTOR_ENABLED=true
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+      - STREAMLIT_SERVER_HEADLESS=true
+      - STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+    depends_on:
+      postgres:
+        condition: service_healthy
+      neo4j:
+        condition: service_started
+    networks:
+      - ai-tutor-network
+    command: >
+      sh -c "pip install -r requirements.txt &&
+             streamlit run main.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true"
+
+volumes:
+  postgres_data:
+    driver: local
+  neo4j_data:
+    driver: local
+  neo4j_logs:
+    driver: local
+
+networks:
+  ai-tutor-network:
+    driver: bridge
+
+

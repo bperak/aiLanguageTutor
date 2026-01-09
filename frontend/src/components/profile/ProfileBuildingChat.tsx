@@ -8,9 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useToast } from "@/components/ToastProvider"
 import ProfileDataReview from "./ProfileDataReview"
-import PersonalizationSuggestions from "./PersonalizationSuggestions"
 import LearningPathPreview from "./LearningPathPreview"
-import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import type { Components } from "react-markdown"
@@ -33,57 +31,44 @@ export default function ProfileBuildingChat({
   const [sending, setSending] = useState(false)
   const [sessionId, setSessionId] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
+  const [profilePreviewData, setProfilePreviewData] = useState<any>(null)
+  const [profilePreviewLoading, setProfilePreviewLoading] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLTextAreaElement>(null)
+  const messagesContainerRef = useRef<HTMLDivElement>(null)
+  const [shouldAutoScroll, setShouldAutoScroll] = useState(true)
 
   // Helper function to extract can_do_id from URL
   const extractCanDoId = (url: string): string | null => {
-    // Clean the URL first
     const cleanUrl = url.trim()
     try {
-      // Try parsing as full URL first
       const urlObj = new URL(cleanUrl, window.location.origin)
       const canDoId = urlObj.searchParams.get("can_do_id")
       if (canDoId) return canDoId
     } catch {
       // If that fails, try regex extraction
     }
-    // Try to extract from path format like /api/v1/cando/lessons/start?can_do_id=JF:21
     const match = cleanUrl.match(/[?&]can_do_id=([^&\s]+)/)
     return match ? decodeURIComponent(match[1]) : null
   }
 
   // Preprocess message content to convert CanDo URLs to clickable links
   const preprocessMessage = (content: string): string => {
-    // Match URLs in code blocks (backticks) - handle both inline and block code
-    // Pattern 1: `URL` (inline code) - this is the most common case
-    // Pattern 2: ```\nURL\n``` (code block)
-    // Pattern 3: Plain URL (not in backticks)
-    
-    // First, handle the exact pattern from the image: `/api/v1/cando/lessons/start?can_do_id=JF:21`
-    // This is the most specific pattern - match inline code with backticks
-    // Note: ? needs to be escaped in regex, using character class [?]
     let processed = content.replace(/`(\/api\/v1\/cando\/lessons\/start[?]can_do_id=([^`\s&]+))`/g, (match, url, canDoId) => {
-      console.log('✅ Matched inline code pattern:', match, 'canDoId:', canDoId)
       return `[Start Lesson: ${canDoId}](/cando/${encodeURIComponent(canDoId)})`
     })
     
-    // Then handle code blocks: ```\nURL\n```
     processed = processed.replace(/```[\s\n]*(\/api\/v1\/cando\/lessons\/start[?]can_do_id=([^\s&`]+))[\s\n]*```/g, (match, url, canDoId) => {
-      console.log('✅ Matched code block:', match, 'canDoId:', canDoId)
       return `[Start Lesson: ${canDoId}](/cando/${encodeURIComponent(canDoId)})`
     })
     
-    // Finally, handle plain URLs (not in backticks)
     processed = processed.replace(/(^|[^`])(\/api\/v1\/cando\/lessons\/start[?]can_do_id=([^\s&`]+))([^`]|$)/g, (match, before, url, canDoId, after) => {
-      // Only replace if it's not already in backticks
       if (before !== '`' && after !== '`') {
-        console.log('✅ Matched plain URL:', match, 'canDoId:', canDoId)
         return `${before}[Start Lesson: ${canDoId}](/cando/${encodeURIComponent(canDoId)})${after}`
       }
       return match
     })
     
-    console.log('Preprocessed content:', processed.substring(0, 200))
     return processed
   }
 
@@ -91,8 +76,6 @@ export default function ProfileBuildingChat({
   const markdownComponents: Components = {
     code: ({ node, className, children, ...props }) => {
       const codeContent = String(children).trim()
-      // Check if the code content looks like a CanDo lesson start URL (both inline and block)
-      // Match with or without leading slash, and handle various formats
       if (codeContent.match(/(^|\/)api\/v1\/cando\/lessons\/start/)) {
         const canDoId = extractCanDoId(codeContent)
         if (canDoId) {
@@ -103,7 +86,7 @@ export default function ProfileBuildingChat({
                 e.preventDefault()
                 router.push(`/cando/${encodeURIComponent(canDoId)}`)
               }}
-              className="text-blue-600 hover:text-blue-800 underline cursor-pointer font-medium"
+              className="text-blue-600 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200 underline cursor-pointer font-medium"
             >
               Start Lesson: {canDoId}
             </a>
@@ -117,7 +100,6 @@ export default function ProfileBuildingChat({
       )
     },
     a: ({ node, href, children, ...props }) => {
-      // Handle CanDo lesson start URLs (API endpoints)
       if (href && href.includes("/api/v1/cando/lessons/start")) {
         const canDoId = extractCanDoId(href)
         if (canDoId) {
@@ -128,7 +110,7 @@ export default function ProfileBuildingChat({
                 e.preventDefault()
                 router.push(`/cando/${encodeURIComponent(canDoId)}`)
               }}
-              className="text-blue-600 hover:text-blue-800 underline"
+              className="text-blue-600 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200 underline"
               {...props}
             >
               {children}
@@ -136,7 +118,6 @@ export default function ProfileBuildingChat({
           )
         }
       }
-      // Handle CanDo frontend routes
       if (href && href.startsWith("/cando/")) {
         return (
           <a
@@ -145,20 +126,19 @@ export default function ProfileBuildingChat({
               e.preventDefault()
               router.push(href)
             }}
-            className="text-blue-600 hover:text-blue-800 underline cursor-pointer"
+            className="text-blue-600 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200 underline cursor-pointer"
             {...props}
           >
             {children}
           </a>
         )
       }
-      // Regular links
       return (
         <a
           href={href}
           target={href?.startsWith("http") ? "_blank" : undefined}
           rel={href?.startsWith("http") ? "noreferrer" : undefined}
-          className="text-blue-600 hover:text-blue-800 underline"
+          className="text-blue-600 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200 underline"
           {...props}
         >
           {children}
@@ -167,111 +147,258 @@ export default function ProfileBuildingChat({
     },
   }
 
+  // Update profile preview as conversation progresses
+  const updateProfilePreview = async () => {
+    if (!sessionId || messages.length < 2) return // Need at least user + assistant message
+    
+    setProfilePreviewLoading(true)
+    try {
+      // Add timeout to prevent hanging
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error("Profile preview update timeout")), 10000)
+      )
+      
+      const response = await Promise.race([
+        apiPost<{ profile_data: any; extraction_response?: any }>("/api/v1/profile/extract", {
+          conversation_id: sessionId,
+        }),
+        timeoutPromise
+      ]) as { profile_data: any; extraction_response?: any }
+      
+      if (response.profile_data) {
+        setProfilePreviewData(response.profile_data)
+        console.log("Profile preview updated:", response.profile_data)
+      }
+    } catch (err: any) {
+      // Log error for debugging but don't show to user
+      const errorMsg = err?.response?.data?.detail || err?.message || "Unknown error"
+      if (errorMsg.includes("timeout")) {
+        console.debug("Profile preview update timed out - this is normal if the API is slow")
+      } else {
+        console.debug("Could not update profile preview:", errorMsg)
+      }
+      // Don't update state on error - keep previous data
+    } finally {
+      setProfilePreviewLoading(false)
+    }
+  }
+
   useEffect(() => {
     initializeSession()
+    
+    // Safety timeout: always exit loading state after 10 seconds
+    const safetyTimeout = setTimeout(() => {
+      if (loading) {
+        console.warn("Loading timeout - forcing exit from loading state")
+        setLoading(false)
+        // Try to load messages if session exists
+        if (sessionId) {
+          loadMessages().catch(console.error)
+        }
+      }
+    }, 10000)
+    
+    return () => clearTimeout(safetyTimeout)
   }, [])
 
+  // Handle scroll behavior - only auto-scroll if user hasn't manually scrolled up
   useEffect(() => {
-    scrollToBottom()
-  }, [messages])
+    if (shouldAutoScroll && messages.length > 0) {
+      scrollToBottom()
+    }
+  }, [messages, shouldAutoScroll])
+
+  // Update profile preview when messages change (debounced)
+  useEffect(() => {
+    if (sessionId && messages.length >= 2) {
+      // Debounce the preview update to avoid too many API calls
+      const timer = setTimeout(() => {
+        updateProfilePreview()
+      }, 2000) // Wait 2 seconds after last message change
+      return () => clearTimeout(timer)
+    }
+  }, [messages, sessionId])
+
+  // Check if user has scrolled up manually
+  const handleScroll = () => {
+    if (!messagesContainerRef.current) return
+    const container = messagesContainerRef.current
+    const isNearBottom = container.scrollHeight - container.scrollTop - container.clientHeight < 100
+    setShouldAutoScroll(isNearBottom)
+  }
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+    if (messagesEndRef.current && shouldAutoScroll) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+    }
   }
 
   const initializeSession = async () => {
     try {
-      // Get user info for personalization
       const user = await apiGet<{ native_language?: string; full_name?: string }>("/api/v1/auth/me")
       
-      // Create profile building conversation session
-      const session = await apiPost<{ id: string }>("/api/v1/conversations/sessions", {
-        title: "Profile Building",
-        language_code: user.native_language || "en",
-        session_type: "profile_building",
-        ai_provider: "openai",
-        ai_model: "gpt-4o-mini",
-        system_prompt: "You are a friendly AI language tutor. Help the user build their learning profile through conversation.",
-      })
+      // First, check if there's an existing active profile building session
+      let session: { id: string } | null = null
+      try {
+        const existingSession = await apiGet<{ id: string } | null>("/api/v1/conversations/sessions/profile-building/active")
+        if (existingSession && existingSession.id) {
+          session = existingSession
+          console.log("Found existing profile building session:", session.id)
+        }
+      } catch (err) {
+        console.log("No existing session found, will create new one")
+      }
+      
+      // If no existing session, create a new one
+      if (!session) {
+        session = await apiPost<{ id: string }>("/api/v1/conversations/sessions", {
+          title: "Profile Building",
+          language_code: user.native_language || "en",
+          session_type: "profile_building",
+          ai_provider: "openai",
+          ai_model: "gpt-4o-mini",
+          system_prompt: "You are a friendly AI language tutor. Help the user build their learning profile through conversation.",
+        })
+        console.log("Created new profile building session:", session.id)
+      }
 
       setSessionId(session.id)
+      console.log("Session initialized:", session.id)
       if (onConversationCreated) {
         onConversationCreated(session.id)
       }
 
-      // Get initial greeting
-      await sendInitialMessage(session.id)
+      // Load existing messages if session already exists
+      const existingMessages = await loadMessagesForSession(session.id)
+      
+      // Only send initial message if there are no existing messages
+      if (!existingMessages || existingMessages.length === 0) {
+        await sendInitialMessage(session.id)
+      } else {
+        console.log(`Loaded ${existingMessages.length} existing messages from session`)
+        // Update profile preview with existing conversation
+        if (existingMessages.length >= 2) {
+          await updateProfilePreview()
+        }
+      }
+      
       setLoading(false)
-    } catch (err) {
-      showToast("Failed to initialize profile building", "error")
+      console.log("Loading complete, sessionId:", session.id)
+    } catch (err: any) {
+      console.error("Error in initializeSession:", err)
+      const error = err as { response?: { status?: number } }
+      if (error?.response?.status === 401) {
+        showToast("Please log in to build your profile")
+        // Redirect to login after a short delay
+        setTimeout(() => {
+          router.push("/login")
+        }, 2000)
+      } else {
+        showToast("Failed to initialize profile building. Please try again.")
+      }
+      setLoading(false)
+    } finally {
+      // Always set loading to false, even if something goes wrong
       setLoading(false)
     }
   }
 
   const sendInitialMessage = async (sessionId: string) => {
     try {
-      // Send initial message to start conversation
       await apiPost(`/api/v1/conversations/sessions/${sessionId}/messages`, {
         role: "user",
         content: "Hello! I'm ready to build my profile.",
         no_ai: true,
       })
 
-      // Stream assistant reply
       const token = getToken()
-      // Use relative URL for browser, same pattern as api.ts
       const baseUrl = typeof window !== "undefined" ? "" : (process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000")
       const url = `${baseUrl}/api/v1/conversations/sessions/${sessionId}/stream`
       
-      const resp = await fetch(url, {
-        method: "GET",
-        headers: token ? { Authorization: `Bearer ${token}` } : undefined,
-      })
+      // Add timeout to prevent hanging
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 30000) // 30 second timeout
+      
+      try {
+        const resp = await fetch(url, {
+          method: "GET",
+          headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+          signal: controller.signal,
+        })
 
-      if (resp.ok && resp.body) {
-        const reader = resp.body.getReader()
-        const decoder = new TextDecoder()
-        let buffer = ""
-        let assistantReply = ""
+        if (resp.ok && resp.body) {
+          const reader = resp.body.getReader()
+          const decoder = new TextDecoder()
+          let buffer = ""
+          let assistantReply = ""
 
-        while (true) {
-          const { done, value } = await reader.read()
-          if (done) break
+          while (true) {
+            const { done, value } = await reader.read()
+            if (done) break
 
-          buffer += decoder.decode(value, { stream: true })
-          let idx
-          while ((idx = buffer.indexOf("\n\n")) !== -1) {
-            const raw = buffer.slice(0, idx)
-            buffer = buffer.slice(idx + 2)
-            const lines = raw.split("\n")
-            
-            for (const line of lines) {
-              if (line.startsWith("data: ")) {
-                const data = line.slice(6)
-                if (data === "[DONE]") {
-                  // Check for completion signal and strip it
-                  const completionSignal = "[PROFILE_COMPLETE]"
-                  const cleanReply = assistantReply.includes(completionSignal)
-                    ? assistantReply.replace(completionSignal, "").trim()
-                    : assistantReply
-                  setMessages([
-                    { role: "user", content: "Hello! I'm ready to build my profile." },
-                    { role: "assistant", content: cleanReply },
-                  ])
-                  // If completion signal detected, trigger completion
-                  if (assistantReply.includes(completionSignal)) {
-                    await handleComplete(sessionId)
+            buffer += decoder.decode(value, { stream: true })
+            let idx
+            while ((idx = buffer.indexOf("\n\n")) !== -1) {
+              const raw = buffer.slice(0, idx)
+              buffer = buffer.slice(idx + 2)
+              const lines = raw.split("\n")
+              
+              for (const line of lines) {
+                if (line.startsWith("data: ")) {
+                  const data = line.slice(6)
+                  if (data === "[DONE]") {
+                    clearTimeout(timeoutId)
+                    const completionSignal = "[PROFILE_COMPLETE]"
+                    const cleanReply = assistantReply.includes(completionSignal)
+                      ? assistantReply.replace(completionSignal, "").trim()
+                      : assistantReply
+                    setMessages([
+                      { role: "user", content: "Hello! I'm ready to build my profile." },
+                      { role: "assistant", content: cleanReply },
+                    ])
+                    if (assistantReply.includes(completionSignal)) {
+                      await handleComplete(sessionId)
+                    }
+                    return
                   }
-                  return
+                  assistantReply += data
                 }
-                assistantReply += data
               }
             }
           }
         }
+      } catch (fetchErr: any) {
+        clearTimeout(timeoutId)
+        if (fetchErr.name === 'AbortError') {
+          console.warn("Stream timeout, loading messages from API instead")
+          // Fallback: load messages from API if stream times out
+          try {
+            await loadMessages()
+          } catch (loadErr) {
+            console.error("Failed to load messages:", loadErr)
+            // Set a default message if loading fails
+            setMessages([
+              { role: "user", content: "Hello! I'm ready to build my profile." },
+              { role: "assistant", content: "Hello! I'm here to help you build your learning profile. Let's start by learning about your goals and experience." },
+            ])
+          }
+        } else {
+          throw fetchErr
+        }
       }
     } catch (err) {
       console.error("Failed to send initial message:", err)
+      // Even if stream fails, try to load existing messages
+      try {
+        await loadMessages()
+      } catch (loadErr) {
+        console.error("Failed to load messages:", loadErr)
+        // Set a default message if loading fails
+        setMessages([
+          { role: "user", content: "Hello! I'm ready to build my profile." },
+          { role: "assistant", content: "Hello! I'm here to help you build your learning profile. Let's start by learning about your goals and experience." },
+        ])
+      }
     }
   }
 
@@ -281,22 +408,22 @@ export default function ProfileBuildingChat({
     const userMessage = input.trim()
     setInput("")
     setSending(true)
+    setShouldAutoScroll(true) // Auto-scroll when sending new message
 
-    // Add user message to UI immediately
+    // Focus input after clearing (for better UX)
+    setTimeout(() => inputRef.current?.focus(), 100)
+
     const newMessages = [...messages, { role: "user", content: userMessage }]
     setMessages(newMessages)
 
     try {
-      // Send user message
       await apiPost(`/api/v1/conversations/sessions/${sessionId}/messages`, {
         role: "user",
         content: userMessage,
         no_ai: true,
       })
 
-      // Stream assistant reply
       const token = getToken()
-      // Use relative URL for browser, same pattern as api.ts
       const baseUrl = typeof window !== "undefined" ? "" : (process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000")
       const url = `${baseUrl}/api/v1/conversations/sessions/${sessionId}/stream`
       
@@ -315,67 +442,97 @@ export default function ProfileBuildingChat({
       let assistantReply = ""
       let hasCompletionSignal = false
 
-      while (true) {
-        const { done, value } = await reader.read()
-        if (done) break
+      // Add timeout for stream reading (30 seconds)
+      const streamTimeout = setTimeout(() => {
+        reader.cancel()
+        console.error("Stream timeout - cancelling reader")
+        setSending(false)
+        showToast("Response timeout. Please try again.")
+        // Load messages to show what we have so far
+        void loadMessages()
+      }, 30000)
 
-        buffer += decoder.decode(value, { stream: true })
-        let idx
-        while ((idx = buffer.indexOf("\n\n")) !== -1) {
-          const raw = buffer.slice(0, idx)
-          buffer = buffer.slice(idx + 2)
-          const lines = raw.split("\n")
-          
-          for (const line of lines) {
-            if (line.startsWith("data: ")) {
-              const data = line.slice(6)
-              if (data === "[DONE]") {
-                setSending(false)
-                // Check for completion signal and strip it
-                const completionSignal = "[PROFILE_COMPLETE]"
-                if (assistantReply.includes(completionSignal)) {
-                  // Strip the signal from the message
-                  const cleanReply = assistantReply.replace(completionSignal, "").trim()
-                  setMessages([...newMessages, { role: "assistant", content: cleanReply }])
-                  // Automatically trigger profile completion
-                  await handleComplete()
+      try {
+        while (true) {
+          const { done, value } = await reader.read()
+          if (done) {
+            clearTimeout(streamTimeout)
+            break
+          }
+
+          buffer += decoder.decode(value, { stream: true })
+          let idx
+          while ((idx = buffer.indexOf("\n\n")) !== -1) {
+            const raw = buffer.slice(0, idx)
+            buffer = buffer.slice(idx + 2)
+            const lines = raw.split("\n")
+            
+            for (const line of lines) {
+              if (line.startsWith("data: ")) {
+                const data = line.slice(6)
+                if (data === "[DONE]") {
+                  clearTimeout(streamTimeout)
+                  setSending(false)
+                  const completionSignal = "[PROFILE_COMPLETE]"
+                  if (assistantReply.includes(completionSignal)) {
+                    const cleanReply = assistantReply.replace(completionSignal, "").trim()
+                    setMessages([...newMessages, { role: "assistant", content: cleanReply }])
+                    await handleComplete()
+                    return
+                  }
+                  await loadMessages()
                   return
                 }
-                // Refresh messages to get final state
-                await loadMessages()
-                return
-              }
-              assistantReply += data
-              // Check for completion signal in real-time and strip from display
-              const completionSignal = "[PROFILE_COMPLETE]"
-              if (assistantReply.includes(completionSignal) && !hasCompletionSignal) {
-                hasCompletionSignal = true
-                // Strip the signal from displayed message
-                const cleanReply = assistantReply.replace(completionSignal, "").trim()
-                setMessages([...newMessages, { role: "assistant", content: cleanReply }])
-              } else if (!hasCompletionSignal) {
-                setMessages([...newMessages, { role: "assistant", content: assistantReply }])
+                assistantReply += data
+                const completionSignal = "[PROFILE_COMPLETE]"
+                if (assistantReply.includes(completionSignal) && !hasCompletionSignal) {
+                  hasCompletionSignal = true
+                  const cleanReply = assistantReply.replace(completionSignal, "").trim()
+                  setMessages([...newMessages, { role: "assistant", content: cleanReply }])
+                } else if (!hasCompletionSignal) {
+                  setMessages([...newMessages, { role: "assistant", content: assistantReply }])
+                }
               }
             }
           }
         }
+        // Stream completed normally
+        clearTimeout(streamTimeout)
+        setSending(false)
+        await loadMessages()
+      } catch (streamErr) {
+        clearTimeout(streamTimeout)
+        console.error("Stream error:", streamErr)
+        setSending(false)
+        showToast("Stream error. Please try again.")
+        await loadMessages()
       }
     } catch (err) {
-      showToast("Failed to send message", "error")
+      console.error("Error in sendMessage:", err)
+      showToast("Failed to send message")
+      setSending(false)
+    } finally {
+      // Ensure sending is always reset, even if something goes wrong
       setSending(false)
     }
   }
 
-  const loadMessages = async () => {
-    if (!sessionId) return
+  const loadMessagesForSession = async (sessionIdToLoad: string) => {
     try {
       const msgs = await apiGet<Array<{ role: string; content: string; id: string }>>(
-        `/api/v1/conversations/sessions/${sessionId}/messages?limit=100`
+        `/api/v1/conversations/sessions/${sessionIdToLoad}/messages?limit=100`
       )
       setMessages(msgs)
+      return msgs
     } catch (err) {
       console.error("Failed to load messages:", err)
+      return []
     }
+  }
+
+  const loadMessages = async () => {
+    if (!sessionId) return []
+    return await loadMessagesForSession(sessionId)
   }
 
   const [showReview, setShowReview] = useState(false)
@@ -384,37 +541,35 @@ export default function ProfileBuildingChat({
   const handleComplete = async (overrideSessionId?: string) => {
     const activeSessionId = overrideSessionId || sessionId
     if (!activeSessionId) {
-      showToast("No active conversation", "error")
+      showToast("No active conversation")
       return
     }
     try {
-      // First, extract the data to show for review
       const response = await apiPost<{ profile_data: any }>("/api/v1/profile/extract", {
         conversation_id: activeSessionId,
       })
       setExtractedData(response.profile_data)
       setShowReview(true)
     } catch (err) {
-      showToast("Failed to extract profile data", "error")
+      showToast("Failed to extract profile data")
     }
   }
 
   const handleApprove = async (profileData: any) => {
     if (!sessionId) {
-      showToast("No active conversation", "error")
+      showToast("No active conversation")
       return
     }
     try {
-      // Call complete endpoint with extracted data
       await apiPost("/api/v1/profile/complete", {
         conversation_id: sessionId,
         profile_data: profileData,
       })
-      showToast("Profile completed successfully!", "success")
+      showToast("Profile completed successfully!")
       onComplete(sessionId)
     } catch (err) {
       const error = err as { response?: { data?: { detail?: string } } }
-      showToast(error?.response?.data?.detail || "Failed to save profile", "error")
+      showToast(error?.response?.data?.detail || "Failed to save profile")
     }
   }
 
@@ -423,7 +578,7 @@ export default function ProfileBuildingChat({
       <Card>
         <CardContent className="p-6">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
             <p className="mt-2 text-sm text-muted-foreground">Initializing conversation...</p>
           </div>
         </CardContent>
@@ -452,77 +607,86 @@ export default function ProfileBuildingChat({
               The AI tutor will ask you about your learning goals, previous experience, and preferences.
             </p>
           </div>
-          <Link href="/">
-            <Button variant="outline" size="sm">
-              Back to Home
-            </Button>
-          </Link>
         </div>
-        {/* Home Context Banner */}
-        <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-          <p className="text-sm text-blue-900">
-            <strong>💡 After completing your profile:</strong> You'll see a personalized learning path on your Home page, 
+        <div className="mt-4 p-3 bg-blue-500/10 border border-blue-500/30 rounded-lg">
+          <p className="text-sm text-blue-700 dark:text-blue-200">
+            <strong>💡 After completing your profile:</strong> You&apos;ll see a personalized learning path on your Home page, 
             customized recommendations, and progress tracking tailored to your goals and preferences.
           </p>
         </div>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          {/* Chat Section - 2/3 width */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
           <div className="lg:col-span-2 space-y-4">
-            {/* Messages */}
-            <div className="h-96 overflow-y-auto border rounded-lg p-4 space-y-4 bg-slate-50">
-            {messages.map((msg, idx) => (
-              <div
-                key={idx}
-                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
-              >
+            <div 
+              ref={messagesContainerRef}
+              onScroll={handleScroll}
+              className="h-96 overflow-y-auto border rounded-lg p-4 space-y-4 bg-muted/40"
+            >
+              {messages.map((msg, idx) => (
                 <div
-                  className={`max-w-[80%] rounded-lg p-3 ${
-                    msg.role === "user"
-                      ? "bg-blue-600 text-white"
-                      : "bg-white border text-gray-900"
-                  }`}
+                  key={idx}
+                  className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
-                  <div className={`text-sm markdown-content ${msg.role === "user" ? "prose-invert" : ""}`}>
-                    <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
-                      {preprocessMessage(msg.content)}
-                    </ReactMarkdown>
+                  <div
+                    className={`max-w-[80%] rounded-lg p-3 ${
+                      msg.role === "user"
+                        ? "bg-blue-600 text-white"
+                        : "bg-card border text-foreground"
+                    }`}
+                  >
+                    <div className={`text-sm markdown-content ${msg.role === "user" ? "prose-invert" : ""}`}>
+                      <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                        {preprocessMessage(msg.content)}
+                      </ReactMarkdown>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-            {sending && (
-              <div className="flex justify-start">
-                <div className="bg-white border rounded-lg p-3">
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
+              ))}
+              {sending && (
+                <div className="flex justify-start">
+                  <div className="bg-card border rounded-lg p-3">
+                    <div className="flex space-x-1">
+                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
+                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-            <div ref={messagesEndRef} />
-          </div>
+              )}
+              <div ref={messagesEndRef} />
+            </div>
 
-            {/* Input */}
+            {/* Input - Changed to textarea for better typing experience */}
             <div className="flex gap-2">
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyPress={(e) => e.key === "Enter" && !e.shiftKey && sendMessage()}
-                placeholder="Type your message..."
-                className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                disabled={sending || !sessionId}
-              />
-              <Button onClick={sendMessage} disabled={sending || !sessionId || !input.trim()}>
+              <div className="flex-1 relative">
+                <textarea
+                  ref={inputRef}
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      e.preventDefault()
+                      sendMessage()
+                    }
+                  }}
+                  placeholder={!sessionId ? "Initializing conversation..." : "Type your message..."}
+                  rows={2}
+                  className="flex-1 w-full px-4 py-2 border border-input rounded-lg bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={sending || !sessionId || loading}
+                  style={{ minHeight: "44px", maxHeight: "120px" }}
+                />
+                {!sessionId && !loading && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-background/80 rounded-lg pointer-events-none">
+                    <p className="text-sm text-muted-foreground">Please wait while we initialize your session...</p>
+                  </div>
+                )}
+              </div>
+              <Button onClick={sendMessage} disabled={sending || !sessionId || !input.trim() || loading}>
                 Send
               </Button>
             </div>
 
-            {/* Actions */}
             <div className="flex justify-between items-center pt-4 border-t">
               <Button variant="outline" onClick={onSkip}>
                 Skip for Now
@@ -533,15 +697,11 @@ export default function ProfileBuildingChat({
             </div>
           </div>
 
-          {/* Suggestions Sidebar - 1/3 width */}
           <div className="lg:col-span-1 space-y-4">
-            <LearningPathPreview />
-            <PersonalizationSuggestions
+            <LearningPathPreview 
               conversationId={sessionId}
-              onSuggestionClick={(suggestion) => {
-                // When user clicks a suggestion, add it to input
-                setInput(suggestion.replace(/^💡\s*/, ""))
-              }}
+              profileData={profilePreviewData}
+              isLoading={profilePreviewLoading}
             />
           </div>
         </div>
@@ -549,4 +709,3 @@ export default function ProfileBuildingChat({
     </Card>
   )
 }
-

@@ -1,0 +1,1 @@
+{"detail":"stage1_failed: 1 validation error for Stage1Content\nreading.text\n  String should have at least 250 characters [type=string_too_short, input_value='今日は東京で忙し...しかったです。', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_too_short"}

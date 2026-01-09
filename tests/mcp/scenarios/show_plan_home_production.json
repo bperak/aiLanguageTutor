@@ -1,0 +1,26 @@
+{
+  "name": "show-plan-home-production",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://ailanguagetutor.syntagent.com/",
+      "waitFor": "networkidle"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { await new Promise(resolve => setTimeout(resolve, 5000)); const bodyText = document.body.innerText.toLowerCase(); const hasNextStep = /next step|learning path|your path/i.test(bodyText); const hasBuilding = /building|generating|please check back/i.test(bodyText); const hasLogin = /login|sign in/i.test(bodyText); const pageTitle = document.title; return { hasNextStep, hasBuilding, hasLogin, pageTitle, bodyTextPreview: bodyText.substring(0, 1000) }; }",
+      "saveAs": "homePageCheck"
+    },
+    {
+      "action": "navigate",
+      "url": "https://ailanguagetutor.syntagent.com/",
+      "waitFor": "networkidle"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { await new Promise(resolve => setTimeout(resolve, 5000)); const bodyText = document.body.innerText.toLowerCase(); const hasNextStep = /next step|learning path|your path/i.test(bodyText); const hasBuilding = /building|generating|please check back/i.test(bodyText); return { hasNextStep, hasBuilding, finalCheck: true }; }",
+      "saveAs": "finalCheck"
+    }
+  ]
+}
+

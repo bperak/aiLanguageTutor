@@ -1,0 +1,37 @@
+{
+  "name": "login-e2e",
+  "description": "Full browser-based login flow: navigate to login, fill form, submit, verify redirect",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "http://localhost:3000/login"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 2000)); const usernameInput = document.querySelector('input[name=\"username\"], input[name=\"email\"], input[type=\"text\"]'); const passwordInput = document.querySelector('input[type=\"password\"]'); const submitBtn = document.querySelector('button[type=\"submit\"]'); return { hasUsernameInput: !!usernameInput, hasPasswordInput: !!passwordInput, hasSubmitBtn: !!submitBtn }; }",
+      "saveAs": "loginForm"
+    },
+    {
+      "action": "assert",
+      "expression": "loginForm.hasUsernameInput === true && loginForm.hasPasswordInput === true"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const usernameInput = document.querySelector('input[name=\"username\"], input[name=\"email\"]'); const passwordInput = document.querySelector('input[type=\"password\"]'); if (!usernameInput || !passwordInput) return { filled: false, reason: 'Inputs not found' }; function triggerReactInput(el, value) { const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set; nativeInputValueSetter.call(el, value); el.dispatchEvent(new Event('input', { bubbles: true, composed: true })); el.dispatchEvent(new Event('change', { bubbles: true })); } triggerReactInput(usernameInput, 'test_user_e2e'); triggerReactInput(passwordInput, 'TestPass123'); await new Promise(r => setTimeout(r, 500)); return { filled: true }; }",
+      "saveAs": "loginFill"
+    },
+    {
+      "action": "assert",
+      "expression": "loginFill.filled === true"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const submitBtn = document.querySelector('button[type=\"submit\"]'); if (!submitBtn) return { clicked: false, reason: 'Submit button not found' }; if (submitBtn.disabled) return { clicked: false, reason: 'Submit button disabled' }; submitBtn.click(); await new Promise(r => setTimeout(r, 5000)); const currentUrl = window.location.href; const bodyText = document.body.textContent || ''; const hasError = /error|invalid|incorrect|failed/i.test(bodyText); const redirected = !currentUrl.includes('/login'); return { clicked: true, redirected, hasError, url: currentUrl }; }",
+      "saveAs": "loginSubmit"
+    },
+    {
+      "action": "assert",
+      "expression": "loginSubmit.clicked === true"
+    }
+  ]
+}

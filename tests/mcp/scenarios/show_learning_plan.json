@@ -1,0 +1,82 @@
+{
+  "name": "show-learning-plan",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "async () => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; const now = Date.now(); const email = `showplan_${now}@example.com`; const username = `showplan_${now}`; const password = 'TestPass123'; const r = await fetch(base + '/api/v1/auth/register', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email, username, password, native_language: 'en', target_languages: ['ja'], learning_goals: ['travel'] }) }); return { status: r.status, body: await r.json(), email, username, password }; }",
+      "saveAs": "register"
+    },
+    {
+      "action": "assert",
+      "expression": "register.status === 201 || register.status === 400"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; const r = await fetch(base + '/api/v1/auth/login', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ username: ctx.register.username, password: ctx.register.password }) }); return { status: r.status, body: await r.json() }; }",
+      "saveAs": "login"
+    },
+    {
+      "action": "assert",
+      "expression": "login.status === 200 && !!login.body.access_token"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; const r = await fetch(base + '/api/v1/conversations/sessions', { method: 'POST', headers: { 'content-type': 'application/json', authorization: `Bearer ${ctx.login.body.access_token}` }, body: JSON.stringify({ session_type: 'profile_building', language_code: 'ja', ai_provider: 'openai', ai_model: 'gpt-4o-mini', title: 'Show Plan Test' }) }); return { status: r.status, body: await r.json() }; }",
+      "saveAs": "session"
+    },
+    {
+      "action": "assert",
+      "expression": "session.status === 200 && !!session.body.id"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; const r = await fetch(base + '/api/v1/profile/complete', { method: 'POST', headers: { 'content-type': 'application/json', authorization: `Bearer ${ctx.login.body.access_token}` }, body: JSON.stringify({ conversation_id: ctx.session.body.id, profile_data: { learning_goals: ['travel'], previous_knowledge: { has_experience: false }, learning_experiences: { preferred_methods: ['conversation'] }, usage_context: { contexts: ['travel'] }, current_level: 'beginner_1', additional_notes: 'Show plan test' } }) }); return { status: r.status, body: await r.json() }; }",
+      "saveAs": "complete"
+    },
+    {
+      "action": "assert",
+      "expression": "complete.status === 200 && complete.body.status === 'completed'"
+    },
+    {
+      "action": "navigate",
+      "url": "http://frontend:3000/",
+      "waitFor": "networkidle"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { await new Promise(resolve => setTimeout(resolve, 5000)); return { loaded: true }; }",
+      "saveAs": "pageLoaded"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { const bodyText = document.body.innerText.toLowerCase(); const hasNextStep = /next step|learning path|your path/i.test(bodyText); const hasBuilding = /building|generating|please check back/i.test(bodyText); return { hasNextStep, hasBuilding, pageTextLength: bodyText.length }; }",
+      "saveAs": "initialCheck"
+    },
+    {
+      "action": "navigate",
+      "url": "http://frontend:3000/",
+      "waitFor": "networkidle"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { await new Promise(resolve => setTimeout(resolve, 3000)); const bodyText = document.body.innerText.toLowerCase(); const hasPlan = /next step|learning path|your path/i.test(bodyText); return { hasPlan, bodyTextPreview: bodyText.substring(0, 500) }; }",
+      "saveAs": "check1"
+    },
+    {
+      "action": "navigate",
+      "url": "http://frontend:3000/",
+      "waitFor": "networkidle"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { await new Promise(resolve => setTimeout(resolve, 3000)); const bodyText = document.body.innerText.toLowerCase(); const hasPlan = /next step|learning path|your path/i.test(bodyText); return { hasPlan, bodyTextPreview: bodyText.substring(0, 500) }; }",
+      "saveAs": "check2"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { return { message: 'Screenshot will be taken by Playwright API' }; }",
+      "saveAs": "screenshotNote"
+    }
+  ]
+}
+

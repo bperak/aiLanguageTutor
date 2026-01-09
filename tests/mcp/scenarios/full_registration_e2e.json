@@ -1,0 +1,70 @@
+{
+  "name": "full-registration-e2e",
+  "description": "Full browser-based registration flow: register -> profile building -> learning path",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "http://localhost:3000/register"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 3000)); const ts = Date.now(); return { email: `e2e_mcp_${ts}@test.com`, username: `e2e_mcp_${ts}`, password: 'TestPass123' }; }",
+      "saveAs": "creds"
+    },
+    {
+      "action": "evaluate",
+      "function": "async (ctx) => { const emailInput = document.querySelector('input[name=\"email\"]'); const usernameInput = document.querySelector('input[name=\"username\"]'); const passwordInput = document.querySelector('input[type=\"password\"]'); if (!emailInput || !usernameInput || !passwordInput) { throw new Error(`Form inputs not found: email=${!!emailInput}, username=${!!usernameInput}, password=${!!passwordInput}`); } function triggerReactInput(el, value) { const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set; nativeInputValueSetter.call(el, value); el.dispatchEvent(new Event('input', { bubbles: true })); el.dispatchEvent(new Event('change', { bubbles: true })); el.dispatchEvent(new Event('blur', { bubbles: true })); } triggerReactInput(emailInput, ctx.creds.email); await new Promise(r => setTimeout(r, 200)); triggerReactInput(usernameInput, ctx.creds.username); await new Promise(r => setTimeout(r, 200)); triggerReactInput(passwordInput, ctx.creds.password); await new Promise(r => setTimeout(r, 1000)); return { filled: true, email: ctx.creds.email }; }",
+      "saveAs": "formFill"
+    },
+    {
+      "action": "assert",
+      "expression": "formFill.filled === true"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 1000)); const btn = document.querySelector('button[type=\"submit\"]'); if (!btn) throw new Error('Submit button not found'); if (btn.disabled) throw new Error('Submit button is disabled - form validation may have failed'); btn.click(); const start = Date.now(); while (Date.now() - start < 60000) { const url = window.location.href; const path = window.location.pathname; if (path.includes('/profile') || (path === '/' && !path.includes('/register'))) { return { success: true, url: url, redirected: true }; } const errorBanner = document.querySelector('.bg-red-50'); const fieldError = document.querySelector('[id$=\"-form-item-message\"]'); if (errorBanner || fieldError) { const errorText = (errorBanner?.textContent || '') + (fieldError?.textContent || ''); return { success: false, error: errorText, url: url }; } await new Promise(r => setTimeout(r, 500)); } return { success: false, url: window.location.href, reason: 'timeout after 60s' }; }",
+      "saveAs": "registration"
+    },
+    {
+      "action": "assert",
+      "expression": "registration.success === true"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 5000)); const textarea = document.querySelector('textarea'); if (!textarea) { const startBtn = Array.from(document.querySelectorAll('button')).find(b => /start|begin|create/i.test(b.textContent)); if (startBtn) { startBtn.click(); await new Promise(r => setTimeout(r, 3000)); } } return { hasTextarea: !!document.querySelector('textarea'), url: window.location.href }; }",
+      "saveAs": "profileReady"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const textarea = document.querySelector('textarea'); if (textarea) { const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set; nativeInputValueSetter.call(textarea, 'I want to learn Japanese for travel. I am a complete beginner.'); textarea.dispatchEvent(new Event('input', {bubbles: true})); textarea.dispatchEvent(new Event('change', {bubbles: true})); await new Promise(r => setTimeout(r, 500)); const sendBtn = Array.from(document.querySelectorAll('button')).find(b => /send/i.test(b.textContent) && !b.disabled); if (sendBtn) { sendBtn.click(); } else { textarea.dispatchEvent(new KeyboardEvent('keydown', {key: 'Enter', keyCode: 13, bubbles: true})); } await new Promise(r => setTimeout(r, 10000)); return { messageSent: true }; } return { messageSent: false, reason: 'No textarea found' }; }",
+      "saveAs": "profileMsg1"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const textarea = document.querySelector('textarea'); if (textarea) { const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set; nativeInputValueSetter.call(textarea, 'I prefer interactive learning. I can study 30 minutes per day.'); textarea.dispatchEvent(new Event('input', {bubbles: true})); textarea.dispatchEvent(new Event('change', {bubbles: true})); await new Promise(r => setTimeout(r, 500)); const sendBtn = Array.from(document.querySelectorAll('button')).find(b => /send/i.test(b.textContent) && !b.disabled); if (sendBtn) { sendBtn.click(); } else { textarea.dispatchEvent(new KeyboardEvent('keydown', {key: 'Enter', keyCode: 13, bubbles: true})); } await new Promise(r => setTimeout(r, 10000)); return { messageSent: true }; } return { messageSent: false }; }",
+      "saveAs": "profileMsg2"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { for (let i = 0; i < 20; i++) { await new Promise(r => setTimeout(r, 3000)); const completeBtn = Array.from(document.querySelectorAll('button')).find(b => /complete|approve|finish|done|save/i.test(b.textContent) && !b.disabled); if (completeBtn) { completeBtn.click(); await new Promise(r => setTimeout(r, 5000)); return { completed: true, attempt: i + 1 }; } } return { completed: false, reason: 'Complete button not found after 20 attempts' }; }",
+      "saveAs": "profileComplete"
+    },
+    {
+      "action": "assert",
+      "expression": "profileComplete.completed === true"
+    },
+    {
+      "action": "navigate",
+      "url": "http://localhost:3000/"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 5000)); const bodyText = document.body.textContent.toLowerCase(); const hasPath = /next step|learning path|your path|continue/i.test(bodyText); const isBuilding = /building|generating|please wait/i.test(bodyText); return { url: window.location.href, hasLearningPath: hasPath, isBuilding: isBuilding, success: hasPath || isBuilding }; }",
+      "saveAs": "finalCheck"
+    },
+    {
+      "action": "assert",
+      "expression": "finalCheck.success === true || finalCheck.hasLearningPath === true || finalCheck.isBuilding === true"
+    }
+  ]
+}

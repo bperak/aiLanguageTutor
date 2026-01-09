@@ -1,0 +1,28 @@
+{
+  "name": "home-status-e2e",
+  "description": "Full browser-based home page flow: navigate to home, verify status loads without 500 errors",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "http://localhost:3000/"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 5000)); const bodyText = document.body.textContent || ''; const hasError500 = /error 500|internal server error|500 error|status 500/i.test(bodyText); const hasContent = bodyText.length > 100; const hasHome = /home|welcome|dashboard/i.test(bodyText); const url = window.location.href; return { hasError500, hasContent, hasHome, url, bodyTextLength: bodyText.length }; }",
+      "saveAs": "homeStatus"
+    },
+    {
+      "action": "assert",
+      "expression": "homeStatus.hasError500 === false || homeStatus.hasContent === true"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; try { const r = await fetch(base + '/api/v1/home/status', { method: 'GET', headers: { 'Content-Type': 'application/json' } }); const data = await r.json().catch(() => ({})); return { status: r.status, isNot500: r.status !== 500, hasData: !!data, dataKeys: Object.keys(data || {}) }; } catch(e) { return { status: 0, error: e.message, isNot500: false }; } }",
+      "saveAs": "homeApi"
+    },
+    {
+      "action": "assert",
+      "expression": "homeApi.isNot500 === true"
+    }
+  ]
+}

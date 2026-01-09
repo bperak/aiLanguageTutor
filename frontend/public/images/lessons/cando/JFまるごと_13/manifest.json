@@ -1,0 +1,88 @@
+{
+  "can_do_id": "JFまるごと:13",
+  "images": [
+    {
+      "image_id": "scene-01",
+      "path": "scene-01.png",
+      "alt_hr": "Predaja suvenira u uredu",
+      "anchors": [
+        "explain"
+      ]
+    },
+    {
+      "image_id": "dialog-v1",
+      "path": "dialog-v1.png",
+      "alt_hr": "Neutralni dijalog u 4 kadra",
+      "anchors": [
+        "sample_dialog"
+      ]
+    },
+    {
+      "image_id": "dialog-v2",
+      "path": "dialog-v2.png",
+      "alt_hr": "Uljudno odbijanje poklona",
+      "anchors": [
+        "sample_dialog"
+      ]
+    },
+    {
+      "image_id": "dialog-v3",
+      "path": "dialog-v3.png",
+      "alt_hr": "Objašnjenje izbora poklona",
+      "anchors": [
+        "sample_dialog"
+      ]
+    },
+    {
+      "image_id": "dialog-v4",
+      "path": "dialog-v4.png",
+      "alt_hr": "Formalnije darivanje",
+      "anchors": [
+        "sample_dialog"
+      ]
+    },
+    {
+      "image_id": "expressions-omiyage-dozo",
+      "path": "expressions-omiyage-dozo.png",
+      "alt_hr": "Konvencionalni izraz: darivanje",
+      "anchors": [
+        "explain",
+        "guided_dialogue"
+      ]
+    },
+    {
+      "image_id": "vocab-omiyage",
+      "path": "vocab-omiyage.png",
+      "alt_hr": "Vokabular: おみやげ",
+      "anchors": [
+        "explain",
+        "lexicon_and_patterns"
+      ]
+    },
+    {
+      "image_id": "culture-cue",
+      "path": "culture-cue.png",
+      "alt_hr": "Kulturalni kontekst: おみやげ",
+      "anchors": [
+        "explain"
+      ]
+    }
+  ],
+  "attach_to_sections": {
+    "explain": [
+      "scene-01",
+      "vocab-omiyage",
+      "expressions-omiyage-dozo",
+      "culture-cue"
+    ],
+    "sample_dialog": [
+      "dialog-v1"
+    ],
+    "guided_dialogue": [
+      "expressions-omiyage-dozo"
+    ],
+    "lexicon_and_patterns": [
+      "vocab-omiyage"
+    ]
+  }
+}

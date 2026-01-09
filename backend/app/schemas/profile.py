@@ -4,7 +4,7 @@ Profile schemas for API request/response validation and data extraction.
 
 from datetime import datetime
 from typing import Optional, List, Dict, Any
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, field_validator
 import uuid
 
 
@@ -14,10 +14,18 @@ class PreviousKnowledge(BaseModel):
     has_experience: bool = False
     experience_level: Optional[str] = None  # beginner, intermediate, advanced
     years_studying: Optional[float] = None
-    formal_classes: bool = False
-    self_study: bool = False
+    formal_classes: bool = Field(default=False)
+    self_study: bool = Field(default=False)
     specific_areas_known: List[str] = Field(default_factory=list)  # e.g., ["hiragana", "basic greetings"]
     specific_areas_unknown: List[str] = Field(default_factory=list)
+    
+    @field_validator('formal_classes', 'self_study', mode='before')
+    @classmethod
+    def convert_none_to_false(cls, v):
+        """Convert None to False for boolean fields."""
+        if v is None:
+            return False
+        return bool(v)
 
 
 class LearningExperience(BaseModel):
@@ -29,6 +37,37 @@ class LearningExperience(BaseModel):
     study_schedule: Optional[str] = None  # daily, weekly, irregular
     motivation_level: Optional[str] = None  # high, medium, low
     challenges_faced: List[str] = Field(default_factory=list)
+    
+    @field_validator('learning_style', 'study_schedule', 'motivation_level', mode='before')
+    @classmethod
+    def convert_list_to_string(cls, v):
+        """Convert lists to comma-separated strings for string fields."""
+        if isinstance(v, list):
+            # Join list items with comma and space
+            return ', '.join(str(item) for item in v if item)
+        if v is None or v == '':
+            return None
+        return v
+    # Priority 2: 4-Stage Personalization
+    grammar_focus_areas: List[str] = Field(default_factory=list)  # ["particles", "verb forms", "keigo"]
+    grammar_challenges: List[str] = Field(default_factory=list)
+    preferred_exercise_types: Dict[str, List[str]] = Field(default_factory=dict)  # {"comprehension": ["matching", "q&a"], "production": ["translation", "writing"]}
+    interaction_preferences: Dict[str, Any] = Field(default_factory=dict)  # {"style": "structured", "role_play": True, "ai_partner": True}
+    # Priority 3: Nice to Have
+    feedback_preferences: Dict[str, Any] = Field(default_factory=dict)  # {"style": "encouraging", "detail_level": "moderate"}
+    error_tolerance: Optional[str] = None  # "high", "medium", "low"
+    
+    @field_validator('preferred_exercise_types', 'interaction_preferences', 'feedback_preferences', mode='before')
+    @classmethod
+    def convert_list_to_dict(cls, v):
+        """Convert empty lists, empty strings, or None to empty dicts for dictionary fields."""
+        if isinstance(v, list):
+            return {}
+        if v is None or v == '':
+            return {}
+        if isinstance(v, str) and v.strip() == '':
+            return {}
+        return v
 
 
 class UsageContext(BaseModel):
@@ -37,6 +76,32 @@ class UsageContext(BaseModel):
     urgency: Optional[str] = None  # immediate, short-term, long-term
     specific_situations: List[str] = Field(default_factory=list)  # e.g., ["ordering food", "business meetings"]
     target_date: Optional[str] = None  # e.g., "in 3 months for trip"
+    # Priority 1: DomainPlan Quality
+    register_preferences: List[str] = Field(default_factory=list)  # ["formal", "casual", "neutral"]
+    formality_contexts: Dict[str, str] = Field(default_factory=dict)  # {"work": "formal", "social": "casual"}
+    scenario_details: Dict[str, List[str]] = Field(default_factory=dict)  # {"travel": ["airport", "hotel"], "work": ["meetings"]}
+    
+    @field_validator('register_preferences', 'contexts', 'specific_situations', mode='before')
+    @classmethod
+    def convert_string_to_list(cls, v):
+        """Convert empty strings to empty lists for list fields."""
+        if v is None or v == '':
+            return []
+        if isinstance(v, str) and v.strip() == '':
+            return []
+        return v
+    
+    @field_validator('formality_contexts', 'scenario_details', mode='before')
+    @classmethod
+    def convert_to_dict(cls, v):
+        """Convert empty lists, empty strings, or None to empty dicts for dictionary fields."""
+        if isinstance(v, list):
+            return {}
+        if v is None or v == '':
+            return {}
+        if isinstance(v, str) and v.strip() == '':
+            return {}
+        return v
 
 
 class ProfileData(BaseModel):
@@ -50,6 +115,22 @@ class ProfileData(BaseModel):
         description="Assessed learning stage: beginner_1, beginner_2, intermediate_1, intermediate_2, advanced_1, advanced_2"
     )
     additional_notes: Optional[str] = None
+    # Priority 0: Learning Loop (Path-Level Structures)
+    vocabulary_domain_goals: List[str] = Field(default_factory=list)  # ["travel", "business", "daily_life"]
+    vocabulary_known: List[Dict[str, Any]] = Field(default_factory=list)  # [{"word": "こんにちは", "domain": "greetings", "level": "beginner_1", "mastery": 4}, ...]
+    vocabulary_learning_target: Optional[int] = None  # Target words per milestone
+    vocabulary_level_preference: Optional[str] = None  # "current", "slightly_above", "challenging"
+    grammar_progression_goals: List[str] = Field(default_factory=list)  # ["particles", "verb_forms", "keigo"]
+    grammar_known: List[Dict[str, Any]] = Field(default_factory=list)  # [{"pattern": "〜です", "level": "beginner_1", "mastery": 5, "area": "copula"}, ...]
+    grammar_learning_target: Optional[int] = None  # Target patterns per milestone
+    grammar_level_preference: Optional[str] = None  # "current", "slightly_above", "challenging"
+    formulaic_expression_goals: List[str] = Field(default_factory=list)  # ["greetings", "requests", "apologies"]
+    expressions_known: List[Dict[str, Any]] = Field(default_factory=list)  # [{"expression": "よろしく", "context": "greetings", "level": "beginner_1", "register": "casual", "mastery": 4}, ...]
+    expression_learning_target: Optional[int] = None  # Target expressions per milestone
+    expression_level_preference: Optional[str] = None  # "current", "slightly_above", "challenging"
+    # Priority 1: DomainPlan Quality
+    cultural_interests: List[str] = Field(default_factory=list)  # ["etiquette", "history", "pop culture"]
+    cultural_background: Optional[str] = None  # User's cultural background
     
     class Config:
         from_attributes = True
@@ -78,6 +159,10 @@ class ProfileDataResponse(BaseModel):
     learning_experiences: Dict[str, Any]
     usage_context: Dict[str, Any]
     additional_notes: Optional[str]
+    extraction_response: Optional[Dict[str, Any]] = Field(
+        default=None,
+        description="AI extraction response and assessment showing how profile data was extracted"
+    )
     profile_building_conversation_id: Optional[uuid.UUID]
     created_at: datetime
     updated_at: datetime
@@ -160,7 +245,19 @@ class LearningPathStep(BaseModel):
     estimated_duration_days: int
     prerequisites: List[str] = Field(default_factory=list)  # step_ids
     learning_objectives: List[str] = Field(default_factory=list)
-    can_do_descriptors: List[str] = Field(default_factory=list)  # CanDo descriptor IDs
+    vocabulary: List[Dict[str, Any]] = Field(
+        default_factory=list,
+        description="Vocabulary items for this step (word, reading, pos, translation)"
+    )
+    grammar: List[Dict[str, Any]] = Field(
+        default_factory=list,
+        description="Grammar patterns for this step (pattern, explanation, examples)"
+    )
+    formulaic_expressions: List[Dict[str, Any]] = Field(
+        default_factory=list,
+        description="Formulaic expressions for this step (phrase, usage_note, register)"
+    )
+    can_do_descriptors: List[str] = Field(default_factory=list)  # CanDo descriptor IDs (validated)
     resources: List[str] = Field(default_factory=list)  # Resource IDs or URLs
     difficulty_level: Optional[str] = None  # beginner, intermediate, advanced
     prelesson_kit: Optional[PreLessonKit] = Field(
@@ -190,6 +287,21 @@ class LearningPathData(BaseModel):
     target_level: str
     learning_goals: List[str]
     created_at: datetime
+    # Path-level structures for evaluation tracking
+    path_structures: Dict[str, Any] = Field(default_factory=dict)  # {
+    #   "vocabulary": [
+    #     {"word": "...", "domain": "...", "milestone": "...", "level": "beginner_1", "cefr_level": "A1", "validated": True},
+    #     ...
+    #   ],
+    #   "grammar": [
+    #     {"pattern": "...", "level": "beginner_1", "cefr_level": "A1", "milestone": "...", "validated": True, "prerequisites": [...]},
+    #     ...
+    #   ],
+    #   "expressions": [
+    #     {"expression": "...", "context": "...", "level": "beginner_1", "cefr_level": "A1", "register": "polite", "milestone": "...", "validated": True},
+    #     ...
+    #   ]
+    # }
     
     class Config:
         from_attributes = True

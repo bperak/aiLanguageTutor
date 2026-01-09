@@ -5,7 +5,7 @@ Profile endpoints for profile building, completion, and learning path management
 from typing import Dict, Any, Optional
 from datetime import datetime
 import asyncio
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, BackgroundTasks
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
 import uuid
@@ -32,9 +32,44 @@ async def get_profile_status(
     current_user: User = Depends(get_current_user)
 ):
     """Get profile completion status with detailed information."""
+    # #region agent log
+    import time
+    import json
+    perf_start = time.time()
+    try:
+        with open("/home/benedikt/.cursor/debug.log", "a") as f:
+            f.write(json.dumps({
+                "sessionId": "debug-session",
+                "runId": "perf1",
+                "hypothesisId": "P7",
+                "location": "profile.py:get_profile_status",
+                "message": "Profile status endpoint called",
+                "data": {"user_id": str(current_user.id), "timestamp": int(time.time() * 1000)},
+                "timestamp": int(time.time() * 1000)
+            }) + "\n")
+    except: pass
+    # #endregion
+    # #region agent log
+    check_start = time.time()
+    # #endregion
     status_data = await profile_building_service.check_profile_completion(
         db, current_user.id
     )
+    # #region agent log
+    check_end = time.time()
+    try:
+        with open("/home/benedikt/.cursor/debug.log", "a") as f:
+            f.write(json.dumps({
+                "sessionId": "debug-session",
+                "runId": "perf1",
+                "hypothesisId": "P7",
+                "location": "profile.py:get_profile_status",
+                "message": "Profile completion check completed",
+                "data": {"duration_ms": (check_end - check_start) * 1000},
+                "timestamp": int(time.time() * 1000)
+            }) + "\n")
+    except: pass
+    # #endregion
     
     # Check if profile data exists and calculate completion
     missing_fields = []
@@ -106,6 +141,22 @@ async def get_profile_status(
         missing_fields = ["profile_data"]
         suggestions = ["Start building your profile to unlock personalized features"]
     
+    # #region agent log
+    perf_end = time.time()
+    try:
+        with open("/home/benedikt/.cursor/debug.log", "a") as f:
+            f.write(json.dumps({
+                "sessionId": "debug-session",
+                "runId": "perf1",
+                "hypothesisId": "P7",
+                "location": "profile.py:get_profile_status",
+                "message": "Profile status endpoint completed",
+                "data": {"total_duration_ms": (perf_end - perf_start) * 1000},
+                "timestamp": int(time.time() * 1000)
+            }) + "\n")
+    except: pass
+    # #endregion
+    
     return ProfileStatusResponse(
         profile_completed=status_data["completed"],
         profile_skipped=status_data["skipped"],
@@ -148,6 +199,7 @@ async def get_profile_data(
         learning_experiences=profile.learning_experiences or {},
         usage_context=profile.usage_context or {},
         additional_notes=profile.additional_notes,
+        extraction_response=profile.extraction_response,
         profile_building_conversation_id=profile.profile_building_conversation_id,
         created_at=profile.created_at,
         updated_at=profile.updated_at
@@ -156,15 +208,32 @@ async def get_profile_data(
 
 @router.post("/extract")
 async def extract_profile_data(
-    request: ProfileCompleteRequest,
+    request: Dict[str, Any],
     db: AsyncSession = Depends(get_postgresql_session),
     current_user: User = Depends(get_current_user)
 ):
     """Extract profile data from conversation without saving it."""
     try:
+        conversation_id = request.get("conversation_id")
+        if not conversation_id:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="conversation_id is required"
+            )
+        
+        # Convert to UUID if string
+        if isinstance(conversation_id, str):
+            try:
+                conversation_id = uuid.UUID(conversation_id)
+            except ValueError:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="Invalid conversation_id format"
+                )
+        
         # Get conversation messages
         session = await ConversationService.get_session(
-            db, request.conversation_id, current_user.id
+            db, conversation_id, current_user.id
         )
         if not session:
             raise HTTPException(
@@ -173,24 +242,52 @@ async def extract_profile_data(
             )
         
         messages = await ConversationService.list_messages(
-            db, request.conversation_id, limit=1000, ascending=True
+            db, conversation_id, limit=1000, ascending=True
         )
+        
+        if not messages or len(messages) == 0:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="No messages found in conversation. Please have a conversation first before extracting profile data."
+            )
+        
         message_list = [
             {"role": m.role, "content": m.content}
             for m in messages
         ]
         
         # Extract profile data
-        profile_data = await profile_building_service.extract_profile_data(message_list)
+        try:
+            profile_data, extraction_response = await profile_building_service.extract_profile_data(message_list)
+        except ValueError as e:
+            # JSON parsing errors
+            import structlog
+            logger = structlog.get_logger()
+            logger.error("profile_extraction_endpoint_json_error", error=str(e), conversation_id=str(conversation_id))
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Failed to parse extracted profile data: {str(e)}. Please try again or contact support."
+            )
+        except Exception as e:
+            # Other extraction errors
+            import structlog
+            logger = structlog.get_logger()
+            logger.error("profile_extraction_endpoint_failed", error=str(e), conversation_id=str(conversation_id))
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Failed to extract profile data: {str(e)}"
+            )
         
         return {
             "profile_data": {
                 "learning_goals": profile_data.learning_goals,
-                "previous_knowledge": profile_data.previous_knowledge.model_dump(),
-                "learning_experiences": profile_data.learning_experiences.model_dump(),
-                "usage_context": profile_data.usage_context.model_dump(),
+                "previous_knowledge": profile_data.previous_knowledge.model_dump() if profile_data.previous_knowledge else {},
+                "learning_experiences": profile_data.learning_experiences.model_dump() if profile_data.learning_experiences else {},
+                "usage_context": profile_data.usage_context.model_dump() if profile_data.usage_context else {},
                 "additional_notes": profile_data.additional_notes,
-            }
+                "current_level": profile_data.current_level,
+            },
+            "extraction_response": extraction_response  # Include AI extraction response and assessment
         }
         
     except HTTPException:
@@ -205,6 +302,7 @@ async def extract_profile_data(
 @router.post("/complete")
 async def complete_profile(
     request: ProfileCompleteRequest,
+    background_tasks: BackgroundTasks,
     db: AsyncSession = Depends(get_postgresql_session),
     current_user: User = Depends(get_current_user)
 ):
@@ -229,6 +327,7 @@ async def complete_profile(
         ]
         
         # Extract profile data (or use provided data)
+        extraction_response = None
         if request.profile_data:
             # Convert dict to ProfileData object if needed
             if isinstance(request.profile_data, dict):
@@ -237,27 +336,96 @@ async def complete_profile(
             else:
                 profile_data = request.profile_data
         else:
-            profile_data = await profile_building_service.extract_profile_data(message_list)
+            profile_data, extraction_response = await profile_building_service.extract_profile_data(message_list)
         
         # Save profile data
         await profile_building_service.save_profile_data(
             db=db,
             user_id=current_user.id,
             profile_data=profile_data,
-            conversation_id=request.conversation_id
+            conversation_id=request.conversation_id,
+            extraction_response=extraction_response
         )
         
         # Mark as complete
         await profile_building_service.mark_profile_complete(db, current_user.id)
         
-        # Generate learning path (best-effort).
+        # Capture user_id for background task (current_user might not be accessible in background)
+        user_id_for_bg = current_user.id
+        
+        # Generate learning path in background (non-blocking).
         #
         # Reason: this can be slow (Neo4j + path logic) and should not block the
-        # user's "Approve & Save" flow. Keep the UX snappy by timing out and
-        # returning success without the path (user can regenerate later).
+        # user's "Approve & Save" flow. Generate in background so it completes
+        # even if it takes longer than a few seconds.
         path_response = None
 
-        async def _generate_path() -> LearningPathResponse | None:
+        async def _generate_path_background() -> None:
+            """Background task to generate learning path."""
+            from app.db import AsyncSessionLocal, get_neo4j_session
+            import structlog
+            import traceback
+            
+            logger = structlog.get_logger()
+            logger.info("learning_path_background_task_started", user_id=str(user_id_for_bg))
+            
+            try:
+                async with AsyncSessionLocal() as bg_db:
+                    try:
+                        async for neo4j_session in get_neo4j_session():
+                            try:
+                                logger.info("learning_path_background_generating", user_id=str(user_id_for_bg))
+                                path_data = await learning_path_service.generate_learning_path(
+                                    db=bg_db,
+                                    neo4j_session=neo4j_session,
+                                    user_id=user_id_for_bg,
+                                )
+                                logger.info("learning_path_background_saving", user_id=str(user_id_for_bg))
+                                saved_path = await learning_path_service.save_learning_path(
+                                    db=bg_db,
+                                    user_id=user_id_for_bg,
+                                    path_data=path_data,
+                                )
+                                await bg_db.commit()
+                                logger.info(
+                                    "learning_path_generated_in_background",
+                                    user_id=str(user_id_for_bg),
+                                    path_id=str(saved_path.id)
+                                )
+                                break
+                            except Exception as bg_err:
+                                await bg_db.rollback()
+                                error_trace = traceback.format_exc()
+                                logger.error(
+                                    "learning_path_generation_failed_in_background",
+                                    error=str(bg_err),
+                                    error_type=type(bg_err).__name__,
+                                    traceback=error_trace,
+                                    user_id=str(user_id_for_bg)
+                                )
+                                break
+                    except Exception as session_err:
+                        error_trace = traceback.format_exc()
+                        logger.error(
+                            "learning_path_background_db_session_failed",
+                            error=str(session_err),
+                            error_type=type(session_err).__name__,
+                            traceback=error_trace,
+                            user_id=str(user_id_for_bg)
+                        )
+            except Exception as bg_err:
+                error_trace = traceback.format_exc()
+                logger.error(
+                    "learning_path_background_task_failed",
+                    error=str(bg_err),
+                    error_type=type(bg_err).__name__,
+                    traceback=error_trace,
+                    user_id=str(user_id_for_bg)
+                )
+        
+        # Try to generate synchronously with a longer timeout (10 seconds)
+        # If it times out, fall back to background generation
+        async def _generate_path_sync() -> LearningPathResponse | None:
             from app.db import get_neo4j_session
 
             async for neo4j_session in get_neo4j_session():
@@ -286,18 +454,21 @@ async def complete_profile(
             return None
 
         try:
-            path_response = await asyncio.wait_for(_generate_path(), timeout=2.5)
+            # Try synchronous generation with 10 second timeout
+            path_response = await asyncio.wait_for(_generate_path_sync(), timeout=10.0)
         except asyncio.TimeoutError:
             import structlog
-
             logger = structlog.get_logger()
-            logger.warning("learning_path_generation_timed_out_on_complete", timeout_s=2.5)
+            logger.info("learning_path_generation_timed_out_using_background", timeout_s=10.0, user_id=str(current_user.id))
+            # Schedule background generation
+            background_tasks.add_task(_generate_path_background)
         except Exception as path_err:
-            # Log but don't fail profile completion
+            # Log but don't fail profile completion, schedule background generation
             import structlog
-
             logger = structlog.get_logger()
-            logger.error("learning_path_generation_failed_on_complete", error=str(path_err))
+            logger.error("learning_path_generation_failed_using_background", error=str(path_err), user_id=str(current_user.id))
+            # Schedule background generation as fallback
+            background_tasks.add_task(_generate_path_background)
         
         return {
             "status": "completed",
@@ -381,6 +552,7 @@ async def get_learning_path_versions(
 @router.post("/learning-path/generate")
 async def generate_learning_path(
     request: LearningPathGenerateRequest,
+    background_tasks: BackgroundTasks,
     db: AsyncSession = Depends(get_postgresql_session),
     current_user: User = Depends(get_current_user)
 ):
@@ -394,36 +566,49 @@ async def generate_learning_path(
                 detail="Active learning path already exists. Use force_regenerate=true to create new version."
             )
         
-        # Get Neo4j session
+        # Run path generation synchronously but with a timeout
+        # If it takes too long, we'll return a status message
         from app.db import get_neo4j_session
-        async for neo4j_session in get_neo4j_session():
-            # Generate new path
-            path_data = await learning_path_service.generate_learning_path(
+        import structlog
+        logger = structlog.get_logger()
+        
+        try:
+            async for neo4j_session in get_neo4j_session():
+                # Generate new path
+                path_data = await learning_path_service.generate_learning_path(
+                    db=db,
+                    neo4j_session=neo4j_session,
+                    user_id=current_user.id
+                )
+                break
+            
+            # Save path
+            new_path = await learning_path_service.save_learning_path(
                 db=db,
-                neo4j_session=neo4j_session,
-                user_id=current_user.id
+                user_id=current_user.id,
+                path_data=path_data
             )
-            break
-        
-        # Save path
-        new_path = await learning_path_service.save_learning_path(
-            db=db,
-            user_id=current_user.id,
-            path_data=path_data
-        )
-        
-        # Return full path data so user can see the complete plan
-        return LearningPathResponse(
-            id=new_path.id,
-            user_id=new_path.user_id,
-            version=new_path.version,
-            path_name=new_path.path_name,
-            path_data=new_path.path_data or {},
-            progress_data=new_path.progress_data or {},
-            is_active=new_path.is_active,
-            created_at=new_path.created_at,
-            updated_at=new_path.updated_at
-        )
+            
+            # Return full path data
+            return LearningPathResponse(
+                id=new_path.id,
+                user_id=new_path.user_id,
+                version=new_path.version,
+                path_name=new_path.path_name,
+                path_data=new_path.path_data or {},
+                progress_data=new_path.progress_data or {},
+                is_active=new_path.is_active,
+                created_at=new_path.created_at,
+                updated_at=new_path.updated_at
+            )
+        except asyncio.TimeoutError:
+            logger.warning("Path generation timed out, returning status",
+                         user_id=str(current_user.id))
+            return {
+                "status": "generating",
+                "message": "Learning path generation is in progress. Please check back in a moment.",
+                "user_id": str(current_user.id)
+            }
         
     except HTTPException:
         raise

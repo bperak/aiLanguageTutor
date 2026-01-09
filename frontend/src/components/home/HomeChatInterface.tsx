@@ -10,6 +10,7 @@ import NextStepWidget from "./NextStepWidget"
 import AITutorSuggestions from "./AITutorSuggestions"
 import SessionsCard from "./SessionsCard"
 import ProfileStatusWidget from "./ProfileStatusWidget"
+import LearningPathWidget from "./LearningPathWidget"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import ReactMarkdown from "react-markdown"
@@ -58,7 +59,6 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
     
     // First, handle the exact pattern from the image: `/api/v1/cando/lessons/start?can_do_id=JF:21`
     // This is the most specific pattern - match inline code with backticks
-    // Note: ? needs to be escaped in regex, but in a string it's fine
     let processed = content.replace(/`(\/api\/v1\/cando\/lessons\/start[?]can_do_id=([^`\s&]+))`/g, (match, url, canDoId) => {
       console.log('✅ Matched inline code pattern:', match, 'canDoId:', canDoId)
       return `[Start Lesson: ${canDoId}](/cando/${encodeURIComponent(canDoId)})`
@@ -92,7 +92,6 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
       console.log('🔍 Code component - content:', codeContent, 'inline:', inline)
       
       // Check if the code content looks like a CanDo lesson start URL (both inline and block)
-      // Match with or without leading slash, and handle various formats
       if (codeContent.match(/\/api\/v1\/cando\/lessons\/start/)) {
         const canDoId = extractCanDoId(codeContent)
         console.log('🔍 Code component - extracted canDoId:', canDoId)
@@ -105,7 +104,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
                 console.log('🔗 Navigating to:', `/cando/${encodeURIComponent(canDoId)}`)
                 router.push(`/cando/${encodeURIComponent(canDoId)}`)
               }}
-              className="text-blue-600 hover:text-blue-800 underline cursor-pointer font-medium"
+              className="text-blue-600 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200 underline cursor-pointer font-medium"
             >
               Start Lesson: {canDoId}
             </a>
@@ -130,7 +129,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
                 e.preventDefault()
                 router.push(`/cando/${encodeURIComponent(canDoId)}`)
               }}
-              className="text-blue-600 hover:text-blue-800 underline"
+              className="text-blue-600 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200 underline"
               {...props}
             >
               {children}
@@ -147,7 +146,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
               e.preventDefault()
               router.push(href)
             }}
-            className="text-blue-600 hover:text-blue-800 underline cursor-pointer"
+            className="text-blue-600 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200 underline cursor-pointer"
             {...props}
           >
             {children}
@@ -160,7 +159,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
           href={href}
           target={href?.startsWith("http") ? "_blank" : undefined}
           rel={href?.startsWith("http") ? "noreferrer" : undefined}
-          className="text-blue-600 hover:text-blue-800 underline"
+          className="text-blue-600 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200 underline"
           {...props}
         >
           {children}
@@ -192,7 +191,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
       setHomeStatus(status)
       setLoading(false)
     } catch (err) {
-      showToast("Failed to load home status", "error")
+      showToast("Failed to load home status")
       setLoading(false)
     }
   }
@@ -261,16 +260,25 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
 
       // Stream reply
       const token = getToken()
-      const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000"
-      const url = `${baseUrl}/api/v1/home/sessions/${currentSessionId}/stream`
+      // Use relative URL for same-origin requests (works with Cloudflare)
+      const url = `/api/v1/home/sessions/${currentSessionId}/stream`
 
+      console.log("Starting stream request to:", url, "sessionId:", currentSessionId)
       const resp = await fetch(url, {
         method: "GET",
         headers: token ? { Authorization: `Bearer ${token}` } : undefined,
       })
 
-      if (!resp.ok || !resp.body) {
-        throw new Error(`Stream error: ${resp.status}`)
+      console.log("Stream response status:", resp.status, "ok:", resp.ok, "body:", resp.body)
+      if (!resp.ok) {
+        const errorText = await resp.text()
+        console.error("Stream error response:", errorText)
+        throw new Error(`Stream error: ${resp.status} - ${errorText}`)
+      }
+      
+      if (!resp.body) {
+        console.error("Stream response has no body")
+        throw new Error(`Stream error: No response body`)
       }
 
       const reader = resp.body.getReader()
@@ -279,10 +287,15 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
       let assistantReply = ""
       let currentEvent = ""
 
+      console.log("Starting to read stream...")
       while (true) {
         const { done, value } = await reader.read()
-        if (done) break
+        if (done) {
+          console.log("Stream reading done")
+          break
+        }
 
+        console.log("Received stream chunk, length:", value?.length)
         buffer += decoder.decode(value, { stream: true })
         let idx
         while ((idx = buffer.indexOf("\n\n")) !== -1) {
@@ -305,7 +318,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
               if (currentEvent === "error" || data === "streaming_failed") {
                 setSending(false)
                 setStreamingText("")
-                showToast("Failed to generate response. Please try again.", "error")
+                showToast("Failed to generate response. Please try again.")
                 return
               }
               
@@ -313,7 +326,6 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
                 setSending(false)
                 setStreamingText("")
                 // Add the assistant reply to messages directly from streamed content
-                // This ensures it appears immediately even if background persistence hasn't completed
                 if (assistantReply.trim()) {
                   setMessages((prevMessages) => [
                     ...prevMessages,
@@ -321,7 +333,6 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
                   ])
                 }
                 // Reload messages after a short delay to sync with persisted version
-                // (background task needs time to persist)
                 setTimeout(async () => {
                   await loadMessages()
                 }, 500)
@@ -332,14 +343,15 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
               currentEvent = ""
               assistantReply += data
               setStreamingText(assistantReply)
-              // streamingText is displayed separately in the UI while streaming
             }
           }
         }
       }
     } catch (err) {
       console.error("Failed to send message:", err)
-      showToast("Failed to send message", "error")
+      const errorMessage = err instanceof Error ? err.message : "Unknown error"
+      console.error("Error details:", errorMessage)
+      showToast(`Failed to send message: ${errorMessage}`)
       setSending(false)
       setStreamingText("")
     }
@@ -348,7 +360,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
       </div>
     )
   }
@@ -383,7 +395,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
             </CardHeader>
             <CardContent>
               {/* Messages */}
-              <div className="max-h-[calc(100vh-280px)] overflow-y-auto border rounded-lg p-4 space-y-4 bg-slate-50 mb-4">
+              <div className="max-h-[calc(100vh-280px)] overflow-y-auto border rounded-lg p-4 space-y-4 bg-muted/40 mb-4">
                 {messages.map((msg, idx) => (
                   <div
                     key={idx}
@@ -393,7 +405,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
                       className={`max-w-[80%] rounded-lg p-3 ${
                         msg.role === "user"
                           ? "bg-blue-600 text-white"
-                          : "bg-white border text-gray-900"
+                          : "bg-card border text-foreground"
                       }`}
                     >
                       <div className={`text-sm markdown-content ${msg.role === "user" ? "prose-invert" : ""}`}>
@@ -406,7 +418,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
                 ))}
                 {sending && streamingText && (
                   <div className="flex justify-start">
-                    <div className="max-w-[80%] bg-white border rounded-lg p-3">
+                    <div className="max-w-[80%] bg-card border rounded-lg p-3">
                       <div className="text-sm markdown-content">
                         <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
                           {preprocessMessage(streamingText)}
@@ -425,7 +437,7 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={(e) => e.key === "Enter" && !e.shiftKey && sendMessage()}
                   placeholder="Ask your AI tutor anything..."
-                  className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-4 py-2 border border-input rounded-lg bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                   disabled={sending || !currentSessionId}
                 />
                 <Button onClick={sendMessage} disabled={sending || !currentSessionId || !input.trim()}>
@@ -438,6 +450,9 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
 
         {/* Sidebar - 1/3 width on desktop */}
         <div className="lg:col-span-1 space-y-4">
+          {profileStatus?.profile_completed && (
+            <LearningPathWidget learningPathInfo={homeStatus?.learning_path_info} />
+          )}
           <AITutorSuggestions suggestions={homeStatus?.suggestions} />
           <SessionsCard
             currentSessionId={currentSessionId}
@@ -449,4 +464,3 @@ export default function HomeChatInterface({ profileStatus }: HomeChatInterfacePr
     </div>
   )
 }
-

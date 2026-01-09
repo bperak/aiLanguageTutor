@@ -1,0 +1,1893 @@
+[
+  {
+    "id": "hiragana_a",
+    "script_type": "hiragana",
+    "kana": "あ",
+    "romaji": "a",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "a-row"
+  },
+  {
+    "id": "hiragana_i",
+    "script_type": "hiragana",
+    "kana": "い",
+    "romaji": "i",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "a-row"
+  },
+  {
+    "id": "hiragana_u",
+    "script_type": "hiragana",
+    "kana": "う",
+    "romaji": "u",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "a-row"
+  },
+  {
+    "id": "hiragana_e",
+    "script_type": "hiragana",
+    "kana": "え",
+    "romaji": "e",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "a-row"
+  },
+  {
+    "id": "hiragana_o",
+    "script_type": "hiragana",
+    "kana": "お",
+    "romaji": "o",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "a-row"
+  },
+  {
+    "id": "hiragana_ka",
+    "script_type": "hiragana",
+    "kana": "か",
+    "romaji": "ka",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_ki",
+    "script_type": "hiragana",
+    "kana": "き",
+    "romaji": "ki",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_ku",
+    "script_type": "hiragana",
+    "kana": "く",
+    "romaji": "ku",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_ke",
+    "script_type": "hiragana",
+    "kana": "け",
+    "romaji": "ke",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_ko",
+    "script_type": "hiragana",
+    "kana": "こ",
+    "romaji": "ko",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_sa",
+    "script_type": "hiragana",
+    "kana": "さ",
+    "romaji": "sa",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_shi",
+    "script_type": "hiragana",
+    "kana": "し",
+    "romaji": "shi",
+    "romaji_aliases": ["si"],
+    "tags": ["gojuon"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_su",
+    "script_type": "hiragana",
+    "kana": "す",
+    "romaji": "su",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_se",
+    "script_type": "hiragana",
+    "kana": "せ",
+    "romaji": "se",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_so",
+    "script_type": "hiragana",
+    "kana": "そ",
+    "romaji": "so",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_ta",
+    "script_type": "hiragana",
+    "kana": "た",
+    "romaji": "ta",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_chi",
+    "script_type": "hiragana",
+    "kana": "ち",
+    "romaji": "chi",
+    "romaji_aliases": ["ti"],
+    "tags": ["gojuon"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_tsu",
+    "script_type": "hiragana",
+    "kana": "つ",
+    "romaji": "tsu",
+    "romaji_aliases": ["tu"],
+    "tags": ["gojuon"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_te",
+    "script_type": "hiragana",
+    "kana": "て",
+    "romaji": "te",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_to",
+    "script_type": "hiragana",
+    "kana": "と",
+    "romaji": "to",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_na",
+    "script_type": "hiragana",
+    "kana": "な",
+    "romaji": "na",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "na-row"
+  },
+  {
+    "id": "hiragana_ni",
+    "script_type": "hiragana",
+    "kana": "に",
+    "romaji": "ni",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "na-row"
+  },
+  {
+    "id": "hiragana_nu",
+    "script_type": "hiragana",
+    "kana": "ぬ",
+    "romaji": "nu",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "na-row"
+  },
+  {
+    "id": "hiragana_ne",
+    "script_type": "hiragana",
+    "kana": "ね",
+    "romaji": "ne",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "na-row"
+  },
+  {
+    "id": "hiragana_no",
+    "script_type": "hiragana",
+    "kana": "の",
+    "romaji": "no",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "na-row"
+  },
+  {
+    "id": "hiragana_ha",
+    "script_type": "hiragana",
+    "kana": "は",
+    "romaji": "ha",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_hi",
+    "script_type": "hiragana",
+    "kana": "ひ",
+    "romaji": "hi",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_fu",
+    "script_type": "hiragana",
+    "kana": "ふ",
+    "romaji": "fu",
+    "romaji_aliases": ["hu"],
+    "tags": ["gojuon"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_he",
+    "script_type": "hiragana",
+    "kana": "へ",
+    "romaji": "he",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_ho",
+    "script_type": "hiragana",
+    "kana": "ほ",
+    "romaji": "ho",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_ma",
+    "script_type": "hiragana",
+    "kana": "ま",
+    "romaji": "ma",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ma-row"
+  },
+  {
+    "id": "hiragana_mi",
+    "script_type": "hiragana",
+    "kana": "み",
+    "romaji": "mi",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ma-row"
+  },
+  {
+    "id": "hiragana_mu",
+    "script_type": "hiragana",
+    "kana": "む",
+    "romaji": "mu",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ma-row"
+  },
+  {
+    "id": "hiragana_me",
+    "script_type": "hiragana",
+    "kana": "め",
+    "romaji": "me",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ma-row"
+  },
+  {
+    "id": "hiragana_mo",
+    "script_type": "hiragana",
+    "kana": "も",
+    "romaji": "mo",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ma-row"
+  },
+  {
+    "id": "hiragana_ya",
+    "script_type": "hiragana",
+    "kana": "や",
+    "romaji": "ya",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ya-row"
+  },
+  {
+    "id": "hiragana_yu",
+    "script_type": "hiragana",
+    "kana": "ゆ",
+    "romaji": "yu",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ya-row"
+  },
+  {
+    "id": "hiragana_yo",
+    "script_type": "hiragana",
+    "kana": "よ",
+    "romaji": "yo",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ya-row"
+  },
+  {
+    "id": "hiragana_ra",
+    "script_type": "hiragana",
+    "kana": "ら",
+    "romaji": "ra",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ra-row"
+  },
+  {
+    "id": "hiragana_ri",
+    "script_type": "hiragana",
+    "kana": "り",
+    "romaji": "ri",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ra-row"
+  },
+  {
+    "id": "hiragana_ru",
+    "script_type": "hiragana",
+    "kana": "る",
+    "romaji": "ru",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ra-row"
+  },
+  {
+    "id": "hiragana_re",
+    "script_type": "hiragana",
+    "kana": "れ",
+    "romaji": "re",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ra-row"
+  },
+  {
+    "id": "hiragana_ro",
+    "script_type": "hiragana",
+    "kana": "ろ",
+    "romaji": "ro",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ra-row"
+  },
+  {
+    "id": "hiragana_wa",
+    "script_type": "hiragana",
+    "kana": "わ",
+    "romaji": "wa",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "wa-row"
+  },
+  {
+    "id": "hiragana_wo",
+    "script_type": "hiragana",
+    "kana": "を",
+    "romaji": "wo",
+    "romaji_aliases": ["o"],
+    "tags": ["gojuon"],
+    "group": "wa-row"
+  },
+  {
+    "id": "hiragana_n",
+    "script_type": "hiragana",
+    "kana": "ん",
+    "romaji": "n",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "n-row"
+  },
+  {
+    "id": "hiragana_ga",
+    "script_type": "hiragana",
+    "kana": "が",
+    "romaji": "ga",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_gi",
+    "script_type": "hiragana",
+    "kana": "ぎ",
+    "romaji": "gi",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_gu",
+    "script_type": "hiragana",
+    "kana": "ぐ",
+    "romaji": "gu",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_ge",
+    "script_type": "hiragana",
+    "kana": "げ",
+    "romaji": "ge",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_go",
+    "script_type": "hiragana",
+    "kana": "ご",
+    "romaji": "go",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_za",
+    "script_type": "hiragana",
+    "kana": "ざ",
+    "romaji": "za",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_ji",
+    "script_type": "hiragana",
+    "kana": "じ",
+    "romaji": "ji",
+    "romaji_aliases": ["zi"],
+    "tags": ["dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_zu",
+    "script_type": "hiragana",
+    "kana": "ず",
+    "romaji": "zu",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_ze",
+    "script_type": "hiragana",
+    "kana": "ぜ",
+    "romaji": "ze",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_zo",
+    "script_type": "hiragana",
+    "kana": "ぞ",
+    "romaji": "zo",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_da",
+    "script_type": "hiragana",
+    "kana": "だ",
+    "romaji": "da",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_di",
+    "script_type": "hiragana",
+    "kana": "ぢ",
+    "romaji": "ji",
+    "romaji_aliases": ["di", "zi"],
+    "tags": ["dakuten"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_du",
+    "script_type": "hiragana",
+    "kana": "づ",
+    "romaji": "zu",
+    "romaji_aliases": ["du", "dzu"],
+    "tags": ["dakuten"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_de",
+    "script_type": "hiragana",
+    "kana": "で",
+    "romaji": "de",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_do",
+    "script_type": "hiragana",
+    "kana": "ど",
+    "romaji": "do",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_ba",
+    "script_type": "hiragana",
+    "kana": "ば",
+    "romaji": "ba",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_bi",
+    "script_type": "hiragana",
+    "kana": "び",
+    "romaji": "bi",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_bu",
+    "script_type": "hiragana",
+    "kana": "ぶ",
+    "romaji": "bu",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_be",
+    "script_type": "hiragana",
+    "kana": "べ",
+    "romaji": "be",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_bo",
+    "script_type": "hiragana",
+    "kana": "ぼ",
+    "romaji": "bo",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_pa",
+    "script_type": "hiragana",
+    "kana": "ぱ",
+    "romaji": "pa",
+    "romaji_aliases": [],
+    "tags": ["handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_pi",
+    "script_type": "hiragana",
+    "kana": "ぴ",
+    "romaji": "pi",
+    "romaji_aliases": [],
+    "tags": ["handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_pu",
+    "script_type": "hiragana",
+    "kana": "ぷ",
+    "romaji": "pu",
+    "romaji_aliases": [],
+    "tags": ["handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_pe",
+    "script_type": "hiragana",
+    "kana": "ぺ",
+    "romaji": "pe",
+    "romaji_aliases": [],
+    "tags": ["handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_po",
+    "script_type": "hiragana",
+    "kana": "ぽ",
+    "romaji": "po",
+    "romaji_aliases": [],
+    "tags": ["handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_kya",
+    "script_type": "hiragana",
+    "kana": "きゃ",
+    "romaji": "kya",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_kyu",
+    "script_type": "hiragana",
+    "kana": "きゅ",
+    "romaji": "kyu",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_kyo",
+    "script_type": "hiragana",
+    "kana": "きょ",
+    "romaji": "kyo",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_sya",
+    "script_type": "hiragana",
+    "kana": "しゃ",
+    "romaji": "sha",
+    "romaji_aliases": ["sya"],
+    "tags": ["combo"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_syu",
+    "script_type": "hiragana",
+    "kana": "しゅ",
+    "romaji": "shu",
+    "romaji_aliases": ["syu"],
+    "tags": ["combo"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_syo",
+    "script_type": "hiragana",
+    "kana": "しょ",
+    "romaji": "sho",
+    "romaji_aliases": ["syo"],
+    "tags": ["combo"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_tya",
+    "script_type": "hiragana",
+    "kana": "ちゃ",
+    "romaji": "cha",
+    "romaji_aliases": ["tya", "cya"],
+    "tags": ["combo"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_tyu",
+    "script_type": "hiragana",
+    "kana": "ちゅ",
+    "romaji": "chu",
+    "romaji_aliases": ["tyu", "cyu"],
+    "tags": ["combo"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_tyo",
+    "script_type": "hiragana",
+    "kana": "ちょ",
+    "romaji": "cho",
+    "romaji_aliases": ["tyo", "cyo"],
+    "tags": ["combo"],
+    "group": "ta-row"
+  },
+  {
+    "id": "hiragana_nya",
+    "script_type": "hiragana",
+    "kana": "にゃ",
+    "romaji": "nya",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "na-row"
+  },
+  {
+    "id": "hiragana_nyu",
+    "script_type": "hiragana",
+    "kana": "にゅ",
+    "romaji": "nyu",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "na-row"
+  },
+  {
+    "id": "hiragana_nyo",
+    "script_type": "hiragana",
+    "kana": "にょ",
+    "romaji": "nyo",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "na-row"
+  },
+  {
+    "id": "hiragana_hya",
+    "script_type": "hiragana",
+    "kana": "ひゃ",
+    "romaji": "hya",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_hyu",
+    "script_type": "hiragana",
+    "kana": "ひゅ",
+    "romaji": "hyu",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_hyo",
+    "script_type": "hiragana",
+    "kana": "ひょ",
+    "romaji": "hyo",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_mya",
+    "script_type": "hiragana",
+    "kana": "みゃ",
+    "romaji": "mya",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ma-row"
+  },
+  {
+    "id": "hiragana_myu",
+    "script_type": "hiragana",
+    "kana": "みゅ",
+    "romaji": "myu",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ma-row"
+  },
+  {
+    "id": "hiragana_myo",
+    "script_type": "hiragana",
+    "kana": "みょ",
+    "romaji": "myo",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ma-row"
+  },
+  {
+    "id": "hiragana_rya",
+    "script_type": "hiragana",
+    "kana": "りゃ",
+    "romaji": "rya",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ra-row"
+  },
+  {
+    "id": "hiragana_ryu",
+    "script_type": "hiragana",
+    "kana": "りゅ",
+    "romaji": "ryu",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ra-row"
+  },
+  {
+    "id": "hiragana_ryo",
+    "script_type": "hiragana",
+    "kana": "りょ",
+    "romaji": "ryo",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ra-row"
+  },
+  {
+    "id": "hiragana_gya",
+    "script_type": "hiragana",
+    "kana": "ぎゃ",
+    "romaji": "gya",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_gyu",
+    "script_type": "hiragana",
+    "kana": "ぎゅ",
+    "romaji": "gyu",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_gyo",
+    "script_type": "hiragana",
+    "kana": "ぎょ",
+    "romaji": "gyo",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "hiragana_ja",
+    "script_type": "hiragana",
+    "kana": "じゃ",
+    "romaji": "ja",
+    "romaji_aliases": ["zya", "jya"],
+    "tags": ["combo", "dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_ju",
+    "script_type": "hiragana",
+    "kana": "じゅ",
+    "romaji": "ju",
+    "romaji_aliases": ["zyu", "jyu"],
+    "tags": ["combo", "dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_jo",
+    "script_type": "hiragana",
+    "kana": "じょ",
+    "romaji": "jo",
+    "romaji_aliases": ["zyo", "jyo"],
+    "tags": ["combo", "dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "hiragana_bya",
+    "script_type": "hiragana",
+    "kana": "びゃ",
+    "romaji": "bya",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_byu",
+    "script_type": "hiragana",
+    "kana": "びゅ",
+    "romaji": "byu",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_byo",
+    "script_type": "hiragana",
+    "kana": "びょ",
+    "romaji": "byo",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_pya",
+    "script_type": "hiragana",
+    "kana": "ぴゃ",
+    "romaji": "pya",
+    "romaji_aliases": [],
+    "tags": ["combo", "handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_pyu",
+    "script_type": "hiragana",
+    "kana": "ぴゅ",
+    "romaji": "pyu",
+    "romaji_aliases": [],
+    "tags": ["combo", "handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_pyo",
+    "script_type": "hiragana",
+    "kana": "ぴょ",
+    "romaji": "pyo",
+    "romaji_aliases": [],
+    "tags": ["combo", "handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "hiragana_small_tsu",
+    "script_type": "hiragana",
+    "kana": "っ",
+    "romaji": "tsu",
+    "romaji_aliases": [],
+    "tags": ["sokuon"],
+    "group": "special"
+  },
+  {
+    "id": "katakana_a",
+    "script_type": "katakana",
+    "kana": "ア",
+    "romaji": "a",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "a-row"
+  },
+  {
+    "id": "katakana_i",
+    "script_type": "katakana",
+    "kana": "イ",
+    "romaji": "i",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "a-row"
+  },
+  {
+    "id": "katakana_u",
+    "script_type": "katakana",
+    "kana": "ウ",
+    "romaji": "u",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "a-row"
+  },
+  {
+    "id": "katakana_e",
+    "script_type": "katakana",
+    "kana": "エ",
+    "romaji": "e",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "a-row"
+  },
+  {
+    "id": "katakana_o",
+    "script_type": "katakana",
+    "kana": "オ",
+    "romaji": "o",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "a-row"
+  },
+  {
+    "id": "katakana_ka",
+    "script_type": "katakana",
+    "kana": "カ",
+    "romaji": "ka",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_ki",
+    "script_type": "katakana",
+    "kana": "キ",
+    "romaji": "ki",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_ku",
+    "script_type": "katakana",
+    "kana": "ク",
+    "romaji": "ku",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_ke",
+    "script_type": "katakana",
+    "kana": "ケ",
+    "romaji": "ke",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_ko",
+    "script_type": "katakana",
+    "kana": "コ",
+    "romaji": "ko",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_sa",
+    "script_type": "katakana",
+    "kana": "サ",
+    "romaji": "sa",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_shi",
+    "script_type": "katakana",
+    "kana": "シ",
+    "romaji": "shi",
+    "romaji_aliases": ["si"],
+    "tags": ["gojuon"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_su",
+    "script_type": "katakana",
+    "kana": "ス",
+    "romaji": "su",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_se",
+    "script_type": "katakana",
+    "kana": "セ",
+    "romaji": "se",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_so",
+    "script_type": "katakana",
+    "kana": "ソ",
+    "romaji": "so",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_ta",
+    "script_type": "katakana",
+    "kana": "タ",
+    "romaji": "ta",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_chi",
+    "script_type": "katakana",
+    "kana": "チ",
+    "romaji": "chi",
+    "romaji_aliases": ["ti"],
+    "tags": ["gojuon"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_tsu",
+    "script_type": "katakana",
+    "kana": "ツ",
+    "romaji": "tsu",
+    "romaji_aliases": ["tu"],
+    "tags": ["gojuon"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_te",
+    "script_type": "katakana",
+    "kana": "テ",
+    "romaji": "te",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_to",
+    "script_type": "katakana",
+    "kana": "ト",
+    "romaji": "to",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_na",
+    "script_type": "katakana",
+    "kana": "ナ",
+    "romaji": "na",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "na-row"
+  },
+  {
+    "id": "katakana_ni",
+    "script_type": "katakana",
+    "kana": "ニ",
+    "romaji": "ni",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "na-row"
+  },
+  {
+    "id": "katakana_nu",
+    "script_type": "katakana",
+    "kana": "ヌ",
+    "romaji": "nu",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "na-row"
+  },
+  {
+    "id": "katakana_ne",
+    "script_type": "katakana",
+    "kana": "ネ",
+    "romaji": "ne",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "na-row"
+  },
+  {
+    "id": "katakana_no",
+    "script_type": "katakana",
+    "kana": "ノ",
+    "romaji": "no",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "na-row"
+  },
+  {
+    "id": "katakana_ha",
+    "script_type": "katakana",
+    "kana": "ハ",
+    "romaji": "ha",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_hi",
+    "script_type": "katakana",
+    "kana": "ヒ",
+    "romaji": "hi",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_fu",
+    "script_type": "katakana",
+    "kana": "フ",
+    "romaji": "fu",
+    "romaji_aliases": ["hu"],
+    "tags": ["gojuon"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_he",
+    "script_type": "katakana",
+    "kana": "ヘ",
+    "romaji": "he",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_ho",
+    "script_type": "katakana",
+    "kana": "ホ",
+    "romaji": "ho",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_ma",
+    "script_type": "katakana",
+    "kana": "マ",
+    "romaji": "ma",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ma-row"
+  },
+  {
+    "id": "katakana_mi",
+    "script_type": "katakana",
+    "kana": "ミ",
+    "romaji": "mi",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ma-row"
+  },
+  {
+    "id": "katakana_mu",
+    "script_type": "katakana",
+    "kana": "ム",
+    "romaji": "mu",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ma-row"
+  },
+  {
+    "id": "katakana_me",
+    "script_type": "katakana",
+    "kana": "メ",
+    "romaji": "me",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ma-row"
+  },
+  {
+    "id": "katakana_mo",
+    "script_type": "katakana",
+    "kana": "モ",
+    "romaji": "mo",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ma-row"
+  },
+  {
+    "id": "katakana_ya",
+    "script_type": "katakana",
+    "kana": "ヤ",
+    "romaji": "ya",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ya-row"
+  },
+  {
+    "id": "katakana_yu",
+    "script_type": "katakana",
+    "kana": "ユ",
+    "romaji": "yu",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ya-row"
+  },
+  {
+    "id": "katakana_yo",
+    "script_type": "katakana",
+    "kana": "ヨ",
+    "romaji": "yo",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ya-row"
+  },
+  {
+    "id": "katakana_ra",
+    "script_type": "katakana",
+    "kana": "ラ",
+    "romaji": "ra",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ra-row"
+  },
+  {
+    "id": "katakana_ri",
+    "script_type": "katakana",
+    "kana": "リ",
+    "romaji": "ri",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ra-row"
+  },
+  {
+    "id": "katakana_ru",
+    "script_type": "katakana",
+    "kana": "ル",
+    "romaji": "ru",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ra-row"
+  },
+  {
+    "id": "katakana_re",
+    "script_type": "katakana",
+    "kana": "レ",
+    "romaji": "re",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ra-row"
+  },
+  {
+    "id": "katakana_ro",
+    "script_type": "katakana",
+    "kana": "ロ",
+    "romaji": "ro",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "ra-row"
+  },
+  {
+    "id": "katakana_wa",
+    "script_type": "katakana",
+    "kana": "ワ",
+    "romaji": "wa",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "wa-row"
+  },
+  {
+    "id": "katakana_wo",
+    "script_type": "katakana",
+    "kana": "ヲ",
+    "romaji": "wo",
+    "romaji_aliases": ["o"],
+    "tags": ["gojuon"],
+    "group": "wa-row"
+  },
+  {
+    "id": "katakana_n",
+    "script_type": "katakana",
+    "kana": "ン",
+    "romaji": "n",
+    "romaji_aliases": [],
+    "tags": ["gojuon"],
+    "group": "n-row"
+  },
+  {
+    "id": "katakana_ga",
+    "script_type": "katakana",
+    "kana": "ガ",
+    "romaji": "ga",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_gi",
+    "script_type": "katakana",
+    "kana": "ギ",
+    "romaji": "gi",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_gu",
+    "script_type": "katakana",
+    "kana": "グ",
+    "romaji": "gu",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_ge",
+    "script_type": "katakana",
+    "kana": "ゲ",
+    "romaji": "ge",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_go",
+    "script_type": "katakana",
+    "kana": "ゴ",
+    "romaji": "go",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_za",
+    "script_type": "katakana",
+    "kana": "ザ",
+    "romaji": "za",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_ji",
+    "script_type": "katakana",
+    "kana": "ジ",
+    "romaji": "ji",
+    "romaji_aliases": ["zi"],
+    "tags": ["dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_zu",
+    "script_type": "katakana",
+    "kana": "ズ",
+    "romaji": "zu",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_ze",
+    "script_type": "katakana",
+    "kana": "ゼ",
+    "romaji": "ze",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_zo",
+    "script_type": "katakana",
+    "kana": "ゾ",
+    "romaji": "zo",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_da",
+    "script_type": "katakana",
+    "kana": "ダ",
+    "romaji": "da",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_di",
+    "script_type": "katakana",
+    "kana": "ヂ",
+    "romaji": "ji",
+    "romaji_aliases": ["di", "zi"],
+    "tags": ["dakuten"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_du",
+    "script_type": "katakana",
+    "kana": "ヅ",
+    "romaji": "zu",
+    "romaji_aliases": ["du", "dzu"],
+    "tags": ["dakuten"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_de",
+    "script_type": "katakana",
+    "kana": "デ",
+    "romaji": "de",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_do",
+    "script_type": "katakana",
+    "kana": "ド",
+    "romaji": "do",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_ba",
+    "script_type": "katakana",
+    "kana": "バ",
+    "romaji": "ba",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_bi",
+    "script_type": "katakana",
+    "kana": "ビ",
+    "romaji": "bi",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_bu",
+    "script_type": "katakana",
+    "kana": "ブ",
+    "romaji": "bu",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_be",
+    "script_type": "katakana",
+    "kana": "ベ",
+    "romaji": "be",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_bo",
+    "script_type": "katakana",
+    "kana": "ボ",
+    "romaji": "bo",
+    "romaji_aliases": [],
+    "tags": ["dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_pa",
+    "script_type": "katakana",
+    "kana": "パ",
+    "romaji": "pa",
+    "romaji_aliases": [],
+    "tags": ["handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_pi",
+    "script_type": "katakana",
+    "kana": "ピ",
+    "romaji": "pi",
+    "romaji_aliases": [],
+    "tags": ["handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_pu",
+    "script_type": "katakana",
+    "kana": "プ",
+    "romaji": "pu",
+    "romaji_aliases": [],
+    "tags": ["handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_pe",
+    "script_type": "katakana",
+    "kana": "ペ",
+    "romaji": "pe",
+    "romaji_aliases": [],
+    "tags": ["handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_po",
+    "script_type": "katakana",
+    "kana": "ポ",
+    "romaji": "po",
+    "romaji_aliases": [],
+    "tags": ["handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_kya",
+    "script_type": "katakana",
+    "kana": "キャ",
+    "romaji": "kya",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_kyu",
+    "script_type": "katakana",
+    "kana": "キュ",
+    "romaji": "kyu",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_kyo",
+    "script_type": "katakana",
+    "kana": "キョ",
+    "romaji": "kyo",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_sya",
+    "script_type": "katakana",
+    "kana": "シャ",
+    "romaji": "sha",
+    "romaji_aliases": ["sya"],
+    "tags": ["combo"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_syu",
+    "script_type": "katakana",
+    "kana": "シュ",
+    "romaji": "shu",
+    "romaji_aliases": ["syu"],
+    "tags": ["combo"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_syo",
+    "script_type": "katakana",
+    "kana": "ショ",
+    "romaji": "sho",
+    "romaji_aliases": ["syo"],
+    "tags": ["combo"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_tya",
+    "script_type": "katakana",
+    "kana": "チャ",
+    "romaji": "cha",
+    "romaji_aliases": ["tya", "cya"],
+    "tags": ["combo"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_tyu",
+    "script_type": "katakana",
+    "kana": "チュ",
+    "romaji": "chu",
+    "romaji_aliases": ["tyu", "cyu"],
+    "tags": ["combo"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_tyo",
+    "script_type": "katakana",
+    "kana": "チョ",
+    "romaji": "cho",
+    "romaji_aliases": ["tyo", "cyo"],
+    "tags": ["combo"],
+    "group": "ta-row"
+  },
+  {
+    "id": "katakana_nya",
+    "script_type": "katakana",
+    "kana": "ニャ",
+    "romaji": "nya",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "na-row"
+  },
+  {
+    "id": "katakana_nyu",
+    "script_type": "katakana",
+    "kana": "ニュ",
+    "romaji": "nyu",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "na-row"
+  },
+  {
+    "id": "katakana_nyo",
+    "script_type": "katakana",
+    "kana": "ニョ",
+    "romaji": "nyo",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "na-row"
+  },
+  {
+    "id": "katakana_hya",
+    "script_type": "katakana",
+    "kana": "ヒャ",
+    "romaji": "hya",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_hyu",
+    "script_type": "katakana",
+    "kana": "ヒュ",
+    "romaji": "hyu",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_hyo",
+    "script_type": "katakana",
+    "kana": "ヒョ",
+    "romaji": "hyo",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_mya",
+    "script_type": "katakana",
+    "kana": "ミャ",
+    "romaji": "mya",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ma-row"
+  },
+  {
+    "id": "katakana_myu",
+    "script_type": "katakana",
+    "kana": "ミュ",
+    "romaji": "myu",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ma-row"
+  },
+  {
+    "id": "katakana_myo",
+    "script_type": "katakana",
+    "kana": "ミョ",
+    "romaji": "myo",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ma-row"
+  },
+  {
+    "id": "katakana_rya",
+    "script_type": "katakana",
+    "kana": "リャ",
+    "romaji": "rya",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ra-row"
+  },
+  {
+    "id": "katakana_ryu",
+    "script_type": "katakana",
+    "kana": "リュ",
+    "romaji": "ryu",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ra-row"
+  },
+  {
+    "id": "katakana_ryo",
+    "script_type": "katakana",
+    "kana": "リョ",
+    "romaji": "ryo",
+    "romaji_aliases": [],
+    "tags": ["combo"],
+    "group": "ra-row"
+  },
+  {
+    "id": "katakana_gya",
+    "script_type": "katakana",
+    "kana": "ギャ",
+    "romaji": "gya",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_gyu",
+    "script_type": "katakana",
+    "kana": "ギュ",
+    "romaji": "gyu",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_gyo",
+    "script_type": "katakana",
+    "kana": "ギョ",
+    "romaji": "gyo",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ka-row"
+  },
+  {
+    "id": "katakana_ja",
+    "script_type": "katakana",
+    "kana": "ジャ",
+    "romaji": "ja",
+    "romaji_aliases": ["zya", "jya"],
+    "tags": ["combo", "dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_ju",
+    "script_type": "katakana",
+    "kana": "ジュ",
+    "romaji": "ju",
+    "romaji_aliases": ["zyu", "jyu"],
+    "tags": ["combo", "dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_jo",
+    "script_type": "katakana",
+    "kana": "ジョ",
+    "romaji": "jo",
+    "romaji_aliases": ["zyo", "jyo"],
+    "tags": ["combo", "dakuten"],
+    "group": "sa-row"
+  },
+  {
+    "id": "katakana_bya",
+    "script_type": "katakana",
+    "kana": "ビャ",
+    "romaji": "bya",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_byu",
+    "script_type": "katakana",
+    "kana": "ビュ",
+    "romaji": "byu",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_byo",
+    "script_type": "katakana",
+    "kana": "ビョ",
+    "romaji": "byo",
+    "romaji_aliases": [],
+    "tags": ["combo", "dakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_pya",
+    "script_type": "katakana",
+    "kana": "ピャ",
+    "romaji": "pya",
+    "romaji_aliases": [],
+    "tags": ["combo", "handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_pyu",
+    "script_type": "katakana",
+    "kana": "ピュ",
+    "romaji": "pyu",
+    "romaji_aliases": [],
+    "tags": ["combo", "handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_pyo",
+    "script_type": "katakana",
+    "kana": "ピョ",
+    "romaji": "pyo",
+    "romaji_aliases": [],
+    "tags": ["combo", "handakuten"],
+    "group": "ha-row"
+  },
+  {
+    "id": "katakana_small_tsu",
+    "script_type": "katakana",
+    "kana": "ッ",
+    "romaji": "tsu",
+    "romaji_aliases": [],
+    "tags": ["sokuon"],
+    "group": "special"
+  }
+]
+

@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local virtualenvs (do not copy into Docker images)
+.venv/
+venv/
+
+# Test/coverage artifacts
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# OS junk
+.DS_Store
+
+

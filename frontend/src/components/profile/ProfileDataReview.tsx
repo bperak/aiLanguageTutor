@@ -59,9 +59,9 @@ export default function ProfileDataReview({
       // The parent owns the actual save to avoid duplicate /profile/complete calls.
       await onApprove(profileData)
       setSaved(true)
-      showToast("Profile saved! Generating your learning path...", "success")
+      showToast("Profile saved! Generating your learning path...")
     } catch (err: any) {
-      showToast(err?.message || "Failed to save profile", "error")
+      showToast(err?.message || "Failed to save profile")
     } finally {
       setSaving(false)
     }
@@ -70,7 +70,7 @@ export default function ProfileDataReview({
   if (saved) {
     return (
       <div className="space-y-4">
-        <Card className="border-green-200 bg-green-50">
+        <Card className="border-green-500/30 bg-green-500/10">
           <CardHeader>
             <CardTitle>Profile Completed! 🎉</CardTitle>
           </CardHeader>
@@ -78,7 +78,7 @@ export default function ProfileDataReview({
             <p className="text-sm text-muted-foreground">
               Your profile has been saved and your personalized learning path is being generated.
             </p>
-            <div className="p-4 bg-white rounded-lg border">
+            <div className="p-4 bg-card rounded-lg border">
               <p className="text-sm font-medium mb-2">What's next on your Home page:</p>
               <ul className="text-sm space-y-1 list-disc list-inside text-muted-foreground">
                 <li>View your personalized learning path</li>

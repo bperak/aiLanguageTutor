@@ -187,6 +187,80 @@ async def get_home_status(
                         )
                         path_generating = True
             
+            # Validate learning path has valid CanDo descriptors - force regeneration if invalid
+            if learning_path:
+                path_data = learning_path.path_data or {}
+                steps = path_data.get("steps", [])
+                
+                # Check if any step has invalid CanDo descriptors
+                has_invalid_candos = False
+                invalid_cando_ids = []
+                if steps:
+                    from app.db import get_neo4j_session
+                    from app.services.user_path_service import user_path_service
+                    
+                    try:
+                        async for neo4j_session in get_neo4j_session():
+                            for step in steps[:5]:  # Check first 5 steps
+                                can_do_ids = step.get("can_do_descriptors", [])
+                                for can_do_id in can_do_ids:
+                                    if can_do_id:
+                                        exists = await user_path_service.validate_cando_exists(neo4j_session, can_do_id)
+                                        if not exists:
+                                            has_invalid_candos = True
+                                            invalid_cando_ids.append(can_do_id)
+                            break
+                    except Exception as val_err:
+                        import structlog
+                        logger = structlog.get_logger()
+                        logger.warning("learning_path_validation_failed", error=str(val_err), user_id=str(current_user.id))
+                        # If validation fails, assume path is valid to avoid regeneration loops
+                        has_invalid_candos = False
+                
+                # Regenerate path immediately if invalid CanDo descriptors found
+                if has_invalid_candos:
+                    import structlog
+                    import asyncio
+                    from app import db as db_module
+                    logger = structlog.get_logger()
+                    logger.warning("learning_path_has_invalid_candos_regenerating", 
+                                 user_id=str(current_user.id),
+                                 invalid_ids=invalid_cando_ids)
+                    
+                    from app.db import get_neo4j_session
+                    if getattr(db_module, "neo4j_driver", None) is not None:
+                        try:
+                            # Regenerate synchronously - wait for it to complete
+                            async for neo4j_session in get_neo4j_session():
+                                new_path_data = await learning_path_service.generate_learning_path(
+                                    db=db,
+                                    neo4j_session=neo4j_session,
+                                    user_id=current_user.id,
+                                )
+                                # Save the new path (this will supersede the old one)
+                                learning_path = await learning_path_service.save_learning_path(
+                                    db=db,
+                                    user_id=current_user.id,
+                                    path_data=new_path_data,
+                                )
+                                logger.info("learning_path_regenerated_after_validation", 
+                                          user_id=str(current_user.id),
+                                          new_steps=len(new_path_data.steps))
+                                # Update path_data and steps from the saved learning_path
+                                path_data = learning_path.path_data or {}
+                                steps = path_data.get("steps", [])
+                                break
+                        except Exception as regen_err:
+                            logger.error("learning_path_regeneration_failed", 
+                                       error=str(regen_err), 
+                                       user_id=str(current_user.id))
+                            # If regeneration fails, set path_generating so UI shows appropriate state
+                            path_generating = True
+                            learning_path = None
+                    else:
+                        path_generating = True
+                        learning_path = None
+            
             if learning_path:
                 progress = learning_path.progress_data or {}
                 path_data = learning_path.path_data or {}
@@ -220,6 +294,7 @@ async def get_home_status(
                             "title": step.get("title", "Learning Step"),
                             "can_do_id": can_do_id,
                             "start_endpoint": f"/api/v1/cando/lessons/start?can_do_id={can_do_id}",
+                            "compile_endpoint": f"/api/v1/cando/lessons/compile_v2_stream?can_do_id={can_do_id}&user_id={current_user.id}",
                             "description": step.get("description", "")
                         })
         
@@ -368,6 +443,7 @@ Profile Data:
         try:
             formatted_prompt = prompt_template.format(
                 user_name=greeting_context["user_name"],
+                is_new_user=str(greeting_context["is_new_user"]),
                 profile_completed=str(profile_status["completed"]),
                 profile_data=profile_data_text,
                 learning_path_info=str(greeting_context["learning_path_info"]),
@@ -381,19 +457,22 @@ Profile Data:
             import structlog
             logger = structlog.get_logger()
             logger.warning("prompt_template_missing_placeholder", placeholder=str(e))
-            # Use a simpler format
-            formatted_prompt = prompt_template.format(
-                user_name=greeting_context["user_name"],
-                profile_completed=str(profile_status["completed"]),
-                learning_path_info=str(greeting_context["learning_path_info"]),
-                recent_progress=str(greeting_context["recent_progress"]),
-                cando_sessions_info=str(cando_sessions_info),
-                next_steps=next_steps_text,
-                path_generating=str(path_generating)
-            )
-            # Manually insert profile_data if needed
-            if "{profile_data}" in prompt_template:
-                formatted_prompt = formatted_prompt.replace("{profile_data}", profile_data_text)
+            # Use a safer approach: replace placeholders manually to avoid KeyError
+            formatted_prompt = prompt_template
+            # Replace all known placeholders
+            replacements = {
+                "{user_name}": greeting_context["user_name"],
+                "{is_new_user}": str(greeting_context.get("is_new_user", False)),
+                "{profile_completed}": str(profile_status["completed"]),
+                "{profile_data}": profile_data_text,
+                "{learning_path_info}": str(greeting_context["learning_path_info"]),
+                "{recent_progress}": str(greeting_context["recent_progress"]),
+                "{cando_sessions_info}": str(cando_sessions_info),
+                "{next_steps}": next_steps_text,
+                "{path_generating}": str(path_generating)
+            }
+            for placeholder, value in replacements.items():
+                formatted_prompt = formatted_prompt.replace(placeholder, value)
         
         # Use user's native language (meta-language) for greeting, default to English.
         # Reason: the production `users` table may not have a `native_language` column
@@ -455,6 +534,30 @@ Be conversational, warm, and encouraging in {native_lang}."""
                 # If profile fetch fails, continue without summary
                 pass
         
+        # Build learning path info for frontend
+        learning_path_info = None
+        if learning_path:
+            learning_path_info = {
+                "path_id": str(learning_path.id),
+                "path_name": learning_path.path_name,
+                "version": learning_path.version,
+                "total_steps": len(steps),
+                "current_step": next_step.get("title") if next_step else None,
+                "progress_percentage": (learning_path.progress_data or {}).get("progress_percentage", 0),
+                "steps": steps[:10],  # Include first 10 steps for preview
+                "has_path": True
+            }
+        elif path_generating:
+            learning_path_info = {
+                "has_path": False,
+                "generating": True
+            }
+        else:
+            learning_path_info = {
+                "has_path": False,
+                "generating": False
+            }
+        
         return {
             "greeting": greeting,
             "profile_completed": profile_status["completed"],
@@ -467,6 +570,7 @@ Be conversational, warm, and encouraging in {native_lang}."""
             },
             "next_learning_step": next_step,
             "next_steps": next_steps,  # Next 3 steps with can_do_id and endpoints
+            "learning_path_info": learning_path_info,  # Full learning path info for display
             "path_generating": path_generating,
             "recent_lessons": recent_lessons,
             "suggestions": [
@@ -543,14 +647,24 @@ async def create_home_session(
         with open(prompt_path, "r", encoding="utf-8") as f:
             system_prompt = f.read()
     except Exception:
-        system_prompt = """You are a friendly AI language tutor GUIDE and COACH. Your role is to guide users to learning endpoints, not teach directly.
+        # Enhanced system prompt with profile context
+        system_prompt = """You are a friendly AI language tutor GUIDE and COACH. Your role is to have natural conversations with learners while guiding them to appropriate learning activities.
 
-Learning happens via dedicated endpoints:
-- CanDo lessons: /api/v1/cando/lessons/start?can_do_id=JF:21
-- Guided dialogue: /api/v1/cando/lessons/guided/turn
-- Lexical lessons: /api/v1/lexical/lessons/activate?can_do_id=JF:21
+**Your Capabilities:**
+- Have natural, conversational interactions with learners
+- Answer questions about their learning journey, progress, and goals
+- Provide encouragement and motivation
+- Guide users to learning endpoints when appropriate:
+  - CanDo lessons: /api/v1/cando/lessons/start?can_do_id=JF:21
+  - Guided dialogue: /api/v1/cando/lessons/guided/turn
+  - Lexical lessons: /api/v1/lexical/lessons/activate?can_do_id=JF:21
 
-Give clear, actionable instructions. Direct users to endpoints. Acknowledge their progress."""
+**Your Approach:**
+- Be conversational and helpful - you can discuss their learning goals, answer questions, and provide guidance
+- When users want to practice or learn, direct them to appropriate endpoints
+- Acknowledge their progress and celebrate achievements
+- Be encouraging and supportive
+- Use the profile context and user actions to personalize your responses"""
     
     # Add user actions context to system prompt
     if user_actions:
@@ -563,6 +677,26 @@ Give clear, actionable instructions. Direct users to endpoints. Acknowledge thei
 Use this information to personalize your guidance and acknowledge achievements.
 """
         system_prompt = system_prompt + user_actions_str
+    
+    # Add profile context if available
+    try:
+        from app.models.database_models import UserProfile
+        profile_result = await db.execute(
+            select(UserProfile).where(UserProfile.user_id == current_user.id)
+        )
+        profile = profile_result.scalar_one_or_none()
+        if profile:
+            profile_context = f"""
+**User Profile Context (use this to personalize conversations):**
+- Learning Goals: {', '.join(profile.learning_goals or [])}
+- Experience Level: {profile.previous_knowledge.get('experience_level', 'Not specified') if profile.previous_knowledge else 'Not specified'}
+- Learning Style: {profile.learning_experiences.get('learning_style', 'Not specified') if profile.learning_experiences else 'Not specified'}
+
+Use this profile information to have more personalized and relevant conversations. Reference their goals and preferences when appropriate.
+"""
+            system_prompt = system_prompt + profile_context
+    except Exception:
+        pass  # Continue without profile context if unavailable
     
     # If greeting provided, prepend it to system prompt as context
     if greeting:
@@ -759,6 +893,22 @@ async def stream_home_reply(
         if not session:
             raise HTTPException(status_code=404, detail="Session not found")
         
+        # CRITICAL: Extract ALL session and user attributes as simple types IMMEDIATELY after fetch
+        # This prevents lazy loading issues when the session is expired later
+        session_msg_count = int(session.total_messages or 0)
+        session_language_code = str(session.language_code) if session.language_code else "ja"
+        session_title = str(session.title) if session.title else "Home"
+        session_ai_provider = str(session.ai_provider) if session.ai_provider else "openai"
+        session_ai_model = str(session.ai_model) if session.ai_model else "gpt-4o-mini"
+        session_system_prompt_raw = session.system_prompt
+        session_system_prompt = str(session_system_prompt_raw) if session_system_prompt_raw else ""
+        
+        # Extract current_user attributes immediately (including id to avoid any ORM access)
+        user_id_uuid = current_user.id  # Extract ID immediately as UUID
+        user_current_level = str(getattr(current_user, "current_level", "")) if getattr(current_user, "current_level", None) else None
+        user_learning_goals_raw = getattr(current_user, "learning_goals", []) or []
+        user_learning_goals = [str(g) for g in user_learning_goals_raw if g]
+        
         # Get recent lesson progress (with error handling)
         recent_lessons = []
         try:
@@ -784,42 +934,112 @@ async def stream_home_reply(
             await db.rollback()
         
         # Get learning path progress (with error handling)
+        # Use already-extracted user_id_uuid to avoid ORM access
         current_step = None
         progress = {}
-        learning_path = None
+        learning_path_data = None
         try:
-            learning_path = await learning_path_service.get_active_learning_path(db, current_user.id)
-            if learning_path:
-                progress = learning_path.progress_data or {}
-                path_data = learning_path.path_data or {}
-                steps = path_data.get("steps", [])
+            # Fetch learning path - ensure we're in proper async context
+            learning_path_obj = await learning_path_service.get_active_learning_path(db, user_id_uuid)
+            if learning_path_obj:
+                # Extract all data as simple Python types immediately
+                learning_path_data = {
+                    "id": str(learning_path_obj.id),
+                    "path_name": str(learning_path_obj.path_name) if learning_path_obj.path_name else None,
+                    "progress_data": dict(learning_path_obj.progress_data) if learning_path_obj.progress_data else {},
+                    "path_data": dict(learning_path_obj.path_data) if learning_path_obj.path_data else {}
+                }
+                progress = learning_path_data.get("progress_data", {})
+                path_data = learning_path_data.get("path_data", {})
+                steps = list(path_data.get("steps", []))
                 current_step_id = progress.get("current_step_id")
-                if current_step_id:
-                    current_step = next((s for s in steps if s.get("step_id") == current_step_id), None)
+                if current_step_id and steps:
+                    for s in steps:
+                        step_dict = dict(s) if isinstance(s, dict) else {}
+                        if step_dict.get("step_id") == current_step_id:
+                            current_step = step_dict
+                            break
         except Exception as e:
             import structlog
             logger = structlog.get_logger()
-            logger.warning("Failed to fetch learning path", error=str(e))
-            await db.rollback()
+            logger.warning("Failed to fetch learning path - continuing without it", error=str(e), error_type=type(e).__name__)
+            # Continue without learning path - it's not critical for streaming
+            current_step = None
+            progress = {}
+            learning_path_data = None
         
-        # Enhance system prompt with latest progress
-        enhanced_system_prompt = session.system_prompt or ""
+        # CRITICAL: Extract ALL ORM attributes as simple types BEFORE any operations
+        # Use already-extracted session system prompt
+        enhanced_system_prompt = session_system_prompt
+        
+        # Extract profile data as simple types BEFORE using it
+        profile_learning_goals = []
+        profile_experience_level = "Not specified"
+        profile_learning_style = "Not specified"
+        
+        # Add profile context if available (for existing sessions that might not have it)
+        try:
+            from app.models.database_models import UserProfile
+            profile_result = await db.execute(
+                select(UserProfile).where(UserProfile.user_id == user_id_uuid)  # Use already-extracted user_id
+            )
+            profile = profile_result.scalar_one_or_none()
+            if profile:
+                # Extract ALL profile attributes as simple types immediately
+                profile_learning_goals = list(profile.learning_goals or [])
+                profile_previous_knowledge = dict(profile.previous_knowledge or {})
+                profile_learning_experiences = dict(profile.learning_experiences or {})
+                profile_experience_level = str(profile_previous_knowledge.get('experience_level', 'Not specified'))
+                profile_learning_style = str(profile_learning_experiences.get('learning_style', 'Not specified'))
+                
+                if "{profile_data}" not in enhanced_system_prompt:
+                    profile_context = f"""
+**User Profile Context (use this to personalize conversations):**
+- Learning Goals: {', '.join(profile_learning_goals)}
+- Experience Level: {profile_experience_level}
+- Learning Style: {profile_learning_style}
+
+Use this profile information to have more personalized and relevant conversations. Reference their goals and preferences when appropriate. You can discuss their learning goals, answer questions about their progress, and provide guidance.
+"""
+                    enhanced_system_prompt = enhanced_system_prompt + profile_context
+        except Exception as profile_err:
+            import structlog
+            logger = structlog.get_logger()
+            logger.warning("Failed to add profile context to stream", error=str(profile_err))
+        
+        # Add progress context
         if recent_lessons or current_step:
+            progress_pct = progress.get('progress_percentage', 0) if progress else 0
+            current_step_title = current_step.get('title') if current_step and isinstance(current_step, dict) else 'None'
             progress_context = f"""
 **LATEST USER PROGRESS (update this context in your response):**
 - Recent lessons: {recent_lessons}
-- Current learning step: {current_step.get('title') if current_step else 'None'}
-- Progress: {progress.get('progress_percentage', 0) if learning_path else 0}%
+- Current learning step: {current_step_title}
+- Progress: {progress_pct}%
 
 Acknowledge these achievements and guide them to next steps.
 """
             enhanced_system_prompt = enhanced_system_prompt + progress_context
         
-        # Refresh session to get latest message count (handles race condition)
+        # Ensure the prompt is conversational (for existing sessions with old prompts)
+        if "conversational" not in enhanced_system_prompt.lower() and "discuss" not in enhanced_system_prompt.lower():
+            conversational_note = """
+**IMPORTANT: You are a conversational AI tutor. You can:
+- Have natural conversations with learners
+- Answer questions about their learning journey, progress, and goals
+- Provide encouragement and motivation
+- Discuss their learning goals and preferences
+- Guide them to learning endpoints when they want to practice
+"""
+            enhanced_system_prompt = enhanced_system_prompt + conversational_note
+        
+        # All database operations must complete before the generator starts
+        # Session values already extracted above - no need to extract again
+        # Commit any pending changes to ensure clean state before generator
         try:
-            await db.refresh(session)
+            await db.commit()
         except Exception:
-            pass  # Ignore if refresh fails
+            pass  # Ignore if commit fails (might already be committed)
         
         # Get message history and prepare for streaming
         # Use enhanced system prompt directly instead of modifying session object
@@ -827,8 +1047,7 @@ Acknowledge these achievements and guide them to next steps.
         import asyncio
         from sqlalchemy import select, func
         
-        # Get expected message count from session to detect if we're missing the latest message
-        session_msg_count = session.total_messages or 0
+        # session_msg_count already extracted above as simple type
         
         history = []
         try:
@@ -845,9 +1064,14 @@ Acknowledge these achievements and guide them to next steps.
                         raise
                 
                 # Check if we have messages and at least one user message
+                # Extract roles immediately to avoid ORM access
                 if history:
-                    user_messages = [m for m in history if m.role == "user"]
-                    if user_messages:
+                    user_message_count = 0
+                    for m in history:
+                        role = str(m.role) if m.role else ""
+                        if role == "user":
+                            user_message_count += 1
+                    if user_message_count > 0:
                         # If session says we have messages but got fewer, might be a race condition
                         if len(history) >= session_msg_count or session_msg_count == 0:
                             break  # We have the expected messages
@@ -859,7 +1083,14 @@ Acknowledge these achievements and guide them to next steps.
             await db.rollback()
             raise HTTPException(status_code=500, detail=f"Failed to get message history: {str(history_error)}")
         
-        history_payload = [{"role": m.role, "content": m.content or ""} for m in history]
+        # CRITICAL: Extract ALL values from ORM objects as simple types BEFORE generator
+        # This prevents greenlet errors when DB session is closed
+        history_payload = []
+        for m in history:
+            # Extract all attributes as simple types immediately
+            role = str(m.role) if m.role else "user"
+            content = str(m.content) if m.content else ""
+            history_payload.append({"role": role, "content": content})
         
         # Ensure we have at least one user message to respond to
         user_messages = [m for m in history_payload if m.get("role") == "user"]
@@ -869,21 +1100,27 @@ Acknowledge these achievements and guide them to next steps.
                 detail="No user messages found in session to respond to"
             )
         
-        # Build session metadata
+        # Build session metadata (use already-extracted values to avoid lazy loading)
         session_meta = {
-            "language_code": session.language_code,
-            "current_level": getattr(current_user, "current_level", None),
-            "learning_goals": getattr(current_user, "learning_goals", None),
-            "topic": session.title,
+            "language_code": session_language_code,
+            "current_level": user_current_level,  # Use already-extracted value
+            "learning_goals": user_learning_goals,  # Use already-extracted value
+            "topic": session_title,
         }
-        corrections_memory = [
-            f"Corrected '{m.content}'" for m in history if m.role == "assistant" and "correct" in (m.content or "").lower()
-        ][-5:]
         
-        # Extract session values before streaming
-        system_prompt_to_use = enhanced_system_prompt  # Use enhanced prompt directly
-        ai_provider = session.ai_provider or "openai"
-        ai_model = session.ai_model or "gpt-4o-mini"
+        # Extract corrections from history (convert to strings to avoid lazy loading)
+        # Use history_payload instead of history to avoid ORM access
+        corrections_memory = []
+        for m in history_payload:
+            if m.get("role") == "assistant" and m.get("content") and "correct" in (m.get("content") or "").lower():
+                corrections_memory.append(f"Corrected '{m.get('content')}'")
+        corrections_memory = corrections_memory[-5:]
+        
+        # Extract session values before streaming (all as simple types)
+        # Use already-extracted values to avoid accessing ORM object after commit
+        system_prompt_to_use = str(enhanced_system_prompt)  # Ensure it's a string
+        ai_provider = session_ai_provider  # Use already-extracted value
+        ai_model = session_ai_model  # Use already-extracted value
         
         # Determine next order for assistant message
         from sqlalchemy import select, func
@@ -940,31 +1177,36 @@ Acknowledge these achievements and guide them to next steps.
                 logger.error("streaming_failed", error=str(e), error_type=type(e).__name__, session_id=session_id)
                 yield "event: error\ndata: streaming_failed\n\n"
         
-        # Background task to persist message
+        # Persist message after streaming
+        # Use background_tasks which FastAPI handles properly with async context
         async def persist_message_after_stream():
             if not full_text_container:
                 return
-            from app.db import AsyncSessionLocal
-            async with AsyncSessionLocal() as new_db:
-                try:
-                    full_text = full_text_container[0]
-                    if full_text.strip():
-                        await ConversationService.add_message(
-                            db=new_db,
-                            session_id=uuid.UUID(session_id),
-                            role="assistant",
-                            content=full_text,
-                            content_type="text",
-                            ai_provider=ai_provider,
-                            ai_model=ai_model,
-                            message_order=next_order,
-                        )
-                    await new_db.commit()
-                except Exception as e:
-                    import structlog
-                    logger = structlog.get_logger()
-                    logger.error("Failed to persist message after stream", error=str(e), session_id=session_id)
-                    await new_db.rollback()
+            try:
+                full_text = full_text_container[0]
+                if full_text.strip():
+                    from app.db import AsyncSessionLocal
+                    # Use context manager to ensure proper session lifecycle
+                    async with AsyncSessionLocal() as new_db:
+                        try:
+                            await ConversationService.add_message(
+                                db=new_db,
+                                session_id=uuid.UUID(session_id),
+                                role="assistant",
+                                content=full_text,
+                                content_type="text",
+                                ai_provider=ai_provider,
+                                ai_model=ai_model,
+                                message_order=next_order,
+                            )
+                            await new_db.commit()
+                        except Exception:
+                            await new_db.rollback()
+                            raise
+            except Exception as e:
+                import structlog
+                logger = structlog.get_logger()
+                logger.error("Failed to persist message after stream", error=str(e), session_id=session_id, error_type=type(e).__name__)
         
         background_tasks.add_task(persist_message_after_stream)
         

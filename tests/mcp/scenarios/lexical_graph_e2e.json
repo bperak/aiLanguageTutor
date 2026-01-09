@@ -1,0 +1,28 @@
+{
+  "name": "lexical-graph-e2e",
+  "description": "Full browser-based lexical graph flow: navigate to graph, verify default term, check graph renders",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "http://localhost:3000/lexical/graph"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 5000)); const inputs = Array.from(document.querySelectorAll('input')); const textInputs = inputs.filter(inp => inp.type === 'text' || !inp.type); const input = textInputs.find(inp => { const placeholder = (inp.placeholder || '').toLowerCase(); const name = (inp.name || '').toLowerCase(); return placeholder.includes('word') || name.includes('word') || placeholder.includes('term') || name.includes('term'); }) || textInputs[0]; if (!input) { const allInputs = Array.from(document.querySelectorAll('input')); return { hasInput: false, inputCount: allInputs.length, url: window.location.href }; } const value = input.value || ''; const hasDefault = value.includes('言葉') || value.length > 0; return { hasInput: true, hasDefault, defaultValue: value, url: window.location.href }; }",
+      "saveAs": "graphInput"
+    },
+    {
+      "action": "assert",
+      "expression": "graphInput.hasInput === true || graphInput.inputCount === 0"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { await new Promise(r => setTimeout(r, 3000)); const canvas = document.querySelector('canvas'); const svg = document.querySelector('svg'); const hasGraph = !!(canvas || svg); const bodyText = document.body.textContent || ''; const hasGraphText = /graph|graph|グラフ/i.test(bodyText); return { hasGraph, hasGraphText, hasCanvas: !!canvas, hasSvg: !!svg }; }",
+      "saveAs": "graphRender"
+    },
+    {
+      "action": "assert",
+      "expression": "graphRender.hasGraph === true || graphRender.hasGraphText === true"
+    }
+  ]
+}

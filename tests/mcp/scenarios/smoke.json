@@ -1,0 +1,47 @@
+{
+  "name": "smoke",
+  "steps": [
+    {
+      "action": "evaluate",
+      "function": "async () => { const base = process.env.TARGET_FRONTEND || 'http://localhost:3000'; const r = await fetch(base + '/'); return { status: r.status, text: await r.text() }; }",
+      "saveAs": "frontend"
+    },
+    {
+      "action": "assert",
+      "expression": "frontend.status === 200"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const base = process.env.TARGET_FRONTEND || 'http://localhost:3000'; const r = await fetch(base + '/lexical/graph'); return { status: r.status, text: await r.text() }; }",
+      "saveAs": "lexicalGraphPageHtml"
+    },
+    {
+      "action": "assert",
+      "expression": "lexicalGraphPageHtml.status === 200"
+    },
+    {
+      "action": "navigate",
+      "url": "http://localhost:3000/lexical/graph"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const getVal = () => document.querySelector('input')?.value || ''; const start = Date.now(); while (Date.now() - start < 5000) { const v = getVal(); if (v) return { value: v }; await new Promise(r => setTimeout(r, 50)); } return { value: getVal() }; }",
+      "saveAs": "lexicalGraphInput"
+    },
+    {
+      "action": "assert",
+      "expression": "lexicalGraphInput.value === '言葉'"
+    },
+    {
+      "action": "evaluate",
+      "function": "async () => { const base = process.env.TARGET_BACKEND || 'http://localhost:8000'; const r = await fetch(base + '/health'); return { status: r.status, body: await r.json() }; }",
+      "saveAs": "health"
+    },
+    {
+      "action": "assert",
+      "expression": "health.status === 200"
+    }
+  ]
+}
+
+

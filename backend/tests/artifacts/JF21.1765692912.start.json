@@ -1,0 +1,2804 @@
+{
+  "sessionId": "12d9bbfe-8f6c-491c-a04a-2e9d98b841dd",
+  "objective": "Practice using the topic marker \"は\" to introduce and discuss general topics about oneself and others.",
+  "ai_character": "Yuki Tanaka, a friendly and approachable colleague who is curious about new people and enjoys making them feel welcome.",
+  "user_role": "A new employee at the company, eager to make a good impression and learn more about your colleagues.",
+  "opening_turns": [
+    {
+      "speaker": "ai",
+      "message": "初めまして、田中ゆきです。新しい社員の方ですよね？ (Hajimemashite, Tanaka Yuki desu. Atarashii shain no kata desu yo ne?)"
+    },
+    {
+      "speaker": "ai",
+      "message": "そうですか。私はこの会社で5年働いています。趣味は何ですか？ (Sō desu ka. Watashi wa kono kaisha de 5-nen hataraiteimasu. Shumi wa nan desu ka?)"
+    }
+  ],
+  "master": {
+    "uiVersion": 2,
+    "lessonId": "b4e8a853-88fb-4f18-8a01-9440e6ee6400",
+    "canDoId": "JF21",
+    "originalLevel": 3,
+    "metadata": {
+      "topic": "general",
+      "languageCode": "ja",
+      "multilingualVersion": true,
+      "createdAt": 1765692903,
+      "estimatedDurationMin": 25,
+      "tags": [],
+      "stage2EnhancedMap": {
+        "reading": true,
+        "dialogue": true,
+        "grammar": true,
+        "culture": true
+      }
+    },
+    "learningObjectives": [],
+    "ui": {
+      "header": {
+        "title": "general",
+        "subtitle": "Complete lesson package",
+        "chips": [
+          "objective",
+          "level",
+          "topic"
+        ]
+      },
+      "sections": [
+        {
+          "id": "overview",
+          "type": "intro",
+          "title": "Overview",
+          "cards": [
+            {
+              "id": "f5010ed1-1b13-4344-a3ad-de607ebf41a5",
+              "kind": "text",
+              "title": "general",
+              "body": {
+                "meta": "generalについて、短い文で話せるようになる。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "lessonPlan",
+          "type": "teach",
+          "title": "Lesson Plan",
+          "cards": [
+            {
+              "id": "790dc17c-6e68-4819-b8a3-4511173dc21e",
+              "kind": "text",
+              "title": "Step 1",
+              "body": {
+                "meta": "**Teacher Notes:** \n\n**Student Task:** "
+              }
+            },
+            {
+              "id": "8a00e42b-2e2f-4506-9ab5-c924a3528d1e",
+              "kind": "text",
+              "title": "Step 2",
+              "body": {
+                "meta": "**Teacher Notes:** \n\n**Student Task:** "
+              }
+            },
+            {
+              "id": "58a94f1f-c58d-4523-9a9f-92746c6389ca",
+              "kind": "text",
+              "title": "Step 3",
+              "body": {
+                "meta": "**Teacher Notes:** \n\n**Student Task:** "
+              }
+            },
+            {
+              "id": "b8f0c644-28fb-4096-bb8c-0ab904668f9f",
+              "kind": "text",
+              "title": "Step 4",
+              "body": {
+                "meta": "**Teacher Notes:** \n\n**Student Task:** "
+              }
+            }
+          ]
+        },
+        {
+          "id": "reading",
+          "type": "reading",
+          "title": "Reading",
+          "cards": [
+            {
+              "id": "7dc006f1-da2b-43b2-a8d4-da162b282eec",
+              "kind": "reading",
+              "reading": {
+                "title": {
+                  "kanji": "generalのはなし",
+                  "romaji": "generalのはなし",
+                  "furigana": [
+                    {
+                      "text": "generalのはなし",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                "content": {
+                  "kanji": "generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。",
+                  "romaji": "generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。",
+                  "furigana": [
+                    {
+                      "text": "generalは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "毎",
+                      "ruby": "g"
+                    },
+                    {
+                      "text": "日",
+                      "ruby": "e"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "生",
+                      "ruby": "n"
+                    },
+                    {
+                      "text": "活",
+                      "ruby": "e"
+                    },
+                    {
+                      "text": "と",
+                      "ruby": null
+                    },
+                    {
+                      "text": "関",
+                      "ruby": "r"
+                    },
+                    {
+                      "text": "係",
+                      "ruby": "a"
+                    },
+                    {
+                      "text": "があります。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "週",
+                      "ruby": "l"
+                    },
+                    {
+                      "text": "末",
+                      "ruby": "は"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "映",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "画",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "に"
+                    },
+                    {
+                      "text": "たり、",
+                      "ruby": null
+                    },
+                    {
+                      "text": "友",
+                      "ruby": "ち"
+                    },
+                    {
+                      "text": "だちと",
+                      "ruby": null
+                    },
+                    {
+                      "text": "会",
+                      "ruby": "の"
+                    },
+                    {
+                      "text": "ったりします。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "家",
+                      "ruby": "せ"
+                    },
+                    {
+                      "text": "でゆっくり",
+                      "ruby": null
+                    },
+                    {
+                      "text": "休",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "むこともあります。あなたは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "自",
+                      "ruby": "か"
+                    },
+                    {
+                      "text": "由",
+                      "ruby": "つ"
+                    },
+                    {
+                      "text": "な",
+                      "ruby": null
+                    },
+                    {
+                      "text": "時",
+                      "ruby": "と"
+                    },
+                    {
+                      "text": "間",
+                      "ruby": "か"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "何",
+                      "ruby": "ん"
+                    },
+                    {
+                      "text": "をしますか。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "短",
+                      "ruby": "け"
+                    },
+                    {
+                      "text": "い",
+                      "ruby": null
+                    },
+                    {
+                      "text": "文",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "言",
+                      "ruby": "が"
+                    },
+                    {
+                      "text": "ってみましょう。generalは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "毎",
+                      "ruby": "あ"
+                    },
+                    {
+                      "text": "日",
+                      "ruby": "り"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "生",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "活",
+                      "ruby": "す"
+                    },
+                    {
+                      "text": "と",
+                      "ruby": null
+                    },
+                    {
+                      "text": "関",
+                      "ruby": "。"
+                    },
+                    {
+                      "text": "係",
+                      "ruby": "し"
+                    },
+                    {
+                      "text": "があります。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "週",
+                      "ruby": "ゅ"
+                    },
+                    {
+                      "text": "末",
+                      "ruby": "う"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "映",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "画",
+                      "ruby": "つ"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "に"
+                    },
+                    {
+                      "text": "たり、",
+                      "ruby": null
+                    },
+                    {
+                      "text": "友",
+                      "ruby": "え"
+                    },
+                    {
+                      "text": "だちと",
+                      "ruby": null
+                    },
+                    {
+                      "text": "会",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "ったりします。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "家",
+                      "ruby": "が"
+                    },
+                    {
+                      "text": "でゆっくり",
+                      "ruby": null
+                    },
+                    {
+                      "text": "休",
+                      "ruby": "を"
+                    },
+                    {
+                      "text": "むこともあります。あなたは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "自",
+                      "ruby": "み"
+                    },
+                    {
+                      "text": "由",
+                      "ruby": "た"
+                    },
+                    {
+                      "text": "な",
+                      "ruby": null
+                    },
+                    {
+                      "text": "時",
+                      "ruby": "り"
+                    },
+                    {
+                      "text": "間",
+                      "ruby": "、"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "何",
+                      "ruby": "と"
+                    },
+                    {
+                      "text": "をしますか。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "短",
+                      "ruby": "も"
+                    },
+                    {
+                      "text": "い",
+                      "ruby": null
+                    },
+                    {
+                      "text": "文",
+                      "ruby": "だ"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "言",
+                      "ruby": "ち"
+                    },
+                    {
+                      "text": "ってみましょう。generalは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "毎",
+                      "ruby": "と"
+                    },
+                    {
+                      "text": "日",
+                      "ruby": "あ"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "生",
+                      "ruby": "っ"
+                    },
+                    {
+                      "text": "活",
+                      "ruby": "た"
+                    },
+                    {
+                      "text": "と",
+                      "ruby": null
+                    },
+                    {
+                      "text": "関",
+                      "ruby": "り"
+                    },
+                    {
+                      "text": "係",
+                      "ruby": "し"
+                    },
+                    {
+                      "text": "があります。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "週",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "末",
+                      "ruby": "す"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "映",
+                      "ruby": "。"
+                    },
+                    {
+                      "text": "画",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "え"
+                    },
+                    {
+                      "text": "たり、",
+                      "ruby": null
+                    },
+                    {
+                      "text": "友",
+                      "ruby": "で"
+                    },
+                    {
+                      "text": "だちと",
+                      "ruby": null
+                    },
+                    {
+                      "text": "会",
+                      "ruby": "ゆ"
+                    },
+                    {
+                      "text": "ったりします。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "家",
+                      "ruby": "っ"
+                    },
+                    {
+                      "text": "でゆっくり",
+                      "ruby": null
+                    },
+                    {
+                      "text": "休",
+                      "ruby": "く"
+                    },
+                    {
+                      "text": "むこともあります。あなたは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "自",
+                      "ruby": "り"
+                    },
+                    {
+                      "text": "由",
+                      "ruby": "や"
+                    },
+                    {
+                      "text": "な",
+                      "ruby": null
+                    },
+                    {
+                      "text": "時",
+                      "ruby": "す"
+                    },
+                    {
+                      "text": "間",
+                      "ruby": "む"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "何",
+                      "ruby": "こ"
+                    },
+                    {
+                      "text": "をしますか。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "短",
+                      "ruby": "と"
+                    },
+                    {
+                      "text": "い",
+                      "ruby": null
+                    },
+                    {
+                      "text": "文",
+                      "ruby": "も"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "言",
+                      "ruby": "あ"
+                    },
+                    {
+                      "text": "ってみましょう。generalは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "毎",
+                      "ruby": "り"
+                    },
+                    {
+                      "text": "日",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "生",
+                      "ruby": "す"
+                    },
+                    {
+                      "text": "活",
+                      "ruby": "。"
+                    },
+                    {
+                      "text": "と",
+                      "ruby": null
+                    },
+                    {
+                      "text": "関",
+                      "ruby": "あ"
+                    },
+                    {
+                      "text": "係",
+                      "ruby": "な"
+                    },
+                    {
+                      "text": "があります。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "週",
+                      "ruby": "た"
+                    },
+                    {
+                      "text": "末",
+                      "ruby": "は"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "映",
+                      "ruby": "じ"
+                    },
+                    {
+                      "text": "画",
+                      "ruby": "ゆ"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "う"
+                    },
+                    {
+                      "text": "たり、",
+                      "ruby": null
+                    },
+                    {
+                      "text": "友",
+                      "ruby": "な"
+                    },
+                    {
+                      "text": "だちと",
+                      "ruby": null
+                    },
+                    {
+                      "text": "会",
+                      "ruby": "じ"
+                    },
+                    {
+                      "text": "ったりします。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "家",
+                      "ruby": "か"
+                    },
+                    {
+                      "text": "でゆっくり",
+                      "ruby": null
+                    },
+                    {
+                      "text": "休",
+                      "ruby": "ん"
+                    },
+                    {
+                      "text": "むこともあります。あなたは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "自",
+                      "ruby": "に"
+                    },
+                    {
+                      "text": "由",
+                      "ruby": "な"
+                    },
+                    {
+                      "text": "な",
+                      "ruby": null
+                    },
+                    {
+                      "text": "時",
+                      "ruby": "に"
+                    },
+                    {
+                      "text": "間",
+                      "ruby": "を"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "何",
+                      "ruby": "し"
+                    },
+                    {
+                      "text": "をしますか。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "短",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "い",
+                      "ruby": null
+                    },
+                    {
+                      "text": "文",
+                      "ruby": "す"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "言",
+                      "ruby": "か"
+                    },
+                    {
+                      "text": "ってみましょう。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                "comprehension": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "dialogue",
+          "type": "dialogue",
+          "title": "Dialogue",
+          "cards": [
+            {
+              "id": "9412f6d4-e169-4de0-be8e-76f1a8aade26",
+              "kind": "dialogue",
+              "title": "Conversation Practice",
+              "dialogue_turns": [
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "週末は何をしますか。",
+                    "romaji": "週末は何をしますか。",
+                    "furigana": [
+                      {
+                        "text": "週",
+                        "ruby": "し"
+                      },
+                      {
+                        "text": "末",
+                        "ruby": "ゅ"
+                      },
+                      {
+                        "text": "は",
+                        "ruby": null
+                      },
+                      {
+                        "text": "何",
+                        "ruby": "う"
+                      },
+                      {
+                        "text": "をしますか。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "映画を見たいです。",
+                    "romaji": "映画を見たいです。",
+                    "furigana": [
+                      {
+                        "text": "映",
+                        "ruby": "え"
+                      },
+                      {
+                        "text": "画",
+                        "ruby": "い"
+                      },
+                      {
+                        "text": "を",
+                        "ruby": null
+                      },
+                      {
+                        "text": "見",
+                        "ruby": "が"
+                      },
+                      {
+                        "text": "たいです。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "どこで見ますか。",
+                    "romaji": "どこで見ますか。",
+                    "furigana": [
+                      {
+                        "text": "どこで",
+                        "ruby": null
+                      },
+                      {
+                        "text": "見",
+                        "ruby": "ど"
+                      },
+                      {
+                        "text": "ますか。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "家で見ます。",
+                    "romaji": "家で見ます。",
+                    "furigana": [
+                      {
+                        "text": "家",
+                        "ruby": "い"
+                      },
+                      {
+                        "text": "で",
+                        "ruby": null
+                      },
+                      {
+                        "text": "見",
+                        "ruby": "え"
+                      },
+                      {
+                        "text": "ます。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "いっしょに見ましょう。",
+                    "romaji": "いっしょに見ましょう。",
+                    "furigana": [
+                      {
+                        "text": "いっしょに",
+                        "ruby": null
+                      },
+                      {
+                        "text": "見",
+                        "ruby": "い"
+                      },
+                      {
+                        "text": "ましょう。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "はい、見ましょう。",
+                    "romaji": "はい、見ましょう。",
+                    "furigana": [
+                      {
+                        "text": "はい、",
+                        "ruby": null
+                      },
+                      {
+                        "text": "見",
+                        "ruby": "は"
+                      },
+                      {
+                        "text": "ましょう。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "grammar",
+          "type": "teach",
+          "title": "Grammar Points",
+          "cards": [
+            {
+              "id": "a3d3ce1f-a8fe-44ff-ad62-4483f31d41ac",
+              "kind": "text",
+              "title": "〜を",
+              "body": {
+                "meta": "目的語を表します。"
+              },
+              "bullets": [
+                {
+                  "kanji": "映画を見ます。",
+                  "romaji": "映画を見ます。",
+                  "furigana": [
+                    {
+                      "text": "映",
+                      "ruby": "え"
+                    },
+                    {
+                      "text": "画",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "が"
+                    },
+                    {
+                      "text": "ます。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                {
+                  "kanji": "本を読みます。",
+                  "romaji": "本を読みます。",
+                  "furigana": [
+                    {
+                      "text": "本",
+                      "ruby": "ほ"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "読",
+                      "ruby": "ん"
+                    },
+                    {
+                      "text": "みます。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              ]
+            },
+            {
+              "id": "e8d66bd7-378d-4247-a5de-bc216851263d",
+              "kind": "text",
+              "title": "〜で",
+              "body": {
+                "meta": "場所を表します。"
+              },
+              "bullets": [
+                {
+                  "kanji": "家で見ます。",
+                  "romaji": "家で見ます。",
+                  "furigana": [
+                    {
+                      "text": "家",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "え"
+                    },
+                    {
+                      "text": "ます。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                {
+                  "kanji": "店で食べます。",
+                  "romaji": "店で食べます。",
+                  "furigana": [
+                    {
+                      "text": "店",
+                      "ruby": "み"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "食",
+                      "ruby": "せ"
+                    },
+                    {
+                      "text": "べます。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              ]
+            },
+            {
+              "id": "80aed82e-e827-41d9-a977-1ef4c2c99341",
+              "kind": "text",
+              "title": "〜たいです",
+              "body": {
+                "meta": "希望を表します。"
+              },
+              "bullets": [
+                {
+                  "kanji": "見たいです。",
+                  "romaji": "見たいです。",
+                  "furigana": [
+                    {
+                      "text": "見",
+                      "ruby": "み"
+                    },
+                    {
+                      "text": "たいです。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                {
+                  "kanji": "行きたいです。",
+                  "romaji": "行きたいです。",
+                  "furigana": [
+                    {
+                      "text": "行",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "きたいです。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "practice",
+          "type": "practice",
+          "title": "Practice",
+          "cards": [
+            {
+              "id": "8ed46332-1c60-4b21-9771-2434588e5b72",
+              "kind": "text",
+              "title": "Cloze",
+              "body": {
+                "meta": "**Instructions:** かっこに入ることばをえらんでください。\n\n\n- 家( )映画を見ます。\n- 映画( )見ます。\n- 見( )です。"
+              }
+            },
+            {
+              "id": "10c247f5-2d37-4580-9f00-83d262c4e141",
+              "kind": "text",
+              "title": "Matching",
+              "body": {
+                "meta": "**Instructions:** 日本語と英語をむすんでください。\n\n\nPairs:\n- 映画 -> movie\n- 家 -> home\n- 週末 -> weekend\n- 友だち -> friend"
+              }
+            },
+            {
+              "id": "3ee5f1ef-0220-4177-827e-1ff2785cd26d",
+              "kind": "text",
+              "title": "Dialoguegap",
+              "body": {
+                "meta": "**Instructions:** 会話の( )をうめてください。\n\n\n- A: 週末は何を( )ですか。\nB: 映画を見たいです。\n- A: どこで見ますか。\nB: 家( )見ます。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "culture",
+          "type": "teach",
+          "title": "Culture",
+          "cards": [
+            {
+              "id": "54a26374-b3e6-4dea-ae0d-070defd3f710",
+              "kind": "text",
+              "title": "あいさつ",
+              "body": {
+                "meta": {
+                  "kanji": "会話の最初に、短いあいさつをします。",
+                  "romaji": "kaiwa no saisho ni, mijikai aisatsu o shimasu.",
+                  "furigana": [
+                    {
+                      "text": "会話",
+                      "ruby": "かいわ"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "最初",
+                      "ruby": "さいしょ"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "、",
+                      "ruby": null
+                    },
+                    {
+                      "text": "短い",
+                      "ruby": "みじかい"
+                    },
+                    {
+                      "text": "あいさつ",
+                      "ruby": null
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "します",
+                      "ruby": null
+                    },
+                    {
+                      "text": "。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "At the beginning of a conversation, make a short greeting."
+                }
+              }
+            },
+            {
+              "id": "a5b49f8f-b3cb-4d00-a6f9-dd799fa3a449",
+              "kind": "text",
+              "title": "マナー",
+              "body": {
+                "meta": {
+                  "kanji": "相手の話を最後まで聞くことが大切です。",
+                  "romaji": "aite no hanashi o saigo made kiku koto ga taisetsu desu.",
+                  "furigana": [
+                    {
+                      "text": "相手",
+                      "ruby": "あいて"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "話",
+                      "ruby": "はなし"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "最後",
+                      "ruby": "さいご"
+                    },
+                    {
+                      "text": "まで",
+                      "ruby": null
+                    },
+                    {
+                      "text": "聞く",
+                      "ruby": "きく"
+                    },
+                    {
+                      "text": "こと",
+                      "ruby": null
+                    },
+                    {
+                      "text": "が",
+                      "ruby": null
+                    },
+                    {
+                      "text": "大切",
+                      "ruby": "たいせつ"
+                    },
+                    {
+                      "text": "です",
+                      "ruby": null
+                    },
+                    {
+                      "text": "。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "It is important to listen to the other person's story until the end."
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "gallery": []
+    },
+    "exercises": [],
+    "extractedEntities": {
+      "words": [
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:16322",
+          "orth": "栄華",
+          "katakana": "エイガ",
+          "romaji": "Eiga",
+          "pos": null,
+          "translation": "prosperity",
+          "source_text": "映画"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:32941",
+          "orth": "本",
+          "katakana": "ホン",
+          "romaji": "Hon",
+          "pos": null,
+          "translation": "book",
+          "source_text": "本"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:750",
+          "orth": "いえ",
+          "katakana": "イエ",
+          "romaji": "Ie",
+          "pos": "感動詞",
+          "translation": null,
+          "source_text": "家"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:14076",
+          "orth": "店",
+          "katakana": "ミセ",
+          "romaji": "Mise",
+          "pos": null,
+          "translation": "shop",
+          "source_text": "店"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:10262",
+          "orth": "週末",
+          "katakana": "シュウマツ",
+          "romaji": "Shuu Matsu",
+          "pos": null,
+          "translation": "weekend",
+          "source_text": "週末"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:29526",
+          "orth": "友達",
+          "katakana": "トモダチ",
+          "romaji": "Tomodachi",
+          "pos": null,
+          "translation": "friend",
+          "source_text": "友だち"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:37341",
+          "orth": "挨拶",
+          "katakana": "アイサツ",
+          "romaji": "Aisatsu",
+          "pos": null,
+          "translation": "greeting",
+          "source_text": "あいさつ"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:185",
+          "orth": "会話",
+          "katakana": "カイワ",
+          "romaji": "Ka iwa",
+          "pos": null,
+          "translation": "conversation",
+          "source_text": "会話"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:8952",
+          "orth": "最初",
+          "katakana": "サイショ",
+          "romaji": "Saisho",
+          "pos": null,
+          "translation": "beginning",
+          "source_text": "最初"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:33396",
+          "orth": "短い",
+          "katakana": "ミジカイ",
+          "romaji": "Mijikai",
+          "pos": null,
+          "translation": "short",
+          "source_text": "短い"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:37361",
+          "orth": "相手",
+          "katakana": "アイテ",
+          "romaji": "Aite",
+          "pos": null,
+          "translation": "partner",
+          "source_text": "相手"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:19159",
+          "orth": "歯無し",
+          "katakana": "ハナシ",
+          "romaji": "Hanashi",
+          "pos": null,
+          "translation": "toothless",
+          "source_text": "話"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:3042",
+          "orth": "最期",
+          "katakana": "サイゴ",
+          "romaji": "Saigo",
+          "pos": "名詞",
+          "translation": null,
+          "source_text": "最後"
+        },
+        {
+          "elementId": "4:e1a14828-ec4f-4d13-9d5e-5f3a6417f082:4380",
+          "orth": "大切",
+          "katakana": "タイセツ",
+          "romaji": "Oogiri",
+          "pos": "形状詞",
+          "translation": null,
+          "source_text": "大切"
+        }
+      ],
+      "grammarPatterns": [
+        {
+          "id": "grammar_1aa05cba-fe5a-4232-85b0-b0dee0def3cc",
+          "pattern": "-は (wa)",
+          "classification": null
+        },
+        {
+          "id": "grammar_e830cc7b-8ce8-41bf-88cc-67372b639976",
+          "pattern": "-です (desu)",
+          "classification": null
+        },
+        {
+          "id": "grammar_077e9b74-2e2c-4936-9d3d-3f02dce733bd",
+          "pattern": "-ます (masu) / -ました (mashita)",
+          "classification": null
+        },
+        {
+          "id": "grammar_0658f04b-a2bc-4f1e-9652-51cd8255fe2a",
+          "pattern": "-の (no)",
+          "classification": null
+        },
+        {
+          "id": "grammar_1bd8d5ff-99a2-4f0f-b5f3-5a96f3ddf8ca",
+          "pattern": "-を (o)",
+          "classification": null
+        },
+        {
+          "id": "grammar_a80a1f2e-8940-47ad-a4fd-5f4b4db2a811",
+          "pattern": "-に (ni)",
+          "classification": null
+        },
+        {
+          "id": "grammar_59719b35-ea80-43de-bd99-bda303ab9d18",
+          "pattern": "と (to)",
+          "classification": null
+        },
+        {
+          "id": "grammar_e459fc16-afc2-4c6f-b767-b64858f5ef67",
+          "pattern": "-がいます (ga imasu)",
+          "classification": null
+        },
+        {
+          "id": "grammar_a3cb4928-0ae1-4c93-a442-96b32b82ae63",
+          "pattern": "Noun + は + Noun/Adj + です (Topic Marker & Formal Copula)",
+          "classification": null
+        },
+        {
+          "id": "grammar_0f83f224-634f-405c-a62d-9f34782c7533",
+          "pattern": "V-masu stem + に + 来ます/行きます (Purpose of Movement)",
+          "classification": null
+        },
+        {
+          "id": "grammar_c7596c6b-6b14-4199-93da-0cd4b69228aa",
+          "pattern": "Noun + が + 好きです (Expressing Likes)",
+          "classification": null
+        },
+        {
+          "id": "grammar_3f60b21e-0232-4d83-b172-55cd358aade8",
+          "pattern": "Noun + が + あります (Existence of Inanimate Objects)",
+          "classification": null
+        },
+        {
+          "id": "grammar_7b1e012a-96f2-4f23-837e-38098ba49741",
+          "pattern": "Noun + は + Noun/Adj + です",
+          "classification": null
+        },
+        {
+          "id": "grammar_7be812e2-ae16-4d04-a8c9-dbfcdc7de323",
+          "pattern": "Noun + が + あります / ありません",
+          "classification": null
+        },
+        {
+          "id": "grammar_8008c072-59b9-4704-9608-614a66924993",
+          "pattern": "「Quote」と + 言います/聞きます",
+          "classification": null
+        },
+        {
+          "id": "grammar_5c39763a-c075-4937-94d2-b118496f0e5f",
+          "pattern": "Noun (location) + に(は) + Noun (thing) + が + あります",
+          "classification": null
+        },
+        {
+          "id": "grammar_870a2a0b-3cb5-44a1-bfa1-af462e09a880",
+          "pattern": "Noun + も + あります/ありません",
+          "classification": null
+        },
+        {
+          "id": "grammar_bebc2f89-fac6-4ee1-8be1-847988265406",
+          "pattern": "Adjective + で / Adjective + くて (te-form of adjectives)",
+          "classification": null
+        },
+        {
+          "id": "grammar_846f31a8-42a6-4623-b454-4c1b41a9ce61",
+          "pattern": "Verb-te + います",
+          "classification": null
+        },
+        {
+          "id": "grammar_3d294746-f6e4-40c6-8ccb-64936da64721",
+          "pattern": "～は～です / ～ですか",
+          "classification": null
+        }
+      ],
+      "vocabulary": [
+        {
+          "surface": "栄華",
+          "reading": "えいが",
+          "pos": "noun",
+          "translation": "prosperity"
+        },
+        {
+          "surface": "本",
+          "reading": "ほん",
+          "pos": "noun",
+          "translation": "book"
+        },
+        {
+          "surface": "いえ",
+          "reading": "いえ",
+          "pos": "interjection",
+          "translation": ""
+        },
+        {
+          "surface": "店",
+          "reading": "みせ",
+          "pos": "noun",
+          "translation": "shop"
+        },
+        {
+          "surface": "週末",
+          "reading": "しゅうまつ",
+          "pos": "noun",
+          "translation": "weekend"
+        },
+        {
+          "surface": "友達",
+          "reading": "ともだち",
+          "pos": "noun",
+          "translation": "friend"
+        },
+        {
+          "surface": "挨拶",
+          "reading": "あいさつ",
+          "pos": "noun",
+          "translation": "greeting"
+        },
+        {
+          "surface": "会話",
+          "reading": "かいわ",
+          "pos": "noun",
+          "translation": "conversation"
+        },
+        {
+          "surface": "最初",
+          "reading": "さいしょ",
+          "pos": "noun",
+          "translation": "beginning"
+        },
+        {
+          "surface": "短い",
+          "reading": "みじかい",
+          "pos": "noun",
+          "translation": "short"
+        },
+        {
+          "surface": "相手",
+          "reading": "あいて",
+          "pos": "noun",
+          "translation": "partner"
+        },
+        {
+          "surface": "歯無し",
+          "reading": "はなし",
+          "pos": "noun",
+          "translation": "toothless"
+        },
+        {
+          "surface": "最期",
+          "reading": "さいご",
+          "pos": "noun",
+          "translation": ""
+        }
+      ]
+    },
+    "readability": {
+      "jlptEstimate": "N5",
+      "metrics": {
+        "chars": 0,
+        "sentences": 0
+      }
+    },
+    "pdf": {
+      "renderTemplate": "default-a4",
+      "assetPaths": []
+    },
+    "lessonSource": "ai_generated"
+  },
+  "variant": {
+    "lessonId": "b4e8a853-88fb-4f18-8a01-9440e6ee6400",
+    "level": 3,
+    "ui": {
+      "header": {
+        "title": "general",
+        "subtitle": "Complete lesson package",
+        "chips": [
+          "objective",
+          "level",
+          "topic"
+        ]
+      },
+      "sections": [
+        {
+          "id": "overview",
+          "type": "intro",
+          "title": "Overview",
+          "cards": [
+            {
+              "id": "f5010ed1-1b13-4344-a3ad-de607ebf41a5",
+              "kind": "text",
+              "title": "general",
+              "body": {
+                "meta": "generalについて、短い文で話せるようになる。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "lessonPlan",
+          "type": "teach",
+          "title": "Lesson Plan",
+          "cards": [
+            {
+              "id": "790dc17c-6e68-4819-b8a3-4511173dc21e",
+              "kind": "text",
+              "title": "Step 1",
+              "body": {
+                "meta": "**Teacher Notes:** \n\n**Student Task:** "
+              }
+            },
+            {
+              "id": "8a00e42b-2e2f-4506-9ab5-c924a3528d1e",
+              "kind": "text",
+              "title": "Step 2",
+              "body": {
+                "meta": "**Teacher Notes:** \n\n**Student Task:** "
+              }
+            },
+            {
+              "id": "58a94f1f-c58d-4523-9a9f-92746c6389ca",
+              "kind": "text",
+              "title": "Step 3",
+              "body": {
+                "meta": "**Teacher Notes:** \n\n**Student Task:** "
+              }
+            },
+            {
+              "id": "b8f0c644-28fb-4096-bb8c-0ab904668f9f",
+              "kind": "text",
+              "title": "Step 4",
+              "body": {
+                "meta": "**Teacher Notes:** \n\n**Student Task:** "
+              }
+            }
+          ]
+        },
+        {
+          "id": "reading",
+          "type": "reading",
+          "title": "Reading",
+          "cards": [
+            {
+              "id": "7dc006f1-da2b-43b2-a8d4-da162b282eec",
+              "kind": "reading",
+              "reading": {
+                "title": {
+                  "kanji": "generalのはなし",
+                  "romaji": "generalのはなし",
+                  "furigana": [
+                    {
+                      "text": "generalのはなし",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                "content": {
+                  "kanji": "generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。",
+                  "romaji": "generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。generalは毎日の生活と関係があります。週末に映画を見たり、友だちと会ったりします。家でゆっくり休むこともあります。あなたは自由な時間に何をしますか。短い文で言ってみましょう。",
+                  "furigana": [
+                    {
+                      "text": "generalは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "毎",
+                      "ruby": "g"
+                    },
+                    {
+                      "text": "日",
+                      "ruby": "e"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "生",
+                      "ruby": "n"
+                    },
+                    {
+                      "text": "活",
+                      "ruby": "e"
+                    },
+                    {
+                      "text": "と",
+                      "ruby": null
+                    },
+                    {
+                      "text": "関",
+                      "ruby": "r"
+                    },
+                    {
+                      "text": "係",
+                      "ruby": "a"
+                    },
+                    {
+                      "text": "があります。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "週",
+                      "ruby": "l"
+                    },
+                    {
+                      "text": "末",
+                      "ruby": "は"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "映",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "画",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "に"
+                    },
+                    {
+                      "text": "たり、",
+                      "ruby": null
+                    },
+                    {
+                      "text": "友",
+                      "ruby": "ち"
+                    },
+                    {
+                      "text": "だちと",
+                      "ruby": null
+                    },
+                    {
+                      "text": "会",
+                      "ruby": "の"
+                    },
+                    {
+                      "text": "ったりします。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "家",
+                      "ruby": "せ"
+                    },
+                    {
+                      "text": "でゆっくり",
+                      "ruby": null
+                    },
+                    {
+                      "text": "休",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "むこともあります。あなたは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "自",
+                      "ruby": "か"
+                    },
+                    {
+                      "text": "由",
+                      "ruby": "つ"
+                    },
+                    {
+                      "text": "な",
+                      "ruby": null
+                    },
+                    {
+                      "text": "時",
+                      "ruby": "と"
+                    },
+                    {
+                      "text": "間",
+                      "ruby": "か"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "何",
+                      "ruby": "ん"
+                    },
+                    {
+                      "text": "をしますか。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "短",
+                      "ruby": "け"
+                    },
+                    {
+                      "text": "い",
+                      "ruby": null
+                    },
+                    {
+                      "text": "文",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "言",
+                      "ruby": "が"
+                    },
+                    {
+                      "text": "ってみましょう。generalは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "毎",
+                      "ruby": "あ"
+                    },
+                    {
+                      "text": "日",
+                      "ruby": "り"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "生",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "活",
+                      "ruby": "す"
+                    },
+                    {
+                      "text": "と",
+                      "ruby": null
+                    },
+                    {
+                      "text": "関",
+                      "ruby": "。"
+                    },
+                    {
+                      "text": "係",
+                      "ruby": "し"
+                    },
+                    {
+                      "text": "があります。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "週",
+                      "ruby": "ゅ"
+                    },
+                    {
+                      "text": "末",
+                      "ruby": "う"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "映",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "画",
+                      "ruby": "つ"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "に"
+                    },
+                    {
+                      "text": "たり、",
+                      "ruby": null
+                    },
+                    {
+                      "text": "友",
+                      "ruby": "え"
+                    },
+                    {
+                      "text": "だちと",
+                      "ruby": null
+                    },
+                    {
+                      "text": "会",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "ったりします。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "家",
+                      "ruby": "が"
+                    },
+                    {
+                      "text": "でゆっくり",
+                      "ruby": null
+                    },
+                    {
+                      "text": "休",
+                      "ruby": "を"
+                    },
+                    {
+                      "text": "むこともあります。あなたは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "自",
+                      "ruby": "み"
+                    },
+                    {
+                      "text": "由",
+                      "ruby": "た"
+                    },
+                    {
+                      "text": "な",
+                      "ruby": null
+                    },
+                    {
+                      "text": "時",
+                      "ruby": "り"
+                    },
+                    {
+                      "text": "間",
+                      "ruby": "、"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "何",
+                      "ruby": "と"
+                    },
+                    {
+                      "text": "をしますか。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "短",
+                      "ruby": "も"
+                    },
+                    {
+                      "text": "い",
+                      "ruby": null
+                    },
+                    {
+                      "text": "文",
+                      "ruby": "だ"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "言",
+                      "ruby": "ち"
+                    },
+                    {
+                      "text": "ってみましょう。generalは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "毎",
+                      "ruby": "と"
+                    },
+                    {
+                      "text": "日",
+                      "ruby": "あ"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "生",
+                      "ruby": "っ"
+                    },
+                    {
+                      "text": "活",
+                      "ruby": "た"
+                    },
+                    {
+                      "text": "と",
+                      "ruby": null
+                    },
+                    {
+                      "text": "関",
+                      "ruby": "り"
+                    },
+                    {
+                      "text": "係",
+                      "ruby": "し"
+                    },
+                    {
+                      "text": "があります。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "週",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "末",
+                      "ruby": "す"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "映",
+                      "ruby": "。"
+                    },
+                    {
+                      "text": "画",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "え"
+                    },
+                    {
+                      "text": "たり、",
+                      "ruby": null
+                    },
+                    {
+                      "text": "友",
+                      "ruby": "で"
+                    },
+                    {
+                      "text": "だちと",
+                      "ruby": null
+                    },
+                    {
+                      "text": "会",
+                      "ruby": "ゆ"
+                    },
+                    {
+                      "text": "ったりします。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "家",
+                      "ruby": "っ"
+                    },
+                    {
+                      "text": "でゆっくり",
+                      "ruby": null
+                    },
+                    {
+                      "text": "休",
+                      "ruby": "く"
+                    },
+                    {
+                      "text": "むこともあります。あなたは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "自",
+                      "ruby": "り"
+                    },
+                    {
+                      "text": "由",
+                      "ruby": "や"
+                    },
+                    {
+                      "text": "な",
+                      "ruby": null
+                    },
+                    {
+                      "text": "時",
+                      "ruby": "す"
+                    },
+                    {
+                      "text": "間",
+                      "ruby": "む"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "何",
+                      "ruby": "こ"
+                    },
+                    {
+                      "text": "をしますか。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "短",
+                      "ruby": "と"
+                    },
+                    {
+                      "text": "い",
+                      "ruby": null
+                    },
+                    {
+                      "text": "文",
+                      "ruby": "も"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "言",
+                      "ruby": "あ"
+                    },
+                    {
+                      "text": "ってみましょう。generalは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "毎",
+                      "ruby": "り"
+                    },
+                    {
+                      "text": "日",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "生",
+                      "ruby": "す"
+                    },
+                    {
+                      "text": "活",
+                      "ruby": "。"
+                    },
+                    {
+                      "text": "と",
+                      "ruby": null
+                    },
+                    {
+                      "text": "関",
+                      "ruby": "あ"
+                    },
+                    {
+                      "text": "係",
+                      "ruby": "な"
+                    },
+                    {
+                      "text": "があります。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "週",
+                      "ruby": "た"
+                    },
+                    {
+                      "text": "末",
+                      "ruby": "は"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "映",
+                      "ruby": "じ"
+                    },
+                    {
+                      "text": "画",
+                      "ruby": "ゆ"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "う"
+                    },
+                    {
+                      "text": "たり、",
+                      "ruby": null
+                    },
+                    {
+                      "text": "友",
+                      "ruby": "な"
+                    },
+                    {
+                      "text": "だちと",
+                      "ruby": null
+                    },
+                    {
+                      "text": "会",
+                      "ruby": "じ"
+                    },
+                    {
+                      "text": "ったりします。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "家",
+                      "ruby": "か"
+                    },
+                    {
+                      "text": "でゆっくり",
+                      "ruby": null
+                    },
+                    {
+                      "text": "休",
+                      "ruby": "ん"
+                    },
+                    {
+                      "text": "むこともあります。あなたは",
+                      "ruby": null
+                    },
+                    {
+                      "text": "自",
+                      "ruby": "に"
+                    },
+                    {
+                      "text": "由",
+                      "ruby": "な"
+                    },
+                    {
+                      "text": "な",
+                      "ruby": null
+                    },
+                    {
+                      "text": "時",
+                      "ruby": "に"
+                    },
+                    {
+                      "text": "間",
+                      "ruby": "を"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "何",
+                      "ruby": "し"
+                    },
+                    {
+                      "text": "をしますか。",
+                      "ruby": null
+                    },
+                    {
+                      "text": "短",
+                      "ruby": "ま"
+                    },
+                    {
+                      "text": "い",
+                      "ruby": null
+                    },
+                    {
+                      "text": "文",
+                      "ruby": "す"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "言",
+                      "ruby": "か"
+                    },
+                    {
+                      "text": "ってみましょう。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                "comprehension": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "dialogue",
+          "type": "dialogue",
+          "title": "Dialogue",
+          "cards": [
+            {
+              "id": "9412f6d4-e169-4de0-be8e-76f1a8aade26",
+              "kind": "dialogue",
+              "title": "Conversation Practice",
+              "dialogue_turns": [
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "週末は何をしますか。",
+                    "romaji": "週末は何をしますか。",
+                    "furigana": [
+                      {
+                        "text": "週",
+                        "ruby": "し"
+                      },
+                      {
+                        "text": "末",
+                        "ruby": "ゅ"
+                      },
+                      {
+                        "text": "は",
+                        "ruby": null
+                      },
+                      {
+                        "text": "何",
+                        "ruby": "う"
+                      },
+                      {
+                        "text": "をしますか。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "映画を見たいです。",
+                    "romaji": "映画を見たいです。",
+                    "furigana": [
+                      {
+                        "text": "映",
+                        "ruby": "え"
+                      },
+                      {
+                        "text": "画",
+                        "ruby": "い"
+                      },
+                      {
+                        "text": "を",
+                        "ruby": null
+                      },
+                      {
+                        "text": "見",
+                        "ruby": "が"
+                      },
+                      {
+                        "text": "たいです。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "どこで見ますか。",
+                    "romaji": "どこで見ますか。",
+                    "furigana": [
+                      {
+                        "text": "どこで",
+                        "ruby": null
+                      },
+                      {
+                        "text": "見",
+                        "ruby": "ど"
+                      },
+                      {
+                        "text": "ますか。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "家で見ます。",
+                    "romaji": "家で見ます。",
+                    "furigana": [
+                      {
+                        "text": "家",
+                        "ruby": "い"
+                      },
+                      {
+                        "text": "で",
+                        "ruby": null
+                      },
+                      {
+                        "text": "見",
+                        "ruby": "え"
+                      },
+                      {
+                        "text": "ます。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "A",
+                  "japanese": {
+                    "kanji": "いっしょに見ましょう。",
+                    "romaji": "いっしょに見ましょう。",
+                    "furigana": [
+                      {
+                        "text": "いっしょに",
+                        "ruby": null
+                      },
+                      {
+                        "text": "見",
+                        "ruby": "い"
+                      },
+                      {
+                        "text": "ましょう。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                },
+                {
+                  "speaker": "B",
+                  "japanese": {
+                    "kanji": "はい、見ましょう。",
+                    "romaji": "はい、見ましょう。",
+                    "furigana": [
+                      {
+                        "text": "はい、",
+                        "ruby": null
+                      },
+                      {
+                        "text": "見",
+                        "ruby": "は"
+                      },
+                      {
+                        "text": "ましょう。",
+                        "ruby": null
+                      }
+                    ],
+                    "translation": "(pending translation)"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "grammar",
+          "type": "teach",
+          "title": "Grammar Points",
+          "cards": [
+            {
+              "id": "a3d3ce1f-a8fe-44ff-ad62-4483f31d41ac",
+              "kind": "text",
+              "title": "〜を",
+              "body": {
+                "meta": "目的語を表します。"
+              },
+              "bullets": [
+                {
+                  "kanji": "映画を見ます。",
+                  "romaji": "映画を見ます。",
+                  "furigana": [
+                    {
+                      "text": "映",
+                      "ruby": "え"
+                    },
+                    {
+                      "text": "画",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "が"
+                    },
+                    {
+                      "text": "ます。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                {
+                  "kanji": "本を読みます。",
+                  "romaji": "本を読みます。",
+                  "furigana": [
+                    {
+                      "text": "本",
+                      "ruby": "ほ"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "読",
+                      "ruby": "ん"
+                    },
+                    {
+                      "text": "みます。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              ]
+            },
+            {
+              "id": "e8d66bd7-378d-4247-a5de-bc216851263d",
+              "kind": "text",
+              "title": "〜で",
+              "body": {
+                "meta": "場所を表します。"
+              },
+              "bullets": [
+                {
+                  "kanji": "家で見ます。",
+                  "romaji": "家で見ます。",
+                  "furigana": [
+                    {
+                      "text": "家",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "見",
+                      "ruby": "え"
+                    },
+                    {
+                      "text": "ます。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                {
+                  "kanji": "店で食べます。",
+                  "romaji": "店で食べます。",
+                  "furigana": [
+                    {
+                      "text": "店",
+                      "ruby": "み"
+                    },
+                    {
+                      "text": "で",
+                      "ruby": null
+                    },
+                    {
+                      "text": "食",
+                      "ruby": "せ"
+                    },
+                    {
+                      "text": "べます。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              ]
+            },
+            {
+              "id": "80aed82e-e827-41d9-a977-1ef4c2c99341",
+              "kind": "text",
+              "title": "〜たいです",
+              "body": {
+                "meta": "希望を表します。"
+              },
+              "bullets": [
+                {
+                  "kanji": "見たいです。",
+                  "romaji": "見たいです。",
+                  "furigana": [
+                    {
+                      "text": "見",
+                      "ruby": "み"
+                    },
+                    {
+                      "text": "たいです。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                },
+                {
+                  "kanji": "行きたいです。",
+                  "romaji": "行きたいです。",
+                  "furigana": [
+                    {
+                      "text": "行",
+                      "ruby": "い"
+                    },
+                    {
+                      "text": "きたいです。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "(pending translation)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "practice",
+          "type": "practice",
+          "title": "Practice",
+          "cards": [
+            {
+              "id": "8ed46332-1c60-4b21-9771-2434588e5b72",
+              "kind": "text",
+              "title": "Cloze",
+              "body": {
+                "meta": "**Instructions:** かっこに入ることばをえらんでください。\n\n\n- 家( )映画を見ます。\n- 映画( )見ます。\n- 見( )です。"
+              }
+            },
+            {
+              "id": "10c247f5-2d37-4580-9f00-83d262c4e141",
+              "kind": "text",
+              "title": "Matching",
+              "body": {
+                "meta": "**Instructions:** 日本語と英語をむすんでください。\n\n\nPairs:\n- 映画 -> movie\n- 家 -> home\n- 週末 -> weekend\n- 友だち -> friend"
+              }
+            },
+            {
+              "id": "3ee5f1ef-0220-4177-827e-1ff2785cd26d",
+              "kind": "text",
+              "title": "Dialoguegap",
+              "body": {
+                "meta": "**Instructions:** 会話の( )をうめてください。\n\n\n- A: 週末は何を( )ですか。\nB: 映画を見たいです。\n- A: どこで見ますか。\nB: 家( )見ます。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "culture",
+          "type": "teach",
+          "title": "Culture",
+          "cards": [
+            {
+              "id": "54a26374-b3e6-4dea-ae0d-070defd3f710",
+              "kind": "text",
+              "title": "あいさつ",
+              "body": {
+                "meta": {
+                  "kanji": "会話の最初に、短いあいさつをします。",
+                  "romaji": "kaiwa no saisho ni, mijikai aisatsu o shimasu.",
+                  "furigana": [
+                    {
+                      "text": "会話",
+                      "ruby": "かいわ"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "最初",
+                      "ruby": "さいしょ"
+                    },
+                    {
+                      "text": "に",
+                      "ruby": null
+                    },
+                    {
+                      "text": "、",
+                      "ruby": null
+                    },
+                    {
+                      "text": "短い",
+                      "ruby": "みじかい"
+                    },
+                    {
+                      "text": "あいさつ",
+                      "ruby": null
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "します",
+                      "ruby": null
+                    },
+                    {
+                      "text": "。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "At the beginning of a conversation, make a short greeting."
+                }
+              }
+            },
+            {
+              "id": "a5b49f8f-b3cb-4d00-a6f9-dd799fa3a449",
+              "kind": "text",
+              "title": "マナー",
+              "body": {
+                "meta": {
+                  "kanji": "相手の話を最後まで聞くことが大切です。",
+                  "romaji": "aite no hanashi o saigo made kiku koto ga taisetsu desu.",
+                  "furigana": [
+                    {
+                      "text": "相手",
+                      "ruby": "あいて"
+                    },
+                    {
+                      "text": "の",
+                      "ruby": null
+                    },
+                    {
+                      "text": "話",
+                      "ruby": "はなし"
+                    },
+                    {
+                      "text": "を",
+                      "ruby": null
+                    },
+                    {
+                      "text": "最後",
+                      "ruby": "さいご"
+                    },
+                    {
+                      "text": "まで",
+                      "ruby": null
+                    },
+                    {
+                      "text": "聞く",
+                      "ruby": "きく"
+                    },
+                    {
+                      "text": "こと",
+                      "ruby": null
+                    },
+                    {
+                      "text": "が",
+                      "ruby": null
+                    },
+                    {
+                      "text": "大切",
+                      "ruby": "たいせつ"
+                    },
+                    {
+                      "text": "です",
+                      "ruby": null
+                    },
+                    {
+                      "text": "。",
+                      "ruby": null
+                    }
+                  ],
+                  "translation": "It is important to listen to the other person's story until the end."
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "gallery": []
+    },
+    "exercises": [],
+    "metadata": {
+      "topic": "general",
+      "languageCode": "ja",
+      "multilingualVersion": true,
+      "createdAt": 1765692903,
+      "estimatedDurationMin": 25,
+      "tags": [],
+      "stage2EnhancedMap": {
+        "reading": true,
+        "dialogue": true,
+        "grammar": true,
+        "culture": true
+      }
+    }
+  },
+  "package": null
+}
